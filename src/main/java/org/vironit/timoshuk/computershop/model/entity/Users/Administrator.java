@@ -11,7 +11,7 @@ import lombok.ToString;
 @EqualsAndHashCode(exclude = "id")
 public class Administrator {
 
-    private Long id;
+    private int id;
     private String login;
     private String password;
     private String email;
