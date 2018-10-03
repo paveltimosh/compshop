@@ -20,4 +20,11 @@ public class Order {
     private boolean isConfirmed;
     private boolean isPayed;
 
+    public Order(Long id, Date dateOfPayment, int totalAmount, boolean isConfirmed, boolean isPayed) {
+        this.id = id;
+        this.dateOfPayment = dateOfPayment;
+        this.totalAmount = totalAmount;
+        this.isConfirmed = isConfirmed;
+        this.isPayed = isPayed;
+    }
 }

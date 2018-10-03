@@ -2,26 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e6acd940-c530-41ba-9507-8e88af58759b" name="Default Changelist" comment="add test package">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_18_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__postgresql_postgresql_9_1_901_1_jdbc4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/model/dao/CustomerDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/model/dao/impl/CustomerDAOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/model/entity/Busket.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/model/entity/Order/Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/model/entity/Order/Payment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/model/entity/Users/Administrator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/model/entity/products/Computer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/model/entity/products/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/model/util/DataBaseConnector.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../untitled4/.idea/vcs.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../untitled4/src/com/company/C.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../untitled4/src/com/company/DeclareStuff.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../untitled4/src/com/company/TestDeclare.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/computershop.iml" beforeDir="false" afterPath="$PROJECT_DIR$/computershop.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/model/entity/Order/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/model/entity/Order/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/model/entity/Order/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/model/entity/Order/Payment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/model/entity/Users/Administrator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/model/entity/Users/Administrator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/model/entity/Users/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/model/entity/Users/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/model/entity/products/Computer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/model/entity/products/Computer.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,6 +18,65 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="computershoptest@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="computershoptest@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="computershoptest@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="computershoptest: database" type="6d9b600a:PostgresImplModel$Database" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="computershoptest@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="computershoptest: database" type="6d9b600a:PostgresImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="computershoptest@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="computershoptest: database" type="6d9b600a:PostgresImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="a16502c0:PostgresImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="computershoptest@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="computershoptest: database" type="6d9b600a:PostgresImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="a16502c0:PostgresImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="computershoptest@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="roles" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+    </expand>
+    <select />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="1610667715">
@@ -52,32 +100,38 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="customers" value="1" />
           <entry key="gitignore" value="1" />
-          <entry key="java" value="15" />
+          <entry key="java" value="17" />
           <entry key="jsp" value="1" />
+          <entry key="sql" value="1" />
           <entry key="xml" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
+          <entry key="Database Element" value="1" />
           <entry key="Git file" value="1" />
-          <entry key="JAVA" value="15" />
+          <entry key="JAVA" value="17" />
           <entry key="JSP" value="1" />
+          <entry key="Scratch" value="1" />
           <entry key="XML" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
+          <entry key="cell" value="3" />
           <entry key="dummy" value="4" />
-          <entry key="java" value="1004" />
+          <entry key="java" value="1024" />
           <entry key="txt" value="16" />
           <entry key="xml" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1004" />
+          <entry key="JAVA" value="1024" />
           <entry key="PLAIN_TEXT" value="20" />
+          <entry key="Scratch" value="3" />
           <entry key="XML" value="8" />
         </counts>
       </usages-collector>
@@ -85,11 +139,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" selection-start-line="7" selection-end-line="7" />
+            <state relative-caret-position="-2">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -100,8 +153,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/model/entity/Users/Customer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+            <state relative-caret-position="262">
+              <caret line="28" column="4" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -112,8 +165,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/model/entity/Order/Order.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" selection-start-line="9" selection-end-line="12" selection-end-column="34" />
+            <state relative-caret-position="221">
+              <caret line="13" selection-start-line="13" selection-end-line="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -122,10 +175,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/model/entity/products/Computer.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/model/entity/Order/Payment.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="323">
-              <caret line="19" column="31" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
+              <caret line="19" column="87" selection-start-line="19" selection-start-column="87" selection-end-line="19" selection-end-column="87" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -133,11 +186,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/model/entity/Users/Administrator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="1" lean-forward="true" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+            <state relative-caret-position="323">
+              <caret line="19" selection-start-line="19" selection-end-line="19" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -199,14 +252,14 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/model/entity/Customer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/model/entity/Users/Customer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/model/entity/Order/Order.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/model/entity/products/Product.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/model/entity/products/Computer.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/model/entity/Busket.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/model/entity/Order/Payment.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/model/entity/Users/Admistrator.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/model/entity/Users/Administrator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/model/entity/products/Computer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/model/entity/Order/Order.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/model/entity/Order/Payment.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/model/entity/Users/Customer.java" />
       </list>
     </option>
   </component>
@@ -228,7 +281,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="40" />
     <option name="y" value="48" />
     <option name="width" value="1840" />
@@ -297,7 +350,45 @@
               <item name="computershop" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="computershop" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="entity" type="462c0819:PsiDirectoryNode" />
+              <item name="Order" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="computershop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="computershop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="computershop" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="entity" type="462c0819:PsiDirectoryNode" />
+              <item name="products" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="computershop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="computershop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="computershop" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="entity" type="462c0819:PsiDirectoryNode" />
+              <item name="Users" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="computershop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="computershop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="computershop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="computershop" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -308,9 +399,11 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="postgresql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538571864287" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538574997558" />
+    <property name="database.console.LAST_STATE" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -363,18 +456,18 @@
       <workItem from="1538502574361" duration="7763000" />
       <workItem from="1538563322779" duration="562000" />
       <workItem from="1538563940126" duration="730000" />
-      <workItem from="1538564979145" duration="4053000" />
+      <workItem from="1538564979145" duration="6788000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13394000" />
+    <option name="totallyTimeSpent" value="16129000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="32" y="39" width="1472" height="748" extended-state="0" />
+    <frame x="32" y="39" width="1472" height="748" extended-state="1" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20113315" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22025496" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Web" order="2" side_tool="true" />
       <window_info id="Image Layers" order="3" />
@@ -382,6 +475,7 @@
       <window_info id="UI Designer" order="5" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Favorites" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Database Console" weight="0.32954547" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32954547" />
@@ -390,7 +484,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" />
@@ -400,7 +494,7 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Database" order="5" />
+      <window_info anchor="right" id="Database" order="5" visible="true" weight="0.2549575" />
       <window_info anchor="right" id="Theme Preview" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Maven Projects" order="8" />
@@ -449,40 +543,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/model/entity/Order/Payment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/model/entity/products/Product.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/model/entity/Order/Order.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" selection-start-line="9" selection-end-line="12" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/model/entity/Busket.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -490,13 +550,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/model/dao/impl/CustomerDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
@@ -514,30 +567,83 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/model/entity/products/Computer.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/model/entity/Users/Administrator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
-          <caret line="19" column="31" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/model/entity/products/Computer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="25" lean-forward="true" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/model/entity/Order/Order.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/model/entity/products/Product.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/model/entity/Order/Payment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="87" selection-start-line="19" selection-start-column="87" selection-end-line="19" selection-end-column="87" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/model/dao/impl/CustomerDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/model/entity/Users/Customer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+        <state relative-caret-position="262">
+          <caret line="28" column="4" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/model/entity/Users/Administrator.java">
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/e5eac0bd-a665-49d7-a55b-642c53ec8eaf/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="das://e5eac0bd-a665-49d7-a55b-642c53ec8eaf/database/computershoptest/schema/public/table/customers">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="1" lean-forward="true" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+        <state relative-caret-position="-2">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

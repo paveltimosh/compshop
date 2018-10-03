@@ -17,4 +17,10 @@ public class Payment {
     private int totalAmount;
     private boolean isConfirmed;
 
+    public Payment(Long id, Date dateOfPayment, int totalAmount, boolean isConfirmed) {
+        this.id = id;
+        this.dateOfPayment = dateOfPayment;
+        this.totalAmount = totalAmount;
+        this.isConfirmed = isConfirmed;
+    }
 }

@@ -23,4 +23,21 @@ public class Customer {
 
     private Busket busket;
 
+    public Customer(){
+        
+    }
+    
+    public Customer(Long id, String login, String password, String email, String firstName, String lastName, String adress, boolean isOnBlackList, Busket busket) {
+        this.id = id;
+        this.login = login;
+        this.password = password;
+        this.email = email;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.adress = adress;
+        this.isOnBlackList = isOnBlackList;
+        this.busket = busket;
+    }
+
+
 }

@@ -19,4 +19,12 @@ public class Computer extends Product{
     private int memoryHd;
     private int processorSpeed;
 
+    public Computer(Long id, int price, String maker, int ram, int memoryHd, int processorSpeed) {
+        this.id = id;
+        this.price = price;
+        this.maker = maker;
+        this.ram = ram;
+        this.memoryHd = memoryHd;
+        this.processorSpeed = processorSpeed;
+    }
 }
