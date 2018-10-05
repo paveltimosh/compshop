@@ -12,12 +12,19 @@ public class Main {
     public static void main(String[] args) {
 
         CustomerDAO customerDAO = new CustomerDAOImpl();
+
         List <Customer> customers = new ArrayList<>();
         customers = customerDAO.findAll();
         System.out.println("Запрос на поиск всех сущностей выполнен" + customers);
 
         Customer customer = customerDAO.findCostumerById(1L);
         System.out.println("Запрос по поиску id выполнен" + customer);
+
+        Customer customer1 = Customer.builder()
+                .email("testEmail")
+                .login("Номер 4444")
+                .id(444L).build();
+
 
 
     }

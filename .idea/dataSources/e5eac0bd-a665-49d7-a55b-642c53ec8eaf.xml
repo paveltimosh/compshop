@@ -78,8 +78,8 @@
       <ObjectId>2200</ObjectId>
       <Comment>standard public schema</Comment>
       <Owner>postgres</Owner>
-      <IntrospectionTimestamp>2018-10-05.15:00:22.100</IntrospectionTimestamp>
-      <IntrospectionStateNumber>577</IntrospectionStateNumber>
+      <IntrospectionTimestamp>2018-10-05.15:51:47.083</IntrospectionTimestamp>
+      <IntrospectionStateNumber>585</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -172,28 +172,28 @@
       <StateNumber>566</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="29" parent="23" name="firstname">
+    <column id="29" parent="23" name="first_name">
       <Position>6</Position>
       <DataType>varchar(30)|0s</DataType>
-      <StateNumber>574</StateNumber>
+      <StateNumber>583</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="30" parent="23" name="lastname">
+    <column id="30" parent="23" name="last_name">
       <Position>7</Position>
       <DataType>varchar(30)|0s</DataType>
-      <StateNumber>575</StateNumber>
+      <StateNumber>584</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="31" parent="23" name="idcard">
+    <column id="31" parent="23" name="id_card">
       <Position>8</Position>
       <DataType>integer|0s</DataType>
-      <StateNumber>577</StateNumber>
+      <StateNumber>585</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="32" parent="23" name="onblacklist">
+    <column id="32" parent="23" name="on_blacklist">
       <Position>9</Position>
       <DataType>boolean|0s</DataType>
-      <StateNumber>576</StateNumber>
+      <StateNumber>582</StateNumber>
       <TypeId>16</TypeId>
     </column>
     <index id="33" parent="23" name="pk_id">

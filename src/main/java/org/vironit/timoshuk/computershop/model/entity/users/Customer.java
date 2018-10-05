@@ -2,8 +2,8 @@ package org.vironit.timoshuk.computershop.model.entity.users;
 
 import lombok.*;
 import org.vironit.timoshuk.computershop.model.entity.Busket;
-import org.vironit.timoshuk.computershop.model.entity.Entity;
 
+@Builder
 @Getter
 @Setter
 @ToString(exclude = "id")
@@ -26,17 +26,16 @@ public class Customer  {
 
     }
 
-    public Customer(Long id, String login, String password, String email, String firstName, String lastName, String adress, boolean onBlackList, Busket busket) {
+    public Customer(Long id, String login, String password, String email, String firstName, String lastName, int idCard, String adress, boolean onBlackList, Busket busket) {
         this.id = id;
         this.login = login;
         this.password = password;
         this.email = email;
         this.firstName = firstName;
         this.lastName = lastName;
+        this.idCard = idCard;
         this.adress = adress;
         this.onBlackList = onBlackList;
         this.busket = busket;
     }
-
-
 }

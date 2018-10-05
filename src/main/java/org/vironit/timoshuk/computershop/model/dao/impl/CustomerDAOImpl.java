@@ -16,9 +16,9 @@ public class CustomerDAOImpl implements CustomerDAO <Long, Customer> {
     private static final String SQL_SELECT_ALL_CUSTOMERS = " SELECT * FROM customers ";
     private static final String SQL_SELECT_CUSTOMER_BY_ID = "SELECT * FROM customers WHERE id = ?";
     private static final String SQL_DELETE_CUSTOMER_BY_ID = "DELETE FROM customers WHERE id = ?";
-//TODO
+//TODO реализовать корзину у пользователя
    private static final String SQL_INSERT_INTO_CUSTOMER = "INSERT INTO customers  " +
-        "(id, login, password, adress, email, firstname, lastName, idCard, OnBlackList )VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) ";
+        "(id, login, password, adress, email, first_name, last_name, id_Card, on_blacklist )VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) ";
 
 
     @Override
@@ -34,10 +34,10 @@ public class CustomerDAOImpl implements CustomerDAO <Long, Customer> {
                     customer.setPassword(rs.getString("password"));
                     customer.setAdress(rs.getString("adress"));
                     customer.setEmail(rs.getString("email"));
-                    customer.setFirstName(rs.getString("firstname"));
-                    customer.setLastName(rs.getString("lastname"));
-                    customer.setIdCard(rs.getInt("idcard"));
-                    customer.setOnBlackList(rs.getBoolean("onBlackList"));
+                    customer.setFirstName(rs.getString("first_name"));
+                    customer.setLastName(rs.getString("last_name"));
+                    customer.setIdCard(rs.getInt("id_card"));
+                    customer.setOnBlackList(rs.getBoolean("on_BlackList"));
                   //  customer.setBusket((Busket)rs.getObject("busket"));
                     customers.add(customer);
                 }
@@ -62,10 +62,10 @@ public class CustomerDAOImpl implements CustomerDAO <Long, Customer> {
             customer.setPassword(rs.getString("password"));
             customer.setAdress(rs.getString("adress"));
             customer.setEmail(rs.getString("email"));
-            customer.setFirstName(rs.getString("firstname"));
-            customer.setLastName(rs.getString("lastname"));
-            customer.setIdCard(rs.getInt("idcard"));
-            customer.setOnBlackList(rs.getBoolean("onBlackList"));
+            customer.setFirstName(rs.getString("first_name"));
+            customer.setLastName(rs.getString("last_name"));
+            customer.setIdCard(rs.getInt("id_card"));
+            customer.setOnBlackList(rs.getBoolean("on_BlackList"));
             //  customer.setBusket((Busket)rs.getObject("busket"));
         } catch (SQLException e) {
             e.printStackTrace();
