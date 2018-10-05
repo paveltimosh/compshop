@@ -1,4 +1,4 @@
-package org.vironit.timoshuk.computershop.model.entity.Users;
+package org.vironit.timoshuk.computershop.model.entity.users;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;

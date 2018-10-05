@@ -1,4 +1,4 @@
-package org.vironit.timoshuk.computershop.model.entity.Users;
+package org.vironit.timoshuk.computershop.model.entity.users;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -24,9 +24,9 @@ public class Customer {
     private Busket busket;
 
     public Customer(){
-        
+
     }
-    
+
     public Customer(Long id, String login, String password, String email, String firstName, String lastName, String adress, boolean isOnBlackList, Busket busket) {
         this.id = id;
         this.login = login;
