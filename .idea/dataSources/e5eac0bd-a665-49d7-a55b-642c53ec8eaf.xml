@@ -78,8 +78,8 @@
       <ObjectId>2200</ObjectId>
       <Comment>standard public schema</Comment>
       <Owner>postgres</Owner>
-      <IntrospectionTimestamp>2018-10-03.16:57:34.170</IntrospectionTimestamp>
-      <IntrospectionStateNumber>563</IntrospectionStateNumber>
+      <IntrospectionTimestamp>2018-10-05.15:00:22.100</IntrospectionTimestamp>
+      <IntrospectionStateNumber>577</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -137,7 +137,7 @@
     <table id="23" parent="15" name="customers">
       <ObjectId>16394</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>561</StateNumber>
+      <StateNumber>570</StateNumber>
     </table>
     <column id="24" parent="23" name="id">
       <Position>1</Position>
@@ -160,23 +160,59 @@
       <StateNumber>561</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="27" parent="23" name="pk_id">
+    <column id="27" parent="23" name="adress">
+      <Position>4</Position>
+      <DataType>varchar(100)|0s</DataType>
+      <StateNumber>565</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="28" parent="23" name="email">
+      <Position>5</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <StateNumber>566</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="29" parent="23" name="firstname">
+      <Position>6</Position>
+      <DataType>varchar(30)|0s</DataType>
+      <StateNumber>574</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="30" parent="23" name="lastname">
+      <Position>7</Position>
+      <DataType>varchar(30)|0s</DataType>
+      <StateNumber>575</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="31" parent="23" name="idcard">
+      <Position>8</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>577</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="32" parent="23" name="onblacklist">
+      <Position>9</Position>
+      <DataType>boolean|0s</DataType>
+      <StateNumber>576</StateNumber>
+      <TypeId>16</TypeId>
+    </column>
+    <index id="33" parent="23" name="pk_id">
       <ObjectId>16403</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="28" parent="23" name="unique_login">
+    <index id="34" parent="23" name="unique_login">
       <ObjectId>16405</ObjectId>
       <ColNames>login</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="29" parent="23" name="pk_id">
+    <key id="35" parent="23" name="pk_id">
       <ObjectId>16404</ObjectId>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>pk_id</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <key id="30" parent="23" name="unique_login">
+    <key id="36" parent="23" name="unique_login">
       <ObjectId>16406</ObjectId>
       <ColNames>login</ColNames>
       <UnderlyingIndexName>unique_login</UnderlyingIndexName>

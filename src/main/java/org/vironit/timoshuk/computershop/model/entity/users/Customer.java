@@ -1,16 +1,14 @@
 package org.vironit.timoshuk.computershop.model.entity.users;
 
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 import org.vironit.timoshuk.computershop.model.entity.Busket;
+import org.vironit.timoshuk.computershop.model.entity.Entity;
 
 @Getter
 @Setter
 @ToString(exclude = "id")
 @EqualsAndHashCode(exclude = "id")
-public class Customer {
+public class Customer  {
 
     private Long id;
     private String login;
@@ -18,8 +16,9 @@ public class Customer {
     private String email;
     private String firstName;
     private String lastName;
+    private int idCard;
     private String adress;
-    private boolean isOnBlackList;
+    private boolean onBlackList;
 
     private Busket busket;
 
@@ -27,7 +26,7 @@ public class Customer {
 
     }
 
-    public Customer(Long id, String login, String password, String email, String firstName, String lastName, String adress, boolean isOnBlackList, Busket busket) {
+    public Customer(Long id, String login, String password, String email, String firstName, String lastName, String adress, boolean onBlackList, Busket busket) {
         this.id = id;
         this.login = login;
         this.password = password;
@@ -35,7 +34,7 @@ public class Customer {
         this.firstName = firstName;
         this.lastName = lastName;
         this.adress = adress;
-        this.isOnBlackList = isOnBlackList;
+        this.onBlackList = onBlackList;
         this.busket = busket;
     }
 

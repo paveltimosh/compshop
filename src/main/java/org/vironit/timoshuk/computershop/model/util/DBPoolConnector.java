@@ -8,6 +8,10 @@ import java.sql.SQLException;
 
 public class  DBPoolConnector {
 
+    private DBPoolConnector(){
+
+    }
+
     private static HikariDataSource ds ;
 
     static {
