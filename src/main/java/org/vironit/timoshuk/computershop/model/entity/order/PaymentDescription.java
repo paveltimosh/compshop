@@ -6,20 +6,15 @@ import lombok.Setter;
 import lombok.ToString;
 
 import java.time.LocalDateTime;
-
+import java.util.Date;
 
 @Getter
 @Setter
 @ToString(exclude = "id")
 @EqualsAndHashCode(exclude = "id")
 
-public class Order {
-
+public class PaymentDescription {
     private Long id;
-    private Long idCustomer;
-    private LocalDateTime dateTimeOfPayment;
-    private int totalAmountOrder;
-    private OrderStatus orderStatus;
-    private PaymentDescription paymentDescription;
-
+    private LocalDateTime dateTimePayment;
+    private TypePayment typePayment;
 }

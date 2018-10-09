@@ -1,41 +1,43 @@
 package org.vironit.timoshuk.computershop.model.entity.users;
 
+
 import lombok.*;
-import org.vironit.timoshuk.computershop.model.entity.Busket;
+import org.vironit.timoshuk.computershop.model.entity.Entity;
 
 @Builder
 @Getter
 @Setter
 @ToString(exclude = "id")
 @EqualsAndHashCode(exclude = "id")
-public class Customer  {
+public class User implements Entity {
 
     private Long id;
+    private UserType userType;
     private String login;
     private String password;
     private String email;
     private String firstName;
     private String lastName;
-    private int idCard;
-    private String adress;
-    private boolean onBlackList;
+    private Integer idCard;
+    private String address;
+    private String phoneNumber;
 
-    private Busket busket;
-
-    public Customer(){
+    public User(){
 
     }
 
-    public Customer(Long id, String login, String password, String email, String firstName, String lastName, int idCard, String adress, boolean onBlackList, Busket busket) {
+    public User(Long id, UserType userType, String login, String password, String email,
+                String firstName, String lastName, Integer idCard, String address, String phoneNumber) {
         this.id = id;
+        this.userType = userType;
         this.login = login;
         this.password = password;
         this.email = email;
         this.firstName = firstName;
         this.lastName = lastName;
         this.idCard = idCard;
-        this.adress = adress;
-        this.onBlackList = onBlackList;
-        this.busket = busket;
+        this.address = address;
+        this.phoneNumber = phoneNumber;
     }
 }
+

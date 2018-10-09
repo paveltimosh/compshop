@@ -78,8 +78,8 @@
       <ObjectId>2200</ObjectId>
       <Comment>standard public schema</Comment>
       <Owner>postgres</Owner>
-      <IntrospectionTimestamp>2018-10-05.15:51:47.083</IntrospectionTimestamp>
-      <IntrospectionStateNumber>585</IntrospectionStateNumber>
+      <IntrospectionTimestamp>2018-10-09.13:07:15.093</IntrospectionTimestamp>
+      <IntrospectionStateNumber>597</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -134,10 +134,10 @@
       <CacheSize>1</CacheSize>
       <DataType>integer</DataType>
     </sequence>
-    <table id="23" parent="15" name="customers">
+    <table id="23" parent="15" name="users">
       <ObjectId>16394</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>570</StateNumber>
+      <StateNumber>596</StateNumber>
     </table>
     <column id="24" parent="23" name="id">
       <Position>1</Position>
@@ -151,7 +151,7 @@
     <column id="25" parent="23" name="login">
       <Position>2</Position>
       <DataType>varchar(30)|0s</DataType>
-      <StateNumber>560</StateNumber>
+      <StateNumber>597</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="26" parent="23" name="password">
@@ -160,10 +160,10 @@
       <StateNumber>561</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="27" parent="23" name="adress">
+    <column id="27" parent="23" name="address">
       <Position>4</Position>
       <DataType>varchar(100)|0s</DataType>
-      <StateNumber>565</StateNumber>
+      <StateNumber>590</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="28" parent="23" name="email">
@@ -190,29 +190,37 @@
       <StateNumber>585</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="32" parent="23" name="on_blacklist">
-      <Position>9</Position>
-      <DataType>boolean|0s</DataType>
-      <StateNumber>582</StateNumber>
-      <TypeId>16</TypeId>
+    <column id="32" parent="23" name="phone_number">
+      <Position>10</Position>
+      <DataType>varchar(20)|0s</DataType>
+      <StateNumber>591</StateNumber>
+      <TypeId>1043</TypeId>
     </column>
-    <index id="33" parent="23" name="pk_id">
+    <column id="33" parent="23" name="user_type">
+      <Position>11</Position>
+      <DataType>varchar(10)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>594</StateNumber>
+      <DefaultExpression>USER</DefaultExpression>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="34" parent="23" name="pk_id">
       <ObjectId>16403</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="34" parent="23" name="unique_login">
+    <index id="35" parent="23" name="unique_login">
       <ObjectId>16405</ObjectId>
       <ColNames>login</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="35" parent="23" name="pk_id">
+    <key id="36" parent="23" name="pk_id">
       <ObjectId>16404</ObjectId>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>pk_id</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <key id="36" parent="23" name="unique_login">
+    <key id="37" parent="23" name="unique_login">
       <ObjectId>16406</ObjectId>
       <ColNames>login</ColNames>
       <UnderlyingIndexName>unique_login</UnderlyingIndexName>
