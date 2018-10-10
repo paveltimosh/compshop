@@ -8,8 +8,8 @@ import org.vironit.timoshuk.computershop.model.entity.products.Components.*;
 
 @Getter
 @Setter
-@ToString(exclude = "id")
-@EqualsAndHashCode(exclude = "id")
+@ToString()
+@EqualsAndHashCode()
 
 public class Computer {
 

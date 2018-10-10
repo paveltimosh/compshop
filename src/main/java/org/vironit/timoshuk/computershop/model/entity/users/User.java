@@ -1,15 +1,13 @@
 package org.vironit.timoshuk.computershop.model.entity.users;
 
-
 import lombok.*;
-import org.vironit.timoshuk.computershop.model.entity.Entity;
 
 @Builder
 @Getter
 @Setter
-@ToString(exclude = "id")
-@EqualsAndHashCode(exclude = "id")
-public class User implements Entity {
+@ToString()
+@EqualsAndHashCode(of = {"login", "id"})
+public class User {
 
     private Long id;
     private UserType userType;
