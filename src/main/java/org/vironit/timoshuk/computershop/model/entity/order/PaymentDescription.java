@@ -1,20 +1,21 @@
 package org.vironit.timoshuk.computershop.model.entity.order;
 
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
+import java.sql.Timestamp;
 import java.time.LocalDateTime;
 import java.util.Date;
 
+@Builder
 @Getter
 @Setter
-@ToString(exclude = "id")
-@EqualsAndHashCode(exclude = "id")
+@ToString()
+@EqualsAndHashCode()
 
 public class PaymentDescription {
     private Long id;
-    private LocalDateTime dateTimePayment;
+//TODO    private LocalDateTime datePayment;
+    private Timestamp dateTimeOfPayment;
+
     private TypePayment typePayment;
 }

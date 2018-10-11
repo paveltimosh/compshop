@@ -78,8 +78,8 @@
       <ObjectId>2200</ObjectId>
       <Comment>standard public schema</Comment>
       <Owner>postgres</Owner>
-      <IntrospectionTimestamp>2018-10-10.12:46:16.378</IntrospectionTimestamp>
-      <IntrospectionStateNumber>597</IntrospectionStateNumber>
+      <IntrospectionTimestamp>2018-10-11.13:08:51.109</IntrospectionTimestamp>
+      <IntrospectionStateNumber>668</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -134,12 +134,91 @@
       <CacheSize>1</CacheSize>
       <DataType>integer</DataType>
     </sequence>
-    <table id="23" parent="15" name="users">
+    <table id="23" parent="15" name="orders">
+      <ObjectId>16425</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>661</StateNumber>
+    </table>
+    <table id="24" parent="15" name="users">
       <ObjectId>16394</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>596</StateNumber>
+      <StateNumber>656</StateNumber>
     </table>
-    <column id="24" parent="23" name="id">
+    <column id="25" parent="23" name="id">
+      <Position>3</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>668</StateNumber>
+      <DefaultExpression>nextval(&apos;customers_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="26" parent="23" name="id_of_customer">
+      <Position>4</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>652</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="27" parent="23" name="total_amount_of_order">
+      <Position>6</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>647</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="28" parent="23" name="order_status">
+      <Position>7</Position>
+      <DataType>varchar|0s</DataType>
+      <StateNumber>648</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="29" parent="23" name="id_of_payment">
+      <Position>8</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>649</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="30" parent="23" name="payment_type">
+      <Position>10</Position>
+      <DataType>varchar|0s</DataType>
+      <StateNumber>651</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="31" parent="23" name="date_time_of_order">
+      <Position>11</Position>
+      <DataType>timestamp|0s</DataType>
+      <StateNumber>659</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="32" parent="23" name="date_time_of_payment">
+      <Position>12</Position>
+      <DataType>timestamp|0s</DataType>
+      <StateNumber>661</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <index id="33" parent="23" name="pk_id_order">
+      <ObjectId>16444</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="34" parent="23" name="fki_fkey_id_customer">
+      <ObjectId>16443</ObjectId>
+      <ColNames>id_of_customer</ColNames>
+    </index>
+    <key id="35" parent="23" name="pk_id_order">
+      <ObjectId>16445</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>pk_id_order</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="36" parent="23" name="fkey_id_customer">
+      <ObjectId>16438</ObjectId>
+      <ColNames>id_of_customer</ColNames>
+      <RefTableId>16394</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>users</RefTableName>
+      <RefKeyName>pk_id</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="37" parent="24" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
@@ -148,55 +227,55 @@
       <TypeId>23</TypeId>
       <SequenceName>customers_id_seq</SequenceName>
     </column>
-    <column id="25" parent="23" name="login">
+    <column id="38" parent="24" name="login">
       <Position>2</Position>
       <DataType>varchar(30)|0s</DataType>
       <StateNumber>597</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="26" parent="23" name="password">
+    <column id="39" parent="24" name="password">
       <Position>3</Position>
       <DataType>varchar(30)|0s</DataType>
       <StateNumber>561</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="27" parent="23" name="address">
+    <column id="40" parent="24" name="address">
       <Position>4</Position>
       <DataType>varchar(100)|0s</DataType>
       <StateNumber>590</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="28" parent="23" name="email">
+    <column id="41" parent="24" name="email">
       <Position>5</Position>
       <DataType>varchar(50)|0s</DataType>
       <StateNumber>566</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="29" parent="23" name="first_name">
+    <column id="42" parent="24" name="first_name">
       <Position>6</Position>
       <DataType>varchar(30)|0s</DataType>
       <StateNumber>583</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="30" parent="23" name="last_name">
+    <column id="43" parent="24" name="last_name">
       <Position>7</Position>
       <DataType>varchar(30)|0s</DataType>
       <StateNumber>584</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="31" parent="23" name="id_card">
+    <column id="44" parent="24" name="id_card">
       <Position>8</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>585</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="32" parent="23" name="phone_number">
+    <column id="45" parent="24" name="phone_number">
       <Position>10</Position>
       <DataType>varchar(20)|0s</DataType>
       <StateNumber>591</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="33" parent="23" name="user_type">
+    <column id="46" parent="24" name="user_type">
       <Position>11</Position>
       <DataType>varchar(10)|0s</DataType>
       <NotNull>1</NotNull>
@@ -204,23 +283,23 @@
       <DefaultExpression>USER</DefaultExpression>
       <TypeId>1043</TypeId>
     </column>
-    <index id="34" parent="23" name="pk_id">
+    <index id="47" parent="24" name="pk_id">
       <ObjectId>16403</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="35" parent="23" name="unique_login">
+    <index id="48" parent="24" name="unique_login">
       <ObjectId>16405</ObjectId>
       <ColNames>login</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="36" parent="23" name="pk_id">
+    <key id="49" parent="24" name="pk_id">
       <ObjectId>16404</ObjectId>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>pk_id</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <key id="37" parent="23" name="unique_login">
+    <key id="50" parent="24" name="unique_login">
       <ObjectId>16406</ObjectId>
       <ColNames>login</ColNames>
       <UnderlyingIndexName>unique_login</UnderlyingIndexName>

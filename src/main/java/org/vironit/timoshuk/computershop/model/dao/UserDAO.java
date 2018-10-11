@@ -4,11 +4,11 @@ import java.util.List;
 
 public interface UserDAO <Key , User > {
 
-    List <User> findAll() throws DAOException, DAOException;
-    User findUserById (Key id) throws DAOException, DAOException;
-    boolean deleteUser (User customer) throws DAOException, DAOException;
-    boolean deleteUserById (Key id) throws DAOException, DAOException;
-    boolean createUser (User customer) throws DAOException, DAOException;
-    boolean update (User customer, Key id) throws DAOException, DAOException;
+    List <User> findAll() throws DAOException;
+    User findUserById (Key id) throws DAOException;
+    boolean deleteUser (User user) throws DAOException;
+    boolean deleteUserById (Key id) throws DAOException;
+    boolean createUser (User user) throws DAOException;
+    boolean update (User user, Key id) throws DAOException;
 
 }
