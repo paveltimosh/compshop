@@ -1,19 +1,14 @@
 package org.vironit.timoshuk.computershop;
 
 import org.vironit.timoshuk.computershop.model.dao.DAOException;
-import org.vironit.timoshuk.computershop.model.dao.OrderDAO;
 import org.vironit.timoshuk.computershop.model.dao.impl.OrderDAOImpl;
 import org.vironit.timoshuk.computershop.model.dao.impl.UserDAOImpl;
 import org.vironit.timoshuk.computershop.model.entity.order.Order;
 import org.vironit.timoshuk.computershop.model.entity.order.OrderStatus;
 import org.vironit.timoshuk.computershop.model.entity.order.PaymentDescription;
 import org.vironit.timoshuk.computershop.model.entity.order.TypePayment;
-import org.vironit.timoshuk.computershop.model.entity.users.User;
-import org.vironit.timoshuk.computershop.model.entity.users.UserType;
-
 import java.sql.Timestamp;
 import java.time.LocalDateTime;
-import java.time.ZoneOffset;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -42,6 +37,8 @@ public class Main {
                 System.out.println(order);
             }
 
+            LocalDateTime localDateTime = order1.getDateTimeOfOrder().toLocalDateTime();
+            System.out.println(localDateTime);
         } catch (DAOException daoExсeption) {
             daoExсeption.printStackTrace();
         }

@@ -23,6 +23,8 @@ public class OrderDAOImpl implements OrderDAO <Long, Order>{
 
     private static final String SQL_SELECT_ALL_ORDERS = "SELECT * FROM orders";
     private static final String SQL_SELECT_ORDER_BY_ID = "SELECT * FROM orders WHERE id = ?";
+    private static final String SQL_SELECT_ORDERS_BY_USER_ID = "SELECT * FROM orders WHERE id_of_customer = ?";
+    private static final String SQL_SELECT_ORDERS_BY_ORDER_STATUS = "SELECT * FROM orders WHERE order_status = ?";
     private static final String SQL_DELETE_ORDER_BY_ID = "DELETE  FROM orders WHERE id = ? ";
     private static final String SQL_INSERT_INTO_ORDERS = "INSERT INTO orders " +
             "( id_of_customer, date_time_of_order, total_amount_of_order, order_status, id_of_payment, date_time_of_payment, payment_type)" +
@@ -30,7 +32,6 @@ public class OrderDAOImpl implements OrderDAO <Long, Order>{
     private static final String SQL_UPDATE_ORDER_BY_ID = "UPDATE orders " +
             "SET date_time_of_order =?, total_amount_of_order = ?, order_status = ?, date_time_of_payment = ?, payment_type = ?" +
             "WHERE id = ?";
-
 
     @Override
     public List<Order> findAll() throws DAOException {
@@ -66,8 +67,47 @@ public class OrderDAOImpl implements OrderDAO <Long, Order>{
         return order;
     }
 
+    public List<Order> fidOrdersByUserId (Long userId) throws DAOException {
+        List <Order> orders = new ArrayList<>();
+        try (Connection conn= DataBasePoolConnector.getConnection();
+             PreparedStatement prepStat  = conn.prepareStatement(SQL_SELECT_ORDERS_BY_USER_ID);) {
+            prepStat.setLong(1, userId);
+            ResultSet rs = prepStat.executeQuery();
+            while (rs.next()) {
+                Order order = new Order();
+                setOrderAllFields(order, rs);
+                orders.add(order);
+            }
+        }catch (SQLException e){
+            LOG.error("SQL exeprion (request or table failed) in method findOrderByUserId()", e);
+            throw new DAOException("SQL Exception ",e);
+        }
+        return orders;
+    }
+
+    public List<Order> fidOrdersByOrderStatus (OrderStatus orderStatus) throws DAOException {
+        List <Order> orders = new ArrayList<>();
+        try (Connection conn= DataBasePoolConnector.getConnection();
+             PreparedStatement prepStat  = conn.prepareStatement(SQL_SELECT_ORDERS_BY_ORDER_STATUS);) {
+            prepStat.setString(1, orderStatus.toString());
+            ResultSet rs = prepStat.executeQuery();
+            while (rs.next()) {
+                Order order = new Order();
+                setOrderAllFields(order, rs);
+                orders.add(order);
+            }
+        }catch (SQLException e){
+            LOG.error("SQL exeprion (request or table failed) in method findAll()", e);
+            throw new DAOException("SQL Exception ",e);
+        }
+        return orders;
+    }
+
     @Override
     public boolean deleteOrderById(Long id) throws DAOException {
+        if (id <=0){
+            throw new NumberFormatException();
+        }
         boolean result = false;
         try (Connection conn= DataBasePoolConnector.getConnection();
              PreparedStatement prepStat  = conn.prepareStatement(SQL_DELETE_ORDER_BY_ID)){
@@ -121,7 +161,6 @@ public class OrderDAOImpl implements OrderDAO <Long, Order>{
         }
         return false;
     }
-
 
     private void setOrderAllFields(Order order, ResultSet rs) throws SQLException {
         order.setId(rs.getLong("id"));
