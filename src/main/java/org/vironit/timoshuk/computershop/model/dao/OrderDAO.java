@@ -8,4 +8,5 @@ public interface OrderDAO <Key, Order> {
     boolean deleteOrderById (Key id) throws DAOException;
     boolean createOrder (Order order) throws DAOException;
     boolean update (Order order, Key id) throws DAOException;
+
 }

@@ -11,10 +11,17 @@ import lombok.ToString;
 @EqualsAndHashCode(callSuper = true)
 public class RAM extends Component {
     private String type;
-    private Integer memoryCapacity;
+    private String memoryCapacity;
 
-    public RAM(Long id, Integer price, String model, String maker, String type, Integer memoryCapacity) {
+    public RAM (){}
+
+    public RAM(Long id, Integer price, String model, String maker, String type, String memoryCapacity) {
         super(id, price, model, maker);
+        this.type = type;
+        this.memoryCapacity = memoryCapacity;
+    }
+
+    public RAM(String type, String memoryCapacity) {
         this.type = type;
         this.memoryCapacity = memoryCapacity;
     }

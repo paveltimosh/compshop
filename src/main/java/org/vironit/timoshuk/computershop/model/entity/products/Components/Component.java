@@ -1,11 +1,10 @@
 package org.vironit.timoshuk.computershop.model.entity.products.Components;
 
 
+import lombok.Builder;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
-
-import java.util.Objects;
 
 @Getter
 @Setter
@@ -21,5 +20,9 @@ public abstract class Component {
         this.price = price;
         this.model = model;
         this.maker = maker;
+    }
+
+    public Component (){
+
     }
 }

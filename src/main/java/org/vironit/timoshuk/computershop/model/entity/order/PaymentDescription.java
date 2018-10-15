@@ -14,8 +14,6 @@ import java.util.Date;
 
 public class PaymentDescription {
     private Long id;
-//TODO    private LocalDateTime datePayment;
-    private Timestamp dateTimeOfPayment;
-
+    private LocalDateTime dateTimeOfPayment;
     private TypePayment typePayment;
 }

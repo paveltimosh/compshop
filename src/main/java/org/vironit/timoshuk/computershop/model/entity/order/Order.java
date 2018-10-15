@@ -15,8 +15,7 @@ public class Order {
 
     private Long id;
     private Long idOfCustomer;
-//TODO    private LocalDateTime dateOrder;
-    private Timestamp dateTimeOfOrder;
+    private LocalDateTime dateTimeOfOrder;
     private int totalAmountOrder;
     private OrderStatus orderStatus;
     private PaymentDescription paymentDescription;
@@ -25,8 +24,8 @@ public class Order {
 
     }
 
-    public Order(Long id, Long idOfCustomer, Timestamp dateTimeOfOrder,
-                 int totalAmountOrder, OrderStatus orderStatus, PaymentDescription paymentDescription) {
+    public Order(Long id, Long idOfCustomer, LocalDateTime dateTimeOfOrder, int totalAmountOrder,
+                 OrderStatus orderStatus, PaymentDescription paymentDescription) {
         this.id = id;
         this.idOfCustomer = idOfCustomer;
         this.dateTimeOfOrder = dateTimeOfOrder;

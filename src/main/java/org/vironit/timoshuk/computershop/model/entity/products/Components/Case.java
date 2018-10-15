@@ -1,9 +1,6 @@
 package org.vironit.timoshuk.computershop.model.entity.products.Components;
 
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 @Getter
 @Setter
@@ -14,8 +11,18 @@ public class Case extends Component {
     private String typeOfCase;
     private String powerSupplyUnit;
 
+    public Case(){
+
+    }
+
     public Case(Long id, Integer price, String model, String maker, String material, String typeOfCase, String powerSupplyUnit) {
         super(id, price, model, maker);
+        this.material = material;
+        this.typeOfCase = typeOfCase;
+        this.powerSupplyUnit = powerSupplyUnit;
+    }
+
+    public Case(String material, String typeOfCase, String powerSupplyUnit) {
         this.material = material;
         this.typeOfCase = typeOfCase;
         this.powerSupplyUnit = powerSupplyUnit;

@@ -15,6 +15,7 @@ import java.sql.*;
 
 public class UserDAOImpl implements UserDAO<Long, User> {
 
+
     static private final Logger LOG = LogManager.getLogger(UserDAOImpl.class);
 
     private static final String SQL_SELECT_ALL_USERS = " SELECT * FROM users ";
@@ -39,7 +40,7 @@ public class UserDAOImpl implements UserDAO<Long, User> {
                     customers.add(user);
                 }
         } catch (SQLException e) {
-            LOG.error("SQL exeprion (request or table failed) in method findAll() ", e);
+            LOG.error("SQL exception (request or table failed) in method findAll() ", e);
             throw new DAOException("SQL Exception ",e);
         }
         return customers;
@@ -49,7 +50,7 @@ public class UserDAOImpl implements UserDAO<Long, User> {
     public User findUserById(Long id) throws DAOException {
         User user = new User();
         try (Connection conn = DataBasePoolConnector.getConnection();
-        PreparedStatement prepStat = conn.prepareStatement(SQL_SELECT_USER_BY_ID);) {
+        PreparedStatement prepStat = conn.prepareStatement(SQL_SELECT_USER_BY_ID)) {
             prepStat.setLong(1, id);
             ResultSet rs = prepStat.executeQuery();
             rs.next();
@@ -105,7 +106,7 @@ public class UserDAOImpl implements UserDAO<Long, User> {
         }
         return result;
     }
-    
+
     @Override
     public boolean update(User user, Long id) throws DAOException {
         boolean result = false;
