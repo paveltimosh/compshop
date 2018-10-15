@@ -18,7 +18,7 @@ import java.util.List;
 public class ComputerDAOImpl implements ComputerDAO <Long, Computer> {
 
     private static final Logger LOG = LogManager.getLogger(ComputerDAOImpl.class);
-    private static final String SQL_SELECT_ALL_COMPUTERS = "SELECT computers.id as id_comp, cases.id AS case_id, cases.maker AS case_maker,  cases.model AS case_model, cases.price AS case_price, cases.power_supply_unit AS case_power_supply_unit, cases.type_of_case AS case_type_of_case, cases.material AS case_material, " +
+    private static final String SQL_SELECT_ALL_COMPUTERS = "SELECT computers.id as id_comp,computers.description AS comp_descrip , cases.id AS case_id, cases.maker AS case_maker,  cases.model AS case_model, cases.price AS case_price, cases.power_supply_unit AS case_power_supply_unit, cases.type_of_case AS case_type_of_case, cases.material AS case_material, " +
             "cpu.id AS cpu_id, cpu.maker AS cpu_maker, cpu.model AS cpu_model, cpu.price AS cpu_price,  cpu.speed AS cpu_speed, cpu.processor_type AS cpu_processor_type, cpu.number_of_cores AS cpu_number_of_cores, " +
             "motherboards.id AS moth_id, motherboards.maker AS moth_maker, motherboards.model AS moth_model, motherboards.price AS moth_price, motherboards.cpu_socket_type AS moth_cpu_socket_type, motherboards.form_factor AS moth_form_factor, motherboards.memory_technology AS moth_memory_technology," +
             "rams.id AS ram_id, rams.maker AS ram_maker, rams.model AS ram_model, rams.price AS ram_price, rams.type AS ram_type, rams.memory_capacity AS rams_memory_capacity, " +
@@ -28,6 +28,23 @@ public class ComputerDAOImpl implements ComputerDAO <Long, Computer> {
             "AND (cpu.id = computers.id_cpu)" +
             "AND (rams.id = computers.id_ram)" +
             "AND (motherboards.id = computers.id_motherboard) ";
+    private static final String SQL_SELECT_COMPUTER_BY_ID = "SELECT computers.id as id_comp,computers.description AS comp_descrip , cases.id AS case_id, cases.maker AS case_maker,  cases.model AS case_model, cases.price AS case_price, cases.power_supply_unit AS case_power_supply_unit, cases.type_of_case AS case_type_of_case, cases.material AS case_material, " +
+            "cpu.id AS cpu_id, cpu.maker AS cpu_maker, cpu.model AS cpu_model, cpu.price AS cpu_price,  cpu.speed AS cpu_speed, cpu.processor_type AS cpu_processor_type, cpu.number_of_cores AS cpu_number_of_cores, " +
+            "motherboards.id AS moth_id, motherboards.maker AS moth_maker, motherboards.model AS moth_model, motherboards.price AS moth_price, motherboards.cpu_socket_type AS moth_cpu_socket_type, motherboards.form_factor AS moth_form_factor, motherboards.memory_technology AS moth_memory_technology," +
+            "rams.id AS ram_id, rams.maker AS ram_maker, rams.model AS ram_model, rams.price AS ram_price, rams.type AS ram_type, rams.memory_capacity AS rams_memory_capacity, " +
+            "videocards.id AS videocard_id, videocards.maker AS videocard_maker, videocards.model AS videocard_model, videocards.price AS videocard_price,videocards.type_graphics_processor AS videocard_type_graphics_processor, videocards.type_video_memory AS videocard_type_video_memory, videocards.video_capacity AS videocard_video_capacity " +
+            "FROM computers, cases, videocards, cpu, rams, motherboards " +
+            "WHERE  (cases.id = computers.id_case)" +
+            "AND (videocards.id = computers.id_videocard)" +
+            "AND (cpu.id = computers.id_cpu)" +
+            "AND (rams.id = computers.id_ram)" +
+            "AND (motherboards.id = computers.id_motherboard) " +
+            "AND computers.id = ?";
+    private static final String SQL_DELETE_COMPUTER_BY_ID = "DELETE FROM computers WHERE id = ?";
+    private static final String SQL_INSERT_INTO_COMPUTERS = "INSERT INTO computers " +
+            "(id, id_case, id_cpu, id_motherboard, id_ram, id_videocard, description) VALUES (?,?,?,?,?,?,?)";
+    private static final String SQL_UPDATE_COMPUTER_INFO = "UPDATE computers SET " +
+            "id_case=?, id_cpu=?, id_motherboard=?, id_ram=?, id_videocard=?, description=? WHERE id = ?";
 
 
     @Override
@@ -50,27 +67,81 @@ public class ComputerDAOImpl implements ComputerDAO <Long, Computer> {
     }
 
     @Override
-    public Computer findComputerById(Long id) {
-        return null;
+    public Computer findComputerById(Long id) throws DAOException {
+        Computer computer = new Computer();
+        try (Connection conn = DataBasePoolConnector.getConnection();
+             PreparedStatement prepStat = conn.prepareStatement(SQL_SELECT_COMPUTER_BY_ID)){
+            prepStat.setLong(1, id);
+            ResultSet rs = prepStat.executeQuery();
+            rs.next();
+            setComputerAllFields(computer, rs);
+        }catch (SQLException e){
+            LOG.error("SQL exception (request or table failed) in method findComputerById() ", e);
+            throw new DAOException("SQL Exception ",e);
+        }
+        return computer;
     }
 
     @Override
-    public boolean deleteComputerById(Long id) {
-        return false;
+    public boolean deleteComputerById(Long id) throws DAOException {
+        boolean result = false;
+        try (Connection conn = DataBasePoolConnector.getConnection();
+             PreparedStatement prepStat = conn.prepareStatement(SQL_DELETE_COMPUTER_BY_ID)) {
+            prepStat.setLong(1, id);
+            prepStat.executeUpdate();
+            result = true;
+        }catch (SQLException e){
+            LOG.error("SQL exception (request or table failed) in method deleteComputerById() ", e);
+            throw new DAOException("SQL Exception ",e);
+        }
+        return result;
     }
 
     @Override
-    public boolean createComputer(Computer computerDAO) {
-        return false;
+    public boolean createComputer(Computer computer) throws DAOException {
+        boolean result = false;
+        try (Connection conn = DataBasePoolConnector.getConnection();
+             PreparedStatement prepStat = conn.prepareStatement(SQL_INSERT_INTO_COMPUTERS)) {
+            prepStat.setLong(1, computer.getId());
+            prepStat.setLong(2, computer.getACase().getId());
+            prepStat.setLong(3, computer.getCpu().getId());
+            prepStat.setLong(4, computer.getMotherBoard().getId());
+            prepStat.setLong(5, computer.getRam().getId());
+            prepStat.setLong(6, computer.getVideoCard().getId());
+            prepStat.setString(7, computer.getCompDescription());
+            prepStat.executeUpdate();
+            result = true;
+        }catch (SQLException e){
+            LOG.error("SQL exception (request or table failed) in method createComputer() ", e);
+            throw new DAOException("SQL Exception ",e);
+        }
+        return result;
     }
 
     @Override
-    public boolean update(Computer computerDAO, Long id) {
-        return false;
+    public boolean update(Computer computer, Long id) throws DAOException {
+        boolean result = false;
+        try (Connection conn = DataBasePoolConnector.getConnection();
+             PreparedStatement prepStat = conn.prepareStatement(SQL_UPDATE_COMPUTER_INFO)) {
+            prepStat.setLong(7, computer.getId());
+            prepStat.setLong(1, computer.getACase().getId());
+            prepStat.setLong(2, computer.getCpu().getId());
+            prepStat.setLong(3, computer.getMotherBoard().getId());
+            prepStat.setLong(4, computer.getRam().getId());
+            prepStat.setLong(5, computer.getVideoCard().getId());
+            prepStat.setString(6, computer.getCompDescription());
+            prepStat.executeUpdate();
+            result = true;
+        }catch (SQLException e){
+            LOG.error("SQL exception (request or table failed) in method update() ", e);
+            throw new DAOException("SQL Exception ",e);
+        }
+        return result;
     }
 
     private void setComputerAllFields(Computer computer, ResultSet rs) throws SQLException {
         computer.setId(rs.getLong("id_comp"));
+        computer.setCompDescription(rs.getString("comp_descrip"));
         setCaseAllFields (computer, rs);
         setCPUAllFields (computer, rs);
         setMotherboardAllFields (computer, rs);
@@ -115,7 +186,6 @@ public class ComputerDAOImpl implements ComputerDAO <Long, Computer> {
         motherBoard.setMemoryTechnology(rs.getString("moth_memory_technology"));
         computer.setMotherBoard(motherBoard);
         LOG.info("method setMotherboardAllFields is worked");
-        //LOG.debug("id =" + motherBoard.getId());
     }
 
     private void setCPUAllFields(Computer computer, ResultSet rs) throws SQLException {

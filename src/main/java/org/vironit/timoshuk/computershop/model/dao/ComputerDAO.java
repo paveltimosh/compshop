@@ -4,8 +4,8 @@ import java.util.List;
 
 public interface ComputerDAO <Key, Computer>{
     List<Computer> findAll () throws DAOException;
-    Computer findComputerById (Key id);
-    boolean deleteComputerById (Key id);
-    boolean createComputer (Computer computer);
-    boolean update (Computer computer, Key id);
+    Computer findComputerById (Key id) throws DAOException;
+    boolean deleteComputerById (Key id) throws DAOException;
+    boolean createComputer (Computer computer) throws DAOException;
+    boolean update (Computer computer, Key id) throws DAOException;
 }

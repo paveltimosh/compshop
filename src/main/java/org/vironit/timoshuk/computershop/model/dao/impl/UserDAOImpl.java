@@ -27,7 +27,6 @@ public class UserDAOImpl implements UserDAO<Long, User> {
     private static final String SQL_UPDATE_USER_INFO = "UPDATE users SET first_name=?, last_name=?, address =?, email=?, phone_number=? WHERE id=?";
     private static final String SQL_UPDATE_USER_PASSWORD_BY_ID = "UPDATE users SET password=? WHERE id = ?";
 
-
     @Override
     public List<User> findAll() throws DAOException {
         List<User> customers = new ArrayList<>();
@@ -55,7 +54,6 @@ public class UserDAOImpl implements UserDAO<Long, User> {
             ResultSet rs = prepStat.executeQuery();
             rs.next();
             setUserAllFields(user, rs);
-
         } catch (SQLException e) {
             LOG.error("SQL exeprion (request or table failed)in method findUserById(Long id) ", e);
             throw new DAOException("SQL Exception ",e);
