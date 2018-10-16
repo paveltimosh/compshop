@@ -2,8 +2,8 @@ package org.vironit.timoshuk.computershop.model.dao.impl;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.vironit.timoshuk.computershop.model.dao.CaseDAO;
 import org.vironit.timoshuk.computershop.model.dao.DAOException;
+import org.vironit.timoshuk.computershop.model.dao.EntityDAOImpl;
 import org.vironit.timoshuk.computershop.model.entity.products.Components.Case;
 import org.vironit.timoshuk.computershop.model.util.DataBasePoolConnector;
 
@@ -14,7 +14,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CaseDAOIml implements CaseDAO <Long, Case> {
+public class CaseDAOIml extends EntityDAOImpl<Long, Case> {
 
     private static final Logger LOG = LogManager.getLogger(CaseDAOIml.class);
 
@@ -43,9 +43,8 @@ public class CaseDAOIml implements CaseDAO <Long, Case> {
         return cases;
     }
 
-
     @Override
-    public Case findCaseById(Long id) throws DAOException {
+    public Case findEntityById(Long id) throws DAOException {
         Case aCase = new Case();
         try (Connection conn = DataBasePoolConnector.getConnection();
              PreparedStatement prepStat = conn.prepareStatement(SQL_SELECT_CASE_BY_ID)) {
@@ -61,12 +60,17 @@ public class CaseDAOIml implements CaseDAO <Long, Case> {
     }
 
     @Override
-    public boolean deleteCaseById(Long id) {
+    public boolean deleteEntity(Case user) throws DAOException {
         return false;
     }
 
     @Override
-    public boolean createCase(Case aCase) {
+    public boolean deleteEntityById(Long id) {
+        return false;
+    }
+
+    @Override
+    public boolean createEntity(Case aCase) {
         return false;
     }
 

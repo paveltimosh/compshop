@@ -2,8 +2,8 @@ package org.vironit.timoshuk.computershop.model.dao.impl;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.vironit.timoshuk.computershop.model.dao.ComputerDAO;
 import org.vironit.timoshuk.computershop.model.dao.DAOException;
+import org.vironit.timoshuk.computershop.model.dao.EntityDAOImpl;
 import org.vironit.timoshuk.computershop.model.entity.products.Components.*;
 import org.vironit.timoshuk.computershop.model.entity.products.Computer;
 import org.vironit.timoshuk.computershop.model.util.DataBasePoolConnector;
@@ -15,7 +15,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ComputerDAOImpl implements ComputerDAO <Long, Computer> {
+public class ComputerDAOImpl extends EntityDAOImpl<Long, Computer> {
 
     private static final Logger LOG = LogManager.getLogger(ComputerDAOImpl.class);
     private static final String SQL_SELECT_ALL_COMPUTERS = "SELECT computers.id as id_comp,computers.description AS comp_descrip , cases.id AS case_id, cases.maker AS case_maker,  cases.model AS case_model, cases.price AS case_price, cases.power_supply_unit AS case_power_supply_unit, cases.type_of_case AS case_type_of_case, cases.material AS case_material, " +
@@ -67,7 +67,7 @@ public class ComputerDAOImpl implements ComputerDAO <Long, Computer> {
     }
 
     @Override
-    public Computer findComputerById(Long id) throws DAOException {
+    public Computer findEntityById(Long id) throws DAOException {
         Computer computer = new Computer();
         try (Connection conn = DataBasePoolConnector.getConnection();
              PreparedStatement prepStat = conn.prepareStatement(SQL_SELECT_COMPUTER_BY_ID)){
@@ -83,7 +83,12 @@ public class ComputerDAOImpl implements ComputerDAO <Long, Computer> {
     }
 
     @Override
-    public boolean deleteComputerById(Long id) throws DAOException {
+    public boolean deleteEntity(Computer entity) throws DAOException {
+        return deleteEntityById(entity.getId());
+    }
+
+    @Override
+    public boolean deleteEntityById(Long id) throws DAOException {
         boolean result = false;
         try (Connection conn = DataBasePoolConnector.getConnection();
              PreparedStatement prepStat = conn.prepareStatement(SQL_DELETE_COMPUTER_BY_ID)) {
@@ -98,7 +103,7 @@ public class ComputerDAOImpl implements ComputerDAO <Long, Computer> {
     }
 
     @Override
-    public boolean createComputer(Computer computer) throws DAOException {
+    public boolean createEntity(Computer computer) throws DAOException {
         boolean result = false;
         try (Connection conn = DataBasePoolConnector.getConnection();
              PreparedStatement prepStat = conn.prepareStatement(SQL_INSERT_INTO_COMPUTERS)) {

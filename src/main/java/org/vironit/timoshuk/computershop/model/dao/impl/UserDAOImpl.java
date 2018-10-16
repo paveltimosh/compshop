@@ -4,7 +4,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import org.vironit.timoshuk.computershop.model.dao.DAOException;
-import org.vironit.timoshuk.computershop.model.dao.UserDAO;
+import org.vironit.timoshuk.computershop.model.dao.EntityDAOImpl;
 import org.vironit.timoshuk.computershop.model.entity.users.User;
 import org.vironit.timoshuk.computershop.model.entity.users.UserType;
 import org.vironit.timoshuk.computershop.model.util.DataBasePoolConnector;
@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.sql.*;
 
-public class UserDAOImpl implements UserDAO<Long, User> {
+public class UserDAOImpl extends EntityDAOImpl<Long, User> {
 
 
     static private final Logger LOG = LogManager.getLogger(UserDAOImpl.class);
@@ -46,7 +46,7 @@ public class UserDAOImpl implements UserDAO<Long, User> {
     }
 
     @Override
-    public User findUserById(Long id) throws DAOException {
+    public User findEntityById(Long id) throws DAOException {
         User user = new User();
         try (Connection conn = DataBasePoolConnector.getConnection();
         PreparedStatement prepStat = conn.prepareStatement(SQL_SELECT_USER_BY_ID)) {
@@ -60,9 +60,10 @@ public class UserDAOImpl implements UserDAO<Long, User> {
         }
         return user;
     }
+    
 
     @Override
-    public boolean deleteUserById(Long id) throws DAOException {
+    public boolean deleteEntityById(Long id) throws DAOException {
         boolean result = false;
         try (Connection conn = DataBasePoolConnector.getConnection();
              PreparedStatement prepStat = conn.prepareStatement(SQL_DELETE_USER_BY_ID)) {
@@ -77,12 +78,12 @@ public class UserDAOImpl implements UserDAO<Long, User> {
     }
 
     @Override
-    public boolean deleteUser(User user) throws DAOException {
-        return deleteUserById(user.getId());
+    public boolean deleteEntity(User user) throws DAOException {
+        return deleteEntityById(user.getId());
     }
 
     @Override
-    public boolean createUser(User user) throws DAOException {
+    public boolean createEntity(User user) throws DAOException {
         boolean result = false;
         try (Connection conn = DataBasePoolConnector.getConnection();
              PreparedStatement prepStat = conn.prepareStatement(SQL_INSERT_INTO_USERS)) {

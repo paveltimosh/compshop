@@ -3,7 +3,7 @@ package org.vironit.timoshuk.computershop.model.dao.impl;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.vironit.timoshuk.computershop.model.dao.DAOException;
-import org.vironit.timoshuk.computershop.model.dao.OrderDAO;
+import org.vironit.timoshuk.computershop.model.dao.EntityDAOImpl;
 import org.vironit.timoshuk.computershop.model.entity.order.Order;
 import org.vironit.timoshuk.computershop.model.entity.order.OrderStatus;
 import org.vironit.timoshuk.computershop.model.entity.order.PaymentDescription;
@@ -16,7 +16,7 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-public class OrderDAOImpl implements OrderDAO <Long, Order>{
+public class OrderDAOImpl extends EntityDAOImpl<Long, Order> {
 
     private static final Logger LOG = LogManager.getLogger(OrderDAOImpl.class);
 
@@ -52,7 +52,7 @@ public class OrderDAOImpl implements OrderDAO <Long, Order>{
     }
 
     @Override
-    public Order findOrderById(Long id) throws DAOException {
+    public Order findEntityById(Long id) throws DAOException {
         if (id <0){
             LOG.error("Illegal argument exception in method findOrderById, id = " + id);
             throw new IllegalArgumentException();
@@ -71,7 +71,12 @@ public class OrderDAOImpl implements OrderDAO <Long, Order>{
         return order;
     }
 
-    public List<Order> findOrdersByUserId (Long userId) throws DAOException {
+    @Override
+    public boolean deleteEntity(Order entity) throws DAOException {
+        return deleteEntityById(entity.getId());
+    }
+
+    public List<Order> findEntityByUserId (Long userId) throws DAOException {
         if (userId <0){
             LOG.error("IllegalArgument exception for userId in method findOrdersByUserId, userId = " + userId);
             throw new IllegalArgumentException();
@@ -130,7 +135,7 @@ public class OrderDAOImpl implements OrderDAO <Long, Order>{
     }
 
     @Override
-    public boolean deleteOrderById(Long id) throws DAOException {
+    public boolean deleteEntityById(Long id) throws DAOException {
         if (id <=0){
             throw new NumberFormatException();
         }
@@ -148,7 +153,7 @@ public class OrderDAOImpl implements OrderDAO <Long, Order>{
     }
 
     @Override
-    public boolean createOrder(Order order) throws DAOException {
+    public boolean createEntity(Order order) throws DAOException {
         boolean result = false;
         try (Connection conn= DataBasePoolConnector.getConnection();
              PreparedStatement prepStat  = conn.prepareStatement(SQL_INSERT_INTO_ORDERS)){
