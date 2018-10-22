@@ -10,12 +10,17 @@ import org.vironit.timoshuk.computershop.model.entity.order.PaymentDescription;
 import org.vironit.timoshuk.computershop.model.entity.order.TypePayment;
 import org.vironit.timoshuk.computershop.model.entity.products.Computer;
 
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Main {
+public class Main extends HttpServlet {
 
     public static void main(String[] args) {
         ComputerDAOImpl computerDAO = new ComputerDAOImpl();
@@ -53,7 +58,7 @@ public class Main {
                 .build();
 
         try {
-//            orderDAO.createOrder(order1);
+            orderDAO.createEntity(order1);
             orders = orderDAO.findOrdersByDateOfOrder(LocalDate.now());
             for (Order order : orders) {
                 System.out.println(order);
@@ -62,5 +67,15 @@ public class Main {
         } catch (DAOException daoExсeption) {
             daoExсeption.printStackTrace();
         }
+    }
+
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        super.doGet(req, resp);
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        super.doPost(req, resp);
     }
 }

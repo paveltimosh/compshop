@@ -1,5 +1,11 @@
+<%@ page contentType="text/html; charset=UTF-8" language="java" pageEncoding="UTF-8" %>
 <html>
+<head>
+    <title>
+
+    </title>
+</head>
 <body>
-<h2>Hello World!</h2>
+<jsp:forward page="WEB-INF/jsp/register.jsp"/>
 </body>
 </html>

@@ -46,7 +46,6 @@ public class ComputerDAOImpl extends EntityDAOImpl<Long, Computer> {
     private static final String SQL_UPDATE_COMPUTER_INFO = "UPDATE computers SET " +
             "id_case=?, id_cpu=?, id_motherboard=?, id_ram=?, id_videocard=?, description=? WHERE id = ?";
 
-
     @Override
     public List<Computer> findAll() throws DAOException {
         List <Computer> computers = new ArrayList<>();
@@ -58,7 +57,6 @@ public class ComputerDAOImpl extends EntityDAOImpl<Long, Computer> {
                 setComputerAllFields (computer, rs);
                 computers.add(computer);
             }
-
         }catch (SQLException e){
             LOG.error("SQL exception (request or table failed) in method findAll() ", e);
             throw new DAOException("SQL Exception ",e);
@@ -165,7 +163,6 @@ public class ComputerDAOImpl extends EntityDAOImpl<Long, Computer> {
         videoCard.setVideoCapacity(rs.getString("videocard_video_capacity"));
         computer.setVideoCard(videoCard);
         LOG.info("method setVideocardAllFields is worked");
-
     }
 
     private void setRAMAllFields(Computer computer, ResultSet rs) throws SQLException {

@@ -15,7 +15,6 @@ import java.sql.*;
 
 public class UserDAOImpl extends EntityDAOImpl<Long, User> {
 
-
     static private final Logger LOG = LogManager.getLogger(UserDAOImpl.class);
 
     private static final String SQL_SELECT_ALL_USERS = " SELECT * FROM users ";
@@ -60,7 +59,7 @@ public class UserDAOImpl extends EntityDAOImpl<Long, User> {
         }
         return user;
     }
-    
+
 
     @Override
     public boolean deleteEntityById(Long id) throws DAOException {
@@ -144,13 +143,29 @@ public class UserDAOImpl extends EntityDAOImpl<Long, User> {
     public boolean updateUserPasswordById (String newPassword, Long id) throws DAOException {
         boolean result = false;
         try (Connection conn = DataBasePoolConnector.getConnection();
-             PreparedStatement prepStat = conn.prepareStatement(SQL_UPDATE_USER_PASSWORD_BY_ID);) {
+             PreparedStatement prepStat = conn.prepareStatement(SQL_UPDATE_USER_PASSWORD_BY_ID)) {
             prepStat.setLong(2, id);
             prepStat.setString(1, newPassword);
             prepStat.executeUpdate();
             result = true;
         }catch (SQLException e){
             LOG.error("SQL exeprion (request or table failed)in method updateUserPasswordById ", e);
+            throw new DAOException("SQL Exception ",e);
+        }
+        return result;
+    }
+
+    public boolean checkLogin (String enterLogin) throws DAOException {
+        boolean result = false;
+        try (Connection conn = DataBasePoolConnector.getConnection();
+             PreparedStatement prepStat = conn.prepareStatement(SQL_SELECT_USER_BY_LOGIN)){
+            prepStat.setString(1, enterLogin);
+            ResultSet resultSet = prepStat.executeQuery();
+            if (resultSet.next()){
+                result = true;
+            }
+        }catch (SQLException e){
+            LOG.error("SQL exception (request or table failed)in method checkLogin ", e);
             throw new DAOException("SQL Exception ",e);
         }
         return result;
