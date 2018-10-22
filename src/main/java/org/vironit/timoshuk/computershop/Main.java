@@ -1,14 +1,14 @@
 package org.vironit.timoshuk.computershop;
 
-import org.vironit.timoshuk.computershop.model.dao.DAOException;
-import org.vironit.timoshuk.computershop.model.dao.impl.ComputerDAOImpl;
-import org.vironit.timoshuk.computershop.model.dao.impl.OrderDAOImpl;
-import org.vironit.timoshuk.computershop.model.dao.impl.UserDAOImpl;
-import org.vironit.timoshuk.computershop.model.entity.order.Order;
-import org.vironit.timoshuk.computershop.model.entity.order.OrderStatus;
-import org.vironit.timoshuk.computershop.model.entity.order.PaymentDescription;
-import org.vironit.timoshuk.computershop.model.entity.order.TypePayment;
-import org.vironit.timoshuk.computershop.model.entity.products.Computer;
+import org.vironit.timoshuk.computershop.dao.DAOException;
+import org.vironit.timoshuk.computershop.dao.impl.ComputerDAOImpl;
+import org.vironit.timoshuk.computershop.dao.impl.OrderDAOImpl;
+import org.vironit.timoshuk.computershop.dao.impl.UserDAOImpl;
+import org.vironit.timoshuk.computershop.entity.order.Order;
+import org.vironit.timoshuk.computershop.entity.order.OrderStatus;
+import org.vironit.timoshuk.computershop.entity.order.PaymentDescription;
+import org.vironit.timoshuk.computershop.entity.order.TypePayment;
+import org.vironit.timoshuk.computershop.entity.products.Computer;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;

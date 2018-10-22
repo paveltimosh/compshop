@@ -78,8 +78,8 @@
       <ObjectId>2200</ObjectId>
       <Comment>standard public schema</Comment>
       <Owner>postgres</Owner>
-      <IntrospectionTimestamp>2018-10-15.16:49:02.778</IntrospectionTimestamp>
-      <IntrospectionStateNumber>804</IntrospectionStateNumber>
+      <IntrospectionTimestamp>2018-10-22.17:28:00.589</IntrospectionTimestamp>
+      <IntrospectionStateNumber>808</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -191,7 +191,7 @@
     <table id="32" parent="15" name="users">
       <ObjectId>16394</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>656</StateNumber>
+      <StateNumber>808</StateNumber>
     </table>
     <table id="33" parent="15" name="videocards">
       <ObjectId>16469</ObjectId>
@@ -674,24 +674,24 @@
       <StateNumber>584</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="111" parent="32" name="id_card">
-      <Position>8</Position>
-      <DataType>integer|0s</DataType>
-      <StateNumber>585</StateNumber>
-      <TypeId>23</TypeId>
-    </column>
-    <column id="112" parent="32" name="phone_number">
+    <column id="111" parent="32" name="phone_number">
       <Position>10</Position>
       <DataType>varchar(20)|0s</DataType>
       <StateNumber>591</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="113" parent="32" name="user_type">
+    <column id="112" parent="32" name="user_type">
       <Position>11</Position>
       <DataType>varchar(10)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>594</StateNumber>
       <DefaultExpression>USER</DefaultExpression>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="113" parent="32" name="id_card">
+      <Position>12</Position>
+      <DataType>varchar|0s</DataType>
+      <StateNumber>808</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <index id="114" parent="32" name="pk_id">
