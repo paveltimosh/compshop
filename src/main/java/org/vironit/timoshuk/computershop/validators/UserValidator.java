@@ -67,7 +67,7 @@ public class UserValidator {
             }
             if ((UserValidator.checkEmail(email))){
                 if(UserValidator.checkEmailFromDB(email)){
-                    errorMessage.put("errorMessage", MessageManager.getProperty("message.emailInUse"));
+                    errorMessage.put("errorEmailMessage", MessageManager.getProperty("message.emailInUse"));
                 }
             }else {
                 errorMessage.put("errorEmailMessage", MessageManager.getProperty("message.emailIncorrect"));

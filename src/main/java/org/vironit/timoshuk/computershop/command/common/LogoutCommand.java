@@ -4,12 +4,15 @@ import org.vironit.timoshuk.computershop.command.ActionCommand;
 import org.vironit.timoshuk.computershop.resource.URLManager;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
-public class EmptyCommand implements ActionCommand {
+public class LogoutCommand implements ActionCommand {
 
     @Override
     public String execute(HttpServletRequest request) {
         String page = URLManager.getProperty("path.page.index");
+        request.getSession().invalidate();
+        HttpSession session = request.getSession(true);
         return page;
     }
 }

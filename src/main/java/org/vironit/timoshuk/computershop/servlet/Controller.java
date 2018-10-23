@@ -2,8 +2,8 @@ package org.vironit.timoshuk.computershop.servlet;
 
 import org.vironit.timoshuk.computershop.command.ActionCommand;
 import org.vironit.timoshuk.computershop.command.factory.ActionFactory;
-import org.vironit.timoshuk.computershop.resource.ConfigurationManager;
 import org.vironit.timoshuk.computershop.resource.MessageManager;
+import org.vironit.timoshuk.computershop.resource.URLManager;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -33,7 +33,7 @@ public class Controller extends HttpServlet {
             RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(page);
             dispatcher.forward(req,resp);
         }else {
-            page = ConfigurationManager.getProperty("path.page.index");
+            page = URLManager.getProperty("path.page.index");
             req.getSession().setAttribute("nullPage", MessageManager.getProperty("message.nullPage"));
             resp.sendRedirect(req.getContextPath() + page);
         }

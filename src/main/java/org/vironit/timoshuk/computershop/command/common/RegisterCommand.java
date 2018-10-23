@@ -5,8 +5,8 @@ import org.vironit.timoshuk.computershop.dao.DAOException;
 import org.vironit.timoshuk.computershop.dao.impl.UserDAOImpl;
 import org.vironit.timoshuk.computershop.entity.users.User;
 import org.vironit.timoshuk.computershop.entity.users.UserType;
-import org.vironit.timoshuk.computershop.resource.ConfigurationManager;
 import org.vironit.timoshuk.computershop.resource.MessageManager;
+import org.vironit.timoshuk.computershop.resource.URLManager;
 import org.vironit.timoshuk.computershop.validators.UserValidator;
 
 import javax.servlet.http.HttpServletRequest;
@@ -46,12 +46,11 @@ public class RegisterCommand implements ActionCommand {
             try {
                 if (new UserDAOImpl().createEntity(user)){
                     request.setAttribute("registerSuccess", MessageManager.getProperty("message.registerSuccess"));
-                    //TODO change path of page from index to another
-                    page = ConfigurationManager.getProperty("path.page.index");
+                    page = URLManager.getProperty("path.page.login");
                 }
                 else {
                     request.setAttribute("", MessageManager.getProperty("message.registerUnSuccess"));
-                    page = ConfigurationManager.getProperty("path.page.register");
+                    page = URLManager.getProperty("path.page.register");
                 }
             } catch (DAOException e) {
                 e.printStackTrace();
@@ -61,7 +60,7 @@ public class RegisterCommand implements ActionCommand {
                 request.setAttribute(entry.getKey(), entry.getValue());
                 System.out.println(entry.getKey() + " " + entry.getValue());
             }
-            page = ConfigurationManager.getProperty("path.page.register");
+            page = URLManager.getProperty("path.page.register");
         }
         return page;
     }

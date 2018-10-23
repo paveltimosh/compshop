@@ -1,4 +1,4 @@
-package org.vironit.timoshuk.computershop.model.entity.products.Components;
+package org.vironit.timoshuk.computershop.entity.products.Components;
 
 import lombok.*;
 

@@ -1,15 +1,15 @@
-package org.vironit.timoshuk.computershop.model.entity.products.Components;
+package org.vironit.timoshuk.computershop.entity.products.Components;
 
 
-import lombok.Builder;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
+import org.vironit.timoshuk.computershop.entity.products.Item;
 
 @Getter
 @Setter
-@EqualsAndHashCode()
-public abstract class Component {
+@EqualsAndHashCode(callSuper = true)
+public abstract class Component extends Item {
     private Long id;
     private Integer price;
     private String model;

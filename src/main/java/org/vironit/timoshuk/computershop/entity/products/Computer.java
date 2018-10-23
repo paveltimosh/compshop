@@ -7,9 +7,9 @@ import org.vironit.timoshuk.computershop.entity.products.Components.*;
 
 @Getter
 @Setter
-@EqualsAndHashCode()
+@EqualsAndHashCode(callSuper = true)
 
-public class Computer {
+public class Computer extends Item{
 
     private Long id;
     private Integer price;

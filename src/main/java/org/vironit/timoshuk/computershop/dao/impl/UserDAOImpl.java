@@ -132,8 +132,9 @@ public class UserDAOImpl extends EntityDAOImpl<Long, User> {
              PreparedStatement prepStat = conn.prepareStatement(SQL_SELECT_USER_BY_LOGIN);) {
             prepStat.setString(1, login);
             ResultSet rs = prepStat.executeQuery();
-            rs.next();
+            if (rs.next()){
             setUserAllFields(user, rs);
+            }else user = null;
         } catch (SQLException e) {
             LOG.error("SQL exeprion (request or table failed)in method findUserByLogin (String login) ", e);
             throw new DAOException("SQL Exception ",e);
