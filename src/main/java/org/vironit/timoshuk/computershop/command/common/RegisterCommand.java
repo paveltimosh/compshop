@@ -1,5 +1,7 @@
 package org.vironit.timoshuk.computershop.command.common;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.vironit.timoshuk.computershop.command.ActionCommand;
 import org.vironit.timoshuk.computershop.dao.DAOException;
 import org.vironit.timoshuk.computershop.dao.impl.UserDAOImpl;
@@ -14,6 +16,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class RegisterCommand implements ActionCommand {
+
+    private final static Logger LOG = LogManager.getLogger(RegisterCommand.class);
 
     private static final String PARAM_NAME_LOGIN = "login";
     private static final String PARAM_NAME_PASSWORD = "password";
@@ -47,18 +51,18 @@ public class RegisterCommand implements ActionCommand {
                 if (new UserDAOImpl().createEntity(user)){
                     request.setAttribute("registerSuccess", MessageManager.getProperty("message.registerSuccess"));
                     page = URLManager.getProperty("path.page.login");
+                    LOG.info("The registration of user with login" + user.getLogin() + " is successful");
                 }
                 else {
                     request.setAttribute("", MessageManager.getProperty("message.registerUnSuccess"));
                     page = URLManager.getProperty("path.page.register");
                 }
             } catch (DAOException e) {
-                e.printStackTrace();
+                LOG.error("DAO Exception in method execute");
             }
         } else {
             for (Map.Entry<String, String> entry: errorMessages.entrySet()){
                 request.setAttribute(entry.getKey(), entry.getValue());
-                System.out.println(entry.getKey() + " " + entry.getValue());
             }
             page = URLManager.getProperty("path.page.register");
         }

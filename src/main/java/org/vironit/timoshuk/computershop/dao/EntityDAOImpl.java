@@ -9,5 +9,5 @@ public abstract class EntityDAOImpl<K, T> implements EntityDAO<K, T>   {
     public  abstract boolean deleteEntity(T entity) throws DAOException;
     public  abstract boolean deleteEntityById(K id) throws DAOException;
     public  abstract boolean createEntity(T entity) throws DAOException;
-    public  abstract boolean update(T entity, K id) throws DAOException;
+    public  abstract boolean update(T entity) throws DAOException;
 }

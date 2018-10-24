@@ -4,6 +4,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.vironit.timoshuk.computershop.dao.DAOException;
 import org.vironit.timoshuk.computershop.dao.impl.UserDAOImpl;
+import org.vironit.timoshuk.computershop.entity.users.User;
 import org.vironit.timoshuk.computershop.resource.MessageManager;
 
 import java.util.HashMap;
@@ -100,4 +101,37 @@ public class UserValidator {
         return errorMessage;
     }
 
+    public static HashMap<String, String> checkUserDataWithoutLoginPassword(User user, String email, String firstName, String lastName,
+                                                                             String phoneNumber, String address, String idBankCard) {
+
+        HashMap <String, String> errorMessage = new HashMap<>();
+        try {
+            if ((UserValidator.checkEmail(email))){
+                if(!user.getEmail().equals(email) && UserValidator.checkEmailFromDB(email)){
+                    errorMessage.put("errorEmailMessage", MessageManager.getProperty("message.emailInUse"));
+                }
+            }else {
+                errorMessage.put("errorEmailMessage", MessageManager.getProperty("message.emailIncorrect"));
+            }
+        } catch (DAOException e) {
+            LOG.error("DAO Exception");
+        }
+        if (!(UserValidator.checkFirstName(firstName))){
+            errorMessage.put("errorFirstNameMessage",MessageManager.getProperty("message.firstNameIncorrect"));
+        }
+        if (!(UserValidator.checkLastName(lastName))){
+            errorMessage.put("errorLastNameMessage",MessageManager.getProperty("message.lastNameIncorrect"));
+        }
+        if(UserValidator.checkIdCard(idBankCard)){
+            if(idBankCard.length() != 16) {
+                errorMessage.put("errorIdCardMessage",MessageManager.getProperty("message.idCardLengthNot16"));
+            }
+        }else {
+            errorMessage.put("errorIdCardMessage", MessageManager.getProperty("message.idCardIncorrect"));
+        }
+        if(!UserValidator.checkPhoneNumber(phoneNumber)){
+            errorMessage.put("errorPhoneMessage",MessageManager.getProperty("message.phoneNumberIncorrect"));
+        }
+        return errorMessage;
+    }
 }

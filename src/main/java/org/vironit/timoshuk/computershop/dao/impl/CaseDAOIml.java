@@ -75,7 +75,7 @@ public class CaseDAOIml extends EntityDAOImpl<Long, Case> {
     }
 
     @Override
-    public boolean update(Case aCase, Long id) {
+    public boolean update(Case aCase) {
         return false;
     }
 

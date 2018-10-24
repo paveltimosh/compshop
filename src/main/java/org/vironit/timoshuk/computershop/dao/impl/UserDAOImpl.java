@@ -24,7 +24,7 @@ public class UserDAOImpl extends EntityDAOImpl<Long, User> {
     private static final String SQL_DELETE_USER_BY_ID = "DELETE FROM users WHERE id = ?";
     private static final String SQL_INSERT_INTO_USERS = "INSERT INTO users  " +
         "( login, password, address, email, first_name, last_name, id_card, user_type, phone_number )VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?) ";
-    private static final String SQL_UPDATE_USER_INFO = "UPDATE users SET first_name=?, last_name=?, address =?, email=?, phone_number=? WHERE id=?";
+    private static final String SQL_UPDATE_USER_INFO = "UPDATE users SET first_name=?, last_name=?, address =?, email=?, phone_number=?, id_card=? WHERE id=?";
     private static final String SQL_UPDATE_USER_PASSWORD_BY_ID = "UPDATE users SET password=? WHERE id = ?";
 
     @Override
@@ -107,21 +107,22 @@ public class UserDAOImpl extends EntityDAOImpl<Long, User> {
     }
 
     @Override
-    public boolean update(User user, Long id) throws DAOException {
+    public boolean update(User user) throws DAOException {
         boolean result = false;
         try (Connection conn = DataBasePoolConnector.getConnection();
              PreparedStatement prepStat = conn.prepareStatement(SQL_UPDATE_USER_INFO)) {
-            prepStat.setLong(6,id);
+            prepStat.setLong(7,user.getId());
             prepStat.setString(1, user.getFirstName());
             prepStat.setString(2, user.getLastName());
             prepStat.setString(3,user.getAddress());
             prepStat.setString(4,user.getEmail());
             prepStat.setString(5, user.getPhoneNumber());
+            prepStat.setString(6, user.getIdCard());
             prepStat.executeUpdate();
             result = true;
         }catch (SQLException e){
             LOG.info("SQL exeprion (request or table failed) in method update(User user)", e);
-            throw new DAOException("SQL Exception ",e);
+            throw new DAOException("SQL Exception ", e);
         }
         return result;
     }

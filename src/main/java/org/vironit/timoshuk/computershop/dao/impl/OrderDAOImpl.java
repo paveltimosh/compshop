@@ -176,11 +176,11 @@ public class OrderDAOImpl extends EntityDAOImpl<Long, Order> {
     }
 
     @Override
-    public boolean update(Order order, Long id) throws DAOException {
+    public boolean update(Order order) throws DAOException {
         boolean result = false;
         try (Connection conn= DataBasePoolConnector.getConnection();
              PreparedStatement prepStat  = conn.prepareStatement(SQL_UPDATE_ORDER_BY_ID)){
-            prepStat.setLong(8, id);
+            prepStat.setLong(8, order.getId());
             prepStat.setDate(1, Date.valueOf(order.getDateTimeOfOrder().toLocalDate()));
             prepStat.setInt(2, order.getTotalAmountOrder());
             prepStat.setString(3, order.getOrderStatus().toString());

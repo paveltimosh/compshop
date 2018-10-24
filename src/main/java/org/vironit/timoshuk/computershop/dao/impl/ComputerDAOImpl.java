@@ -122,7 +122,7 @@ public class ComputerDAOImpl extends EntityDAOImpl<Long, Computer> {
     }
 
     @Override
-    public boolean update(Computer computer, Long id) throws DAOException {
+    public boolean update(Computer computer) throws DAOException {
         boolean result = false;
         try (Connection conn = DataBasePoolConnector.getConnection();
              PreparedStatement prepStat = conn.prepareStatement(SQL_UPDATE_COMPUTER_INFO)) {

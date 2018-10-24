@@ -10,7 +10,6 @@
   <packaging>war</packaging>
 
   <name>computershop Maven Webapp</name>
-  <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
   <properties>
@@ -27,13 +26,11 @@
       <scope>test</scope>
     </dependency>
 
-    <!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
     <dependency>
       <groupId>org.postgresql</groupId>
       <artifactId>postgresql</artifactId>
       <version>42.2.5</version>
     </dependency>
-
 
     <dependency>
       <groupId>org.projectlombok</groupId>
@@ -54,7 +51,6 @@
       <version>1.7.21</version>
     </dependency>
 
-
     <dependency>
       <groupId>org.apache.logging.log4j</groupId>
       <artifactId>log4j-api</artifactId>
@@ -66,13 +62,12 @@
       <version>2.4.1</version>
     </dependency>
 
-      <!-- https://mvnrepository.com/artifact/org.testng/testng -->
-      <dependency>
-          <groupId>org.testng</groupId>
-          <artifactId>testng</artifactId>
-          <version>6.14.3</version>
-          <scope>test</scope>
-      </dependency>
+    <dependency>
+        <groupId>org.testng</groupId>
+        <artifactId>testng</artifactId>
+        <version>6.14.3</version>
+        <scope>test</scope>
+    </dependency>
 
 
   </dependencies>

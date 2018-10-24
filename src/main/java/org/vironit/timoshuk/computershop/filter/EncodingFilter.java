@@ -22,7 +22,6 @@ public class EncodingFilter implements Filter {
         }
         filterChain.doFilter(servletRequest, servletResponse);
     }
-
     public void destroy() {
         code = null;
     }

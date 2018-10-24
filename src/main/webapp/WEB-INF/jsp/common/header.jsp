@@ -10,8 +10,8 @@
     <div>
         <c:choose>
             <c:when test="${sessionScope.user == null}">
-                You can register <a href="/WEB-INF/jsp/register.jsp" class="button tiny" > Register </a> <br>
-                Or you can login <a href="<%= request.getContextPath() %>/WEB-INF/jsp/login.jsp" class="button tiny"> Login </a>
+                You can register <a href="/WEB-INF/jsp/register.jsp" class="button" > Register </a> <br>
+                Or you can login <a href="<%= request.getContextPath() %>/WEB-INF/jsp/login.jsp" class="button"> Login </a>
             </c:when>
             <c:otherwise>
 

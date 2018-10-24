@@ -12,7 +12,6 @@ import org.vironit.timoshuk.computershop.resource.MessageManager;
 import org.vironit.timoshuk.computershop.resource.URLManager;
 
 import javax.servlet.http.HttpServletRequest;
-import java.net.URL;
 import java.util.HashMap;
 
 public class LoginCommand implements ActionCommand {
@@ -35,13 +34,14 @@ public class LoginCommand implements ActionCommand {
                     request.getSession().setAttribute("user", user);
                     request.getSession().setAttribute("role", user.getUserType());
                     request.getSession().setAttribute("cart", cart);
-                    page = URLManager.getProperty("path.page.main");
+                    //TODO
+                    page = URLManager.getProperty("path.page.user.changeUser");
                 }else {
                     request.setAttribute("wrongPassword", MessageManager.getProperty("message.passwordError"));
                     page = URLManager.getProperty("path.page.login");
+                    LOG.info("The  user with login" + user.getLogin() + " is logged in");
                 }
             }else {
-                System.out.println("Юзер не найден");
                 request.setAttribute("userNotFound", MessageManager.getProperty("message.loginError"));
                 page = URLManager.getProperty("path.page.login");
             }
