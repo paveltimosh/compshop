@@ -15,6 +15,6 @@
     <input type="submit" class="button" name="loginButton" value="Login" /><br/>
 <form/>
 
-<%@include file="/WEB-INF/jsp/common/footer.jsp"%>
+<%@include file="/WEB-INF/jsp/common/footer.jspf"%>
 </body>
 </html>

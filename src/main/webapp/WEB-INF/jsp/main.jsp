@@ -5,10 +5,10 @@
     <title>Computer shop</title>
 </head>
 <body>
-<%@include file="/WEB-INF/jsp/common/header.jsp"%>
+<%@include file="/WEB-INF/jsp/common/header.jspf"%>
 
 <h1> Тута будет мой магазин</h1>
 
-<%@include file="/WEB-INF/jsp/common/footer.jsp"%>
+<%@include file="/WEB-INF/jsp/common/footer.jspf"%>
 </body>
 </html>
