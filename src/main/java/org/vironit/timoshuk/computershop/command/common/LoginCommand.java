@@ -32,10 +32,9 @@ public class LoginCommand implements ActionCommand {
                 if (user.getPassword().equals(password)){
                     HashMap <Item, Integer > cart = new HashMap<>();
                     request.getSession().setAttribute("user", user);
-                    request.getSession().setAttribute("role", user.getUserType());
+                    request.getSession().setAttribute("role", user.getUserType().toString());
                     request.getSession().setAttribute("cart", cart);
-                    //TODO
-                    page = URLManager.getProperty("path.page.user.changeUser");
+                    page = URLManager.getProperty("path.page.main");
                 }else {
                     request.setAttribute("wrongPassword", MessageManager.getProperty("message.passwordError"));
                     page = URLManager.getProperty("path.page.login");

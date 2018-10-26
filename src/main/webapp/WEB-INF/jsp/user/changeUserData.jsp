@@ -5,10 +5,11 @@
     <title>Change user info</title>
 </head>
 <body>
+<%@include file="/WEB-INF/jsp/common/header.jspf"%>
 <h1>Change user info</h1>
-<form name="registerForm" class="text" id="registerForm" method="post" action="/jsp/controller">
+<form name="registerForm" class="text" id="registerForm" method="post"  action="/jsp/controller">
     <input type="hidden" name="command" value="change_user_info" />
-    <input type="hidden" name="userId" value= "${sessionScope.user.id}">
+    <input type="hidden" name="userId" value="${sessionScope.user.id}" />
     Email:<br/>
     <input type="email" name="email" value="${sessionScope.user.email}" required/>
     <div style="color:#ff0000"> ${errorEmailMessage} </div><br/>
@@ -27,7 +28,7 @@
     ID of bank card (16 numbers): <br/>
     <input type="text" name="idBankCard" value="${sessionScope.user.idCard}" required/>
     <div style="color:#ff0000"> ${errorIdCardMessage} </div><br/><br/>
-    <input type="submit" class="button" name="loginButton" value="Submit" /><br/>
+    <input type="submit" class="button" name="changeInfoUserButton"  value="Submit" /><br/>
 </form>
 
 <%@include file="/WEB-INF/jsp/common/footer.jspf"%>

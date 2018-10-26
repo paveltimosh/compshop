@@ -45,7 +45,7 @@ public class OrderDAOImpl extends EntityDAOImpl<Long, Order> {
                 orders.add(order);
             }
         }catch (SQLException e){
-            LOG.error("SQL exeprion (request or table failed) in method findAll()", e);
+            LOG.error("SQL exception (request or table failed) in method findAll()", e);
             throw new DAOException("SQL Exception ",e);
         }
         return orders;

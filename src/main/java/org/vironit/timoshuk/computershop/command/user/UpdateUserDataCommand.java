@@ -41,7 +41,6 @@ public class UpdateUserDataCommand implements ActionCommand {
             UserDAOImpl userDAO = new UserDAOImpl();
             User user = userDAO.findEntityById(userId);
             HashMap<String, String> errorMessages = UserValidator.checkUserDataWithoutLoginPassword( user, email, firstName,lastName, phoneNumber, address, idBankCard);
-
             if(errorMessages.isEmpty() && user != null){
                 user.setEmail(email);
                 user.setFirstName(firstName);
@@ -51,7 +50,7 @@ public class UpdateUserDataCommand implements ActionCommand {
                 user.setIdCard(idBankCard);
                 if(userDAO.update(user)){
                     User updatedUser = userDAO.findEntityById(userId);
-                    request.setAttribute("user", updatedUser);
+                    request.getSession().setAttribute("user", updatedUser);
                     page = URLManager.getProperty("path.page.user.profile");
                 }else {
                     page = URLManager.getProperty("path.page.user.changeUser");
