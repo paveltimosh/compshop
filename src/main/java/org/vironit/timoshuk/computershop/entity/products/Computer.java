@@ -13,7 +13,7 @@ public class Computer extends Item{
 
     private Long id;
     private Integer price;
-    private String compDescription;
+    private String model;
     private Case cases;
     private CPU cpu;
     private MotherBoard motherBoard;
@@ -23,10 +23,10 @@ public class Computer extends Item{
     public Computer() {
     }
 
-    public Computer(Long id, Integer price, String compDescription, Case aCase, CPU cpu, MotherBoard motherBoard, RAM ram, VideoCard videoCard) {
+    public Computer(Long id, Integer price, String model, Case aCase, CPU cpu, MotherBoard motherBoard, RAM ram, VideoCard videoCard) {
         this.id = id;
         this.price = price;
-        this.compDescription = compDescription;
+        this.model = model;
         this.cases = aCase;
         this.cpu = cpu;
         this.motherBoard = motherBoard;
@@ -39,7 +39,7 @@ public class Computer extends Item{
         return "Computer{" +
                 "id=" + id +
                 ", price=" + price +
-                ", compDescription='" + compDescription + '\'' +"\n"+
+                ", compDescription='" + model + '\'' +"\n"+
                 ", aCase=" + cases + "\n"+
                 ", cpu=" + cpu +"\n"+
                 ", motherBoard=" + motherBoard +"\n"+

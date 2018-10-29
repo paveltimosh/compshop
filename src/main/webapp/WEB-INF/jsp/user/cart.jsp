@@ -9,7 +9,7 @@
 <h1>Cart</h1>
 <table cellpadding="10">
     <colgroup>
-        <col span="7" style="background-color: #feb229">
+        <col span="8" style="background-color: #feb229">
     </colgroup>
     <tr>
         <td>Description</td>
@@ -17,15 +17,17 @@
         <td>Quantity</td>
     </tr>
     <c:forEach var="item" items="${sessionScope.cart}">
+        <c:set var="summa" value="${item.key.price + summa}"/>
         <tr>
-            <th>${item.key.compDescription} </th>
+            <th>${item.key.model} </th>
             <th>${item.key.price} </th>
             <th>${item.value}</th>
         </tr>
     </c:forEach>
-</table>
 
-
+</table><br/>
+<h3> Total amount: ${summa}</h3>
+<a href="${pageContext.request.contextPath}/main"> Back</a>
 <%@include file="/WEB-INF/jsp/common/footer.jspf"%>
 </body>
 </html>
