@@ -78,8 +78,8 @@
       <ObjectId>2200</ObjectId>
       <Comment>standard public schema</Comment>
       <Owner>postgres</Owner>
-      <IntrospectionTimestamp>2018-10-22.17:28:00.589</IntrospectionTimestamp>
-      <IntrospectionStateNumber>808</IntrospectionStateNumber>
+      <IntrospectionTimestamp>2018-10-26.13:55:14.158</IntrospectionTimestamp>
+      <IntrospectionStateNumber>825</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -166,7 +166,7 @@
     <table id="27" parent="15" name="computers">
       <ObjectId>16472</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>804</StateNumber>
+      <StateNumber>825</StateNumber>
     </table>
     <table id="28" parent="15" name="cpu">
       <ObjectId>16460</ObjectId>
@@ -296,38 +296,44 @@
       <StateNumber>804</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="50" parent="27" name="pk_id_computer">
+    <column id="50" parent="27" name="price">
+      <Position>8</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>825</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="51" parent="27" name="pk_id_computer">
       <ObjectId>16521</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="51" parent="27" name="fki_fk_id_case">
+    <index id="52" parent="27" name="fki_fk_id_case">
       <ObjectId>16520</ObjectId>
       <ColNames>id_case</ColNames>
     </index>
-    <index id="52" parent="27" name="fki_fk_id_cpu">
+    <index id="53" parent="27" name="fki_fk_id_cpu">
       <ObjectId>16533</ObjectId>
       <ColNames>id_cpu</ColNames>
     </index>
-    <index id="53" parent="27" name="fki_fk_id_motherboard">
+    <index id="54" parent="27" name="fki_fk_id_motherboard">
       <ObjectId>16539</ObjectId>
       <ColNames>id_motherboard</ColNames>
     </index>
-    <index id="54" parent="27" name="fki_fk_id_ram">
+    <index id="55" parent="27" name="fki_fk_id_ram">
       <ObjectId>16545</ObjectId>
       <ColNames>id_ram</ColNames>
     </index>
-    <index id="55" parent="27" name="fki_fk_id_videocard">
+    <index id="56" parent="27" name="fki_fk_id_videocard">
       <ObjectId>16551</ObjectId>
       <ColNames>id_videocard</ColNames>
     </index>
-    <key id="56" parent="27" name="pk_id_computer">
+    <key id="57" parent="27" name="pk_id_computer">
       <ObjectId>16522</ObjectId>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>pk_id_computer</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="57" parent="27" name="fk_id_case">
+    <foreign-key id="58" parent="27" name="fk_id_case">
       <ObjectId>16555</ObjectId>
       <ColNames>id_case</ColNames>
       <RefTableId>16457</RefTableId>
@@ -336,7 +342,7 @@
       <RefKeyName>pk_id_case</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="58" parent="27" name="fk_id_cpu">
+    <foreign-key id="59" parent="27" name="fk_id_cpu">
       <ObjectId>16528</ObjectId>
       <ColNames>id_cpu</ColNames>
       <RefTableId>16460</RefTableId>
@@ -345,7 +351,7 @@
       <RefKeyName>pk_id_cpu</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="59" parent="27" name="fk_id_motherboard">
+    <foreign-key id="60" parent="27" name="fk_id_motherboard">
       <ObjectId>16534</ObjectId>
       <ColNames>id_motherboard</ColNames>
       <RefTableId>16463</RefTableId>
@@ -354,7 +360,7 @@
       <RefKeyName>pk_id_motherboard</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="60" parent="27" name="fk_id_ram">
+    <foreign-key id="61" parent="27" name="fk_id_ram">
       <ObjectId>16540</ObjectId>
       <ColNames>id_ram</ColNames>
       <RefTableId>16466</RefTableId>
@@ -363,7 +369,7 @@
       <RefKeyName>pk_id_ram</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="61" parent="27" name="fk_id_videocard">
+    <foreign-key id="62" parent="27" name="fk_id_videocard">
       <ObjectId>16546</ObjectId>
       <ColNames>id_videocard</ColNames>
       <RefTableId>16469</RefTableId>
@@ -372,7 +378,7 @@
       <RefKeyName>pk_id_videocard</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="62" parent="28" name="id">
+    <column id="63" parent="28" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
@@ -380,54 +386,54 @@
       <DefaultExpression>nextval(&apos;id_component_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <column id="63" parent="28" name="maker">
+    <column id="64" parent="28" name="maker">
       <Position>2</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>735</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="64" parent="28" name="model">
+    <column id="65" parent="28" name="model">
       <Position>4</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>737</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="65" parent="28" name="processor_type">
+    <column id="66" parent="28" name="processor_type">
       <Position>5</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>738</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="66" parent="28" name="number_of_cores">
+    <column id="67" parent="28" name="number_of_cores">
       <Position>6</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>739</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="67" parent="28" name="speed">
+    <column id="68" parent="28" name="speed">
       <Position>7</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>791</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="68" parent="28" name="price">
+    <column id="69" parent="28" name="price">
       <Position>8</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>745</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <index id="69" parent="28" name="pk_id_cpu">
+    <index id="70" parent="28" name="pk_id_cpu">
       <ObjectId>16488</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="70" parent="28" name="pk_id_cpu">
+    <key id="71" parent="28" name="pk_id_cpu">
       <ObjectId>16489</ObjectId>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>pk_id_cpu</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <column id="71" parent="29" name="id">
+    <column id="72" parent="29" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
@@ -435,54 +441,54 @@
       <DefaultExpression>nextval(&apos;id_component_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <column id="72" parent="29" name="model">
+    <column id="73" parent="29" name="model">
       <Position>2</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>744</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="73" parent="29" name="maker">
+    <column id="74" parent="29" name="maker">
       <Position>3</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>746</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="74" parent="29" name="price">
+    <column id="75" parent="29" name="price">
       <Position>4</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>747</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="75" parent="29" name="form_factor">
+    <column id="76" parent="29" name="form_factor">
       <Position>5</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>748</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="76" parent="29" name="memory_technology">
+    <column id="77" parent="29" name="memory_technology">
       <Position>6</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>749</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="77" parent="29" name="cpu_socket_type">
+    <column id="78" parent="29" name="cpu_socket_type">
       <Position>7</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>750</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="78" parent="29" name="pk_id_motherboard">
+    <index id="79" parent="29" name="pk_id_motherboard">
       <ObjectId>16494</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="79" parent="29" name="pk_id_motherboard">
+    <key id="80" parent="29" name="pk_id_motherboard">
       <ObjectId>16495</ObjectId>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>pk_id_motherboard</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <column id="80" parent="30" name="id">
+    <column id="81" parent="30" name="id">
       <Position>3</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
@@ -490,25 +496,25 @@
       <DefaultExpression>nextval(&apos;orders_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <column id="81" parent="30" name="id_of_customer">
+    <column id="82" parent="30" name="id_of_customer">
       <Position>4</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>652</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="82" parent="30" name="total_amount_of_order">
+    <column id="83" parent="30" name="total_amount_of_order">
       <Position>6</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>647</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="83" parent="30" name="order_status">
+    <column id="84" parent="30" name="order_status">
       <Position>7</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>648</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="84" parent="30" name="id_of_payment">
+    <column id="85" parent="30" name="id_of_payment">
       <Position>8</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
@@ -516,62 +522,62 @@
       <DefaultExpression>nextval(&apos;id_of_payment_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <column id="85" parent="30" name="payment_type">
+    <column id="86" parent="30" name="payment_type">
       <Position>10</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>651</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="86" parent="30" name="date_of_order">
+    <column id="87" parent="30" name="date_of_order">
       <Position>13</Position>
       <DataType>date|0s</DataType>
       <StateNumber>693</StateNumber>
       <TypeId>1082</TypeId>
     </column>
-    <column id="87" parent="30" name="time_of_order">
+    <column id="88" parent="30" name="time_of_order">
       <Position>14</Position>
       <DataType>time|0s</DataType>
       <StateNumber>692</StateNumber>
       <TypeId>1083</TypeId>
     </column>
-    <column id="88" parent="30" name="date_of_payment">
+    <column id="89" parent="30" name="date_of_payment">
       <Position>15</Position>
       <DataType>date|0s</DataType>
       <StateNumber>702</StateNumber>
       <TypeId>1082</TypeId>
     </column>
-    <column id="89" parent="30" name="time_of_payment">
+    <column id="90" parent="30" name="time_of_payment">
       <Position>16</Position>
       <DataType>time|0s</DataType>
       <StateNumber>703</StateNumber>
       <TypeId>1083</TypeId>
     </column>
-    <index id="90" parent="30" name="pk_id_order">
+    <index id="91" parent="30" name="pk_id_order">
       <ObjectId>16444</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="91" parent="30" name="id_of_payment">
+    <index id="92" parent="30" name="id_of_payment">
       <ObjectId>16455</ObjectId>
       <ColNames>id_of_payment</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="92" parent="30" name="fki_fkey_id_customer">
+    <index id="93" parent="30" name="fki_fkey_id_customer">
       <ObjectId>16443</ObjectId>
       <ColNames>id_of_customer</ColNames>
     </index>
-    <key id="93" parent="30" name="pk_id_order">
+    <key id="94" parent="30" name="pk_id_order">
       <ObjectId>16445</ObjectId>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>pk_id_order</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <key id="94" parent="30" name="id_of_payment">
+    <key id="95" parent="30" name="id_of_payment">
       <ObjectId>16456</ObjectId>
       <ColNames>id_of_payment</ColNames>
       <UnderlyingIndexName>id_of_payment</UnderlyingIndexName>
     </key>
-    <foreign-key id="95" parent="30" name="fkey_id_customer">
+    <foreign-key id="96" parent="30" name="fkey_id_customer">
       <ObjectId>16438</ObjectId>
       <ColNames>id_of_customer</ColNames>
       <RefTableId>16394</RefTableId>
@@ -580,7 +586,7 @@
       <RefKeyName>pk_id</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="96" parent="31" name="id">
+    <column id="97" parent="31" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
@@ -588,48 +594,48 @@
       <DefaultExpression>nextval(&apos;id_component_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <column id="97" parent="31" name="maker">
+    <column id="98" parent="31" name="maker">
       <Position>2</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>754</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="98" parent="31" name="model">
+    <column id="99" parent="31" name="model">
       <Position>3</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>755</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="99" parent="31" name="price">
+    <column id="100" parent="31" name="price">
       <Position>4</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>756</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="100" parent="31" name="type">
+    <column id="101" parent="31" name="type">
       <Position>5</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>757</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="101" parent="31" name="memory_capacity">
+    <column id="102" parent="31" name="memory_capacity">
       <Position>6</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>758</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="102" parent="31" name="pk_id_ram">
+    <index id="103" parent="31" name="pk_id_ram">
       <ObjectId>16500</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="103" parent="31" name="pk_id_ram">
+    <key id="104" parent="31" name="pk_id_ram">
       <ObjectId>16501</ObjectId>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>pk_id_ram</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <column id="104" parent="32" name="id">
+    <column id="105" parent="32" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
@@ -638,49 +644,49 @@
       <TypeId>23</TypeId>
       <SequenceName>customers_id_seq</SequenceName>
     </column>
-    <column id="105" parent="32" name="login">
+    <column id="106" parent="32" name="login">
       <Position>2</Position>
       <DataType>varchar(30)|0s</DataType>
       <StateNumber>597</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="106" parent="32" name="password">
+    <column id="107" parent="32" name="password">
       <Position>3</Position>
       <DataType>varchar(30)|0s</DataType>
       <StateNumber>561</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="107" parent="32" name="address">
+    <column id="108" parent="32" name="address">
       <Position>4</Position>
       <DataType>varchar(100)|0s</DataType>
       <StateNumber>590</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="108" parent="32" name="email">
+    <column id="109" parent="32" name="email">
       <Position>5</Position>
       <DataType>varchar(50)|0s</DataType>
       <StateNumber>566</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="109" parent="32" name="first_name">
+    <column id="110" parent="32" name="first_name">
       <Position>6</Position>
       <DataType>varchar(30)|0s</DataType>
       <StateNumber>583</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="110" parent="32" name="last_name">
+    <column id="111" parent="32" name="last_name">
       <Position>7</Position>
       <DataType>varchar(30)|0s</DataType>
       <StateNumber>584</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="111" parent="32" name="phone_number">
+    <column id="112" parent="32" name="phone_number">
       <Position>10</Position>
       <DataType>varchar(20)|0s</DataType>
       <StateNumber>591</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="112" parent="32" name="user_type">
+    <column id="113" parent="32" name="user_type">
       <Position>11</Position>
       <DataType>varchar(10)|0s</DataType>
       <NotNull>1</NotNull>
@@ -688,34 +694,34 @@
       <DefaultExpression>USER</DefaultExpression>
       <TypeId>1043</TypeId>
     </column>
-    <column id="113" parent="32" name="id_card">
+    <column id="114" parent="32" name="id_card">
       <Position>12</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>808</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="114" parent="32" name="pk_id">
+    <index id="115" parent="32" name="pk_id">
       <ObjectId>16403</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="115" parent="32" name="unique_login">
+    <index id="116" parent="32" name="unique_login">
       <ObjectId>16405</ObjectId>
       <ColNames>login</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="116" parent="32" name="pk_id">
+    <key id="117" parent="32" name="pk_id">
       <ObjectId>16404</ObjectId>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>pk_id</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <key id="117" parent="32" name="unique_login">
+    <key id="118" parent="32" name="unique_login">
       <ObjectId>16406</ObjectId>
       <ColNames>login</ColNames>
       <UnderlyingIndexName>unique_login</UnderlyingIndexName>
     </key>
-    <column id="118" parent="33" name="id">
+    <column id="119" parent="33" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
@@ -723,48 +729,48 @@
       <DefaultExpression>nextval(&apos;id_component_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <column id="119" parent="33" name="maker">
+    <column id="120" parent="33" name="maker">
       <Position>2</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>763</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="120" parent="33" name="price">
+    <column id="121" parent="33" name="price">
       <Position>3</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>764</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="121" parent="33" name="model">
+    <column id="122" parent="33" name="model">
       <Position>4</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>765</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="122" parent="33" name="video_capacity">
+    <column id="123" parent="33" name="video_capacity">
       <Position>5</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>766</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="123" parent="33" name="type_graphics_processor">
+    <column id="124" parent="33" name="type_graphics_processor">
       <Position>6</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>767</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="124" parent="33" name="type_video_memory">
+    <column id="125" parent="33" name="type_video_memory">
       <Position>7</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>768</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="125" parent="33" name="pk_id_videocard">
+    <index id="126" parent="33" name="pk_id_videocard">
       <ObjectId>16508</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="126" parent="33" name="pk_id_videocard">
+    <key id="127" parent="33" name="pk_id_videocard">
       <ObjectId>16509</ObjectId>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>pk_id_videocard</UnderlyingIndexName>

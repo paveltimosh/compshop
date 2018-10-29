@@ -56,6 +56,15 @@
         <servlet-name>main</servlet-name>
         <url-pattern>/main</url-pattern>
     </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>computers</servlet-name>
+        <jsp-file>/WEB-INF/jsp/catalog/computers.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>computers</servlet-name>
+        <url-pattern>/computers</url-pattern>
+    </servlet-mapping>
 
     <servlet>
         <servlet-name>editinfo</servlet-name>
@@ -64,6 +73,24 @@
     <servlet-mapping>
         <servlet-name>editinfo</servlet-name>
         <url-pattern>/editinfo</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>comp_info</servlet-name>
+        <jsp-file>/WEB-INF/jsp/catalog/view/computerInfo.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>comp_info</servlet-name>
+        <url-pattern>/computer_info</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>cart</servlet-name>
+        <jsp-file>/WEB-INF/jsp/user/cart.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>cart</servlet-name>
+        <url-pattern>/cart</url-pattern>
     </servlet-mapping>
 
 

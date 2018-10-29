@@ -4,7 +4,7 @@ import lombok.*;
 
 @Getter
 @Setter
-@ToString()
+@ToString(callSuper = true)
 @EqualsAndHashCode(callSuper = true)
 public class Case extends Component {
     private String material;
@@ -12,7 +12,6 @@ public class Case extends Component {
     private String powerSupplyUnit;
 
     public Case(){
-
     }
 
     public Case(Long id, Integer price, String model, String maker, String material, String typeOfCase, String powerSupplyUnit) {

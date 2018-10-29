@@ -1,6 +1,8 @@
 package org.vironit.timoshuk.computershop;
 
 import org.vironit.timoshuk.computershop.dao.DAOException;
+import org.vironit.timoshuk.computershop.dao.impl.CaseDAOIml;
+
 import org.vironit.timoshuk.computershop.dao.impl.ComputerDAOImpl;
 import org.vironit.timoshuk.computershop.dao.impl.OrderDAOImpl;
 import org.vironit.timoshuk.computershop.dao.impl.UserDAOImpl;
@@ -8,7 +10,9 @@ import org.vironit.timoshuk.computershop.entity.order.Order;
 import org.vironit.timoshuk.computershop.entity.order.OrderStatus;
 import org.vironit.timoshuk.computershop.entity.order.PaymentDescription;
 import org.vironit.timoshuk.computershop.entity.order.TypePayment;
+import org.vironit.timoshuk.computershop.entity.products.Components.Case;
 import org.vironit.timoshuk.computershop.entity.products.Computer;
+
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -23,22 +27,16 @@ import java.util.List;
 public class Main extends HttpServlet {
 
     public static void main(String[] args) {
-        ComputerDAOImpl computerDAO = new ComputerDAOImpl();
         try {
-            List <Computer> computers = new ArrayList<>();
-            computers = computerDAO.findAll();
-            for (Computer computer : computers) {
-                System.out.println(computer);
-            }
-
+            ComputerDAOImpl computerDAO = new ComputerDAOImpl();
+            List<Computer> computers = computerDAO.findAll();
+            System.out.println(computers);
         } catch (DAOException e) {
             e.printStackTrace();
         }
-
-
     }
 
-    void testOrder (){
+        void testOrder (){
         int[] customers = new int[55];
         int size = customers.length;
 

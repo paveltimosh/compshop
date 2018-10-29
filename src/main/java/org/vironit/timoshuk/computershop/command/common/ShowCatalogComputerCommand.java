@@ -30,7 +30,6 @@ public class ShowCatalogComputerCommand implements ActionCommand {
         } catch (DAOException e) {
             LOG.error("DAO Exception in method execute() ");
         }
-
         return page;
     }
 }

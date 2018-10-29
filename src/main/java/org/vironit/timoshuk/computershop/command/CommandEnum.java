@@ -1,9 +1,8 @@
 package org.vironit.timoshuk.computershop.command;
 
-import org.vironit.timoshuk.computershop.command.common.LoginCommand;
-import org.vironit.timoshuk.computershop.command.common.LogoutCommand;
-import org.vironit.timoshuk.computershop.command.common.RegisterCommand;
-import org.vironit.timoshuk.computershop.command.common.ShowCatalogComputerCommand;
+import org.vironit.timoshuk.computershop.command.common.*;
+import org.vironit.timoshuk.computershop.command.item.ShowComputerInfoCommand;
+import org.vironit.timoshuk.computershop.command.user.AddToCartCommand;
 import org.vironit.timoshuk.computershop.command.user.UpdateUserDataCommand;
 
 public enum CommandEnum {
@@ -27,6 +26,19 @@ public enum CommandEnum {
     },SHOW_CATALOG_COMPUTER{
         {
             this.command = new ShowCatalogComputerCommand();
+        }
+    },
+    SHOW_CATALOG_CASE{
+        {
+            this.command = new ShowCatalogCaseCommand();
+        }
+    },SHOW_COMPUTER_INFO{
+        {
+            this.command = new ShowComputerInfoCommand();
+        }
+    },ADD_TO_CART{
+        {
+            this.command = new AddToCartCommand();
         }
     };
 

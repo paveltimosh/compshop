@@ -7,14 +7,14 @@ import org.vironit.timoshuk.computershop.entity.products.Components.*;
 
 @Getter
 @Setter
-@EqualsAndHashCode(callSuper = true)
+@EqualsAndHashCode(callSuper = true, of = {"id", "compDescription"})
 
 public class Computer extends Item{
 
     private Long id;
     private Integer price;
     private String compDescription;
-    private Case aCase;
+    private Case cases;
     private CPU cpu;
     private MotherBoard motherBoard;
     private RAM ram;
@@ -27,7 +27,7 @@ public class Computer extends Item{
         this.id = id;
         this.price = price;
         this.compDescription = compDescription;
-        this.aCase = aCase;
+        this.cases = aCase;
         this.cpu = cpu;
         this.motherBoard = motherBoard;
         this.ram = ram;
@@ -40,7 +40,7 @@ public class Computer extends Item{
                 "id=" + id +
                 ", price=" + price +
                 ", compDescription='" + compDescription + '\'' +"\n"+
-                ", aCase=" + aCase + "\n"+
+                ", aCase=" + cases + "\n"+
                 ", cpu=" + cpu +"\n"+
                 ", motherBoard=" + motherBoard +"\n"+
                 ", ram=" + ram +"\n"+

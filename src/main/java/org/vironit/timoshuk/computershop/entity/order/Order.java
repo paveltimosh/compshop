@@ -15,12 +15,11 @@ public class Order {
     private Long id;
     private Long idOfCustomer;
     private LocalDateTime dateTimeOfOrder;
-    private int totalAmountOrder;
+    private Integer totalAmountOrder;
     private OrderStatus orderStatus;
     private PaymentDescription paymentDescription;
 
     public Order(){
-
     }
 
     public Order(Long id, Long idOfCustomer, LocalDateTime dateTimeOfOrder, int totalAmountOrder,

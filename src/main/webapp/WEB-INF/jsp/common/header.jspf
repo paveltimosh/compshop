@@ -19,7 +19,7 @@
             <c:otherwise>
                 <c:if test="${role eq 'USER' }">
                     <h4>Hi, ${sessionScope.user.login}</h4>
-                    <a href="">Go to cart</a> <br/>
+                    <a href="${pageContext.request.contextPath}/cart">Go to cart</a> <br/>
                     <a href="${pageContext.request.contextPath}/profile">Show profile</a><br/>
                     <form name="logoutForm" method="POST" action="/jsp/controller"  style=" text-align: right; margin: 0; padding: 0; display: inline;">
                         <input type="hidden" name="command" value="logout" />
@@ -32,5 +32,6 @@
             </c:otherwise>
         </c:choose>
     </div>
+    <h1> Магазин компьютеров "Мастер-хакер"</h1>
 </body>
 </html>

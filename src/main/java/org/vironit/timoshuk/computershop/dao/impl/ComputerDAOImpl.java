@@ -18,7 +18,7 @@ import java.util.List;
 public class ComputerDAOImpl extends EntityDAOImpl<Long, Computer> {
 
     private static final Logger LOG = LogManager.getLogger(ComputerDAOImpl.class);
-    private static final String SQL_SELECT_ALL_COMPUTERS = "SELECT computers.id as id_comp,computers.description AS comp_descrip , cases.id AS case_id, cases.maker AS case_maker,  cases.model AS case_model, cases.price AS case_price, cases.power_supply_unit AS case_power_supply_unit, cases.type_of_case AS case_type_of_case, cases.material AS case_material, " +
+    private static final String SQL_SELECT_ALL_COMPUTERS = "SELECT computers.id as id_comp,computers.description AS comp_descrip, computers.price AS comp_price , cases.id AS case_id, cases.maker AS case_maker,  cases.model AS case_model, cases.price AS case_price, cases.power_supply_unit AS case_power_supply_unit, cases.type_of_case AS case_type_of_case, cases.material AS case_material, " +
             "cpu.id AS cpu_id, cpu.maker AS cpu_maker, cpu.model AS cpu_model, cpu.price AS cpu_price,  cpu.speed AS cpu_speed, cpu.processor_type AS cpu_processor_type, cpu.number_of_cores AS cpu_number_of_cores, " +
             "motherboards.id AS moth_id, motherboards.maker AS moth_maker, motherboards.model AS moth_model, motherboards.price AS moth_price, motherboards.cpu_socket_type AS moth_cpu_socket_type, motherboards.form_factor AS moth_form_factor, motherboards.memory_technology AS moth_memory_technology," +
             "rams.id AS ram_id, rams.maker AS ram_maker, rams.model AS ram_model, rams.price AS ram_price, rams.type AS ram_type, rams.memory_capacity AS rams_memory_capacity, " +
@@ -28,7 +28,7 @@ public class ComputerDAOImpl extends EntityDAOImpl<Long, Computer> {
             "AND (cpu.id = computers.id_cpu)" +
             "AND (rams.id = computers.id_ram)" +
             "AND (motherboards.id = computers.id_motherboard) ";
-    private static final String SQL_SELECT_COMPUTER_BY_ID = "SELECT computers.id as id_comp,computers.description AS comp_descrip , cases.id AS case_id, cases.maker AS case_maker,  cases.model AS case_model, cases.price AS case_price, cases.power_supply_unit AS case_power_supply_unit, cases.type_of_case AS case_type_of_case, cases.material AS case_material, " +
+    private static final String SQL_SELECT_COMPUTER_BY_ID = "SELECT computers.id as id_comp,computers.description AS comp_descrip ,computers.price AS comp_price , cases.id AS case_id, cases.maker AS case_maker,  cases.model AS case_model, cases.price AS case_price, cases.power_supply_unit AS case_power_supply_unit, cases.type_of_case AS case_type_of_case, cases.material AS case_material, " +
             "cpu.id AS cpu_id, cpu.maker AS cpu_maker, cpu.model AS cpu_model, cpu.price AS cpu_price,  cpu.speed AS cpu_speed, cpu.processor_type AS cpu_processor_type, cpu.number_of_cores AS cpu_number_of_cores, " +
             "motherboards.id AS moth_id, motherboards.maker AS moth_maker, motherboards.model AS moth_model, motherboards.price AS moth_price, motherboards.cpu_socket_type AS moth_cpu_socket_type, motherboards.form_factor AS moth_form_factor, motherboards.memory_technology AS moth_memory_technology," +
             "rams.id AS ram_id, rams.maker AS ram_maker, rams.model AS ram_model, rams.price AS ram_price, rams.type AS ram_type, rams.memory_capacity AS rams_memory_capacity, " +
@@ -106,7 +106,7 @@ public class ComputerDAOImpl extends EntityDAOImpl<Long, Computer> {
         try (Connection conn = DataBasePoolConnector.getConnection();
              PreparedStatement prepStat = conn.prepareStatement(SQL_INSERT_INTO_COMPUTERS)) {
             prepStat.setLong(1, computer.getId());
-            prepStat.setLong(2, computer.getACase().getId());
+            prepStat.setLong(2, computer.getCases().getId());
             prepStat.setLong(3, computer.getCpu().getId());
             prepStat.setLong(4, computer.getMotherBoard().getId());
             prepStat.setLong(5, computer.getRam().getId());
@@ -127,7 +127,7 @@ public class ComputerDAOImpl extends EntityDAOImpl<Long, Computer> {
         try (Connection conn = DataBasePoolConnector.getConnection();
              PreparedStatement prepStat = conn.prepareStatement(SQL_UPDATE_COMPUTER_INFO)) {
             prepStat.setLong(7, computer.getId());
-            prepStat.setLong(1, computer.getACase().getId());
+            prepStat.setLong(1, computer.getCases().getId());
             prepStat.setLong(2, computer.getCpu().getId());
             prepStat.setLong(3, computer.getMotherBoard().getId());
             prepStat.setLong(4, computer.getRam().getId());
@@ -145,6 +145,7 @@ public class ComputerDAOImpl extends EntityDAOImpl<Long, Computer> {
     private void setComputerAllFields(Computer computer, ResultSet rs) throws SQLException {
         computer.setId(rs.getLong("id_comp"));
         computer.setCompDescription(rs.getString("comp_descrip"));
+        computer.setPrice(rs.getInt("comp_price"));
         setCaseAllFields (computer, rs);
         setCPUAllFields (computer, rs);
         setMotherboardAllFields (computer, rs);
@@ -212,7 +213,7 @@ public class ComputerDAOImpl extends EntityDAOImpl<Long, Computer> {
         aCase.setTypeOfCase(rs.getString("case_type_of_case"));
         aCase.setPowerSupplyUnit(rs.getString("case_power_supply_unit"));
         aCase.setMaterial(rs.getString("case_material"));
-        computer.setACase(aCase);
+        computer.setCases(aCase);
         LOG.info("method setCaseAllFields is worked");
     }
 }
