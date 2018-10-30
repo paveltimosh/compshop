@@ -31,6 +31,7 @@
     <input type="hidden" name="command" value="show_catalog_video_cards"/>
     <input type="submit" class="button" name="catalog_video_cards" value="Video cards"/>
 </form>
+<div style="color:#ff0000">  ${addToCartError}</div>
 
 </body>
 </html>

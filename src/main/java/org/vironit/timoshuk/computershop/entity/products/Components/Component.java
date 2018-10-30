@@ -18,6 +18,7 @@ public abstract class Component extends Item {
     private String maker;
 
     Component(Long id, Integer price, String model, String maker) {
+        super(id);
         this.id = id;
         this.price = price;
         this.model = model;

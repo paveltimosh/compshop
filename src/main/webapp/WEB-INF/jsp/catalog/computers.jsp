@@ -25,15 +25,17 @@
                 <th>Video card</th>
                 <th>Price</th>
                 <th>Add to cart</th>
-                <th>Show info</th>
+                <%--<th>Show info</th>--%>
             </tr>
             <c:forEach var="computer" items="${computers}">
             <tr>
                 <td>
-                    <c:url value="${pageContext.request.contextPath}/computer_info" var="url" scope="request">
+                    <c:url value="${pageContext.request.contextPath}/computer_info" var="url" >
                         <c:param name="comp" value="748"/>
                     </c:url>
-                    <a href="${url}" > <c:out value="${computer.model}"/> </a></td>
+                    <a href="${url}?computer=777" > <c:out value="${computer.model}"/></a>
+                    <%--<c:out value="${computer.model}"/>--%>
+                </td>
                 <td> <c:out value="${computer.cases.model}"/></td>
                 <td> <c:out value="${computer.cpu.model}"/></td>
                 <td> <c:out value="${computer.motherBoard.model}"/></td>
@@ -49,12 +51,12 @@
                         <input type="submit" class="button" name="computer_info" value="Add to cart"/>
                     </form>
                 </td>
-                <td valign="center">
+                <%--<td valign="center">
                     <form name="compInfoForm" class="text" id="compInfoForm" method="post" action="/jsp/controller">
                         <input type="hidden" name="command" value="show_computer_info"/>
                         <input type="submit" class="button" name="computer_info" value="Show info"/>
                     </form>
-                </td>
+                </td>--%>
 
             </tr>
             </c:forEach>

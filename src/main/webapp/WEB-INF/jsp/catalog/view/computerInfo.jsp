@@ -14,7 +14,10 @@
 <c:out value=">${requestScope.comp}<"/>
 <c:out value="${comp}"/>
 ${comp}
-${requestScope.computer}
+${computer}
+${requestScope.comp}
+${requestScope.get("comp")}
+${requestScope.values()}
 
 </body>
 </html>

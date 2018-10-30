@@ -8,7 +8,6 @@
 <%@include file="/WEB-INF/jsp/common/header.jspf"%>
 
 <%@include file="/WEB-INF/jsp/common/menu.jsp"%>
-
 <%@include file="/WEB-INF/jsp/common/footer.jspf"%>
 </body>
 </html>

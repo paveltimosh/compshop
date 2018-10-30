@@ -10,7 +10,6 @@ import org.vironit.timoshuk.computershop.entity.products.Item;
 import org.vironit.timoshuk.computershop.entity.users.User;
 import org.vironit.timoshuk.computershop.resource.MessageManager;
 import org.vironit.timoshuk.computershop.resource.URLManager;
-
 import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
 

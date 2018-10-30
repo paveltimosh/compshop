@@ -7,8 +7,7 @@ import org.vironit.timoshuk.computershop.entity.products.Components.*;
 
 @Getter
 @Setter
-@EqualsAndHashCode(callSuper = true, of = {"id", "compDescription"})
-
+@EqualsAndHashCode(callSuper = true, of = {"id", "model"})
 public class Computer extends Item{
 
     private Long id;
@@ -24,6 +23,7 @@ public class Computer extends Item{
     }
 
     public Computer(Long id, Integer price, String model, Case aCase, CPU cpu, MotherBoard motherBoard, RAM ram, VideoCard videoCard) {
+        super(id);
         this.id = id;
         this.price = price;
         this.model = model;

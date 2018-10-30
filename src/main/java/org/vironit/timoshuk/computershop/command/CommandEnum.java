@@ -3,6 +3,7 @@ package org.vironit.timoshuk.computershop.command;
 import org.vironit.timoshuk.computershop.command.common.*;
 import org.vironit.timoshuk.computershop.command.item.ShowComputerInfoCommand;
 import org.vironit.timoshuk.computershop.command.user.AddToCartCommand;
+import org.vironit.timoshuk.computershop.command.user.DeleteFromCartCommand;
 import org.vironit.timoshuk.computershop.command.user.UpdateUserDataCommand;
 
 public enum CommandEnum {
@@ -39,6 +40,10 @@ public enum CommandEnum {
     },ADD_TO_CART{
         {
             this.command = new AddToCartCommand();
+        }
+    },DELETE_FROM_CART{
+        {
+            this.command = new DeleteFromCartCommand();
         }
     };
 

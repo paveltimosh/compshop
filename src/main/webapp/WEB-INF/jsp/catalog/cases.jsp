@@ -10,7 +10,7 @@
 <div>
 <table cellpadding="10">
     <colgroup>
-        <col span="9" style="background-color: #6ba2fe">
+        <col span="7" style="background-color: #6ba2fe">
     </colgroup>
     <tr>
         <th>Model </th>

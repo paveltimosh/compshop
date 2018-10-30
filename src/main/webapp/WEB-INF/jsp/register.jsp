@@ -37,7 +37,6 @@
     <div style="color:#ff0000"> ${errorIdCardMessage} </div><br/><br/>
     <input type="submit" class="button" name="register" value="Register" /><br/>
 </form></center>
-
 <%@include file="/WEB-INF/jsp/common/footer.jspf"%>
 </body>
 </html>

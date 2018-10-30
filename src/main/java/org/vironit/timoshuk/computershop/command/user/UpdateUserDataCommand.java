@@ -58,7 +58,6 @@ public class UpdateUserDataCommand implements ActionCommand {
             }else {
                 for (Map.Entry<String, String> entry: errorMessages.entrySet()){
                     request.setAttribute(entry.getKey(), entry.getValue());
-                    System.out.println(entry.getKey()+ entry.getValue());
                 }
                 page = URLManager.getProperty("path.page.user.changeUser");
             }

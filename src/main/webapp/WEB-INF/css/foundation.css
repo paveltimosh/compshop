@@ -5823,7 +5823,7 @@ kbd {
     width: 1.5rem;
     -webkit-transition: left 0.15s ease-out;
     -moz-transition: left 0.15s ease-out;
-    -o-transition: translate3d(0, 0, 0);
+
     transition: left 0.15s ease-out;
     -webkit-transform: translate3d(0, 0, 0);
     -moz-transform: translate3d(0, 0, 0);
@@ -6368,12 +6368,6 @@ th.hide-for-touch {
     padding: 6px 12px;
     cursor: pointer;
 }
-
-
-.footer {
-    height: 80px;
-}
-
 
 .content {
     min-height: calc(100vh - 80px);

@@ -20,7 +20,6 @@ public class ShowCatalogCaseCommand implements ActionCommand {
         String page = null;
         try {
             List<Case> cases = new CaseDAOIml().findAll();
-            System.out.println(cases);
             if(cases != null){
                 request.setAttribute("cases", cases);
                 page = URLManager.getProperty("path.page.catalog.cases");

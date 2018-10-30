@@ -24,6 +24,5 @@
 <a href="${pageContext.request.contextPath}/main"> Back</a>
 
 <%@include file="/WEB-INF/jsp/common/footer.jspf"%>
-
 </body>
 </html>
