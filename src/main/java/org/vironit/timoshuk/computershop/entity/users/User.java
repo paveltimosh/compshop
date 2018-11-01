@@ -21,7 +21,6 @@ public class User {
     private String phoneNumber;
 
     public User(){
-
     }
 
     public User( Long id, UserType userType, String login, String password, String email,
