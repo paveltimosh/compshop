@@ -1,12 +1,17 @@
 package org.vironit.timoshuk.computershop.entity.users;
 
 import lombok.*;
+import javax.persistence.Table;
+
+import javax.persistence.Entity;
 
 @Builder
 @Getter
 @Setter
 @ToString()
 @EqualsAndHashCode(of = {"login", "id"})
+@Entity
+@Table(name = "users")
 public class User {
 
     private Long id;
