@@ -1,4 +1,4 @@
-package org.vironit.timoshuk.computershop.hibernateDAO.impl;
+package org.vironit.timoshuk.computershop.hibernateDAO.impl.productDAO;
 
 import org.hibernate.Session;
 import org.hibernate.query.Query;
@@ -21,7 +21,6 @@ public class ComputerDAOImpl extends EntityDAOImpl <Computer> {
     public Computer findById(Long id) throws SQLException {
         Computer computer = null;
         computer = session.load(Computer.class, id);
-
         return computer;
     }
 
