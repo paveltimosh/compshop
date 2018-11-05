@@ -1,14 +1,15 @@
 package org.vironit.timoshuk.computershop.hibernateDAO;
 
+import java.sql.SQLException;
 import java.util.List;
 
 public interface EntityDAO <T>{
 
-    T findById(Long id);
-    List<T> findAll();
-    void create(final T entity);
-    T update(final T entity);
-    void delete(final T entity);
-    void deleteById(Long id);
+    T findById(Long id) throws SQLException;
+    List<T> findAll() throws SQLException;
+    void create(final T entity) throws SQLException;
+    void update(final T entity) throws SQLException;
+    void delete(final T entity) throws SQLException;
+    void deleteById(Long id) throws SQLException;
 
 }

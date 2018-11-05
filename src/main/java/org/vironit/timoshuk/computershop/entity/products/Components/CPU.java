@@ -5,13 +5,25 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
 @Getter
 @Setter
-@ToString()
+@ToString(callSuper = true)
 @EqualsAndHashCode(callSuper = true)
+@Entity
+@Table(name = "cpu")
 public class CPU extends Component {
+
+    @Column(name = "processor_type")
     private String processorType;
+
+    @Column(name = "number_of_cores")
     private Integer numberOfCores;
+
+    @Column(name = "speed")
     private String cpuSpeed;
 
     public CPU (){}

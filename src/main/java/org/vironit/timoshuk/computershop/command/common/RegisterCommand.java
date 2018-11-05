@@ -3,15 +3,15 @@ package org.vironit.timoshuk.computershop.command.common;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.vironit.timoshuk.computershop.command.ActionCommand;
-import org.vironit.timoshuk.computershop.dao.DAOException;
-import org.vironit.timoshuk.computershop.dao.impl.UserDAOImpl;
 import org.vironit.timoshuk.computershop.entity.users.User;
 import org.vironit.timoshuk.computershop.entity.users.UserType;
+import org.vironit.timoshuk.computershop.hibernateDAO.impl.UserDAOImpl;
 import org.vironit.timoshuk.computershop.resource.MessageManager;
 import org.vironit.timoshuk.computershop.resource.URLManager;
 import org.vironit.timoshuk.computershop.validators.UserValidator;
 
 import javax.servlet.http.HttpServletRequest;
+import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -48,7 +48,8 @@ public class RegisterCommand implements ActionCommand {
             User user = User.builder().userType(UserType.USER).login(login).password(password).email(email).firstName(firstName).lastName(lastName)
                     .phoneNumber(phoneNumber).address(address).idCard(idBankCard).build();
             try {
-                if (new UserDAOImpl().createEntity(user)){
+                new UserDAOImpl().create(user);
+                if (new UserDAOImpl().findById(user.getId()).equals(user) ){
                     request.setAttribute("registerSuccess", MessageManager.getProperty("message.registerSuccess"));
                     page = URLManager.getProperty("path.page.login");
                     LOG.info("The registration of user with login" + user.getLogin() + " is successful");
@@ -57,7 +58,7 @@ public class RegisterCommand implements ActionCommand {
                     request.setAttribute("", MessageManager.getProperty("message.registerUnSuccess"));
                     page = URLManager.getProperty("path.page.register");
                 }
-            } catch (DAOException e) {
+            } catch (SQLException e) {
                 LOG.error("DAO Exception in method execute");
             }
         } else {

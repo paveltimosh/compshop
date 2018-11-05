@@ -7,14 +7,28 @@ import lombok.Setter;
 import lombok.ToString;
 import org.vironit.timoshuk.computershop.entity.products.Item;
 
+import javax.persistence.*;
+
 @Getter
 @Setter
 @ToString
 @EqualsAndHashCode(callSuper = true)
+@MappedSuperclass
+@Inheritance
 public abstract class Component extends Item {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @Column(name = "id")
     private Long id;
+
+    @Column(name = "price")
     private Integer price;
+
+    @Column(name = "model")
     private String model;
+
+    @Column(name = "maker")
     private String maker;
 
     Component(Long id, Integer price, String model, String maker) {
@@ -26,6 +40,5 @@ public abstract class Component extends Item {
     }
 
     public Component (){
-
     }
 }

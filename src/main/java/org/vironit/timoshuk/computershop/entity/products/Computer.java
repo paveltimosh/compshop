@@ -5,18 +5,44 @@ import lombok.Getter;
 import lombok.Setter;
 import org.vironit.timoshuk.computershop.entity.products.Components.*;
 
+import javax.persistence.*;
+
 @Getter
 @Setter
 @EqualsAndHashCode(callSuper = true, of = {"id", "model"})
+@Entity
+@Table(name = "computers")
 public class Computer extends Item{
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @Column(name = "id")
     private Long id;
+
+    @Column(name = "price")
     private Integer price;
+
+    @Column(name = "description")
     private String model;
+
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinColumn(name = "id_case", referencedColumnName = "id")
     private Case cases;
+
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinColumn(name = "id_cpu", referencedColumnName = "id")
     private CPU cpu;
+
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinColumn(name = "id_motherboard", referencedColumnName = "id")
     private MotherBoard motherBoard;
+
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinColumn(name = "id_ram", referencedColumnName = "id")
     private RAM ram;
+
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinColumn(name = "id_videocard", referencedColumnName = "id")
     private VideoCard videoCard;
 
     public Computer() {

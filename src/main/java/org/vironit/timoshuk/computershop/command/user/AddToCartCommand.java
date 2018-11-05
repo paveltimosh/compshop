@@ -28,7 +28,7 @@ public class AddToCartCommand implements ActionCommand {
         if(user == null){
             request.setAttribute("addToCartError", MessageManager.getProperty("message.addToCartError"));
         }else {
-            Item item = getItem(itemId, itemType);
+            Item item = getItemFromDB(itemId, itemType);
             HashMap<Item, Integer> cart = (HashMap<Item, Integer>) request.getSession().getAttribute("cart");
             if (cart.size() == 0) {
                 cart.put(item, 1);
@@ -58,7 +58,7 @@ public class AddToCartCommand implements ActionCommand {
         return page;
     }
 
-    private Item getItem(Long itemId, String itemType) {
+    private Item getItemFromDB(Long itemId, String itemType) {
         Item item = null;
         try {
             switch (itemType){

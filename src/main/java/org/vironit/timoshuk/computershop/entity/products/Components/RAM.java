@@ -5,12 +5,22 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
 @Getter
 @Setter
-@ToString()
+@ToString(callSuper = true)
 @EqualsAndHashCode(callSuper = true)
+@Entity
+@Table(name = "rams")
 public class RAM extends Component {
+
+    @Column(name = "type")
     private String type;
+
+    @Column(name = "memory_capacity")
     private String memoryCapacity;
 
     public RAM (){}

@@ -1,9 +1,9 @@
 package org.vironit.timoshuk.computershop.entity.users;
 
 import lombok.*;
-import javax.persistence.Table;
 
-import javax.persistence.Entity;
+import javax.persistence.*;
+import java.io.Serializable;
 
 @Builder
 @Getter
@@ -11,18 +11,40 @@ import javax.persistence.Entity;
 @ToString()
 @EqualsAndHashCode(of = {"login", "id"})
 @Entity
-@Table(name = "users")
-public class User {
+@Table(name = "users", schema = "public")
+public class User  implements Serializable{
 
+    @Id
+    @GeneratedValue(strategy=GenerationType.SEQUENCE)
+    @Column(name = "id")
     private Long id;
+
+    @Column(name = "user_type")
+    @Enumerated(EnumType.STRING)
     private UserType userType;
+
+    @Column(name = "login")
     private String login;
+
+    @Column(name = "password")
     private String password;
+
+    @Column(name = "email")
     private String email;
+
+    @Column(name = "first_name")
     private String firstName;
+
+    @Column(name = "last_name")
     private String lastName;
+
+    @Column(name = "id_card")
     private String idCard;
+
+    @Column(name = "address")
     private String address;
+
+    @Column(name = "phone_number")
     private String phoneNumber;
 
     public User(){
@@ -41,5 +63,5 @@ public class User {
         this.address = address;
         this.phoneNumber = phoneNumber;
     }
-}
 
+}

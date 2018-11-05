@@ -5,13 +5,25 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
 @Getter
 @Setter
-@ToString()
+@ToString(callSuper = true)
 @EqualsAndHashCode(callSuper = true)
+@Entity
+@Table(name = "motherboards")
 public class MotherBoard extends Component {
+
+    @Column(name = "form_factor")
     private String formFactor;
+
+    @Column(name = "memory_technology")
     private String memoryTechnology;
+
+    @Column(name = "cpu_socket_type")
     private String cpuSocketType;
 
     public MotherBoard (){}
