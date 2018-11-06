@@ -7,8 +7,10 @@ import lombok.Setter;
 @Setter
 public abstract class Item {
     private Long id;
+    private String model;
 
-    public Item(Long id) {
+    public Item(Long id, String model) {
     }
+
     public Item(){}
 }

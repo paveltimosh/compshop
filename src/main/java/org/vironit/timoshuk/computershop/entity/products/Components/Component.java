@@ -19,6 +19,7 @@ public abstract class Component extends Item {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
+
     @Column(name = "id")
     private Long id;
 
@@ -32,7 +33,7 @@ public abstract class Component extends Item {
     private String maker;
 
     Component(Long id, Integer price, String model, String maker) {
-        super(id);
+        super(id, model);
         this.id = id;
         this.price = price;
         this.model = model;

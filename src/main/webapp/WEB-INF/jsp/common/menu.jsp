@@ -18,7 +18,7 @@
 </form>
 
 <form name="cmotherForm" class="text" id="motherBoardForm" method="post" action="/jsp/controller">
-    <input type="hidden" name="command" value="show_catalog_motherboards"/>
+    <input type="hidden" name="command" value="show_catalog_mother_board"/>
     <input type="submit" class="button" name="catalog_motherboards" value="Motherboards"/>
 </form>
 
@@ -28,8 +28,8 @@
 </form>
 
 <form name="videoCardForm" class="text" id="videoCardForm" method="post" action="/jsp/controller">
-    <input type="hidden" name="command" value="show_catalog_video_cards"/>
-    <input type="submit" class="button" name="catalog_video_cards" value="Video cards"/>
+    <input type="hidden" name="command" value="show_catalog_video_card"/>
+    <input type="submit" class="button" name="catalog_video_cards" value="Video Cards"/>
 </form>
 <div style="color:#ff0000">  ${addToCartError}</div>
 

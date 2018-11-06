@@ -18,7 +18,7 @@ import javax.persistence.Table;
 public class VideoCard extends Component {
 
     @Column(name = "video_capacity")
-    private String VideoCapacity;
+    private String videoCapacity;
 
     @Column(name = "type_graphics_processor")
     private String typeGraphicsProcessor;
@@ -30,13 +30,13 @@ public class VideoCard extends Component {
 
     public VideoCard(Long id, Integer price, String model, String maker, String videoCapacity, String typeGraphicsProcessor, String typeVideoMemory) {
         super(id, price, model, maker);
-        this.VideoCapacity = videoCapacity;
+        this.videoCapacity = videoCapacity;
         this.typeGraphicsProcessor = typeGraphicsProcessor;
         this.typeVideoMemory = typeVideoMemory;
     }
 
     public VideoCard(String videoCapacity, String typeGraphicsProcessor, String typeVideoMemory) {
-        this.VideoCapacity = videoCapacity;
+        this.videoCapacity = videoCapacity;
         this.typeGraphicsProcessor = typeGraphicsProcessor;
         this.typeVideoMemory = typeVideoMemory;
     }

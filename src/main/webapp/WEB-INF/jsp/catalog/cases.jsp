@@ -7,6 +7,7 @@
 <body>
 <%@include file="/WEB-INF/jsp/common/header.jspf"%>
 <%@include file="/WEB-INF/jsp/common/menu.jsp"%>
+<h2>Cases</h2>
 <div>
 <table cellpadding="10">
     <colgroup>

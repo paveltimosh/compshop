@@ -59,4 +59,12 @@ public class OrderDAOImpl extends EntityDAOImpl <Order> {
         Order order = findById(id);
         delete(order);
     }
+
+    public List<Order> findAllByUserId(Long userId) throws SQLException {
+        List<Order> orderList = new ArrayList<>();
+        Query query = session.createQuery("FROM Order WHERE id_of_customer =:paramUserId");
+        query.setParameter("paramUserId", userId);
+        orderList = query.list();
+        return orderList;
+    }
 }

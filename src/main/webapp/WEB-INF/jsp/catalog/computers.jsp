@@ -9,7 +9,7 @@
 <body>
 <%@include file="/WEB-INF/jsp/common/header.jspf"%>
 <%@include file="/WEB-INF/jsp/common/menu.jsp"%>
-
+<h2>Computers</h2>
 <div class="table-row-cell">
 
         <table cellpadding="10">

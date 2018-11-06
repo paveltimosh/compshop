@@ -2,9 +2,7 @@ package org.vironit.timoshuk.computershop.command;
 
 import org.vironit.timoshuk.computershop.command.common.*;
 import org.vironit.timoshuk.computershop.command.item.ShowComputerInfoCommand;
-import org.vironit.timoshuk.computershop.command.user.AddToCartCommand;
-import org.vironit.timoshuk.computershop.command.user.DeleteFromCartCommand;
-import org.vironit.timoshuk.computershop.command.user.UpdateUserDataCommand;
+import org.vironit.timoshuk.computershop.command.user.*;
 
 public enum CommandEnum {
 
@@ -37,6 +35,10 @@ public enum CommandEnum {
         {
             this.command = new ShowComputerInfoCommand();
         }
+    },SHOW_CATALOG_CPU{
+        {
+            this.command = new ShowCatalogCpuCommand();
+        }
     },ADD_TO_CART{
         {
             this.command = new AddToCartCommand();
@@ -44,6 +46,30 @@ public enum CommandEnum {
     },DELETE_FROM_CART{
         {
             this.command = new DeleteFromCartCommand();
+        }
+    },SHOW_CATALOG_MOTHER_BOARD{
+        {
+            this.command = new ShowCatalogMotherBoardCommand();
+        }
+    },SHOW_CATALOG_RAM{
+        {
+            this.command = new ShowCatalogRamCommand();
+        }
+    },SHOW_CATALOG_VIDEO_CARD{
+        {
+            this.command = new ShowCatalogVideocardCommand();
+        }
+    },MAKE_ORDER{
+        {
+            this.command = new MakeOrderCommand();
+        }
+    },SHOW_ORDERS_OF_USER{
+        {
+            this.command = new ShowOrderUserCommand();
+        }
+    },CONFIRM_ORDER{
+        {
+            this.command = new ConfirmOrderCommand();
         }
     };
 

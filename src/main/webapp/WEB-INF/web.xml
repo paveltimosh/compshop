@@ -67,6 +67,51 @@
     </servlet-mapping>
 
     <servlet>
+        <servlet-name>cases</servlet-name>
+        <jsp-file>/WEB-INF/jsp/catalog/cases.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>cases</servlet-name>
+        <url-pattern>/cases</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>cpu</servlet-name>
+        <jsp-file>/WEB-INF/jsp/catalog/cpu.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>cpu</servlet-name>
+        <url-pattern>/cpu</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>motherBoard</servlet-name>
+        <jsp-file>/WEB-INF/jsp/catalog/mother_board.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>motherBoard</servlet-name>
+        <url-pattern>/mother_boards</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ram</servlet-name>
+        <jsp-file>/WEB-INF/jsp/catalog/ram.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ram</servlet-name>
+        <url-pattern>/ram</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>videocards</servlet-name>
+        <jsp-file>/WEB-INF/jsp/catalog/videocards.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>videocards</servlet-name>
+        <url-pattern>/videocards</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
         <servlet-name>editinfo</servlet-name>
         <jsp-file>/WEB-INF/jsp/user/changeUserData.jsp</jsp-file>
     </servlet>
@@ -91,6 +136,15 @@
     <servlet-mapping>
         <servlet-name>cart</servlet-name>
         <url-pattern>/cart</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>orders</servlet-name>
+        <jsp-file>/WEB-INF/jsp/user/orders.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>orders</servlet-name>
+        <url-pattern>/orders</url-pattern>
     </servlet-mapping>
 
 

@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 
-@WebFilter(urlPatterns = {"/profile", "/editinfo","/cart"}, initParams = { @WebInitParam(name = "INDEX_PATH", value = "/index.jsp") })
+@WebFilter(urlPatterns = {"/profile", "/editinfo","/cart", "/orders"}, initParams = { @WebInitParam(name = "INDEX_PATH", value = "/index.jsp") })
 public class NonregisteredUserRedirectFilter implements Filter {
     private String indexPath;
     User user;

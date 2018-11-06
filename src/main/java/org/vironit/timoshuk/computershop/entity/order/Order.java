@@ -22,12 +22,16 @@ public class Order implements Serializable {
     private static final long serialVersionUID = -4319131179207728616L;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "orders_id")
+    @SequenceGenerator(name = "orders_id", sequenceName = "orders_id_seq", allocationSize = 1)
     @Column(name = "id")
     private Long id;
 
     @Column(name = "id_of_customer")
     private Long idOfCustomer;
+
+    @Column(name = "order_description")
+    String orderDescription;
 
     @Column(name = "date_of_order")
     @Convert(converter = LocalDateAttributeConverter.class)
@@ -56,10 +60,11 @@ public class Order implements Serializable {
     public Order(){
     }
 
-    public Order(Long id, Long idOfCustomer, LocalDate dateOfOrder, LocalTime timeOfOrder,
+    public Order(Long id, Long idOfCustomer, String orderDescription, LocalDate dateOfOrder, LocalTime timeOfOrder,
                  Integer totalAmountOrder, OrderStatus orderStatus, PaymentDescription paymentDescription) {
         this.id = id;
         this.idOfCustomer = idOfCustomer;
+        this.orderDescription = orderDescription;
         this.dateOfOrder = dateOfOrder;
         this.timeOfOrder = timeOfOrder;
         this.totalAmountOrder = totalAmountOrder;

@@ -49,7 +49,7 @@ public class Computer extends Item{
     }
 
     public Computer(Long id, Integer price, String model, Case aCase, CPU cpu, MotherBoard motherBoard, RAM ram, VideoCard videoCard) {
-        super(id);
+        super(id, model);
         this.id = id;
         this.price = price;
         this.model = model;

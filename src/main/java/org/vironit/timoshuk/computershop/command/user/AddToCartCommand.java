@@ -3,15 +3,14 @@ package org.vironit.timoshuk.computershop.command.user;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.vironit.timoshuk.computershop.command.ActionCommand;
-import org.vironit.timoshuk.computershop.command.common.ShowCatalogCaseCommand;
-import org.vironit.timoshuk.computershop.command.common.ShowCatalogComputerCommand;
-import org.vironit.timoshuk.computershop.dao.DAOException;
-import org.vironit.timoshuk.computershop.dao.impl.CaseDAOIml;
-import org.vironit.timoshuk.computershop.dao.impl.ComputerDAOImpl;
+import org.vironit.timoshuk.computershop.command.common.*;
+
 import org.vironit.timoshuk.computershop.entity.products.Item;
 import org.vironit.timoshuk.computershop.entity.users.User;
+import org.vironit.timoshuk.computershop.hibernateDAO.impl.productDAO.*;
 import org.vironit.timoshuk.computershop.resource.MessageManager;
 import javax.servlet.http.HttpServletRequest;
+import java.sql.SQLException;
 import java.util.HashMap;
 
 public class AddToCartCommand implements ActionCommand {
@@ -28,7 +27,7 @@ public class AddToCartCommand implements ActionCommand {
         if(user == null){
             request.setAttribute("addToCartError", MessageManager.getProperty("message.addToCartError"));
         }else {
-            Item item = getItemFromDB(itemId, itemType);
+            Item item = defineAndGetItemFromDB(itemId, itemType);
             HashMap<Item, Integer> cart = (HashMap<Item, Integer>) request.getSession().getAttribute("cart");
             if (cart.size() == 0) {
                 cart.put(item, 1);
@@ -46,7 +45,6 @@ public class AddToCartCommand implements ActionCommand {
 
     private String pageGenerator(String itemType, HttpServletRequest request) {
         String page = null;
-
         switch (itemType){
             case "computer" :
                 page = new ShowCatalogComputerCommand().execute(request);
@@ -54,22 +52,48 @@ public class AddToCartCommand implements ActionCommand {
             case "cases":
                 page = new ShowCatalogCaseCommand().execute(request);
                 break;
+            case "cpu":
+                page = new ShowCatalogCpuCommand().execute(request);
+                break;
+            case "ram":
+                page = new ShowCatalogRamCommand().execute(request);
+                break;
+            case "videoCard":
+                page = new ShowCatalogVideocardCommand().execute(request);
+                break;
+            case "mother_board":
+                page = new ShowCatalogMotherBoardCommand().execute(request);
+                break;
         }
         return page;
     }
 
-    private Item getItemFromDB(Long itemId, String itemType) {
+    private Item defineAndGetItemFromDB(Long itemId, String itemType) {
         Item item = null;
         try {
             switch (itemType){
                 case "computer" :
-                    item = new ComputerDAOImpl().findEntityById(itemId);
+                    item = new ComputerDAOImpl().findById(itemId);
                     break;
                 case "cases":
-                    item = new CaseDAOIml().findEntityById(itemId);
+                    item = new CaseDAOImpl().findById(itemId);
                     break;
+                case "cpu":
+                    item = new CpuDAOImpl().findById(itemId);
+                    break;
+                case "ram":
+                    item = new RamDAOImpl().findById(itemId);
+                    break;
+                case "videoCard":
+                    item = new VideocardDAOImpl().findById(itemId);
+                    break;
+                case "mother_board":
+                    item = new MotherboardDAOImpl().findById(itemId);
+                    break;
+                default:
+                    item = null;
             }
-        } catch (DAOException e) {
+        } catch (SQLException e) {
             LOG.error("DAOException");
         }
         return item;
