@@ -6,7 +6,6 @@ import org.vironit.timoshuk.computershop.command.ActionCommand;
 import org.vironit.timoshuk.computershop.entity.order.Order;
 import org.vironit.timoshuk.computershop.entity.order.OrderStatus;
 import org.vironit.timoshuk.computershop.entity.order.PaymentDescription;
-import org.vironit.timoshuk.computershop.entity.order.TypePayment;
 import org.vironit.timoshuk.computershop.entity.products.Item;
 import org.vironit.timoshuk.computershop.entity.users.User;
 import org.vironit.timoshuk.computershop.hibernateDAO.impl.OrderDAOImpl;

@@ -33,6 +33,9 @@ public class User  implements Serializable{
     @Column(name = "email")
     private String email;
 
+    @Column(name = "own_money")
+    private Integer ownMoney;
+
     @Column(name = "first_name")
     private String firstName;
 
@@ -51,18 +54,18 @@ public class User  implements Serializable{
     public User(){
     }
 
-    public User( Long id, UserType userType, String login, String password, String email,
+    public User(Long id, UserType userType, String login, String password, String email, Integer ownMoney,
                 String firstName, String lastName, String idCard, String address, String phoneNumber) {
         this.id = id;
         this.userType = userType;
         this.login = login;
         this.password = password;
         this.email = email;
+        this.ownMoney = ownMoney;
         this.firstName = firstName;
         this.lastName = lastName;
         this.idCard = idCard;
         this.address = address;
         this.phoneNumber = phoneNumber;
     }
-
 }

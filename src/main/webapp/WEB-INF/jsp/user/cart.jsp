@@ -46,6 +46,7 @@
     <input type="hidden" name="command" value="show_orders_of_user"/>
     <input type="submit" class="button" name="show_order_button" value="Show orders" />
 </form>
+<h3>Own money: ${sessionScope.user.ownMoney}</h3>
 
 <a href="${pageContext.request.contextPath}/main"> Back</a>
 <%@include file="/WEB-INF/jsp/common/footer.jspf"%>

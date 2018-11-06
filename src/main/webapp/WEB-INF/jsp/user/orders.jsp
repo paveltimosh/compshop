@@ -46,6 +46,8 @@
 </c:forEach>
 
 </table><br>
+<h3>Own money: ${sessionScope.user.ownMoney}</h3>
+<br>
 <a href="${pageContext.request.contextPath}/cart"> Back to cart</a>
 <%@include file="/WEB-INF/jsp/common/footer.jspf"%>
 </body>
