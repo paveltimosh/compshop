@@ -14,6 +14,8 @@ import java.io.Serializable;
 @Table(name = "users", schema = "public")
 public class User  implements Serializable{
 
+    private static final long serialVersionUID = 3388139916457807859L;
+
     @Id
     @GeneratedValue(strategy=GenerationType.SEQUENCE, generator = "user_seq")
     @SequenceGenerator(name = "user_seq", sequenceName = "customers_id_seq", allocationSize = 1)

@@ -7,6 +7,7 @@ import lombok.ToString;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
+import java.io.Serializable;
 
 @Getter
 @Setter
@@ -14,7 +15,9 @@ import javax.persistence.Table;
 @EqualsAndHashCode(callSuper = true)
 @Entity
 @Table(name = "cpu")
-public class CPU extends Component {
+public class CPU extends Component implements Serializable {
+
+    private static final long serialVersionUID = -4239668863693050420L;
 
     @Column(name = "processor_type")
     private String processorType;

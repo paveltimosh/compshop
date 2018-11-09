@@ -30,28 +30,21 @@ public class MakeOrderCommand implements ActionCommand {
         String page = null;
         OrderDAOImpl orderDAO = new OrderDAOImpl();
         String orderDescription = "";
-        int totalAmountOfOrder = Integer.valueOf(request.getParameter(PARAM_NAME_TOTAL_AMOUNT_OF_ORDER).trim());
         User user = (User)request.getSession().getAttribute("user");
         Long userId = user.getId();
         HashMap<Item, Integer> cart = (HashMap<Item, Integer>) request.getSession().getAttribute("cart");
-        if(totalAmountOfOrder != 0 && !cart.isEmpty()){
-            for (Map.Entry <Item, Integer> entry : cart.entrySet()){
-                orderDescription = orderDescription.concat(entry.getKey().getModel()).concat(" ");
-            }
+        if(!cart.isEmpty()){
+            int totalAmountOfOrder = Integer.valueOf(request.getParameter(PARAM_NAME_TOTAL_AMOUNT_OF_ORDER).trim());
+            changeDescriptionOfOrder(orderDescription, cart);
             Order order = createOrderEntity(userId, totalAmountOfOrder, orderDescription.trim());
-            try {
-                orderDAO.create(order);
-            } catch (SQLException e) {
-                LOG.error("SQLException in method execute");
-            }
+            addOrderToDataBase(order);
             cart = new HashMap<>();
             request.setAttribute("orderSuccessful", MessageManager.getProperty("message.orderSuccessful"));
             request.getSession().setAttribute("cart", cart);
-            page = URLManager.getProperty("path.page.user.cart");
         }else {
             request.setAttribute("orderError", MessageManager.getProperty("message.orderError"));
-            page = URLManager.getProperty("path.page.user.cart");
         }
+        page = URLManager.getProperty("path.page.user.cart");
         return page;
     }
 
@@ -65,5 +58,19 @@ public class MakeOrderCommand implements ActionCommand {
                                 .build()
                 ).build();
         return order;
+    }
+
+    public void addOrderToDataBase(Order order){
+        try {
+            new OrderDAOImpl().create(order);
+        } catch (SQLException e) {
+            LOG.error("SQLException in method execute");
+        }
+    }
+
+    public void changeDescriptionOfOrder(String orderDescription, HashMap<Item, Integer> cart ){
+        for (Map.Entry <Item, Integer> entry : cart.entrySet()){
+            orderDescription = orderDescription.concat(entry.getKey().getModel()).concat(" ");
+        }
     }
 }

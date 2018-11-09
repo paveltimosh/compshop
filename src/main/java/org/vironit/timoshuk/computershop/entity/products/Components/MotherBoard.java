@@ -8,6 +8,7 @@ import lombok.ToString;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
+import java.io.Serializable;
 
 @Getter
 @Setter
@@ -15,7 +16,9 @@ import javax.persistence.Table;
 @EqualsAndHashCode(callSuper = true)
 @Entity
 @Table(name = "motherboards")
-public class MotherBoard extends Component {
+public class MotherBoard extends Component implements Serializable {
+
+    private static final long serialVersionUID = 7133899839366163513L;
 
     @Column(name = "form_factor")
     private String formFactor;

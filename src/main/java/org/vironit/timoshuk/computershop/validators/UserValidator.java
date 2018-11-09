@@ -2,11 +2,11 @@ package org.vironit.timoshuk.computershop.validators;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.vironit.timoshuk.computershop.dao.DAOException;
-import org.vironit.timoshuk.computershop.dao.impl.UserDAOImpl;
 import org.vironit.timoshuk.computershop.entity.users.User;
+import org.vironit.timoshuk.computershop.hibernateDAO.impl.UserDAOImpl;
 import org.vironit.timoshuk.computershop.resource.MessageManager;
 
+import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.ResourceBundle;
 
@@ -19,7 +19,7 @@ public class UserValidator {
         return enterLogin.matches(RESOURCE_BUNDLE.getString("login"));
     }
 
-    public static boolean checkLoginFromDB (String enterLogin) throws DAOException {
+    public static boolean checkLoginFromDB (String enterLogin) throws SQLException {
         return new UserDAOImpl().checkLogin(enterLogin);
     }
 
@@ -31,7 +31,7 @@ public class UserValidator {
         return enterEmail.matches(RESOURCE_BUNDLE.getString("email"));
     }
 
-    public static boolean checkEmailFromDB (String enterEmail) throws DAOException {
+    public static boolean checkEmailFromDB (String enterEmail) throws SQLException {
         return new UserDAOImpl().checkEmail(enterEmail);
     }
 
@@ -54,6 +54,9 @@ public class UserValidator {
     public static boolean checkIdCard (String enterIdCard){
         return enterIdCard.matches(RESOURCE_BUNDLE.getString("idBankCard"));
     }
+    public static boolean checkIdCardFromDB (String bankCard) throws SQLException {
+        return new UserDAOImpl().checkBankCard(bankCard);
+    }
 
     public static HashMap <String, String> checkUserData (String login, String password, String passwordTwo, String email, String firstName,
                                                           String lastName, String phonenumber, String address, String idBankCard){
@@ -73,7 +76,10 @@ public class UserValidator {
             }else {
                 errorMessage.put("errorEmailMessage", MessageManager.getProperty("message.emailIncorrect"));
             }
-        } catch (DAOException e) {
+            if(UserValidator.checkIdCardFromDB(idBankCard)){
+                errorMessage.put("errorIdBanCardInUseMessage", MessageManager.getProperty("message.idCardInUse"));
+            }
+        } catch (SQLException e) {
             LOG.error("DAO Exception");
         }
         if (!(UserValidator.checkPassword(password))){
@@ -103,7 +109,6 @@ public class UserValidator {
 
     public static HashMap<String, String> checkUserDataWithoutLoginPassword(User user, String email, String firstName, String lastName,
                                                                              String phoneNumber, String address, String idBankCard) {
-
         HashMap <String, String> errorMessage = new HashMap<>();
         try {
             if ((UserValidator.checkEmail(email))){
@@ -113,7 +118,8 @@ public class UserValidator {
             }else {
                 errorMessage.put("errorEmailMessage", MessageManager.getProperty("message.emailIncorrect"));
             }
-        } catch (DAOException e) {
+
+        } catch (SQLException e) {
             LOG.error("DAO Exception");
         }
         if (!(UserValidator.checkFirstName(firstName))){
@@ -122,12 +128,19 @@ public class UserValidator {
         if (!(UserValidator.checkLastName(lastName))){
             errorMessage.put("errorLastNameMessage",MessageManager.getProperty("message.lastNameIncorrect"));
         }
-        if(UserValidator.checkIdCard(idBankCard)){
-            if(idBankCard.length() != 16) {
-                errorMessage.put("errorIdCardMessage",MessageManager.getProperty("message.idCardLengthNot16"));
+        try {
+            if(UserValidator.checkIdCard(idBankCard)){
+                if(!user.getIdCard().equals(idBankCard) && UserValidator.checkIdCardFromDB(idBankCard)){
+                    errorMessage.put("errorIdBanCardInUseMessage", MessageManager.getProperty("message.idCardInUse"));
+                }
+                if(idBankCard.length() != 16) {
+                    errorMessage.put("errorIdCardMessage",MessageManager.getProperty("message.idCardLengthNot16"));
+                }
+            }else {
+                errorMessage.put("errorIdCardMessage", MessageManager.getProperty("message.idCardIncorrect"));
             }
-        }else {
-            errorMessage.put("errorIdCardMessage", MessageManager.getProperty("message.idCardIncorrect"));
+        } catch (SQLException e) {
+            LOG.error("DAO Exception");
         }
         if(!UserValidator.checkPhoneNumber(phoneNumber)){
             errorMessage.put("errorPhoneMessage",MessageManager.getProperty("message.phoneNumberIncorrect"));

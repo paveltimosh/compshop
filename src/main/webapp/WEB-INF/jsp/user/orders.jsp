@@ -7,8 +7,9 @@
 <body>
 <%@include file="/WEB-INF/jsp/common/header.jspf"%>
 <h2>Orders</h2><br>
-<div style="color:#ff0000"> ${orderConfirmError} </div><br/>
-<div style="color:#2ecd1d"> ${orderConfirmSuc} </div><br/>
+<div style="color:#ff0000"> ${orderConfirmError} </div>
+<div style="color:#ff0000"> ${orderAlsoConfirmed} </div>
+<div style="color:#2ecd1d"> ${orderConfirmSuc} </div>
 <table cellpadding="10">
 <tr>
     <th width="100">Name</th>

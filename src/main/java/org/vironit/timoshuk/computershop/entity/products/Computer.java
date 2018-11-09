@@ -6,13 +6,16 @@ import lombok.Setter;
 import org.vironit.timoshuk.computershop.entity.products.Components.*;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Getter
 @Setter
 @EqualsAndHashCode(callSuper = true, of = {"id", "model"})
 @Entity
 @Table(name = "computers")
-public class Computer extends Item{
+public class Computer extends Item implements Serializable {
+
+    private static final long serialVersionUID = 2967751437487461522L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)

@@ -63,12 +63,39 @@ public class UserDAOImpl extends EntityDAOImpl <User> {
         delete(user);
     }
 
-    public User findByLogin (String login)throws SQLException{
+    public User findByParameter(String nameOfParamFromDB, String paramValue)throws SQLException{
         User user = null;
-        String sql = "FROM User where login =:paramLogin";
+        String sql = "FROM User where " + nameOfParamFromDB + " =:paramValue";
         Query query = session.createQuery(sql);
-        query.setParameter("paramLogin", login);
+        query.setParameter("paramValue", paramValue);
         user = (User) query.uniqueResult();
         return user;
+    }
+
+    public boolean checkLogin (String login) throws SQLException{
+        boolean result = false;
+        User user = findByParameter("login", login);
+        if (user != null){
+            result = true;
+        }
+        return result;
+    }
+
+    public boolean checkEmail (String email) throws SQLException{
+        boolean result = false;
+        User user = findByParameter("email", email);
+        if (user != null){
+            result = true;
+        }
+        return result;
+    }
+
+    public boolean checkBankCard (String bankCard) throws SQLException{
+        boolean result = false;
+        User user = findByParameter("id_card", bankCard);
+        if (user != null){
+            result = true;
+        }
+        return result;
     }
 }

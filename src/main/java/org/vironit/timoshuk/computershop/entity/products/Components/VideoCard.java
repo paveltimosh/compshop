@@ -8,6 +8,7 @@ import lombok.ToString;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
+import java.io.Serializable;
 
 @Getter
 @Setter
@@ -15,7 +16,9 @@ import javax.persistence.Table;
 @EqualsAndHashCode(callSuper = true)
 @Entity
 @Table(name = "videocards")
-public class VideoCard extends Component {
+public class VideoCard extends Component implements Serializable {
+
+    private static final long serialVersionUID = 2526239902823792887L;
 
     @Column(name = "video_capacity")
     private String videoCapacity;

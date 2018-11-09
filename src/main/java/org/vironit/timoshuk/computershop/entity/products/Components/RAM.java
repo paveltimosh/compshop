@@ -8,6 +8,7 @@ import lombok.ToString;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
+import java.io.Serializable;
 
 @Getter
 @Setter
@@ -15,7 +16,9 @@ import javax.persistence.Table;
 @EqualsAndHashCode(callSuper = true)
 @Entity
 @Table(name = "rams")
-public class RAM extends Component {
+public class RAM extends Component implements Serializable {
+
+    private static final long serialVersionUID = -4793103779061627845L;
 
     @Column(name = "type")
     private String type;

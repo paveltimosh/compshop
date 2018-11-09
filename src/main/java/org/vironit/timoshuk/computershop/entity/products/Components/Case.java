@@ -5,6 +5,7 @@ import lombok.*;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
+import java.io.Serializable;
 
 @Getter
 @Setter
@@ -12,7 +13,9 @@ import javax.persistence.Table;
 @EqualsAndHashCode(callSuper = true)
 @Entity
 @Table(name = "cases")
-public class Case extends Component {
+public class Case extends Component implements Serializable {
+
+    private static final long serialVersionUID = -5265907039198363238L;
 
     @Column(name = "material")
     private String material;

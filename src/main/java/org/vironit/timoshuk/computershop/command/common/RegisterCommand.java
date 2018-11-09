@@ -52,7 +52,7 @@ public class RegisterCommand implements ActionCommand {
                 if (new UserDAOImpl().findById(user.getId()).equals(user) ){
                     request.setAttribute("registerSuccess", MessageManager.getProperty("message.registerSuccess"));
                     page = URLManager.getProperty("path.page.login");
-                    LOG.info("The registration of user with login" + user.getLogin() + " is successful");
+                    LOG.info("The registration of user with login " + user.getLogin() + " is successful");
                 }
                 else {
                     request.setAttribute("", MessageManager.getProperty("message.registerUnSuccess"));

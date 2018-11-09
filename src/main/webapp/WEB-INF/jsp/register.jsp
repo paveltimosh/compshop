@@ -34,7 +34,7 @@
     <div > </div><br/>
     ID of bank card (16 numbers): <br/>
     <input type="text" name="idBankCard" value="" required/>
-    <div style="color:#ff0000"> ${errorIdCardMessage} </div><br/><br/>
+    <div style="color:#ff0000"> ${errorIdCardMessage} ${errorIdBanCardInUseMessage}</div><br/><br/>
     <input type="submit" class="button" name="register" value="Register" /><br/>
 </form></center>
 <%@include file="/WEB-INF/jsp/common/footer.jspf"%>

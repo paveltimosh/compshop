@@ -32,6 +32,6 @@
             </c:otherwise>
         </c:choose>
     </div>
-    <h1> Магазин компьютеров "Мастер-хакер"</h1>
+    <h1>BUILD YOUR OWN PC</h1>
 </body>
 </html>

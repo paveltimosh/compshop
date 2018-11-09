@@ -26,7 +26,7 @@ public class LoginCommand implements ActionCommand {
         String login = request.getParameter(PARAM_NAME_LOGIN);
         String password = request.getParameter(PARAM_NAME_PASSWORD);
         try {
-            User user = new UserDAOImpl().findByLogin(login);
+            User user = new UserDAOImpl().findByParameter("login", login);
             if(user != null){
                 if (user.getPassword().equals(password)){
                     HashMap <Item, Integer> cart = new HashMap<>();

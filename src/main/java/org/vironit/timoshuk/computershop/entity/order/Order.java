@@ -7,7 +7,6 @@ import org.vironit.timoshuk.computershop.util.LocalTimeAttributeConverter;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.time.LocalTime;
 
 @Builder
