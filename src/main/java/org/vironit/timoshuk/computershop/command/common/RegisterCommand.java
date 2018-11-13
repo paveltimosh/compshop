@@ -19,15 +19,15 @@ public class RegisterCommand implements ActionCommand {
 
     private final static Logger LOG = LogManager.getLogger(RegisterCommand.class);
 
-    private static final String PARAM_NAME_LOGIN = "login";
-    private static final String PARAM_NAME_PASSWORD = "password";
-    private static final String PARAM_NAME_PASSWORD_TWO = "passwordTwo";
-    private static final String PARAM_NAME_EMAIL = "email";
-    private static final String PARAM_NAME_FIRST_NAME = "firstName";
-    private static final String PARAM_NAME_LAST_NAME = "lastName";
-    private static final String PARAM_NAME_PHONE_NUMBER ="phoneNumber";
-    private static final String PARAM_NAME_ADDRESS = "address";
-    private static final String PARAM_NAME_ID_BANK_CARD = "idBankCard";
+    private static final String PARAM_NAME_LOGIN =          "login";
+    private static final String PARAM_NAME_PASSWORD =       "password";
+    private static final String PARAM_NAME_PASSWORD_TWO =   "passwordTwo";
+    private static final String PARAM_NAME_EMAIL =          "email";
+    private static final String PARAM_NAME_FIRST_NAME =     "firstName";
+    private static final String PARAM_NAME_LAST_NAME =      "lastName";
+    private static final String PARAM_NAME_PHONE_NUMBER =   "phoneNumber";
+    private static final String PARAM_NAME_ADDRESS =        "address";
+    private static final String PARAM_NAME_ID_BANK_CARD =   "idBankCard";
 
     @Override
     public String execute(HttpServletRequest request) {

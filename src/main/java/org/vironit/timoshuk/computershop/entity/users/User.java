@@ -5,7 +5,7 @@ import lombok.*;
 import javax.persistence.*;
 import java.io.Serializable;
 
-@Builder
+@Builder()
 @Getter
 @Setter
 @ToString()
@@ -16,6 +16,7 @@ public class User  implements Serializable{
 
     private static final long serialVersionUID = 3388139916457807859L;
 
+    //@Setter(value = AccessLevel.PRIVATE)
     @Id
     @GeneratedValue(strategy=GenerationType.SEQUENCE, generator = "user_seq")
     @SequenceGenerator(name = "user_seq", sequenceName = "customers_id_seq", allocationSize = 1)

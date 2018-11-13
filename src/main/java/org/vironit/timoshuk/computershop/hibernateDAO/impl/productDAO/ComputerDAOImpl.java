@@ -10,53 +10,10 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ComputerDAOImpl extends EntityDAOImpl <Computer> {
-    private Session session;
+public class ComputerDAOImpl extends EntityDAOImpl <Computer, Long> {
 
     public ComputerDAOImpl(){
-        session = HibernateUtil.getSessionFactory().openSession();
+        type = Computer.class;
     }
 
-    @Override
-    public Computer findById(Long id) throws SQLException {
-        Computer computer = null;
-        computer = session.load(Computer.class, id);
-        return computer;
-    }
-
-    @Override
-    public List<Computer> findAll() throws SQLException {
-        List<Computer> computers = new ArrayList<>();
-        Query query = session.createQuery("FROM Computer");
-        computers = query.list();
-        return computers;
-    }
-
-    @Override
-    public void create(Computer entity) throws SQLException {
-        session.beginTransaction();
-        session.save(entity);
-        session.getTransaction().commit();
-    }
-
-    @Override
-    public void update(Computer entity) throws SQLException {
-        session.beginTransaction();
-        session.update(entity);
-        session.getTransaction().commit();
-    }
-
-    @Override
-    public void delete(Computer entity) throws SQLException {
-        session.beginTransaction();
-        session.delete(entity);
-        session.getTransaction().commit();
-    }
-
-    @Override
-    public void deleteById(Long id) throws SQLException {
-        Computer computer = null;
-        computer = session.load(Computer.class, id);
-        delete(computer);
-    }
 }

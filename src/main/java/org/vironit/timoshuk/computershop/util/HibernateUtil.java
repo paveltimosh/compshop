@@ -34,6 +34,7 @@ public class HibernateUtil {
                         .addAnnotatedClass(CPU.class)
                         .getMetadataBuilder().build();
                 sessionFactory = metadata.getSessionFactoryBuilder().build();
+
             }catch (Exception e){
                 LOG.error("Exception in creating MetadataSources" + e) ;
                 StandardServiceRegistryBuilder.destroy(standardRegistry);

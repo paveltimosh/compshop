@@ -1,10 +1,7 @@
 package org.vironit.timoshuk.computershop.entity.products.Components;
 
 
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 import org.vironit.timoshuk.computershop.entity.products.Item;
 
 import javax.persistence.*;
@@ -12,14 +9,13 @@ import javax.persistence.*;
 @Getter
 @Setter
 @ToString
-@EqualsAndHashCode(callSuper = true)
+@EqualsAndHashCode(callSuper = true, of = {"id", "model"})
 @MappedSuperclass
 @Inheritance
 public abstract class Component extends Item {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-
     @Column(name = "id")
     private Long id;
 

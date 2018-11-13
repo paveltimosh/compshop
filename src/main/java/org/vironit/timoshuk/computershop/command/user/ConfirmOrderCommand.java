@@ -11,6 +11,8 @@ import org.vironit.timoshuk.computershop.entity.users.User;
 import org.vironit.timoshuk.computershop.hibernateDAO.impl.OrderDAOImpl;
 import org.vironit.timoshuk.computershop.hibernateDAO.impl.UserDAOImpl;
 import org.vironit.timoshuk.computershop.resource.MessageManager;
+
+import javax.persistence.PersistenceException;
 import javax.servlet.http.HttpServletRequest;
 import java.sql.SQLException;
 import java.time.LocalDate;
@@ -53,6 +55,8 @@ public class ConfirmOrderCommand implements ActionCommand {
             orderDAO.update(order);
         } catch (SQLException e) {
             LOG.error("SQLException in method execute");
+        } catch ( PersistenceException e ) {
+            request.setAttribute("deleteOrderError", MessageManager.getProperty("message.order.deleteError"));
         }
         page = new ShowOrderUserCommand().execute(request);
         return page;

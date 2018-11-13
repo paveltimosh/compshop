@@ -29,13 +29,12 @@ public class MakeOrderCommand implements ActionCommand {
     public String execute(HttpServletRequest request) {
         String page = null;
         OrderDAOImpl orderDAO = new OrderDAOImpl();
-        String orderDescription = "";
         User user = (User)request.getSession().getAttribute("user");
         Long userId = user.getId();
         HashMap<Item, Integer> cart = (HashMap<Item, Integer>) request.getSession().getAttribute("cart");
         if(!cart.isEmpty()){
             int totalAmountOfOrder = Integer.valueOf(request.getParameter(PARAM_NAME_TOTAL_AMOUNT_OF_ORDER).trim());
-            changeDescriptionOfOrder(orderDescription, cart);
+            String orderDescription = changeDescriptionOfOrder( cart);
             Order order = createOrderEntity(userId, totalAmountOfOrder, orderDescription.trim());
             addOrderToDataBase(order);
             cart = new HashMap<>();
@@ -68,9 +67,11 @@ public class MakeOrderCommand implements ActionCommand {
         }
     }
 
-    public void changeDescriptionOfOrder(String orderDescription, HashMap<Item, Integer> cart ){
+    public String changeDescriptionOfOrder( HashMap<Item, Integer> cart ){
+        String orderDescription = "";
         for (Map.Entry <Item, Integer> entry : cart.entrySet()){
             orderDescription = orderDescription.concat(entry.getKey().getModel()).concat(" ");
         }
+        return orderDescription;
     }
 }

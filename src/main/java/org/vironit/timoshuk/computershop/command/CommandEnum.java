@@ -71,7 +71,12 @@ public enum CommandEnum {
         {
             this.command = new ConfirmOrderCommand();
         }
-    };
+    },DELETE_ORDER_USER{
+        {
+            this.command = new DeleteOrderByUserCommand();
+        }
+    }
+    ;
 
     ActionCommand command;
 

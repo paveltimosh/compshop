@@ -14,7 +14,7 @@ import java.util.Map;
 public class DeleteFromCartCommand implements ActionCommand {
 
     private static final Logger LOG = LogManager.getLogger(DeleteFromCartCommand.class);
-    private static final String PARAM_ID_ITEM= "id";
+    private static final String PARAM_ID_ITEM = "id";
 
     @Override
     public String execute(HttpServletRequest request) {

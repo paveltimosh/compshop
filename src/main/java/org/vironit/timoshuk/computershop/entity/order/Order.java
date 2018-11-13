@@ -20,6 +20,7 @@ public class Order implements Serializable {
 
     private static final long serialVersionUID = -4319131179207728616L;
 
+    @Setter(value = AccessLevel.PRIVATE)
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "orders_id")
     @SequenceGenerator(name = "orders_id", sequenceName = "orders_id_seq", allocationSize = 1)

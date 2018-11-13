@@ -10,53 +10,10 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CaseDAOImpl extends EntityDAOImpl<Case> {
-
-    private Session session;
+public class CaseDAOImpl extends EntityDAOImpl<Case, Long> {
 
     public CaseDAOImpl(){
-        session = HibernateUtil.getSessionFactory().openSession();
+        type = Case.class;
     }
 
-    @Override
-    public Case findById(Long id) throws SQLException {
-        Case caze = null;
-        caze = session.load(Case.class, id);
-        return caze;
-    }
-
-    @Override
-    public List<Case> findAll() throws SQLException {
-        List<Case> caseList = new ArrayList<>();
-        Query query = session.createQuery("FROM Case");
-        caseList = query.list();
-        return caseList;
-    }
-
-    @Override
-    public void create(Case entity) throws SQLException {
-        session.beginTransaction();
-        session.save(entity);
-        session.getTransaction().commit();
-    }
-
-    @Override
-    public void update(Case entity) throws SQLException {
-        session.beginTransaction();
-        session.update(entity);
-        session.getTransaction().commit();
-    }
-
-    @Override
-    public void delete(Case entity) throws SQLException {
-        session.beginTransaction();
-        session.delete(entity);
-        session.getTransaction().commit();
-    }
-
-    @Override
-    public void deleteById(Long id) throws SQLException {
-        Case caze = findById(id);
-        delete(caze);
-    }
 }

@@ -7,12 +7,11 @@
 <body>
 <%@include file="/WEB-INF/jsp/common/header.jspf"%>
 <h2>Orders</h2><br>
-<div style="color:#ff0000"> ${orderConfirmError} </div>
-<div style="color:#ff0000"> ${orderAlsoConfirmed} </div>
-<div style="color:#2ecd1d"> ${orderConfirmSuc} </div>
+<div style="color:#ff0000"> ${orderAlsoConfirmed} ${deletePayedOrderError} ${orderConfirmError} ${deleteOrderError} </div>
+<div style="color:#2ecd1d"> ${orderConfirmSuc} ${deleteOrderSuccess} </div>
 <table cellpadding="10">
 <tr>
-    <th width="100">Name</th>
+    <th width="100">Description</th>
     <th>Date of order</th>
     <th>Time of order</th>
     <th>Status</th>
@@ -36,11 +35,21 @@
                 </select>
                 <input type="hidden" name="command" value="confirm_order"/>
                 <input type="hidden" name="orderId" value="${order.id}"/>
-                <input type="submit" class="button" name="confirm_order_button" value="Confirm order" />
             </form>
         </c:if>
         <c:if test="${order.paymentDescription.typePayment != null }">
             ${order.paymentDescription.typePayment}
+        </c:if>
+    </td>
+    <td>
+        <c:if test="${order.paymentDescription.typePayment == null}">
+            <input type="submit" form="makeOrder" class="button" name="confirm_order_button" value="Confirm order" />
+            <form name="make_order" class="text" id="makeOrder" method="post" action="/jsp/controller">
+                <input type="hidden" name="command" value="delete_order_user"/>
+                <input type="hidden" name="orderId" value="${order.id}"/>
+                <input type="submit" class="button" name="confirm_order_button" value="Delete" />
+            </form>
+
         </c:if>
     </td>
 </tr>

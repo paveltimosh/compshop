@@ -10,53 +10,10 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CpuDAOImpl extends EntityDAOImpl <CPU> {
-
-    private Session session;
+public class CpuDAOImpl extends EntityDAOImpl <CPU, Long> {
 
     public CpuDAOImpl(){
-        session = HibernateUtil.getSessionFactory().openSession();
+        type = CPU.class;
     }
 
-    @Override
-    public CPU findById(Long id) throws SQLException {
-        CPU cpu = null;
-        cpu = session.load(CPU.class, id);
-        return cpu;
-    }
-
-    @Override
-    public List<CPU> findAll() throws SQLException {
-        List<CPU> cpuList = new ArrayList<>();
-        Query query = session.createQuery("FROM CPU");
-        cpuList = query.list();
-        return cpuList;
-    }
-
-    @Override
-    public void create(CPU entity) throws SQLException {
-        session.beginTransaction();
-        session.save(entity);
-        session.getTransaction().commit();
-    }
-
-    @Override
-    public void update(CPU entity) throws SQLException {
-        session.beginTransaction();
-        session.update(entity);
-        session.getTransaction().commit();
-    }
-
-    @Override
-    public void delete(CPU entity) throws SQLException {
-        session.beginTransaction();
-        session.delete(entity);
-        session.getTransaction().commit();
-    }
-
-    @Override
-    public void deleteById(Long id) throws SQLException {
-        CPU cpu = findById(id);
-        delete(cpu);
-    }
 }

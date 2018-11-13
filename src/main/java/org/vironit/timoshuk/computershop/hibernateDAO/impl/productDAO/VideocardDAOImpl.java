@@ -10,53 +10,10 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class VideocardDAOImpl extends EntityDAOImpl<VideoCard> {
-
-    private Session session;
+public class VideocardDAOImpl extends EntityDAOImpl<VideoCard, Long> {
 
     public VideocardDAOImpl(){
-        session = HibernateUtil.getSessionFactory().openSession();
+        type = VideoCard.class;
     }
 
-    @Override
-    public VideoCard findById(Long id) throws SQLException {
-        VideoCard videoCard = null;
-        videoCard = session.load(VideoCard.class, id);
-        return videoCard;
-    }
-
-    @Override
-    public List<VideoCard> findAll() throws SQLException {
-        List<VideoCard> videoCards = new ArrayList<>();
-        Query query = session.createQuery("FROM VideoCard");
-        videoCards = query.list();
-        return videoCards;
-    }
-
-    @Override
-    public void create(VideoCard entity) throws SQLException {
-        session.beginTransaction();
-        session.save(entity);
-        session.getTransaction().commit();
-    }
-
-    @Override
-    public void update(VideoCard entity) throws SQLException {
-        session.beginTransaction();
-        session.update(entity);
-        session.getTransaction().commit();
-    }
-
-    @Override
-    public void delete(VideoCard entity) throws SQLException {
-        session.beginTransaction();
-        session.delete(entity);
-        session.getTransaction().commit();
-    }
-
-    @Override
-    public void deleteById(Long id) throws SQLException {
-        VideoCard videoCard = findById(id);
-        delete(videoCard);
-    }
 }
