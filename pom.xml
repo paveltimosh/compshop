@@ -38,12 +38,6 @@
       <scope>provided</scope>
     </dependency>
 
-    <dependency>
-      <groupId>com.zaxxer</groupId>
-      <artifactId>HikariCP</artifactId>
-      <version>3.2.0</version>
-    </dependency>
-
       <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-simple</artifactId>
@@ -69,11 +63,16 @@
     </dependency>
 
     <dependency>
+      <groupId>com.zaxxer</groupId>
+      <artifactId>HikariCP</artifactId>
+      <version>3.2.0</version>
+    </dependency>
+
+    <dependency>
       <groupId>org.hibernate</groupId>
       <artifactId>hibernate-core</artifactId>
       <version>5.3.5.Final</version>
     </dependency>
-
 
     <dependency>
       <groupId>org.hibernate</groupId>
@@ -81,8 +80,13 @@
       <version>5.3.6.Final</version>
     </dependency>
 
-  </dependencies>
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-hikaricp</artifactId>
+      <version>5.3.7.Final</version>
+    </dependency>
 
+  </dependencies>
 
   <build>
     <finalName>computershop</finalName>
@@ -92,7 +96,6 @@
           <artifactId>maven-clean-plugin</artifactId>
           <version>3.0.0</version>
         </plugin>
-
         <plugin>
           <artifactId>maven-resources-plugin</artifactId>
           <version>3.0.2</version>

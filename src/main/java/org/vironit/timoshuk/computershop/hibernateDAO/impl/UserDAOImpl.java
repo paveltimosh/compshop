@@ -6,8 +6,6 @@ import org.vironit.timoshuk.computershop.entity.users.User;
 import org.vironit.timoshuk.computershop.hibernateDAO.EntityDAOImpl;
 import org.vironit.timoshuk.computershop.util.HibernateUtil;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
 
 public class UserDAOImpl extends EntityDAOImpl <User, Long> {
 

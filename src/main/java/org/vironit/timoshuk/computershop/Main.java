@@ -6,7 +6,9 @@ import org.apache.logging.log4j.Logger;
 import org.vironit.timoshuk.computershop.entity.order.Order;
 import org.vironit.timoshuk.computershop.entity.users.User;
 import org.vironit.timoshuk.computershop.hibernateDAO.impl.OrderDAOImpl;
+import org.vironit.timoshuk.computershop.util.DataBasePoolConnector;
 
+import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.List;
 
@@ -16,10 +18,7 @@ public class Main  {
     public static void main(String[] args) {
 
         try {
-            List<Order> orderList = new OrderDAOImpl().findAll();
-            for (Order order : orderList) {
-                System.out.println(order);
-            }
+            Connection connection =  DataBasePoolConnector.getConnection();
         } catch (SQLException e) {
             e.printStackTrace();
         }
