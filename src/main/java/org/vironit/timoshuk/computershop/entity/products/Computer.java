@@ -1,8 +1,6 @@
 package org.vironit.timoshuk.computershop.entity.products;
 
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 import org.vironit.timoshuk.computershop.entity.products.Components.*;
 
 import javax.persistence.*;
@@ -13,6 +11,8 @@ import java.io.Serializable;
 @EqualsAndHashCode(callSuper = true, of = {"id", "model"})
 @Entity
 @Table(name = "computers")
+@NoArgsConstructor
+@AllArgsConstructor
 public class Computer extends Item implements Serializable {
 
     private static final long serialVersionUID = 2967751437487461522L;
@@ -47,21 +47,6 @@ public class Computer extends Item implements Serializable {
     @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinColumn(name = "id_videocard", referencedColumnName = "id")
     private VideoCard videoCard;
-
-    public Computer() {
-    }
-
-    public Computer(Long id, Integer price, String model, Case aCase, CPU cpu, MotherBoard motherBoard, RAM ram, VideoCard videoCard) {
-        super(id, model);
-        this.id = id;
-        this.price = price;
-        this.model = model;
-        this.cases = aCase;
-        this.cpu = cpu;
-        this.motherBoard = motherBoard;
-        this.ram = ram;
-        this.videoCard = videoCard;
-    }
 
     @Override
     public String toString() {

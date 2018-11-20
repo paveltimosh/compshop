@@ -12,12 +12,14 @@ import java.io.Serializable;
 @EqualsAndHashCode(of = {"login", "id"})
 @Entity
 @Table(name = "users", schema = "public")
-public class User  implements Serializable{
+@NoArgsConstructor
+@AllArgsConstructor
+public class User implements Serializable{
 
     private static final long serialVersionUID = 3388139916457807859L;
 
-    //@Setter(value = AccessLevel.PRIVATE)
     @Id
+    @Setter(value = AccessLevel.PRIVATE)
     @GeneratedValue(strategy=GenerationType.SEQUENCE, generator = "user_seq")
     @SequenceGenerator(name = "user_seq", sequenceName = "customers_id_seq", allocationSize = 1)
     @Column(name = "id")
@@ -54,21 +56,4 @@ public class User  implements Serializable{
     @Column(name = "phone_number")
     private String phoneNumber;
 
-    public User(){
-    }
-
-    public User(Long id, UserType userType, String login, String password, String email, Integer ownMoney,
-                String firstName, String lastName, String idCard, String address, String phoneNumber) {
-        this.id = id;
-        this.userType = userType;
-        this.login = login;
-        this.password = password;
-        this.email = email;
-        this.ownMoney = ownMoney;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.idCard = idCard;
-        this.address = address;
-        this.phoneNumber = phoneNumber;
-    }
 }

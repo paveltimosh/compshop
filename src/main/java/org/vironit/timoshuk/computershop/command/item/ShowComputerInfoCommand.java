@@ -19,7 +19,6 @@ public class ShowComputerInfoCommand implements ActionCommand {
 
     private static final String PARAM_NAME_ID_COMPUTER= "id";
 
-
     @Override
     public String execute(HttpServletRequest request) {
         String page = null;
@@ -35,7 +34,7 @@ public class ShowComputerInfoCommand implements ActionCommand {
         return page;
     }
 
-    private Computer  getEntityComputer( Long id){
+    private Computer  getEntityComputer(Long id){
         Computer computer = null;
         try {
             computer = new ComputerDAOImpl().findById(id);

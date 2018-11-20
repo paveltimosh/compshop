@@ -3,7 +3,6 @@ package org.vironit.timoshuk.computershop.entity.order;
 import lombok.*;
 import org.vironit.timoshuk.computershop.util.LocalDateAttributeConverter;
 import org.vironit.timoshuk.computershop.util.LocalTimeAttributeConverter;
-
 import javax.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDate;
@@ -16,12 +15,14 @@ import java.time.LocalTime;
 @EqualsAndHashCode(of = {"id", "idOfCustomer"})
 @Entity
 @Table(name = "orders")
+@NoArgsConstructor
+@AllArgsConstructor
 public class Order implements Serializable {
 
     private static final long serialVersionUID = -4319131179207728616L;
 
-    @Setter(value = AccessLevel.PRIVATE)
     @Id
+    @Setter(value = AccessLevel.PRIVATE)
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "orders_id")
     @SequenceGenerator(name = "orders_id", sequenceName = "orders_id_seq", allocationSize = 1)
     @Column(name = "id")
@@ -31,7 +32,7 @@ public class Order implements Serializable {
     private Long idOfCustomer;
 
     @Column(name = "order_description")
-    String orderDescription;
+    private String orderDescription;
 
     @Column(name = "date_of_order")
     @Convert(converter = LocalDateAttributeConverter.class)
@@ -57,18 +58,4 @@ public class Order implements Serializable {
     })
     private PaymentDescription paymentDescription;
 
-    public Order(){
-    }
-
-    public Order(Long id, Long idOfCustomer, String orderDescription, LocalDate dateOfOrder, LocalTime timeOfOrder,
-                 Integer totalAmountOrder, OrderStatus orderStatus, PaymentDescription paymentDescription) {
-        this.id = id;
-        this.idOfCustomer = idOfCustomer;
-        this.orderDescription = orderDescription;
-        this.dateOfOrder = dateOfOrder;
-        this.timeOfOrder = timeOfOrder;
-        this.totalAmountOrder = totalAmountOrder;
-        this.orderStatus = orderStatus;
-        this.paymentDescription = paymentDescription;
-    }
 }

@@ -15,6 +15,7 @@ import javax.persistence.*;
 public abstract class Component extends Item {
 
     @Id
+    @Setter(value = AccessLevel.PRIVATE)
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column(name = "id")
     private Long id;

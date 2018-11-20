@@ -3,9 +3,7 @@ package org.vironit.timoshuk.computershop.command.common;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.vironit.timoshuk.computershop.command.ActionCommand;
-import org.vironit.timoshuk.computershop.entity.products.Components.MotherBoard;
 import org.vironit.timoshuk.computershop.entity.products.Components.RAM;
-import org.vironit.timoshuk.computershop.hibernateDAO.impl.productDAO.MotherboardDAOImpl;
 import org.vironit.timoshuk.computershop.hibernateDAO.impl.productDAO.RamDAOImpl;
 import org.vironit.timoshuk.computershop.resource.URLManager;
 

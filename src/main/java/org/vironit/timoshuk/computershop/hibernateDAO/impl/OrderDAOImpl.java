@@ -15,7 +15,6 @@ public class OrderDAOImpl extends EntityDAOImpl <Order, Long> {
         type = Order.class;
     }
 
-
     public List<Order> findAllByUserId(Long userId) throws SQLException {
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
         session.beginTransaction();
