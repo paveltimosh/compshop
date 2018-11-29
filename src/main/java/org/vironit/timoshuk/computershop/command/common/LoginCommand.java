@@ -43,7 +43,7 @@ public class LoginCommand implements ActionCommand {
                 request.setAttribute("userNotFound", MessageManager.getProperty("message.loginError"));
                 page = URLManager.getProperty("path.page.login");
             }
-        } catch (SQLException e) {
+        } catch (Exception e) {
             LOG.error("DAO Exception in method execute");
         }
         return page;

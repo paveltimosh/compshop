@@ -16,13 +16,10 @@ public class OrderDAOImpl extends EntityDAOImpl <Order, Long> {
     }
 
     public List<Order> findAllByUserId(Long userId) throws SQLException {
-        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
-        session.beginTransaction();
         List<Order> orderList = new ArrayList<>();
-        Query query = session.createQuery("FROM Order WHERE id_of_customer =:paramUserId");
+        Query query = getCurrentSession().createQuery("FROM Order WHERE id_of_customer =:paramUserId");
         query.setParameter("paramUserId", userId);
         orderList = query.list();
-        session.getTransaction().commit();
         return orderList;
     }
 }

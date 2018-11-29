@@ -2,18 +2,21 @@ package org.vironit.timoshuk.computershop.validators;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.vironit.timoshuk.computershop.entity.users.User;
 import org.vironit.timoshuk.computershop.hibernateDAO.impl.UserDAOImpl;
 import org.vironit.timoshuk.computershop.resource.MessageManager;
+import org.vironit.timoshuk.computershop.service.UserService;
 
+import javax.transaction.Transactional;
 import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.ResourceBundle;
 
+
 public class UserValidator {
     private static final ResourceBundle RESOURCE_BUNDLE = ResourceBundle.getBundle("regex");
     private static final Logger LOG = LogManager.getLogger(UserValidator.class);
-
 
     public static boolean checkLogin (String enterLogin){
         return enterLogin.matches(RESOURCE_BUNDLE.getString("login"));
@@ -106,6 +109,7 @@ public class UserValidator {
         }
         return errorMessage;
     }
+
 
     public static HashMap<String, String> checkUserDataWithoutLoginPassword(User user, String email, String firstName, String lastName,
                                                                              String phoneNumber, String address, String idBankCard) {

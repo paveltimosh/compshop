@@ -12,7 +12,7 @@ public class LogoutCommand implements ActionCommand {
     public String execute(HttpServletRequest request) {
         String page = URLManager.getProperty("path.page.index");
         request.getSession().invalidate();
-        HttpSession session = request.getSession(true);
+        request.getSession(true);
         return page;
     }
 }

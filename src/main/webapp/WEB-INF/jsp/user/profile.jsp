@@ -18,9 +18,7 @@
 <b>Address: </b> ${sessionScope.user.address}<br/>
 <b>ID of bank card: </b> ${sessionScope.user.idCard}<br/><br/>
 
-<form name="changeUserInfo" method="POST" action="${pageContext.request.contextPath}/editinfo" autocomplete="off">
-    <input type="submit" class="button" value="Change profile info"/>
-</form><br/>
+<a href="${pageContext.request.contextPath}/changeUserData"> Edit profile</a>
 <a href="${pageContext.request.contextPath}/main"> Back</a>
 
 <%@include file="/WEB-INF/jsp/common/footer.jspf"%>

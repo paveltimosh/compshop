@@ -32,9 +32,7 @@ public class DeleteOrderByUserCommand implements ActionCommand {
             }else {
                 request.setAttribute("deletePayedOrderError", MessageManager.getProperty("message.orderPayed.deleteError"));
             }
-        } catch (SQLException e) {
-            LOG.error("DAOException in method execute" );
-        } catch (PersistenceException  e){
+        }catch (PersistenceException  e){
             request.setAttribute("deleteOrderError", MessageManager.getProperty("message.order.deleteError"));
             page = new ShowOrderUserCommand().execute(request);
         }

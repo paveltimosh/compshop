@@ -58,7 +58,7 @@ public class UpdateUserDataCommand implements ActionCommand {
                 }
                 page = URLManager.getProperty("path.page.user.changeUser");
             }
-        } catch (SQLException e) {
+        } catch (Exception e) {
             LOG.error("DAOException");
         }
         return page;

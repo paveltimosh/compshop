@@ -26,7 +26,7 @@ public class ShowCatalogComputerCommand implements ActionCommand {
             }else {
                 page = URLManager.getProperty("path.page.main");
             }
-        } catch (SQLException e) {
+        } catch (Exception e) {
             LOG.error("DAO Exception in method execute() ");
         }
         return page;

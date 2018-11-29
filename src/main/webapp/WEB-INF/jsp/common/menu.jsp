@@ -17,7 +17,7 @@
     <input type="submit" class="button" name="catalog_cpu" value="CPU"/>
 </form>
 
-<form name="cmotherForm" class="text" id="motherBoardForm" method="post" action="/jsp/controller">
+<form name="motherForm" class="text" id="motherBoardForm" method="post" action="/jsp/controller">
     <input type="hidden" name="command" value="show_catalog_mother_board"/>
     <input type="submit" class="button" name="catalog_motherboards" value="Motherboards"/>
 </form>

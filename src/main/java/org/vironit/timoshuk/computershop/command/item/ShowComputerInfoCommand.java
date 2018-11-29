@@ -8,10 +8,7 @@ import org.vironit.timoshuk.computershop.command.common.ShowCatalogComputerComma
 import org.vironit.timoshuk.computershop.entity.products.Computer;
 import org.vironit.timoshuk.computershop.hibernateDAO.impl.productDAO.ComputerDAOImpl;
 import org.vironit.timoshuk.computershop.resource.URLManager;
-
 import javax.servlet.http.HttpServletRequest;
-import java.net.URL;
-import java.sql.SQLException;
 
 public class ShowComputerInfoCommand implements ActionCommand {
 
@@ -38,7 +35,7 @@ public class ShowComputerInfoCommand implements ActionCommand {
         Computer computer = null;
         try {
             computer = new ComputerDAOImpl().findById(id);
-        } catch (SQLException e) {
+        } catch (Exception e) {
             LOG.error("DAOException in method execute");
         }
         return computer;

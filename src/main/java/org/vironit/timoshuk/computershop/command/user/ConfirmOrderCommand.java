@@ -53,9 +53,7 @@ public class ConfirmOrderCommand implements ActionCommand {
                 request.setAttribute("orderConfirmSuc", MessageManager.getProperty("message.orderConfirmSuccessful"));
             }
             orderDAO.update(order);
-        } catch (SQLException e) {
-            LOG.error("SQLException in method execute");
-        } catch ( PersistenceException e ) {
+        }  catch ( Exception e ) {
             request.setAttribute("deleteOrderError", MessageManager.getProperty("message.order.deleteError"));
         }
         page = new ShowOrderUserCommand().execute(request);

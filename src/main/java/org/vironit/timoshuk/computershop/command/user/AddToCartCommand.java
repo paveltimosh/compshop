@@ -93,7 +93,7 @@ public class AddToCartCommand implements ActionCommand {
                 default:
                     item = null;
             }
-        } catch (SQLException e) {
+        } catch (Exception e) {
             LOG.error("DAOException");
         }
         return item;

@@ -21,8 +21,8 @@
                     <h4>Hi, ${sessionScope.user.login}</h4>
                     <a href="${pageContext.request.contextPath}/cart">Go to cart</a> <br/>
                     <a href="${pageContext.request.contextPath}/profile">Show profile</a><br/>
-                    <form name="logoutForm" method="POST" action="/jsp/controller"  style=" text-align: right; margin: 0; padding: 0; display: inline;">
-                        <input type="hidden" name="command" value="logout" />
+                    <form name="logoutForm" method="GET" action="logout"  style=" text-align: right; margin: 0; padding: 0; display: inline;">
+                        <input type="hidden" name="login" value="${sessionScope.user.login}"/>
                         <input type="submit" class="button tiny"  value="Logout"/>
                     </form>
                 </c:if>

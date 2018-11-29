@@ -62,7 +62,7 @@ public class MakeOrderCommand implements ActionCommand {
     public void addOrderToDataBase(Order order){
         try {
             new OrderDAOImpl().create(order);
-        } catch (SQLException e) {
+        } catch (Exception e) {
             LOG.error("SQLException in method execute");
         }
     }

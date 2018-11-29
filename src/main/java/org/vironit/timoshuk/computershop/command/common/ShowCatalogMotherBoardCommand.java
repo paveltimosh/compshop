@@ -26,7 +26,7 @@ public class ShowCatalogMotherBoardCommand implements ActionCommand {
             }else {
                 page = URLManager.getProperty("path.page.main");
             }
-        } catch (SQLException e) {
+        } catch (Exception e) {
             LOG.error("DAO Exception");
         }
         return page;

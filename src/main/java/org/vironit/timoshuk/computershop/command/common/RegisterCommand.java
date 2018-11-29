@@ -58,7 +58,7 @@ public class RegisterCommand implements ActionCommand {
                     request.setAttribute("", MessageManager.getProperty("message.registerUnSuccess"));
                     page = URLManager.getProperty("path.page.register");
                 }
-            } catch (SQLException e) {
+            } catch (Exception e) {
                 LOG.error("DAO Exception in method execute");
             }
         } else {
