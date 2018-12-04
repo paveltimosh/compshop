@@ -1,5 +1,6 @@
-
+<%@ taglib prefix="st" uri="http://www.springframework.org/tags" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <html>
 <head>
     <title>RAM</title>
@@ -21,7 +22,7 @@
             <th>Price </th>
             <th>Add to cart</th>
         </tr>
-        <c:forEach var="item" items="${RAMs}">
+        <c:forEach var="item" items="${rams}">
             <tr>
                 <td> <c:out value="${item.model}"/></td>
                 <td> <c:out value="${item.maker}"/></td>
@@ -29,7 +30,7 @@
                 <td> <c:out value="${item.memoryCapacity}"/></td>
                 <td> <c:out value="${item.price}"/></td>
                 <td>
-                    <form name="addToCart" class="text" id="addToCart" method="post" action="/jsp/controller">
+                    <form name="addToCart" class="text" id="addToCart" method="post" action="/catalog/addToCart">
                         <input type="hidden" name="command" value="add_to_cart"/>
                         <input type="hidden" name="id" value="${item.id}">
                         <input type="hidden" name="description" value="${item.model}">

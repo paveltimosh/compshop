@@ -31,11 +31,11 @@
                 <td> <c:out value="${item.typeVideoMemory}"/></td>
                 <td> <c:out value="${item.price}"/></td>
                 <td>
-                    <form name="addToCart" class="text" id="addToCart" method="post" action="/jsp/controller">
+                    <form name="addToCart" class="text" id="addToCart" method="post" action="/catalog/addToCart">
                         <input type="hidden" name="command" value="add_to_cart"/>
                         <input type="hidden" name="id" value="${item.id}">
                         <input type="hidden" name="description" value="${item.model}">
-                        <input type="hidden" name="itemType" value="videoCard">
+                        <input type="hidden" name="itemType" value="videocards">
                         <input type="submit" class="button" name="add_to_cart" value="Add to cart"/>
                     </form>
                 </td>

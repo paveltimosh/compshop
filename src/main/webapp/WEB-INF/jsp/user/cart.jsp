@@ -27,16 +27,15 @@
             <td>${item.key.price} </td>
             <td>${item.value}</td>
             <td>
-                <form name="compInfoForm" class="text" id="deleteFromCart" method="post" action="/jsp/controller">
-                    <input type="hidden" name="command" value="delete_from_cart"/>
+                <form name="compInfoForm" class="text" id="deleteFromCart" method="get" action="/cart/delete">
                     <input type="hidden" name="id" value="${item.key.id}">
-                    <input type="submit" class="button" name="delete_item" value="Delete"/>
+                    <input type="submit" class="button" value="Delete"/>
                 </form>
             </td>
         </tr>
     </c:forEach>
 </table><br/>
-<h3> Total amount: ${summa}</h3><p>
+<h3> Total amount: $ ${summa} </h3><p>
 <form name="make_order" class="text" id="makeOrder" method="post" action="/jsp/controller">
     <input type="hidden" name="command" value="make_order"/>
     <input type="hidden" name="summa" value="${summa}">
@@ -46,7 +45,7 @@
     <input type="hidden" name="command" value="show_orders_of_user"/>
     <input type="submit" class="button" name="show_order_button" value="Show orders" />
 </form>
-<h3>Own money: ${sessionScope.user.ownMoney}</h3>
+<h3>Own money: $ ${sessionScope.user.ownMoney}</h3>
 
 <a href="${pageContext.request.contextPath}/main"> Back</a>
 <%@include file="/WEB-INF/jsp/common/footer.jspf"%>

@@ -41,6 +41,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public void createUserThenAuthenticate(UserDTO userDTO) {
         User user = createUserEntityFromDTO(userDTO);
+        System.out.println("new user" + user);
         userDAO.create(user);
     }
 
@@ -48,7 +49,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public void update(UserDTO userDTO) {
         User user = createUserEntityFromDTO(userDTO);
-        System.out.println(user);
+        System.out.println("updated user " + user);
         userDAO.update(user);
     }
 

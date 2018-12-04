@@ -12,16 +12,16 @@
     <div>
         <c:set var="role" value="${sessionScope.role}" scope="page"/>
         <c:choose>
-            <c:when test="${sessionScope.user == null}">
-                You can register <a href="${pageContext.request.contextPath}/register"> Register </a> <br>
-                Or you can login <a href="${pageContext.request.contextPath}/login"> Login </a>
+            <c:when test="${role == null}">
+                You can register <a href="/user/register"> Register </a> <br>
+                Or you can login <a href="/user/login"> Login </a>
             </c:when>
             <c:otherwise>
                 <c:if test="${role eq 'USER' }">
                     <h4>Hi, ${sessionScope.user.login}</h4>
-                    <a href="${pageContext.request.contextPath}/cart">Go to cart</a> <br/>
-                    <a href="${pageContext.request.contextPath}/profile">Show profile</a><br/>
-                    <form name="logoutForm" method="GET" action="logout"  style=" text-align: right; margin: 0; padding: 0; display: inline;">
+                    <a href="/user/cart">Go to cart</a> <br/>
+                    <a href="/user/profile">Show profile</a><br/>
+                    <form name="logoutForm" method="GET" action="/user/logout"  style=" text-align: right; margin: 0; padding: 0; display: inline;">
                         <input type="hidden" name="login" value="${sessionScope.user.login}"/>
                         <input type="submit" class="button tiny"  value="Logout"/>
                     </form>

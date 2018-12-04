@@ -11,7 +11,7 @@
 <%@include file="/WEB-INF/jsp/common/header.jspf"%>
 <h1>Change user info</h1>
 
-<form:form action="change_profile" method="post" modelAttribute="userDTO">
+<form:form action="/user/changeProfile" method="post" modelAttribute="userDTO">
     Email:<br/>
     <form:input path="email"  autocomplete="true"/>
     <form:errors path="email"  /><br>
@@ -30,7 +30,7 @@
     ID of bank card (16 numbers): <br/>
     <form:input path="idCard" autocomplete="${sessionScope.user.idCard}" />
     <form:errors path="idCard"  /><br>
-    <button type="submit">Submit</button>
+    <form:button name="changeUser">Submit</form:button>
 </form:form>
 
 <%@include file="/WEB-INF/jsp/common/footer.jspf"%>

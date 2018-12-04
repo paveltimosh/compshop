@@ -8,7 +8,7 @@
 </head>
 <body>
 <h1>Login</h1>
-<form name="loginForm" class="text" id="loginForm" method="post" action="/login">
+<form name="loginForm" class="text" id="loginForm" method="post" action="login">
     Login:<br/>
     <input type="text" name="login" value="" required />
     <div style="color:#ff0000"> ${userNotFound} </div>  <br/>

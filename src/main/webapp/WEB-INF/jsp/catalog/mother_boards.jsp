@@ -22,7 +22,7 @@
             <th>Price </th>
             <th>Add to cart</th>
         </tr>
-        <c:forEach var="item" items="${motherBoards}">
+        <c:forEach var="item" items="${motherboardList}">
             <tr>
                 <td> <c:out value="${item.model}"/></td>
                 <td> <c:out value="${item.maker}"/></td>
@@ -31,11 +31,10 @@
                 <td> <c:out value="${item.cpuSocketType}"/></td>
                 <td> <c:out value="${item.price}"/></td>
                 <td>
-                    <form name="addToCart" class="text" id="addToCart" method="post" action="/jsp/controller">
-                        <input type="hidden" name="command" value="add_to_cart"/>
+                    <form name="addToCart" class="text" id="addToCart" method="post" action="/catalog/addToCart">
                         <input type="hidden" name="id" value="${item.id}">
                         <input type="hidden" name="description" value="${item.model}">
-                        <input type="hidden" name="itemType" value="mother_board">
+                        <input type="hidden" name="itemType" value="mother_boards">
                         <input type="submit" class="button" name="add_to_cart" value="Add to cart"/>
                     </form>
                 </td>

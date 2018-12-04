@@ -22,7 +22,7 @@
         <th>Price </th>
         <th>Add to cart</th>
     </tr>
-    <c:forEach var="cases" items="${cases}">
+    <c:forEach var="cases" items="${caseList}">
     <tr>
         <td> <c:out value="${cases.model}"/></td>
         <td> <c:out value="${cases.maker}"/></td>
@@ -31,7 +31,7 @@
         <td> <c:out value="${cases.powerSupplyUnit}"/></td>
         <td> <c:out value="${cases.price}"/></td>
         <td>
-            <form name="addToCart" class="text" id="addToCart" method="post" action="/jsp/controller">
+            <form name="addToCart" class="text" id="addToCart" method="post" action="/catalog/addToCart">
                 <input type="hidden" name="command" value="add_to_cart"/>
                 <input type="hidden" name="id" value="${cases.id}">
                 <input type="hidden" name="description" value="${cases.model}">

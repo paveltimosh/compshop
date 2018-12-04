@@ -18,8 +18,8 @@
 <b>Address: </b> ${sessionScope.user.address}<br/>
 <b>ID of bank card: </b> ${sessionScope.user.idCard}<br/><br/>
 
-<a href="${pageContext.request.contextPath}/changeUserData"> Edit profile</a>
-<a href="${pageContext.request.contextPath}/main"> Back</a>
+<a href="/user/changeUserData"> Edit profile</a>
+<a href="/main"> Back</a>
 
 <%@include file="/WEB-INF/jsp/common/footer.jspf"%>
 </body>

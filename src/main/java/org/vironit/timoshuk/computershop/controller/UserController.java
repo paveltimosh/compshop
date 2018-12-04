@@ -5,27 +5,29 @@ import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.bind.support.SessionStatus;
 import org.springframework.web.servlet.ModelAndView;
-import org.vironit.timoshuk.computershop.command.common.LoginCommand;
 import org.vironit.timoshuk.computershop.dto.UserDTO;
 import org.vironit.timoshuk.computershop.dto.parser.UserDtoParser;
+import org.vironit.timoshuk.computershop.dto.transfer.CreateNewUser;
+import org.vironit.timoshuk.computershop.dto.transfer.EditUserData;
 import org.vironit.timoshuk.computershop.entity.products.Item;
-import org.vironit.timoshuk.computershop.entity.users.User;
+import org.vironit.timoshuk.computershop.entity.users.UserType;
 import org.vironit.timoshuk.computershop.resource.MessageManager;
 import org.vironit.timoshuk.computershop.service.UserService;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
-import javax.validation.Valid;
 import java.util.HashMap;
 
 @SessionAttributes({"user","cart"})
 @Controller
+@RequestMapping("/user")
 public class UserController {
 
     private UserService userService;
 
-    private final static Logger LOG = LogManager.getLogger(LoginCommand.class);
+    private final static Logger LOG = LogManager.getLogger(UserController.class);
 
     @Autowired
     public UserController(UserService userService) {
@@ -35,20 +37,25 @@ public class UserController {
     @Autowired
     private UserDtoParser userDtoParser;
 
+
     @ModelAttribute("userDTO")
     public UserDTO createModel() {
-
         return new UserDTO();
     }
 
-    @RequestMapping(value = "/login", method = RequestMethod.POST)
+    @ModelAttribute("newUser")
+    public UserDTO createModelUser() {
+        return new UserDTO();
+    }
+
+
+    @PostMapping(value = "/login")
     public ModelAndView login (@RequestParam String login,
                                @RequestParam String password,
                                HttpSession session){
-
-        ModelAndView model = new ModelAndView();
-        UserDTO user = userService.findByLogin(login);
-        if (user != null) {
+        ModelAndView model = new ModelAndView("login");
+        try {
+            UserDTO user = userService.findByLogin(login);
             if (user.getPassword().equals(password)) {
                 HashMap<Item, Integer> cart = new HashMap<>();
                 session.setAttribute("user", user);
@@ -57,58 +64,67 @@ public class UserController {
                 LOG.info("The user with login " + user.getLogin() + " is logged in");
                 model.setViewName("main");
             }else {
-                model.setViewName("login");
                 model.addObject("wrongPassword", MessageManager.getProperty("message.passwordError"));
             }
-        }else {
-            model.setViewName("login");
+        }catch (NullPointerException e){
             model.addObject("userNotFound", MessageManager.getProperty("message.loginError"));
         }
         return model;
     }
-    @RequestMapping("register")
-    public ModelAndView registerNewUser(@ModelAttribute User user){
-        ModelAndView model = new ModelAndView();
 
-        return model;
-    }
-
-    @RequestMapping(name = "change_profile", method = RequestMethod.POST)
-    public ModelAndView changeProfile(@SessionAttribute("user") UserDTO user,
-                                       @Valid @ModelAttribute UserDTO userDtoEdit,
-                                       BindingResult bindingResult,
-                                       HttpSession session){
+    @PostMapping(value = "/changeProfile")
+    public ModelAndView changeProfile(@SessionAttribute("user") UserDTO userDTO,
+                                      @Validated(EditUserData.class) @ModelAttribute ("userDTO")UserDTO userDtoEdit,
+                                      BindingResult bindingResult,
+                                      HttpSession session){
         ModelAndView model = new ModelAndView();
         if(bindingResult.hasErrors()){
             model.setViewName("user/changeUserData");
+            LOG.info("Editing of user is not valid:" + bindingResult);
             return model;
         }
-        user.setEmail(userDtoEdit.getEmail());
-        user.setFirstName(userDtoEdit.getFirstName());
-        user.setLastName(userDtoEdit.getLastName());
-        user.setAddress(userDtoEdit.getAddress());
-        user.setPhoneNumber(userDtoEdit.getPhoneNumber());
-        user.setIdCard(userDtoEdit.getIdCard());
-        userService.update(user);
+        userDTO.setEmail(userDtoEdit.getEmail());
+        userDTO.setFirstName(userDtoEdit.getFirstName());
+        userDTO.setLastName(userDtoEdit.getLastName());
+        userDTO.setAddress(userDtoEdit.getAddress());
+        userDTO.setPhoneNumber(userDtoEdit.getPhoneNumber());
+        userDTO.setIdCard(userDtoEdit.getIdCard());
+        userService.update(userDTO);
         model.setViewName("user/profile");
-        session.setAttribute("user", user);
+        session.setAttribute("user", userDTO);
         return model;
     }
 
-    @RequestMapping("/logout")
+    @PostMapping(value = "/register")
+    public ModelAndView registerNewUser(@Validated(CreateNewUser.class) @ModelAttribute("newUser") UserDTO newUser,
+                                        BindingResult bindingResult){
+        ModelAndView model = new ModelAndView("main");
+        System.out.println("new user from form " + newUser);
+        if(bindingResult.hasErrors()){
+            model.setViewName("register");
+            System.out.println(bindingResult);
+            return model;
+        }
+        newUser.setUserType(UserType.USER);
+        userService.createUserThenAuthenticate(newUser);
+        return model;
+    }
+
+    @GetMapping("/logout")
     public String getLogoutPage (@RequestParam String login,
-                                 SessionStatus sessionStatus){
-        sessionStatus.setComplete();
+                                 HttpServletRequest request, HttpSession session){
+        session.invalidate();
+        request.getSession(true);
         LOG.info("The user with login " + login + " is logged out");
         return "main";
     }
 
-    @RequestMapping("/profile")
+    @GetMapping("/profile")
     public String getShowProfilePage (){
         return "user/profile";
     }
 
-    @RequestMapping("/changeUserData")
+    @GetMapping("/changeUserData")
     public String getChangeProfilePage(){
         return "user/changeUserData";
     }
@@ -118,9 +134,18 @@ public class UserController {
         return "login";
     }
 
+    @GetMapping({"/register"})
+    public String getRegisterPage(){
+        return "register";
+    }
 
-    @GetMapping({"/main","/"})
+    @GetMapping({"/"})
     public String mainPage(){
         return "main";
+    }
+
+    @GetMapping("/cart")
+    public String showCart(){
+        return "user/cart";
     }
 }

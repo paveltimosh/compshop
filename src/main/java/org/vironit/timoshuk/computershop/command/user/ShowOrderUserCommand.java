@@ -26,7 +26,7 @@ public class ShowOrderUserCommand implements ActionCommand {
         List<Order> orderList = new ArrayList<>();
         try {
             orderList = new OrderDAOImpl().findAllByUserId(userId);
-        } catch (SQLException e) {
+        } catch (Exception e) {
             LOG.error("SQLException in method execute");
         }
         request.setAttribute("orders", orderList );
