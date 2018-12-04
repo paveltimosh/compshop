@@ -119,7 +119,7 @@ public class UserController {
         return "main";
     }
 
-    @GetMapping("/profile")
+    @GetMapping({"/profile",""})
     public String getShowProfilePage (){
         return "user/profile";
     }

@@ -4,7 +4,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 import org.vironit.timoshuk.computershop.entity.products.Item;
-
 import javax.servlet.http.HttpSession;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -29,11 +28,11 @@ public class CartController {
             }
         }
         session.setAttribute("cart", cart);
-
         return modelAndView;
     }
 
+    @RequestMapping("")
     public String showCart(){
-        return "cart";
+        return "user/cart";
     }
 }

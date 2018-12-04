@@ -36,18 +36,16 @@
     </c:forEach>
 </table><br/>
 <h3> Total amount: $ ${summa} </h3><p>
-<form name="make_order" class="text" id="makeOrder" method="post" action="/jsp/controller">
-    <input type="hidden" name="command" value="make_order"/>
+<form name="make_order" class="text" id="makeOrder" method="post" action="/make_order">
     <input type="hidden" name="summa" value="${summa}">
-    <input type="submit" class="button" name="make_order_button" value="Make order" />
+    <input type="submit" class="button" value="Make order" />
 </form>
-<form name="make_order" class="text" id="makeOrder" method="post" action="/jsp/controller">
-    <input type="hidden" name="command" value="show_orders_of_user"/>
-    <input type="submit" class="button" name="show_order_button" value="Show orders" />
+<form name="make_order" class="text" id="makeOrder" method="get" action="/user/orders">
+    <input type="submit" class="button"  value="Show orders" />
 </form>
 <h3>Own money: $ ${sessionScope.user.ownMoney}</h3>
 
-<a href="${pageContext.request.contextPath}/main"> Back</a>
+<a href="/main"> Back</a>
 <%@include file="/WEB-INF/jsp/common/footer.jspf"%>
 </body>
 </html>
