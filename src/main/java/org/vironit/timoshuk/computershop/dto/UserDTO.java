@@ -7,9 +7,7 @@ import lombok.NoArgsConstructor;
 import org.vironit.timoshuk.computershop.dto.transfer.CreateNewUser;
 import org.vironit.timoshuk.computershop.dto.transfer.EditUserData;
 import org.vironit.timoshuk.computershop.entity.users.UserType;
-import org.vironit.timoshuk.computershop.validator.FieldsValueMatch;
-
-import javax.persistence.Id;
+import org.vironit.timoshuk.computershop.validator.annotations.FieldsValueMatch;
 import javax.validation.constraints.*;
 
 @Data
@@ -20,7 +18,6 @@ import javax.validation.constraints.*;
         @FieldsValueMatch( field = "password", fieldMatch = "passwordTwo", message = "Passwords do not match!", groups = CreateNewUser.class)})
 public class UserDTO {
 
-    @Id
     private Long id;
 
     private UserType userType;

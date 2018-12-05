@@ -1,12 +1,11 @@
-package org.vironit.timoshuk.computershop.hibernateDAO.impl;
+package org.vironit.timoshuk.computershop.DAO.impl;
 
-import org.hibernate.Session;
 import org.hibernate.query.Query;
 import org.springframework.stereotype.Repository;
 import org.vironit.timoshuk.computershop.entity.order.Order;
-import org.vironit.timoshuk.computershop.hibernateDAO.EntityDAOImpl;
+import org.vironit.timoshuk.computershop.DAO.EntityDAOImpl;
 import org.vironit.timoshuk.computershop.util.HibernateUtil;
-import java.sql.SQLException;
+
 import java.util.ArrayList;
 import java.util.List;
 

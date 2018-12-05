@@ -5,7 +5,7 @@ import java.util.ResourceBundle;
 
 public class MessageManager {
 
-    private static ResourceBundle resourceBundle = ResourceBundle.getBundle("message", new Locale("",""));
+    private static ResourceBundle resourceBundle = ResourceBundle.getBundle("message_ru_RU", new Locale("",""));
 
     public static void checkLocale (Locale locale){
         resourceBundle = ResourceBundle.getBundle("message", locale);

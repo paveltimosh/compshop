@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 import org.vironit.timoshuk.computershop.dto.UserDTO;
 import org.vironit.timoshuk.computershop.dto.parser.UserDtoParser;
 import org.vironit.timoshuk.computershop.entity.users.User;
-import org.vironit.timoshuk.computershop.hibernateDAO.impl.UserDAOImpl;
+import org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl;
 import org.vironit.timoshuk.computershop.service.UserService;
 
 import javax.transaction.Transactional;
@@ -41,7 +41,6 @@ public class UserServiceImpl implements UserService {
     @Override
     public void createUserThenAuthenticate(UserDTO userDTO) {
         User user = createUserEntityFromDTO(userDTO);
-        System.out.println("new user" + user);
         userDAO.create(user);
     }
 
@@ -49,7 +48,6 @@ public class UserServiceImpl implements UserService {
     @Override
     public void update(UserDTO userDTO) {
         User user = createUserEntityFromDTO(userDTO);
-        System.out.println("updated user " + user);
         userDAO.update(user);
     }
 
@@ -74,9 +72,22 @@ public class UserServiceImpl implements UserService {
 
     @Transactional
     @Override
-    public boolean checkEmail(String login) {
+    public boolean checkEmail(String email) {
+        return userDAO.checkEmail(email);
+    }
+
+    @Transactional
+    @Override
+    public boolean checkLogin(String login) {
         return userDAO.checkLogin(login);
     }
+
+    @Transactional
+    @Override
+    public boolean checkBankCard(String bankCard) {
+        return userDAO.checkBankCard(bankCard);
+    }
+
 
     private User createUserEntityFromDTO(UserDTO userDTO){
         User user = User.builder().userType(userDTO.getUserType())

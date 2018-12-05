@@ -1,4 +1,4 @@
-package org.vironit.timoshuk.computershop.hibernateDAO;
+package org.vironit.timoshuk.computershop.DAO;
 
 import org.hibernate.HibernateException;
 

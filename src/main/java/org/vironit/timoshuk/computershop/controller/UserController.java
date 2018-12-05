@@ -3,8 +3,10 @@ package org.vironit.timoshuk.computershop.controller;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
+import org.springframework.validation.Validator;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
@@ -25,18 +27,14 @@ import java.util.HashMap;
 @RequestMapping("/user")
 public class UserController {
 
+    @Autowired
     private UserService userService;
 
+    @Autowired
+    @Qualifier("userValidator")
+    private Validator userValidator;
+
     private final static Logger LOG = LogManager.getLogger(UserController.class);
-
-    @Autowired
-    public UserController(UserService userService) {
-        this.userService = userService;
-    }
-
-    @Autowired
-    private UserDtoParser userDtoParser;
-
 
     @ModelAttribute("userDTO")
     public UserDTO createModel() {
@@ -99,10 +97,9 @@ public class UserController {
     public ModelAndView registerNewUser(@Validated(CreateNewUser.class) @ModelAttribute("newUser") UserDTO newUser,
                                         BindingResult bindingResult){
         ModelAndView model = new ModelAndView("main");
-        System.out.println("new user from form " + newUser);
+        userValidator.validate(newUser,bindingResult);
         if(bindingResult.hasErrors()){
             model.setViewName("register");
-            System.out.println(bindingResult);
             return model;
         }
         newUser.setUserType(UserType.USER);

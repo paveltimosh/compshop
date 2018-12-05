@@ -1,4 +1,4 @@
-package org.vironit.timoshuk.computershop.validator;
+package org.vironit.timoshuk.computershop.validator.annotations;
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;

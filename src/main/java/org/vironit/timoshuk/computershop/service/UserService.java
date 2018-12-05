@@ -13,6 +13,8 @@ public interface UserService {
     void delete(User entity);
     void deleteById(Long id);
     UserDTO findByLogin (String login);
-    boolean checkEmail (String login);
+    boolean checkEmail (String email);
+    boolean checkLogin(String login);
+    boolean checkBankCard (String bankCard);
 
 }

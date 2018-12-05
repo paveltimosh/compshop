@@ -53,10 +53,10 @@ public class OrderController {
         return modelAndView;
     }
 
-    @GetMapping("user/orders/delete")
+    @PostMapping("user/orders/delete")
     public ModelAndView deleteOrderByUser(@RequestParam Long orderId,
                                           @SessionAttribute UserDTO user){
-        ModelAndView modelAndView = showOrdersOfUser(user);
+        ModelAndView modelAndView = new ModelAndView("user/orders");
         Order order = orderService.findById(orderId);
         if (order != null && order.getOrderStatus().equals(OrderStatus.IS_CONFIRMED)){
             orderService.delete(order);
@@ -64,16 +64,17 @@ public class OrderController {
         }else {
             modelAndView.addObject("deletePayedOrderError", MessageManager.getProperty("message.orderPayed.deleteError"));
         }
-
+        List<Order> orderList = orderService.findAllByUserId(user.getId());
+        modelAndView.addObject("orders", orderList );
         return modelAndView;
     }
 
     @PostMapping("user/orders/confirm")
-    public ModelAndView confirmorder(@RequestParam Long orderId,
+    public ModelAndView confirmOrder(@RequestParam Long orderId,
                                      @RequestParam String paymentType,
                                      @SessionAttribute UserDTO user,
                                      HttpSession session){
-        ModelAndView modelAndView = showOrdersOfUser(user);
+        ModelAndView modelAndView = new ModelAndView("user/orders");
         int ownMoney = user.getOwnMoney();
         Order order = orderService.findById(orderId);
         if(order.getOrderStatus().equals(OrderStatus.IS_PAYED)){
@@ -95,6 +96,8 @@ public class OrderController {
             modelAndView.addObject("orderConfirmSuc", MessageManager.getProperty("message.orderConfirmSuccessful"));
         }
         orderService.update(order);
+        List<Order> orderList = orderService.findAllByUserId(user.getId());
+        modelAndView.addObject("orders", orderList );
         return modelAndView;
     }
 }

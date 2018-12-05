@@ -8,7 +8,6 @@ import org.vironit.timoshuk.computershop.dto.UserDTO;
 import org.vironit.timoshuk.computershop.entity.products.Components.*;
 import org.vironit.timoshuk.computershop.entity.products.Computer;
 import org.vironit.timoshuk.computershop.entity.products.Item;
-import org.vironit.timoshuk.computershop.hibernateDAO.impl.productDAO.*;
 import org.vironit.timoshuk.computershop.resource.MessageManager;
 import org.vironit.timoshuk.computershop.service.*;
 

@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.vironit.timoshuk.computershop.entity.products.Components.Case;
-import org.vironit.timoshuk.computershop.hibernateDAO.impl.productDAO.CaseDAOImpl;
+import org.vironit.timoshuk.computershop.DAO.impl.productDAO.CaseDAOImpl;
 import org.vironit.timoshuk.computershop.service.CaseService;
 
 import java.util.List;

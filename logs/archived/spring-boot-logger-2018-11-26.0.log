@@ -560,15 +560,15 @@ Caused by: java.lang.ClassNotFoundException: org.aspectj.lang.annotation.Pointcu
 java.lang.IllegalStateException: Transaction already active
 	at org.hibernate.engine.transaction.internal.TransactionImpl.begin(TransactionImpl.java:52)
 	at org.hibernate.internal.AbstractSharedSessionContract.beginTransaction(AbstractSharedSessionContract.java:409)
-	at org.vironit.timoshuk.computershop.hibernateDAO.EntityDAOImpl.update(EntityDAOImpl.java:39)
-	at org.vironit.timoshuk.computershop.hibernateDAO.EntityDAOImpl$$FastClassBySpringCGLIB$$9402df81.invoke(<generated>)
+	at org.vironit.timoshuk.computershop.DAO.EntityDAOImpl.update(EntityDAOImpl.java:39)
+	at org.vironit.timoshuk.computershop.DAO.EntityDAOImpl$$FastClassBySpringCGLIB$$9402df81.invoke(<generated>)
 	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:746)
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
 	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
-	at org.vironit.timoshuk.computershop.hibernateDAO.impl.UserDAOImpl$$EnhancerBySpringCGLIB$$4b43bada.update(<generated>)
+	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl$$EnhancerBySpringCGLIB$$4b43bada.update(<generated>)
 	at org.vironit.timoshuk.computershop.service.impl.UserServiceImpl.update(UserServiceImpl.java:40)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -838,15 +838,15 @@ org.hibernate.TransientObjectException: The given object has a null identifier: 
 	at org.hibernate.internal.SessionImpl.fireUpdate(SessionImpl.java:715)
 	at org.hibernate.internal.SessionImpl.update(SessionImpl.java:707)
 	at org.hibernate.internal.SessionImpl.update(SessionImpl.java:702)
-	at org.vironit.timoshuk.computershop.hibernateDAO.EntityDAOImpl.update(EntityDAOImpl.java:39)
-	at org.vironit.timoshuk.computershop.hibernateDAO.EntityDAOImpl$$FastClassBySpringCGLIB$$9402df81.invoke(<generated>)
+	at org.vironit.timoshuk.computershop.DAO.EntityDAOImpl.update(EntityDAOImpl.java:39)
+	at org.vironit.timoshuk.computershop.DAO.EntityDAOImpl$$FastClassBySpringCGLIB$$9402df81.invoke(<generated>)
 	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:746)
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
 	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
-	at org.vironit.timoshuk.computershop.hibernateDAO.impl.UserDAOImpl$$EnhancerBySpringCGLIB$$b62dcff7.update(<generated>)
+	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl$$EnhancerBySpringCGLIB$$b62dcff7.update(<generated>)
 	at org.vironit.timoshuk.computershop.service.impl.UserServiceImpl.update(UserServiceImpl.java:40)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -925,9 +925,9 @@ org.hibernate.TransientObjectException: The given object has a null identifier: 
 2018-11-26 15:02:29,087 INFO org.vironit.timoshuk.computershop.controller.UserController [http-nio-8080-exec-3] The user with login pafanya22 is logged in
 2018-11-26 15:02:34,835 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-9] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
 java.lang.NullPointerException: null
-	at org.vironit.timoshuk.computershop.hibernateDAO.EntityDAOImpl.getCurrentSession(EntityDAOImpl.java:54)
-	at org.vironit.timoshuk.computershop.hibernateDAO.impl.UserDAOImpl.findByParameter(UserDAOImpl.java:20)
-	at org.vironit.timoshuk.computershop.hibernateDAO.impl.UserDAOImpl.checkBankCard(UserDAOImpl.java:55)
+	at org.vironit.timoshuk.computershop.DAO.EntityDAOImpl.getCurrentSession(EntityDAOImpl.java:54)
+	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl.findByParameter(UserDAOImpl.java:20)
+	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl.checkBankCard(UserDAOImpl.java:55)
 	at org.vironit.timoshuk.computershop.validators.UserValidator.checkIdCardFromDB(UserValidator.java:58)
 	at org.vironit.timoshuk.computershop.validators.UserValidator.checkUserDataWithoutLoginPassword(UserValidator.java:133)
 	at org.vironit.timoshuk.computershop.controller.UserController.changeProfile(UserController.java:77)
@@ -1011,9 +1011,9 @@ java.lang.NullPointerException: null
 2018-11-26 15:04:51,779 INFO org.vironit.timoshuk.computershop.controller.UserController [http-nio-8080-exec-6] The user with login pafanya22 is logged in
 2018-11-26 15:05:20,150 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-9] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
 java.lang.NullPointerException: null
-	at org.vironit.timoshuk.computershop.hibernateDAO.EntityDAOImpl.getCurrentSession(EntityDAOImpl.java:54)
-	at org.vironit.timoshuk.computershop.hibernateDAO.impl.UserDAOImpl.findByParameter(UserDAOImpl.java:20)
-	at org.vironit.timoshuk.computershop.hibernateDAO.impl.UserDAOImpl.checkBankCard(UserDAOImpl.java:55)
+	at org.vironit.timoshuk.computershop.DAO.EntityDAOImpl.getCurrentSession(EntityDAOImpl.java:54)
+	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl.findByParameter(UserDAOImpl.java:20)
+	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl.checkBankCard(UserDAOImpl.java:55)
 	at org.vironit.timoshuk.computershop.validators.UserValidator.checkIdCardFromDB(UserValidator.java:58)
 	at org.vironit.timoshuk.computershop.validators.UserValidator.checkUserDataWithoutLoginPassword(UserValidator.java:133)
 	at org.vironit.timoshuk.computershop.controller.UserController.changeProfile(UserController.java:78)
@@ -1061,9 +1061,9 @@ java.lang.NullPointerException: null
 	at java.lang.Thread.run(Thread.java:748)
 2018-11-26 15:05:59,602 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-5] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
 java.lang.NullPointerException: null
-	at org.vironit.timoshuk.computershop.hibernateDAO.EntityDAOImpl.getCurrentSession(EntityDAOImpl.java:54)
-	at org.vironit.timoshuk.computershop.hibernateDAO.impl.UserDAOImpl.findByParameter(UserDAOImpl.java:20)
-	at org.vironit.timoshuk.computershop.hibernateDAO.impl.UserDAOImpl.checkBankCard(UserDAOImpl.java:55)
+	at org.vironit.timoshuk.computershop.DAO.EntityDAOImpl.getCurrentSession(EntityDAOImpl.java:54)
+	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl.findByParameter(UserDAOImpl.java:20)
+	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl.checkBankCard(UserDAOImpl.java:55)
 	at org.vironit.timoshuk.computershop.validators.UserValidator.checkIdCardFromDB(UserValidator.java:58)
 	at org.vironit.timoshuk.computershop.validators.UserValidator.checkUserDataWithoutLoginPassword(UserValidator.java:133)
 	at org.vironit.timoshuk.computershop.controller.UserController.changeProfile(UserController.java:78)
@@ -1131,9 +1131,9 @@ java.lang.NullPointerException: null
 2018-11-26 15:10:59,353 INFO org.vironit.timoshuk.computershop.controller.UserController [http-nio-8080-exec-5] The user with login pafanya22 is logged in
 2018-11-26 15:11:05,395 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
 java.lang.NullPointerException: null
-	at org.vironit.timoshuk.computershop.hibernateDAO.EntityDAOImpl.getCurrentSession(EntityDAOImpl.java:54)
-	at org.vironit.timoshuk.computershop.hibernateDAO.impl.UserDAOImpl.findByParameter(UserDAOImpl.java:20)
-	at org.vironit.timoshuk.computershop.hibernateDAO.impl.UserDAOImpl.checkBankCard(UserDAOImpl.java:55)
+	at org.vironit.timoshuk.computershop.DAO.EntityDAOImpl.getCurrentSession(EntityDAOImpl.java:54)
+	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl.findByParameter(UserDAOImpl.java:20)
+	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl.checkBankCard(UserDAOImpl.java:55)
 	at org.vironit.timoshuk.computershop.validators.UserValidator.checkIdCardFromDB(UserValidator.java:58)
 	at org.vironit.timoshuk.computershop.validators.UserValidator.checkUserDataWithoutLoginPassword(UserValidator.java:133)
 	at org.vironit.timoshuk.computershop.controller.UserController.changeProfile(UserController.java:79)
@@ -1201,9 +1201,9 @@ java.lang.NullPointerException: null
 2018-11-26 15:13:20,300 INFO org.vironit.timoshuk.computershop.controller.UserController [http-nio-8080-exec-5] The user with login pafanya22 is logged in
 2018-11-26 15:13:27,375 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
 java.lang.NullPointerException: null
-	at org.vironit.timoshuk.computershop.hibernateDAO.EntityDAOImpl.getCurrentSession(EntityDAOImpl.java:54)
-	at org.vironit.timoshuk.computershop.hibernateDAO.impl.UserDAOImpl.findByParameter(UserDAOImpl.java:20)
-	at org.vironit.timoshuk.computershop.hibernateDAO.impl.UserDAOImpl.checkBankCard(UserDAOImpl.java:55)
+	at org.vironit.timoshuk.computershop.DAO.EntityDAOImpl.getCurrentSession(EntityDAOImpl.java:54)
+	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl.findByParameter(UserDAOImpl.java:20)
+	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl.checkBankCard(UserDAOImpl.java:55)
 	at org.vironit.timoshuk.computershop.validators.UserValidator.checkIdCardFromDB(UserValidator.java:58)
 	at org.vironit.timoshuk.computershop.validators.UserValidator.checkUserDataWithoutLoginPassword(UserValidator.java:133)
 	at org.vironit.timoshuk.computershop.controller.UserController.changeProfile(UserController.java:79)
@@ -1271,9 +1271,9 @@ java.lang.NullPointerException: null
 2018-11-26 15:15:00,997 INFO org.vironit.timoshuk.computershop.controller.UserController [http-nio-8080-exec-2] The user with login pafanya22 is logged in
 2018-11-26 15:15:14,354 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-3] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
 java.lang.NullPointerException: null
-	at org.vironit.timoshuk.computershop.hibernateDAO.EntityDAOImpl.getCurrentSession(EntityDAOImpl.java:54)
-	at org.vironit.timoshuk.computershop.hibernateDAO.impl.UserDAOImpl.findByParameter(UserDAOImpl.java:20)
-	at org.vironit.timoshuk.computershop.hibernateDAO.impl.UserDAOImpl.checkBankCard(UserDAOImpl.java:55)
+	at org.vironit.timoshuk.computershop.DAO.EntityDAOImpl.getCurrentSession(EntityDAOImpl.java:54)
+	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl.findByParameter(UserDAOImpl.java:20)
+	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl.checkBankCard(UserDAOImpl.java:55)
 	at org.vironit.timoshuk.computershop.validators.UserValidator.checkIdCardFromDB(UserValidator.java:58)
 	at org.vironit.timoshuk.computershop.validators.UserValidator.checkUserDataWithoutLoginPassword(UserValidator.java:133)
 	at org.vironit.timoshuk.computershop.controller.UserController.changeProfile(UserController.java:79)
@@ -1341,9 +1341,9 @@ java.lang.NullPointerException: null
 2018-11-26 15:21:46,551 INFO org.vironit.timoshuk.computershop.controller.UserController [http-nio-8080-exec-3] The user with login pafanya22 is logged in
 2018-11-26 15:22:00,304 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
 java.lang.NullPointerException: null
-	at org.vironit.timoshuk.computershop.hibernateDAO.EntityDAOImpl.getCurrentSession(EntityDAOImpl.java:54)
-	at org.vironit.timoshuk.computershop.hibernateDAO.impl.UserDAOImpl.findByParameter(UserDAOImpl.java:20)
-	at org.vironit.timoshuk.computershop.hibernateDAO.impl.UserDAOImpl.checkBankCard(UserDAOImpl.java:56)
+	at org.vironit.timoshuk.computershop.DAO.EntityDAOImpl.getCurrentSession(EntityDAOImpl.java:54)
+	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl.findByParameter(UserDAOImpl.java:20)
+	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl.checkBankCard(UserDAOImpl.java:56)
 	at org.vironit.timoshuk.computershop.validators.UserValidator.checkIdCardFromDB(UserValidator.java:58)
 	at org.vironit.timoshuk.computershop.validators.UserValidator.checkUserDataWithoutLoginPassword(UserValidator.java:133)
 	at org.vironit.timoshuk.computershop.controller.UserController.changeProfile(UserController.java:78)
@@ -1411,9 +1411,9 @@ java.lang.NullPointerException: null
 2018-11-26 15:23:24,678 INFO org.vironit.timoshuk.computershop.controller.UserController [http-nio-8080-exec-4] The user with login pafanya22 is logged in
 2018-11-26 15:23:35,248 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-10] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
 java.lang.NullPointerException: null
-	at org.vironit.timoshuk.computershop.hibernateDAO.EntityDAOImpl.getCurrentSession(EntityDAOImpl.java:54)
-	at org.vironit.timoshuk.computershop.hibernateDAO.impl.UserDAOImpl.findByParameter(UserDAOImpl.java:20)
-	at org.vironit.timoshuk.computershop.hibernateDAO.impl.UserDAOImpl.checkBankCard(UserDAOImpl.java:56)
+	at org.vironit.timoshuk.computershop.DAO.EntityDAOImpl.getCurrentSession(EntityDAOImpl.java:54)
+	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl.findByParameter(UserDAOImpl.java:20)
+	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl.checkBankCard(UserDAOImpl.java:56)
 	at org.vironit.timoshuk.computershop.validators.UserValidator.checkIdCardFromDB(UserValidator.java:58)
 	at org.vironit.timoshuk.computershop.validators.UserValidator.checkUserDataWithoutLoginPassword(UserValidator.java:133)
 	at org.vironit.timoshuk.computershop.controller.UserController.changeProfile(UserController.java:78)
@@ -1481,9 +1481,9 @@ java.lang.NullPointerException: null
 2018-11-26 15:24:50,208 INFO org.vironit.timoshuk.computershop.controller.UserController [http-nio-8080-exec-2] The user with login pafanya22 is logged in
 2018-11-26 15:25:06,447 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-4] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
 java.lang.NullPointerException: null
-	at org.vironit.timoshuk.computershop.hibernateDAO.EntityDAOImpl.getCurrentSession(EntityDAOImpl.java:54)
-	at org.vironit.timoshuk.computershop.hibernateDAO.impl.UserDAOImpl.findByParameter(UserDAOImpl.java:20)
-	at org.vironit.timoshuk.computershop.hibernateDAO.impl.UserDAOImpl.checkBankCard(UserDAOImpl.java:56)
+	at org.vironit.timoshuk.computershop.DAO.EntityDAOImpl.getCurrentSession(EntityDAOImpl.java:54)
+	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl.findByParameter(UserDAOImpl.java:20)
+	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl.checkBankCard(UserDAOImpl.java:56)
 	at org.vironit.timoshuk.computershop.validators.UserValidator.checkIdCardFromDB(UserValidator.java:58)
 	at org.vironit.timoshuk.computershop.validators.UserValidator.checkUserDataWithoutLoginPassword(UserValidator.java:133)
 	at org.vironit.timoshuk.computershop.controller.UserController.changeProfile(UserController.java:78)
@@ -1641,9 +1641,9 @@ java.lang.NullPointerException: null
 2018-11-26 22:20:36,524 INFO org.vironit.timoshuk.computershop.controller.UserController [http-nio-8080-exec-4] The user with login pafanya22 is logged in
 2018-11-26 22:20:47,205 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
 java.lang.NullPointerException: null
-	at org.vironit.timoshuk.computershop.hibernateDAO.EntityDAOImpl.getCurrentSession(EntityDAOImpl.java:54)
-	at org.vironit.timoshuk.computershop.hibernateDAO.impl.UserDAOImpl.findByParameter(UserDAOImpl.java:20)
-	at org.vironit.timoshuk.computershop.hibernateDAO.impl.UserDAOImpl.checkBankCard(UserDAOImpl.java:56)
+	at org.vironit.timoshuk.computershop.DAO.EntityDAOImpl.getCurrentSession(EntityDAOImpl.java:54)
+	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl.findByParameter(UserDAOImpl.java:20)
+	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl.checkBankCard(UserDAOImpl.java:56)
 	at org.vironit.timoshuk.computershop.validators.UserValidator.checkIdCardFromDB(UserValidator.java:58)
 	at org.vironit.timoshuk.computershop.validators.UserValidator.checkUserDataWithoutLoginPassword(UserValidator.java:133)
 	at org.vironit.timoshuk.computershop.controller.UserController.changeProfile(UserController.java:76)
@@ -1691,9 +1691,9 @@ java.lang.NullPointerException: null
 	at java.lang.Thread.run(Thread.java:748)
 2018-11-26 22:20:57,856 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-5] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
 java.lang.NullPointerException: null
-	at org.vironit.timoshuk.computershop.hibernateDAO.EntityDAOImpl.getCurrentSession(EntityDAOImpl.java:54)
-	at org.vironit.timoshuk.computershop.hibernateDAO.impl.UserDAOImpl.findByParameter(UserDAOImpl.java:20)
-	at org.vironit.timoshuk.computershop.hibernateDAO.impl.UserDAOImpl.checkBankCard(UserDAOImpl.java:56)
+	at org.vironit.timoshuk.computershop.DAO.EntityDAOImpl.getCurrentSession(EntityDAOImpl.java:54)
+	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl.findByParameter(UserDAOImpl.java:20)
+	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl.checkBankCard(UserDAOImpl.java:56)
 	at org.vironit.timoshuk.computershop.validators.UserValidator.checkIdCardFromDB(UserValidator.java:58)
 	at org.vironit.timoshuk.computershop.validators.UserValidator.checkUserDataWithoutLoginPassword(UserValidator.java:133)
 	at org.vironit.timoshuk.computershop.controller.UserController.changeProfile(UserController.java:76)
@@ -1761,9 +1761,9 @@ java.lang.NullPointerException: null
 2018-11-26 22:23:55,297 INFO org.vironit.timoshuk.computershop.controller.UserController [http-nio-8080-exec-4] The user with login pafanya22 is logged in
 2018-11-26 22:24:46,546 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-6] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
 java.lang.NullPointerException: null
-	at org.vironit.timoshuk.computershop.hibernateDAO.EntityDAOImpl.getCurrentSession(EntityDAOImpl.java:54)
-	at org.vironit.timoshuk.computershop.hibernateDAO.impl.UserDAOImpl.findByParameter(UserDAOImpl.java:20)
-	at org.vironit.timoshuk.computershop.hibernateDAO.impl.UserDAOImpl.checkBankCard(UserDAOImpl.java:56)
+	at org.vironit.timoshuk.computershop.DAO.EntityDAOImpl.getCurrentSession(EntityDAOImpl.java:54)
+	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl.findByParameter(UserDAOImpl.java:20)
+	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl.checkBankCard(UserDAOImpl.java:56)
 	at org.vironit.timoshuk.computershop.validators.UserValidator.checkIdCardFromDB(UserValidator.java:58)
 	at org.vironit.timoshuk.computershop.validators.UserValidator.checkUserDataWithoutLoginPassword(UserValidator.java:133)
 	at org.vironit.timoshuk.computershop.controller.UserController.changeProfile(UserController.java:75)
@@ -1831,9 +1831,9 @@ java.lang.NullPointerException: null
 2018-11-26 22:26:36,808 INFO org.vironit.timoshuk.computershop.controller.UserController [http-nio-8080-exec-4] The user with login pafanya22 is logged in
 2018-11-26 22:26:47,118 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
 java.lang.NullPointerException: null
-	at org.vironit.timoshuk.computershop.hibernateDAO.EntityDAOImpl.getCurrentSession(EntityDAOImpl.java:54)
-	at org.vironit.timoshuk.computershop.hibernateDAO.impl.UserDAOImpl.findByParameter(UserDAOImpl.java:20)
-	at org.vironit.timoshuk.computershop.hibernateDAO.impl.UserDAOImpl.checkEmail(UserDAOImpl.java:46)
+	at org.vironit.timoshuk.computershop.DAO.EntityDAOImpl.getCurrentSession(EntityDAOImpl.java:54)
+	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl.findByParameter(UserDAOImpl.java:20)
+	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl.checkEmail(UserDAOImpl.java:46)
 	at org.vironit.timoshuk.computershop.validators.UserValidator.checkEmailFromDB(UserValidator.java:35)
 	at org.vironit.timoshuk.computershop.validators.UserValidator.checkUserDataWithoutLoginPassword(UserValidator.java:115)
 	at org.vironit.timoshuk.computershop.controller.UserController.changeProfile(UserController.java:75)
@@ -1921,9 +1921,9 @@ java.lang.NullPointerException: null
 2018-11-26 22:30:12,854 INFO org.vironit.timoshuk.computershop.controller.UserController [http-nio-8080-exec-4] The user with login pafanya22 is logged in
 2018-11-26 22:30:19,994 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
 java.lang.NullPointerException: null
-	at org.vironit.timoshuk.computershop.hibernateDAO.EntityDAOImpl.getCurrentSession(EntityDAOImpl.java:54)
-	at org.vironit.timoshuk.computershop.hibernateDAO.impl.UserDAOImpl.findByParameter(UserDAOImpl.java:20)
-	at org.vironit.timoshuk.computershop.hibernateDAO.impl.UserDAOImpl.checkBankCard(UserDAOImpl.java:58)
+	at org.vironit.timoshuk.computershop.DAO.EntityDAOImpl.getCurrentSession(EntityDAOImpl.java:54)
+	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl.findByParameter(UserDAOImpl.java:20)
+	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl.checkBankCard(UserDAOImpl.java:58)
 	at org.vironit.timoshuk.computershop.validators.UserValidator.checkIdCardFromDB(UserValidator.java:59)
 	at org.vironit.timoshuk.computershop.validators.UserValidator.checkUserDataWithoutLoginPassword(UserValidator.java:136)
 	at org.vironit.timoshuk.computershop.controller.UserController.changeProfile(UserController.java:75)
@@ -1981,7 +1981,7 @@ java.lang.NullPointerException: null
 2018-11-26 22:31:37,279 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [localhost-startStop-1] Root WebApplicationContext: initialization completed in 2182 ms
 2018-11-26 22:31:37,302 INFO org.springframework.boot.web.servlet.ServletRegistrationBean [localhost-startStop-1] Servlet dispatcherServlet mapped to [/]
 2018-11-26 22:31:37,309 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'characterEncodingFilter' to: [/*]
-2018-11-26 22:31:38,775 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userController' defined in file [C:\Users\User\IdeaProjects\computershop\target\classes\org\vironit\timoshuk\computershop\controller\UserController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userServiceImpl' defined in file [C:\Users\User\IdeaProjects\computershop\target\classes\org\vironit\timoshuk\computershop\service\impl\UserServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanNotOfRequiredTypeException: Bean named 'userDAOImpl' is expected to be of type 'org.vironit.timoshuk.computershop.hibernateDAO.impl.UserDAOImpl' but was actually of type 'com.sun.proxy.$Proxy74'
+2018-11-26 22:31:38,775 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userController' defined in file [C:\Users\User\IdeaProjects\computershop\target\classes\org\vironit\timoshuk\computershop\controller\UserController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userServiceImpl' defined in file [C:\Users\User\IdeaProjects\computershop\target\classes\org\vironit\timoshuk\computershop\service\impl\UserServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanNotOfRequiredTypeException: Bean named 'userDAOImpl' is expected to be of type 'org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl' but was actually of type 'com.sun.proxy.$Proxy74'
 2018-11-26 22:31:38,775 INFO org.apache.juli.logging.DirectJDKLog [main] Stopping service [Tomcat]
 2018-11-26 22:31:38,790 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [main] 
 
@@ -1994,7 +1994,7 @@ APPLICATION FAILED TO START
 
 Description:
 
-The bean 'userDAOImpl' could not be injected as a 'org.vironit.timoshuk.computershop.hibernateDAO.impl.UserDAOImpl' because it is a JDK dynamic proxy that implements:
+The bean 'userDAOImpl' could not be injected as a 'org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl' because it is a JDK dynamic proxy that implements:
 
 
 Action:
@@ -2013,7 +2013,7 @@ Consider injecting the bean as one of its interfaces or forcing the use of CGLib
 2018-11-26 22:32:42,789 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [localhost-startStop-1] Root WebApplicationContext: initialization completed in 1738 ms
 2018-11-26 22:32:42,805 INFO org.springframework.boot.web.servlet.ServletRegistrationBean [localhost-startStop-1] Servlet dispatcherServlet mapped to [/]
 2018-11-26 22:32:42,805 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'characterEncodingFilter' to: [/*]
-2018-11-26 22:32:44,073 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userController' defined in file [C:\Users\User\IdeaProjects\computershop\target\classes\org\vironit\timoshuk\computershop\controller\UserController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userServiceImpl' defined in file [C:\Users\User\IdeaProjects\computershop\target\classes\org\vironit\timoshuk\computershop\service\impl\UserServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanNotOfRequiredTypeException: Bean named 'userDAOImpl' is expected to be of type 'org.vironit.timoshuk.computershop.hibernateDAO.impl.UserDAOImpl' but was actually of type 'com.sun.proxy.$Proxy74'
+2018-11-26 22:32:44,073 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userController' defined in file [C:\Users\User\IdeaProjects\computershop\target\classes\org\vironit\timoshuk\computershop\controller\UserController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userServiceImpl' defined in file [C:\Users\User\IdeaProjects\computershop\target\classes\org\vironit\timoshuk\computershop\service\impl\UserServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanNotOfRequiredTypeException: Bean named 'userDAOImpl' is expected to be of type 'org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl' but was actually of type 'com.sun.proxy.$Proxy74'
 2018-11-26 22:32:44,077 INFO org.apache.juli.logging.DirectJDKLog [main] Stopping service [Tomcat]
 2018-11-26 22:32:44,090 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [main] 
 
@@ -2026,7 +2026,7 @@ APPLICATION FAILED TO START
 
 Description:
 
-The bean 'userDAOImpl' could not be injected as a 'org.vironit.timoshuk.computershop.hibernateDAO.impl.UserDAOImpl' because it is a JDK dynamic proxy that implements:
+The bean 'userDAOImpl' could not be injected as a 'org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl' because it is a JDK dynamic proxy that implements:
 
 
 Action:
@@ -2055,8 +2055,8 @@ Consider injecting the bean as one of its interfaces or forcing the use of CGLib
 2018-11-26 22:35:33,464 INFO org.vironit.timoshuk.computershop.controller.UserController [http-nio-8080-exec-5] The user with login pafanya22 is logged in
 2018-11-26 22:35:46,298 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
 java.lang.NullPointerException: null
-	at org.vironit.timoshuk.computershop.hibernateDAO.EntityDAOImpl.getCurrentSession(EntityDAOImpl.java:54)
-	at org.vironit.timoshuk.computershop.hibernateDAO.impl.UserDAOImpl.checkEmail(UserDAOImpl.java:53)
+	at org.vironit.timoshuk.computershop.DAO.EntityDAOImpl.getCurrentSession(EntityDAOImpl.java:54)
+	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl.checkEmail(UserDAOImpl.java:53)
 	at org.vironit.timoshuk.computershop.validators.UserValidator.checkEmailFromDB(UserValidator.java:36)
 	at org.vironit.timoshuk.computershop.validators.UserValidator.checkUserDataWithoutLoginPassword(UserValidator.java:117)
 	at org.vironit.timoshuk.computershop.controller.UserController.changeProfile(UserController.java:75)
@@ -2191,9 +2191,9 @@ java.lang.NullPointerException: null
 2018-11-26 22:47:34,022 INFO org.vironit.timoshuk.computershop.controller.UserController [http-nio-8080-exec-4] The user with login pafanya22 is logged in
 2018-11-26 22:47:46,163 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
 java.lang.NullPointerException: null
-	at org.vironit.timoshuk.computershop.hibernateDAO.EntityDAOImpl.getCurrentSession(EntityDAOImpl.java:54)
-	at org.vironit.timoshuk.computershop.hibernateDAO.impl.UserDAOImpl.findByParameter(UserDAOImpl.java:19)
-	at org.vironit.timoshuk.computershop.hibernateDAO.impl.UserDAOImpl.checkBankCard(UserDAOImpl.java:63)
+	at org.vironit.timoshuk.computershop.DAO.EntityDAOImpl.getCurrentSession(EntityDAOImpl.java:54)
+	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl.findByParameter(UserDAOImpl.java:19)
+	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl.checkBankCard(UserDAOImpl.java:63)
 	at org.vironit.timoshuk.computershop.validators.UserValidator.checkIdCardFromDB(UserValidator.java:64)
 	at org.vironit.timoshuk.computershop.validators.UserValidator.checkUserDataWithoutLoginPassword(UserValidator.java:140)
 	at org.vironit.timoshuk.computershop.controller.UserController.changeProfile(UserController.java:75)

@@ -43,8 +43,8 @@
     </td>
     <td>
         <c:if test="${order.paymentDescription.typePayment == null}">
-            <input type="submit" form="makeOrder" class="button" name="confirm_order_button" value="Confirm order" />
-            <form name="make_order" class="text" id="makeOrder" method="get" action="/user/orders/delete">
+            <input type="submit" form="makeOrder" class="button"  value="Confirm order" />
+            <form name="make_order" class="text" id="makeOrder" method="post" action="/user/orders/delete">
                 <input type="hidden" name="orderId" value="${order.id}"/>
                 <input type="submit" class="button" name="confirm_order_button" value="Delete" />
             </form>

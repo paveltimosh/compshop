@@ -1,10 +1,10 @@
-package org.vironit.timoshuk.computershop.hibernateDAO.impl;
+package org.vironit.timoshuk.computershop.DAO.impl;
 
-import org.hibernate.Session;
+import org.hibernate.NonUniqueResultException;
 import org.hibernate.query.Query;
 import org.springframework.stereotype.Repository;
 import org.vironit.timoshuk.computershop.entity.users.User;
-import org.vironit.timoshuk.computershop.hibernateDAO.EntityDAOImpl;
+import org.vironit.timoshuk.computershop.DAO.EntityDAOImpl;
 
 @Repository
 public class UserDAOImpl extends EntityDAOImpl <User, Long> {
@@ -13,7 +13,7 @@ public class UserDAOImpl extends EntityDAOImpl <User, Long> {
         type = User.class;
     }
 
-    public User findByParameter(String nameOfParam, String paramValue){
+    public User findByParameter(String nameOfParam, String paramValue)throws NonUniqueResultException {
         User user = null;
         String sql = "FROM User where " + nameOfParam + " =:paramValue";
         Query query = getCurrentSession().createQuery(sql);
@@ -31,41 +31,31 @@ public class UserDAOImpl extends EntityDAOImpl <User, Long> {
         return user;
     }
 
-    public boolean checkLogin (String login) {
+    public boolean checkLogin (String login)throws NonUniqueResultException {
         boolean result = false;
-        Session session = getCurrentSession();
-        getCurrentSession().beginTransaction();
         User user = findByParameter("login", login);
         if (user != null){
             result = true;
         }
-        session.getTransaction().commit();
         return result;
     }
 
 
-    public boolean checkEmail (String email) {
+    public boolean checkEmail (String email)throws NonUniqueResultException  {
         boolean result = false;
-        Session session = getCurrentSession();
-        getCurrentSession().beginTransaction();
         User user = findByParameter("email", email);
         if (user != null){
             result = true;
         }
-        System.out.println("чекинг мыла");
-        session.getTransaction().commit();
         return result;
     }
 
-    public boolean checkBankCard (String bankCard){
+    public boolean checkBankCard (String bankCard)throws NonUniqueResultException {
         boolean result = false;
-        System.out.println(bankCard);
         User user = findByParameter("idCard", bankCard);
         if (user != null){
             result = true;
         }
-        System.out.println("банк карты чекинг");
-
         return result;
     }
 }

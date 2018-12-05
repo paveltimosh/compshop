@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.vironit.timoshuk.computershop.entity.products.Components.VideoCard;
-import org.vironit.timoshuk.computershop.hibernateDAO.impl.productDAO.VideocardDAOImpl;
+import org.vironit.timoshuk.computershop.DAO.impl.productDAO.VideocardDAOImpl;
 import org.vironit.timoshuk.computershop.service.VideocardService;
 
 import java.util.List;

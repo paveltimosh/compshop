@@ -1,4 +1,4 @@
-package org.vironit.timoshuk.computershop.validator;
+package org.vironit.timoshuk.computershop.validator.annotations;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

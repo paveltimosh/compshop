@@ -10,7 +10,7 @@
 <body>
 <h1>Registration</h1>
 <form:form id="user/register" action="/user/register" method="post" modelAttribute="newUser">
-    <form:errors  path = "*"  element = "div" />
+    <form:errors  path = ""  element = "div" />
      Login:<br/>
     <form:input path="login" value="" />
     <form:errors path="login"  /><br>

@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.vironit.timoshuk.computershop.entity.products.Components.MotherBoard;
-import org.vironit.timoshuk.computershop.hibernateDAO.impl.productDAO.MotherboardDAOImpl;
+import org.vironit.timoshuk.computershop.DAO.impl.productDAO.MotherboardDAOImpl;
 import org.vironit.timoshuk.computershop.service.MotherboardService;
 
 import java.util.List;

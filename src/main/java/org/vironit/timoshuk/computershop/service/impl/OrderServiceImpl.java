@@ -8,7 +8,7 @@ import org.vironit.timoshuk.computershop.entity.order.OrderStatus;
 import org.vironit.timoshuk.computershop.entity.order.PaymentDescription;
 import org.vironit.timoshuk.computershop.entity.order.TypePayment;
 import org.vironit.timoshuk.computershop.entity.products.Item;
-import org.vironit.timoshuk.computershop.hibernateDAO.impl.OrderDAOImpl;
+import org.vironit.timoshuk.computershop.DAO.impl.OrderDAOImpl;
 import org.vironit.timoshuk.computershop.service.OrderService;
 
 import java.time.LocalDate;
