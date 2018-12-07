@@ -1,7 +1,7 @@
-package org.vironit.timoshuk.computershop.dto.parser;
+package org.vironit.timoshuk.computershop.DTO.parser;
 
 import org.springframework.stereotype.Service;
-import org.vironit.timoshuk.computershop.dto.UserDTO;
+import org.vironit.timoshuk.computershop.DTO.UserDTO;
 import org.vironit.timoshuk.computershop.entity.users.User;
 
 @Service

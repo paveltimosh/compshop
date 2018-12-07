@@ -1,4 +1,4 @@
-package org.vironit.timoshuk.computershop.dto.transfer;
+package org.vironit.timoshuk.computershop.DTO.transfer;
 
 public interface EditUserData {
 }
