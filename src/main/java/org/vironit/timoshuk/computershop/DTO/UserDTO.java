@@ -1,11 +1,11 @@
-package org.vironit.timoshuk.computershop.dto;
+package org.vironit.timoshuk.computershop.DTO;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.vironit.timoshuk.computershop.dto.transfer.CreateNewUser;
-import org.vironit.timoshuk.computershop.dto.transfer.EditUserData;
+import org.vironit.timoshuk.computershop.DTO.transfer.CreateNewUser;
+import org.vironit.timoshuk.computershop.DTO.transfer.EditUserData;
 import org.vironit.timoshuk.computershop.entity.users.UserType;
 import org.vironit.timoshuk.computershop.validator.annotations.FieldsValueMatch;
 import javax.validation.constraints.*;

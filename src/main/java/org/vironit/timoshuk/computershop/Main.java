@@ -4,10 +4,8 @@ package org.vironit.timoshuk.computershop;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.vironit.timoshuk.computershop.util.DataBasePoolConnector;
 
-import java.sql.Connection;
-import java.sql.SQLException;
+import java.util.UUID;
 
 public class Main  {
     private static final Logger LOGGER = LogManager.getLogger(Main.class);
@@ -15,12 +13,8 @@ public class Main  {
 
     public static void main(String[] args) {
 
-        try {
-            Connection connection =  DataBasePoolConnector.getConnection();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-
+        System.out.println(Long.toHexString(Double.doubleToLongBits(Math.random())));
+        System.out.println( UUID.randomUUID().toString());
     }
 
 }

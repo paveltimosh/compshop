@@ -2,8 +2,8 @@ package org.vironit.timoshuk.computershop.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.vironit.timoshuk.computershop.dto.UserDTO;
-import org.vironit.timoshuk.computershop.dto.parser.UserDtoParser;
+import org.vironit.timoshuk.computershop.DTO.UserDTO;
+import org.vironit.timoshuk.computershop.DTO.parser.UserDtoParser;
 import org.vironit.timoshuk.computershop.entity.users.User;
 import org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl;
 import org.vironit.timoshuk.computershop.service.UserService;

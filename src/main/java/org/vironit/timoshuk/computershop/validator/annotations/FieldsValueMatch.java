@@ -1,5 +1,7 @@
 package org.vironit.timoshuk.computershop.validator.annotations;
 
+import org.vironit.timoshuk.computershop.validator.FieldsValueMatchValidator;
+
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

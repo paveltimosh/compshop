@@ -4,7 +4,6 @@ import org.hibernate.query.Query;
 import org.springframework.stereotype.Repository;
 import org.vironit.timoshuk.computershop.entity.order.Order;
 import org.vironit.timoshuk.computershop.DAO.EntityDAOImpl;
-import org.vironit.timoshuk.computershop.util.HibernateUtil;
 
 import java.util.ArrayList;
 import java.util.List;

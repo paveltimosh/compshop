@@ -4,11 +4,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
-import org.vironit.timoshuk.computershop.dto.UserDTO;
+import org.vironit.timoshuk.computershop.DTO.UserDTO;
 import org.vironit.timoshuk.computershop.entity.products.Components.*;
 import org.vironit.timoshuk.computershop.entity.products.Computer;
 import org.vironit.timoshuk.computershop.entity.products.Item;
-import org.vironit.timoshuk.computershop.resource.MessageManager;
+import org.vironit.timoshuk.computershop.util.MessageManager;
 import org.vironit.timoshuk.computershop.service.*;
 
 import javax.servlet.http.HttpSession;

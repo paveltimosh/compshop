@@ -9,7 +9,7 @@
 </head>
 <body>
 <h1>Registration</h1>
-<form:form id="user/register" action="/user/register" method="post" modelAttribute="newUser">
+<form:form id="user/register" action="/register" method="post" modelAttribute="newUser">
     <form:errors  path = ""  element = "div" />
      Login:<br/>
     <form:input path="login" value="" />

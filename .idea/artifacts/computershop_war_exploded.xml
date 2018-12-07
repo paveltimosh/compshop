@@ -37,7 +37,9 @@
           <element id="library" level="project" name="Maven: org.springframework:spring-aop:5.1.1.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-context:5.1.1.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-expression:5.1.1.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-core:5.1.0.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-core:5.1.2.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-web:5.1.2.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-config:5.1.2.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-web:5.1.1.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter-web:2.1.0.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter:2.1.0.RELEASE" />
@@ -67,6 +69,7 @@
           <element id="library" level="project" name="Maven: org.hibernate.validator:hibernate-validator-annotation-processor:6.0.2.Final" />
           <element id="library" level="project" name="Maven: javax.el:javax.el-api:3.0.0" />
           <element id="library" level="project" name="Maven: org.glassfish.web:javax.el:2.2.6" />
+          <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter-security:2.1.1.RELEASE" />
         </element>
       </element>
       <element id="directory" name="META-INF">

@@ -1,9 +1,10 @@
-package org.vironit.timoshuk.computershop.validator.annotations;
+package org.vironit.timoshuk.computershop.validator;
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 
 import org.springframework.beans.BeanWrapperImpl;
+import org.vironit.timoshuk.computershop.validator.annotations.FieldsValueMatch;
 
 public class FieldsValueMatchValidator implements ConstraintValidator<FieldsValueMatch, Object> {
 

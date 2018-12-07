@@ -23,7 +23,7 @@ Field error in object 'userDTO' on field 'passwordTwo': rejected value [topor]; 
 Field error in object 'userDTO' on field 'login': rejected value [pafanya22e]; codes [Null.userDTO.login,Null.login,Null.java.lang.String,Null]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userDTO.login,login]; arguments []; default message [login]]; default message [должно быть незадано]
 2018-12-03 17:38:56,040 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
 java.lang.NullPointerException: null
-	at org.vironit.timoshuk.computershop.dto.parser.UserDtoParser.createDTOFromEntity(UserDtoParser.java:12)
+	at org.vironit.timoshuk.computershop.DTO.parser.UserDtoParser.createDTOFromEntity(UserDtoParser.java:12)
 	at org.vironit.timoshuk.computershop.service.impl.UserServiceImpl.findByLogin(UserServiceImpl.java:71)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -1073,18 +1073,18 @@ org.hibernate.TransientObjectException: The given object has a null identifier: 
 2018-12-03 18:28:55,612 INFO org.springframework.boot.web.servlet.ServletRegistrationBean [localhost-startStop-1] Servlet dispatcherServlet mapped to [/]
 2018-12-03 18:28:55,614 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'characterEncodingFilter' to: [/*]
 2018-12-03 18:28:57,231 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/vironit/timoshuk/computershop/config/CustomWebMvcConfigurationSupport.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userController' method 
-public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.changeProfile(org.vironit.timoshuk.computershop.dto.UserDTO,org.vironit.timoshuk.computershop.dto.UserDTO,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession)
+public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.changeProfile(org.vironit.timoshuk.computershop.DTO.UserDTO,org.vironit.timoshuk.computershop.DTO.UserDTO,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession)
 to {[],methods=[POST]}: There is already 'userController' bean method
-public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.registerNewUser(org.vironit.timoshuk.computershop.dto.UserDTO,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession) mapped.
+public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.registerNewUser(org.vironit.timoshuk.computershop.DTO.UserDTO,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession) mapped.
 2018-12-03 18:28:57,237 INFO org.apache.juli.logging.DirectJDKLog [main] Stopping service [Tomcat]
 2018-12-03 18:28:57,253 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [main] 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
 2018-12-03 18:28:57,269 ERROR org.springframework.boot.SpringApplication [main] Application run failed
 org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/vironit/timoshuk/computershop/config/CustomWebMvcConfigurationSupport.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userController' method 
-public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.changeProfile(org.vironit.timoshuk.computershop.dto.UserDTO,org.vironit.timoshuk.computershop.dto.UserDTO,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession)
+public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.changeProfile(org.vironit.timoshuk.computershop.DTO.UserDTO,org.vironit.timoshuk.computershop.DTO.UserDTO,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession)
 to {[],methods=[POST]}: There is already 'userController' bean method
-public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.registerNewUser(org.vironit.timoshuk.computershop.dto.UserDTO,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession) mapped.
+public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.registerNewUser(org.vironit.timoshuk.computershop.DTO.UserDTO,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession) mapped.
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1745)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:576)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498)
@@ -1103,9 +1103,9 @@ public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.compute
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
 	at org.vironit.timoshuk.computershop.Application.main(Application.java:11)
 Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userController' method 
-public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.changeProfile(org.vironit.timoshuk.computershop.dto.UserDTO,org.vironit.timoshuk.computershop.dto.UserDTO,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession)
+public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.changeProfile(org.vironit.timoshuk.computershop.DTO.UserDTO,org.vironit.timoshuk.computershop.DTO.UserDTO,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession)
 to {[],methods=[POST]}: There is already 'userController' bean method
-public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.registerNewUser(org.vironit.timoshuk.computershop.dto.UserDTO,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession) mapped.
+public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.registerNewUser(org.vironit.timoshuk.computershop.DTO.UserDTO,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession) mapped.
 	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.assertUniqueMethodMapping(AbstractHandlerMethodMapping.java:599)
 	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:567)
 	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:294)
@@ -1678,18 +1678,18 @@ org.hibernate.TransientObjectException: The given object has a null identifier: 
 2018-12-03 18:48:20,692 INFO org.springframework.boot.web.servlet.ServletRegistrationBean [localhost-startStop-1] Servlet dispatcherServlet mapped to [/]
 2018-12-03 18:48:20,695 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'characterEncodingFilter' to: [/*]
 2018-12-03 18:48:22,244 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/vironit/timoshuk/computershop/config/CustomWebMvcConfigurationSupport.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userController' method 
-public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.registerNewUser(org.vironit.timoshuk.computershop.dto.UserDTO,org.springframework.validation.BindingResult)
+public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.registerNewUser(org.vironit.timoshuk.computershop.DTO.UserDTO,org.springframework.validation.BindingResult)
 to {[],methods=[POST]}: There is already 'userController' bean method
-public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.changeProfile(org.vironit.timoshuk.computershop.dto.UserDTO,org.vironit.timoshuk.computershop.dto.UserDTO,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession) mapped.
+public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.changeProfile(org.vironit.timoshuk.computershop.DTO.UserDTO,org.vironit.timoshuk.computershop.DTO.UserDTO,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession) mapped.
 2018-12-03 18:48:22,248 INFO org.apache.juli.logging.DirectJDKLog [main] Stopping service [Tomcat]
 2018-12-03 18:48:22,261 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [main] 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
 2018-12-03 18:48:22,266 ERROR org.springframework.boot.SpringApplication [main] Application run failed
 org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/vironit/timoshuk/computershop/config/CustomWebMvcConfigurationSupport.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userController' method 
-public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.registerNewUser(org.vironit.timoshuk.computershop.dto.UserDTO,org.springframework.validation.BindingResult)
+public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.registerNewUser(org.vironit.timoshuk.computershop.DTO.UserDTO,org.springframework.validation.BindingResult)
 to {[],methods=[POST]}: There is already 'userController' bean method
-public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.changeProfile(org.vironit.timoshuk.computershop.dto.UserDTO,org.vironit.timoshuk.computershop.dto.UserDTO,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession) mapped.
+public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.changeProfile(org.vironit.timoshuk.computershop.DTO.UserDTO,org.vironit.timoshuk.computershop.DTO.UserDTO,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession) mapped.
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1745)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:576)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498)
@@ -1708,9 +1708,9 @@ public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.compute
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
 	at org.vironit.timoshuk.computershop.Application.main(Application.java:11)
 Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userController' method 
-public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.registerNewUser(org.vironit.timoshuk.computershop.dto.UserDTO,org.springframework.validation.BindingResult)
+public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.registerNewUser(org.vironit.timoshuk.computershop.DTO.UserDTO,org.springframework.validation.BindingResult)
 to {[],methods=[POST]}: There is already 'userController' bean method
-public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.changeProfile(org.vironit.timoshuk.computershop.dto.UserDTO,org.vironit.timoshuk.computershop.dto.UserDTO,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession) mapped.
+public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.changeProfile(org.vironit.timoshuk.computershop.DTO.UserDTO,org.vironit.timoshuk.computershop.DTO.UserDTO,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession) mapped.
 	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.assertUniqueMethodMapping(AbstractHandlerMethodMapping.java:599)
 	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:567)
 	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:294)
@@ -1831,18 +1831,18 @@ org.hibernate.TransientObjectException: The given object has a null identifier: 
 2018-12-03 18:52:10,587 INFO org.springframework.boot.web.servlet.ServletRegistrationBean [localhost-startStop-1] Servlet dispatcherServlet mapped to [/]
 2018-12-03 18:52:10,591 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'characterEncodingFilter' to: [/*]
 2018-12-03 18:52:12,507 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/web/servlet/config/annotation/DelegatingWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userController' method 
-public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.registerNewUser(org.vironit.timoshuk.computershop.dto.UserDTO,org.springframework.validation.BindingResult)
+public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.registerNewUser(org.vironit.timoshuk.computershop.DTO.UserDTO,org.springframework.validation.BindingResult)
 to {[],methods=[POST]}: There is already 'userController' bean method
-public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.changeProfile(org.vironit.timoshuk.computershop.dto.UserDTO,org.vironit.timoshuk.computershop.dto.UserDTO,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession) mapped.
+public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.changeProfile(org.vironit.timoshuk.computershop.DTO.UserDTO,org.vironit.timoshuk.computershop.DTO.UserDTO,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession) mapped.
 2018-12-03 18:52:12,510 INFO org.apache.juli.logging.DirectJDKLog [main] Stopping service [Tomcat]
 2018-12-03 18:52:12,523 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [main] 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
 2018-12-03 18:52:12,531 ERROR org.springframework.boot.SpringApplication [main] Application run failed
 org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/web/servlet/config/annotation/DelegatingWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userController' method 
-public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.registerNewUser(org.vironit.timoshuk.computershop.dto.UserDTO,org.springframework.validation.BindingResult)
+public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.registerNewUser(org.vironit.timoshuk.computershop.DTO.UserDTO,org.springframework.validation.BindingResult)
 to {[],methods=[POST]}: There is already 'userController' bean method
-public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.changeProfile(org.vironit.timoshuk.computershop.dto.UserDTO,org.vironit.timoshuk.computershop.dto.UserDTO,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession) mapped.
+public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.changeProfile(org.vironit.timoshuk.computershop.DTO.UserDTO,org.vironit.timoshuk.computershop.DTO.UserDTO,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession) mapped.
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1745)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:576)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498)
@@ -1861,9 +1861,9 @@ public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.compute
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
 	at org.vironit.timoshuk.computershop.Application.main(Application.java:11)
 Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userController' method 
-public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.registerNewUser(org.vironit.timoshuk.computershop.dto.UserDTO,org.springframework.validation.BindingResult)
+public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.registerNewUser(org.vironit.timoshuk.computershop.DTO.UserDTO,org.springframework.validation.BindingResult)
 to {[],methods=[POST]}: There is already 'userController' bean method
-public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.changeProfile(org.vironit.timoshuk.computershop.dto.UserDTO,org.vironit.timoshuk.computershop.dto.UserDTO,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession) mapped.
+public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.changeProfile(org.vironit.timoshuk.computershop.DTO.UserDTO,org.vironit.timoshuk.computershop.DTO.UserDTO,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession) mapped.
 	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.assertUniqueMethodMapping(AbstractHandlerMethodMapping.java:599)
 	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:567)
 	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:294)
@@ -2357,18 +2357,18 @@ Field error in object 'userDTO' on field 'idCard': rejected value [null]; codes 
 2018-12-03 20:32:50,984 INFO org.springframework.boot.web.servlet.ServletRegistrationBean [localhost-startStop-1] Servlet dispatcherServlet mapped to [/]
 2018-12-03 20:32:50,989 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'characterEncodingFilter' to: [/*]
 2018-12-03 20:32:52,447 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/vironit/timoshuk/computershop/config/CustomWebMvcConfigurationSupport.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userController' method 
-public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.changeProfile(org.vironit.timoshuk.computershop.dto.UserDTO,org.vironit.timoshuk.computershop.dto.UserDTO,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession)
+public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.changeProfile(org.vironit.timoshuk.computershop.DTO.UserDTO,org.vironit.timoshuk.computershop.DTO.UserDTO,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession)
 to {[/user],methods=[POST]}: There is already 'userController' bean method
-public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.registerNewUser(org.vironit.timoshuk.computershop.dto.UserDTO,org.springframework.validation.BindingResult) mapped.
+public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.registerNewUser(org.vironit.timoshuk.computershop.DTO.UserDTO,org.springframework.validation.BindingResult) mapped.
 2018-12-03 20:32:52,451 INFO org.apache.juli.logging.DirectJDKLog [main] Stopping service [Tomcat]
 2018-12-03 20:32:52,465 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [main] 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
 2018-12-03 20:32:52,476 ERROR org.springframework.boot.SpringApplication [main] Application run failed
 org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/vironit/timoshuk/computershop/config/CustomWebMvcConfigurationSupport.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userController' method 
-public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.changeProfile(org.vironit.timoshuk.computershop.dto.UserDTO,org.vironit.timoshuk.computershop.dto.UserDTO,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession)
+public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.changeProfile(org.vironit.timoshuk.computershop.DTO.UserDTO,org.vironit.timoshuk.computershop.DTO.UserDTO,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession)
 to {[/user],methods=[POST]}: There is already 'userController' bean method
-public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.registerNewUser(org.vironit.timoshuk.computershop.dto.UserDTO,org.springframework.validation.BindingResult) mapped.
+public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.registerNewUser(org.vironit.timoshuk.computershop.DTO.UserDTO,org.springframework.validation.BindingResult) mapped.
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1745)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:576)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498)
@@ -2387,9 +2387,9 @@ public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.compute
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
 	at org.vironit.timoshuk.computershop.Application.main(Application.java:11)
 Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userController' method 
-public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.changeProfile(org.vironit.timoshuk.computershop.dto.UserDTO,org.vironit.timoshuk.computershop.dto.UserDTO,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession)
+public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.changeProfile(org.vironit.timoshuk.computershop.DTO.UserDTO,org.vironit.timoshuk.computershop.DTO.UserDTO,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession)
 to {[/user],methods=[POST]}: There is already 'userController' bean method
-public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.registerNewUser(org.vironit.timoshuk.computershop.dto.UserDTO,org.springframework.validation.BindingResult) mapped.
+public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.registerNewUser(org.vironit.timoshuk.computershop.DTO.UserDTO,org.springframework.validation.BindingResult) mapped.
 	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.assertUniqueMethodMapping(AbstractHandlerMethodMapping.java:599)
 	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:567)
 	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:294)
@@ -2466,7 +2466,7 @@ public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.compute
 2018-12-03 20:41:11,293 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 9 ms
 2018-12-03 20:41:24,084 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-6] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
 java.lang.NullPointerException: null
-	at org.vironit.timoshuk.computershop.dto.parser.UserDtoParser.createDTOFromEntity(UserDtoParser.java:12)
+	at org.vironit.timoshuk.computershop.DTO.parser.UserDtoParser.createDTOFromEntity(UserDtoParser.java:12)
 	at org.vironit.timoshuk.computershop.service.impl.UserServiceImpl.findByLogin(UserServiceImpl.java:72)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -2583,7 +2583,7 @@ java.lang.NullPointerException: null
 2018-12-03 20:51:04,841 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
 2018-12-03 20:51:04,849 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 6 ms
 2018-12-03 20:51:05,591 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Servlet.service() for servlet [jsp] threw exception
-java.lang.IllegalArgumentException: Cannot convert [UserDTO(id=null, userType=null, login=null, password=null, passwordTwo=null, email=null, firstName=null, lastName=null, address=null, phoneNumber=null, idCard=null, ownMoney=null)] of type [class org.vironit.timoshuk.computershop.dto.UserDTO] to [Number]
+java.lang.IllegalArgumentException: Cannot convert [UserDTO(id=null, userType=null, login=null, password=null, passwordTwo=null, email=null, firstName=null, lastName=null, address=null, phoneNumber=null, idCard=null, ownMoney=null)] of type [class org.vironit.timoshuk.computershop.DTO.UserDTO] to [Number]
 	at org.apache.el.lang.ELArithmetic.coerce(ELArithmetic.java:391)
 	at org.apache.el.lang.ELArithmetic.divide(ELArithmetic.java:310)
 	at org.apache.el.parser.AstDiv.getValue(AstDiv.java:40)
@@ -2641,8 +2641,8 @@ java.lang.IllegalArgumentException: Cannot convert [UserDTO(id=null, userType=nu
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
-2018-12-03 20:51:05,597 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [java.lang.IllegalArgumentException: Cannot convert [UserDTO(id=null, userType=null, login=null, password=null, passwordTwo=null, email=null, firstName=null, lastName=null, address=null, phoneNumber=null, idCard=null, ownMoney=null)] of type [class org.vironit.timoshuk.computershop.dto.UserDTO] to [Number]] with root cause
-java.lang.IllegalArgumentException: Cannot convert [UserDTO(id=null, userType=null, login=null, password=null, passwordTwo=null, email=null, firstName=null, lastName=null, address=null, phoneNumber=null, idCard=null, ownMoney=null)] of type [class org.vironit.timoshuk.computershop.dto.UserDTO] to [Number]
+2018-12-03 20:51:05,597 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [java.lang.IllegalArgumentException: Cannot convert [UserDTO(id=null, userType=null, login=null, password=null, passwordTwo=null, email=null, firstName=null, lastName=null, address=null, phoneNumber=null, idCard=null, ownMoney=null)] of type [class org.vironit.timoshuk.computershop.DTO.UserDTO] to [Number]] with root cause
+java.lang.IllegalArgumentException: Cannot convert [UserDTO(id=null, userType=null, login=null, password=null, passwordTwo=null, email=null, firstName=null, lastName=null, address=null, phoneNumber=null, idCard=null, ownMoney=null)] of type [class org.vironit.timoshuk.computershop.DTO.UserDTO] to [Number]
 	at org.apache.el.lang.ELArithmetic.coerce(ELArithmetic.java:391)
 	at org.apache.el.lang.ELArithmetic.divide(ELArithmetic.java:310)
 	at org.apache.el.parser.AstDiv.getValue(AstDiv.java:40)
@@ -2701,7 +2701,7 @@ java.lang.IllegalArgumentException: Cannot convert [UserDTO(id=null, userType=nu
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
 2018-12-03 20:51:14,809 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-5] Servlet.service() for servlet [jsp] threw exception
-java.lang.IllegalArgumentException: Cannot convert [UserDTO(id=null, userType=null, login=null, password=null, passwordTwo=null, email=null, firstName=null, lastName=null, address=null, phoneNumber=null, idCard=null, ownMoney=null)] of type [class org.vironit.timoshuk.computershop.dto.UserDTO] to [Number]
+java.lang.IllegalArgumentException: Cannot convert [UserDTO(id=null, userType=null, login=null, password=null, passwordTwo=null, email=null, firstName=null, lastName=null, address=null, phoneNumber=null, idCard=null, ownMoney=null)] of type [class org.vironit.timoshuk.computershop.DTO.UserDTO] to [Number]
 	at org.apache.el.lang.ELArithmetic.coerce(ELArithmetic.java:391)
 	at org.apache.el.lang.ELArithmetic.divide(ELArithmetic.java:310)
 	at org.apache.el.parser.AstDiv.getValue(AstDiv.java:40)
@@ -2759,8 +2759,8 @@ java.lang.IllegalArgumentException: Cannot convert [UserDTO(id=null, userType=nu
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
-2018-12-03 20:51:14,812 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-5] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [java.lang.IllegalArgumentException: Cannot convert [UserDTO(id=null, userType=null, login=null, password=null, passwordTwo=null, email=null, firstName=null, lastName=null, address=null, phoneNumber=null, idCard=null, ownMoney=null)] of type [class org.vironit.timoshuk.computershop.dto.UserDTO] to [Number]] with root cause
-java.lang.IllegalArgumentException: Cannot convert [UserDTO(id=null, userType=null, login=null, password=null, passwordTwo=null, email=null, firstName=null, lastName=null, address=null, phoneNumber=null, idCard=null, ownMoney=null)] of type [class org.vironit.timoshuk.computershop.dto.UserDTO] to [Number]
+2018-12-03 20:51:14,812 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-5] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [java.lang.IllegalArgumentException: Cannot convert [UserDTO(id=null, userType=null, login=null, password=null, passwordTwo=null, email=null, firstName=null, lastName=null, address=null, phoneNumber=null, idCard=null, ownMoney=null)] of type [class org.vironit.timoshuk.computershop.DTO.UserDTO] to [Number]] with root cause
+java.lang.IllegalArgumentException: Cannot convert [UserDTO(id=null, userType=null, login=null, password=null, passwordTwo=null, email=null, firstName=null, lastName=null, address=null, phoneNumber=null, idCard=null, ownMoney=null)] of type [class org.vironit.timoshuk.computershop.DTO.UserDTO] to [Number]
 	at org.apache.el.lang.ELArithmetic.coerce(ELArithmetic.java:391)
 	at org.apache.el.lang.ELArithmetic.divide(ELArithmetic.java:310)
 	at org.apache.el.parser.AstDiv.getValue(AstDiv.java:40)
@@ -2819,7 +2819,7 @@ java.lang.IllegalArgumentException: Cannot convert [UserDTO(id=null, userType=nu
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
 2018-12-03 20:52:33,901 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-7] Servlet.service() for servlet [jsp] threw exception
-java.lang.IllegalArgumentException: Cannot convert [UserDTO(id=null, userType=null, login=null, password=null, passwordTwo=null, email=null, firstName=null, lastName=null, address=null, phoneNumber=null, idCard=null, ownMoney=null)] of type [class org.vironit.timoshuk.computershop.dto.UserDTO] to [Number]
+java.lang.IllegalArgumentException: Cannot convert [UserDTO(id=null, userType=null, login=null, password=null, passwordTwo=null, email=null, firstName=null, lastName=null, address=null, phoneNumber=null, idCard=null, ownMoney=null)] of type [class org.vironit.timoshuk.computershop.DTO.UserDTO] to [Number]
 	at org.apache.el.lang.ELArithmetic.coerce(ELArithmetic.java:391)
 	at org.apache.el.lang.ELArithmetic.divide(ELArithmetic.java:310)
 	at org.apache.el.parser.AstDiv.getValue(AstDiv.java:40)
@@ -2877,8 +2877,8 @@ java.lang.IllegalArgumentException: Cannot convert [UserDTO(id=null, userType=nu
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
-2018-12-03 20:52:33,905 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-7] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [java.lang.IllegalArgumentException: Cannot convert [UserDTO(id=null, userType=null, login=null, password=null, passwordTwo=null, email=null, firstName=null, lastName=null, address=null, phoneNumber=null, idCard=null, ownMoney=null)] of type [class org.vironit.timoshuk.computershop.dto.UserDTO] to [Number]] with root cause
-java.lang.IllegalArgumentException: Cannot convert [UserDTO(id=null, userType=null, login=null, password=null, passwordTwo=null, email=null, firstName=null, lastName=null, address=null, phoneNumber=null, idCard=null, ownMoney=null)] of type [class org.vironit.timoshuk.computershop.dto.UserDTO] to [Number]
+2018-12-03 20:52:33,905 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-7] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [java.lang.IllegalArgumentException: Cannot convert [UserDTO(id=null, userType=null, login=null, password=null, passwordTwo=null, email=null, firstName=null, lastName=null, address=null, phoneNumber=null, idCard=null, ownMoney=null)] of type [class org.vironit.timoshuk.computershop.DTO.UserDTO] to [Number]] with root cause
+java.lang.IllegalArgumentException: Cannot convert [UserDTO(id=null, userType=null, login=null, password=null, passwordTwo=null, email=null, firstName=null, lastName=null, address=null, phoneNumber=null, idCard=null, ownMoney=null)] of type [class org.vironit.timoshuk.computershop.DTO.UserDTO] to [Number]
 	at org.apache.el.lang.ELArithmetic.coerce(ELArithmetic.java:391)
 	at org.apache.el.lang.ELArithmetic.divide(ELArithmetic.java:310)
 	at org.apache.el.parser.AstDiv.getValue(AstDiv.java:40)
@@ -2937,7 +2937,7 @@ java.lang.IllegalArgumentException: Cannot convert [UserDTO(id=null, userType=nu
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
 2018-12-03 20:53:00,935 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Servlet.service() for servlet [jsp] threw exception
-java.lang.IllegalArgumentException: Cannot convert [UserDTO(id=null, userType=null, login=null, password=null, passwordTwo=null, email=null, firstName=null, lastName=null, address=null, phoneNumber=null, idCard=null, ownMoney=null)] of type [class org.vironit.timoshuk.computershop.dto.UserDTO] to [Number]
+java.lang.IllegalArgumentException: Cannot convert [UserDTO(id=null, userType=null, login=null, password=null, passwordTwo=null, email=null, firstName=null, lastName=null, address=null, phoneNumber=null, idCard=null, ownMoney=null)] of type [class org.vironit.timoshuk.computershop.DTO.UserDTO] to [Number]
 	at org.apache.el.lang.ELArithmetic.coerce(ELArithmetic.java:391)
 	at org.apache.el.lang.ELArithmetic.divide(ELArithmetic.java:310)
 	at org.apache.el.parser.AstDiv.getValue(AstDiv.java:40)
@@ -2995,8 +2995,8 @@ java.lang.IllegalArgumentException: Cannot convert [UserDTO(id=null, userType=nu
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
-2018-12-03 20:53:00,938 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [java.lang.IllegalArgumentException: Cannot convert [UserDTO(id=null, userType=null, login=null, password=null, passwordTwo=null, email=null, firstName=null, lastName=null, address=null, phoneNumber=null, idCard=null, ownMoney=null)] of type [class org.vironit.timoshuk.computershop.dto.UserDTO] to [Number]] with root cause
-java.lang.IllegalArgumentException: Cannot convert [UserDTO(id=null, userType=null, login=null, password=null, passwordTwo=null, email=null, firstName=null, lastName=null, address=null, phoneNumber=null, idCard=null, ownMoney=null)] of type [class org.vironit.timoshuk.computershop.dto.UserDTO] to [Number]
+2018-12-03 20:53:00,938 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [java.lang.IllegalArgumentException: Cannot convert [UserDTO(id=null, userType=null, login=null, password=null, passwordTwo=null, email=null, firstName=null, lastName=null, address=null, phoneNumber=null, idCard=null, ownMoney=null)] of type [class org.vironit.timoshuk.computershop.DTO.UserDTO] to [Number]] with root cause
+java.lang.IllegalArgumentException: Cannot convert [UserDTO(id=null, userType=null, login=null, password=null, passwordTwo=null, email=null, firstName=null, lastName=null, address=null, phoneNumber=null, idCard=null, ownMoney=null)] of type [class org.vironit.timoshuk.computershop.DTO.UserDTO] to [Number]
 	at org.apache.el.lang.ELArithmetic.coerce(ELArithmetic.java:391)
 	at org.apache.el.lang.ELArithmetic.divide(ELArithmetic.java:310)
 	at org.apache.el.parser.AstDiv.getValue(AstDiv.java:40)
@@ -3074,7 +3074,7 @@ java.lang.IllegalArgumentException: Cannot convert [UserDTO(id=null, userType=nu
 2018-12-03 20:55:56,972 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
 2018-12-03 20:55:56,984 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 10 ms
 2018-12-03 20:55:59,358 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-3] Servlet.service() for servlet [jsp] threw exception
-java.lang.IllegalArgumentException: Cannot convert [UserDTO(id=null, userType=null, login=null, password=null, passwordTwo=null, email=null, firstName=null, lastName=null, address=null, phoneNumber=null, idCard=null, ownMoney=null)] of type [class org.vironit.timoshuk.computershop.dto.UserDTO] to [Number]
+java.lang.IllegalArgumentException: Cannot convert [UserDTO(id=null, userType=null, login=null, password=null, passwordTwo=null, email=null, firstName=null, lastName=null, address=null, phoneNumber=null, idCard=null, ownMoney=null)] of type [class org.vironit.timoshuk.computershop.DTO.UserDTO] to [Number]
 	at org.apache.el.lang.ELArithmetic.coerce(ELArithmetic.java:391)
 	at org.apache.el.lang.ELArithmetic.divide(ELArithmetic.java:310)
 	at org.apache.el.parser.AstDiv.getValue(AstDiv.java:40)
@@ -3132,8 +3132,8 @@ java.lang.IllegalArgumentException: Cannot convert [UserDTO(id=null, userType=nu
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
-2018-12-03 20:55:59,365 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-3] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [java.lang.IllegalArgumentException: Cannot convert [UserDTO(id=null, userType=null, login=null, password=null, passwordTwo=null, email=null, firstName=null, lastName=null, address=null, phoneNumber=null, idCard=null, ownMoney=null)] of type [class org.vironit.timoshuk.computershop.dto.UserDTO] to [Number]] with root cause
-java.lang.IllegalArgumentException: Cannot convert [UserDTO(id=null, userType=null, login=null, password=null, passwordTwo=null, email=null, firstName=null, lastName=null, address=null, phoneNumber=null, idCard=null, ownMoney=null)] of type [class org.vironit.timoshuk.computershop.dto.UserDTO] to [Number]
+2018-12-03 20:55:59,365 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-3] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [java.lang.IllegalArgumentException: Cannot convert [UserDTO(id=null, userType=null, login=null, password=null, passwordTwo=null, email=null, firstName=null, lastName=null, address=null, phoneNumber=null, idCard=null, ownMoney=null)] of type [class org.vironit.timoshuk.computershop.DTO.UserDTO] to [Number]] with root cause
+java.lang.IllegalArgumentException: Cannot convert [UserDTO(id=null, userType=null, login=null, password=null, passwordTwo=null, email=null, firstName=null, lastName=null, address=null, phoneNumber=null, idCard=null, ownMoney=null)] of type [class org.vironit.timoshuk.computershop.DTO.UserDTO] to [Number]
 	at org.apache.el.lang.ELArithmetic.coerce(ELArithmetic.java:391)
 	at org.apache.el.lang.ELArithmetic.divide(ELArithmetic.java:310)
 	at org.apache.el.parser.AstDiv.getValue(AstDiv.java:40)
@@ -3211,7 +3211,7 @@ java.lang.IllegalArgumentException: Cannot convert [UserDTO(id=null, userType=nu
 2018-12-03 20:56:29,632 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
 2018-12-03 20:56:29,644 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 10 ms
 2018-12-03 20:56:32,692 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-3] Servlet.service() for servlet [jsp] threw exception
-java.lang.IllegalArgumentException: Cannot convert [UserDTO(id=null, userType=null, login=null, password=null, passwordTwo=null, email=null, firstName=null, lastName=null, address=null, phoneNumber=null, idCard=null, ownMoney=null)] of type [class org.vironit.timoshuk.computershop.dto.UserDTO] to [Number]
+java.lang.IllegalArgumentException: Cannot convert [UserDTO(id=null, userType=null, login=null, password=null, passwordTwo=null, email=null, firstName=null, lastName=null, address=null, phoneNumber=null, idCard=null, ownMoney=null)] of type [class org.vironit.timoshuk.computershop.DTO.UserDTO] to [Number]
 	at org.apache.el.lang.ELArithmetic.coerce(ELArithmetic.java:391)
 	at org.apache.el.lang.ELArithmetic.divide(ELArithmetic.java:310)
 	at org.apache.el.parser.AstDiv.getValue(AstDiv.java:40)
@@ -3269,8 +3269,8 @@ java.lang.IllegalArgumentException: Cannot convert [UserDTO(id=null, userType=nu
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
-2018-12-03 20:56:32,695 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-3] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [java.lang.IllegalArgumentException: Cannot convert [UserDTO(id=null, userType=null, login=null, password=null, passwordTwo=null, email=null, firstName=null, lastName=null, address=null, phoneNumber=null, idCard=null, ownMoney=null)] of type [class org.vironit.timoshuk.computershop.dto.UserDTO] to [Number]] with root cause
-java.lang.IllegalArgumentException: Cannot convert [UserDTO(id=null, userType=null, login=null, password=null, passwordTwo=null, email=null, firstName=null, lastName=null, address=null, phoneNumber=null, idCard=null, ownMoney=null)] of type [class org.vironit.timoshuk.computershop.dto.UserDTO] to [Number]
+2018-12-03 20:56:32,695 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-3] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [java.lang.IllegalArgumentException: Cannot convert [UserDTO(id=null, userType=null, login=null, password=null, passwordTwo=null, email=null, firstName=null, lastName=null, address=null, phoneNumber=null, idCard=null, ownMoney=null)] of type [class org.vironit.timoshuk.computershop.DTO.UserDTO] to [Number]] with root cause
+java.lang.IllegalArgumentException: Cannot convert [UserDTO(id=null, userType=null, login=null, password=null, passwordTwo=null, email=null, firstName=null, lastName=null, address=null, phoneNumber=null, idCard=null, ownMoney=null)] of type [class org.vironit.timoshuk.computershop.DTO.UserDTO] to [Number]
 	at org.apache.el.lang.ELArithmetic.coerce(ELArithmetic.java:391)
 	at org.apache.el.lang.ELArithmetic.divide(ELArithmetic.java:310)
 	at org.apache.el.parser.AstDiv.getValue(AstDiv.java:40)
@@ -4252,18 +4252,18 @@ Consider injecting the bean as one of its interfaces or forcing the use of CGLib
 2018-12-04 14:07:23,553 INFO org.springframework.boot.web.servlet.ServletRegistrationBean [localhost-startStop-1] Servlet dispatcherServlet mapped to [/]
 2018-12-04 14:07:23,563 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'characterEncodingFilter' to: [/*]
 2018-12-04 14:07:25,336 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/vironit/timoshuk/computershop/config/CustomWebMvcConfigurationSupport.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userController' method 
-public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.changeProfile(org.vironit.timoshuk.computershop.dto.UserDTO,org.vironit.timoshuk.computershop.dto.UserDTO,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession)
+public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.changeProfile(org.vironit.timoshuk.computershop.DTO.UserDTO,org.vironit.timoshuk.computershop.DTO.UserDTO,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession)
 to {[/user],methods=[POST]}: There is already 'userController' bean method
-public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.registerNewUser(org.vironit.timoshuk.computershop.dto.UserDTO,org.springframework.validation.BindingResult) mapped.
+public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.registerNewUser(org.vironit.timoshuk.computershop.DTO.UserDTO,org.springframework.validation.BindingResult) mapped.
 2018-12-04 14:07:25,336 INFO org.apache.juli.logging.DirectJDKLog [main] Stopping service [Tomcat]
 2018-12-04 14:07:25,352 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [main] 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
 2018-12-04 14:07:25,367 ERROR org.springframework.boot.SpringApplication [main] Application run failed
 org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/vironit/timoshuk/computershop/config/CustomWebMvcConfigurationSupport.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userController' method 
-public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.changeProfile(org.vironit.timoshuk.computershop.dto.UserDTO,org.vironit.timoshuk.computershop.dto.UserDTO,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession)
+public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.changeProfile(org.vironit.timoshuk.computershop.DTO.UserDTO,org.vironit.timoshuk.computershop.DTO.UserDTO,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession)
 to {[/user],methods=[POST]}: There is already 'userController' bean method
-public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.registerNewUser(org.vironit.timoshuk.computershop.dto.UserDTO,org.springframework.validation.BindingResult) mapped.
+public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.registerNewUser(org.vironit.timoshuk.computershop.DTO.UserDTO,org.springframework.validation.BindingResult) mapped.
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1745)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:576)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498)
@@ -4282,9 +4282,9 @@ public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.compute
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
 	at org.vironit.timoshuk.computershop.Application.main(Application.java:11)
 Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userController' method 
-public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.changeProfile(org.vironit.timoshuk.computershop.dto.UserDTO,org.vironit.timoshuk.computershop.dto.UserDTO,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession)
+public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.changeProfile(org.vironit.timoshuk.computershop.DTO.UserDTO,org.vironit.timoshuk.computershop.DTO.UserDTO,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession)
 to {[/user],methods=[POST]}: There is already 'userController' bean method
-public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.registerNewUser(org.vironit.timoshuk.computershop.dto.UserDTO,org.springframework.validation.BindingResult) mapped.
+public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.registerNewUser(org.vironit.timoshuk.computershop.DTO.UserDTO,org.springframework.validation.BindingResult) mapped.
 	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.assertUniqueMethodMapping(AbstractHandlerMethodMapping.java:599)
 	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:567)
 	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:294)
@@ -4311,18 +4311,18 @@ public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.compute
 2018-12-04 14:11:50,497 INFO org.springframework.boot.web.servlet.ServletRegistrationBean [localhost-startStop-1] Servlet dispatcherServlet mapped to [/]
 2018-12-04 14:11:50,513 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'characterEncodingFilter' to: [/*]
 2018-12-04 14:11:51,984 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/vironit/timoshuk/computershop/config/CustomWebMvcConfigurationSupport.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userController' method 
-public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.registerNewUser(org.vironit.timoshuk.computershop.dto.UserDTO,org.springframework.validation.BindingResult)
+public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.registerNewUser(org.vironit.timoshuk.computershop.DTO.UserDTO,org.springframework.validation.BindingResult)
 to {[/user],methods=[POST]}: There is already 'userController' bean method
-public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.changeProfile(org.vironit.timoshuk.computershop.dto.UserDTO,org.vironit.timoshuk.computershop.dto.UserDTO,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession) mapped.
+public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.changeProfile(org.vironit.timoshuk.computershop.DTO.UserDTO,org.vironit.timoshuk.computershop.DTO.UserDTO,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession) mapped.
 2018-12-04 14:11:51,989 INFO org.apache.juli.logging.DirectJDKLog [main] Stopping service [Tomcat]
 2018-12-04 14:11:51,996 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [main] 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
 2018-12-04 14:11:51,996 ERROR org.springframework.boot.SpringApplication [main] Application run failed
 org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/vironit/timoshuk/computershop/config/CustomWebMvcConfigurationSupport.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userController' method 
-public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.registerNewUser(org.vironit.timoshuk.computershop.dto.UserDTO,org.springframework.validation.BindingResult)
+public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.registerNewUser(org.vironit.timoshuk.computershop.DTO.UserDTO,org.springframework.validation.BindingResult)
 to {[/user],methods=[POST]}: There is already 'userController' bean method
-public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.changeProfile(org.vironit.timoshuk.computershop.dto.UserDTO,org.vironit.timoshuk.computershop.dto.UserDTO,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession) mapped.
+public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.changeProfile(org.vironit.timoshuk.computershop.DTO.UserDTO,org.vironit.timoshuk.computershop.DTO.UserDTO,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession) mapped.
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1745)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:576)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498)
@@ -4341,9 +4341,9 @@ public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.compute
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
 	at org.vironit.timoshuk.computershop.Application.main(Application.java:11)
 Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userController' method 
-public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.registerNewUser(org.vironit.timoshuk.computershop.dto.UserDTO,org.springframework.validation.BindingResult)
+public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.registerNewUser(org.vironit.timoshuk.computershop.DTO.UserDTO,org.springframework.validation.BindingResult)
 to {[/user],methods=[POST]}: There is already 'userController' bean method
-public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.changeProfile(org.vironit.timoshuk.computershop.dto.UserDTO,org.vironit.timoshuk.computershop.dto.UserDTO,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession) mapped.
+public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.changeProfile(org.vironit.timoshuk.computershop.DTO.UserDTO,org.vironit.timoshuk.computershop.DTO.UserDTO,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession) mapped.
 	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.assertUniqueMethodMapping(AbstractHandlerMethodMapping.java:599)
 	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:567)
 	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:294)
@@ -5323,7 +5323,7 @@ java.lang.IllegalArgumentException: Invalid character found in method name. HTTP
 org.springframework.beans.NotReadablePropertyException: Invalid property 'password' of bean class [java.lang.String]: Bean property 'password' is not readable or has an invalid getter method: Does the return type of the getter match the parameter type of the setter?
 	at org.springframework.beans.AbstractNestablePropertyAccessor.getPropertyValue(AbstractNestablePropertyAccessor.java:622)
 	at org.springframework.beans.AbstractNestablePropertyAccessor.getPropertyValue(AbstractNestablePropertyAccessor.java:612)
-	at org.vironit.timoshuk.computershop.validator.annotations.FieldsValueMatchValidator.isValid(FieldsValueMatchValidator.java:20)
+	at org.vironit.timoshuk.computershop.validator.FieldsValueMatchValidator.isValid(FieldsValueMatchValidator.java:20)
 	at org.hibernate.validator.internal.engine.constraintvalidation.ConstraintTree.validateSingleConstraint(ConstraintTree.java:318)
 	at org.hibernate.validator.internal.engine.constraintvalidation.ConstraintTree.validateConstraints(ConstraintTree.java:122)
 	at org.hibernate.validator.internal.engine.constraintvalidation.ConstraintTree.validateConstraints(ConstraintTree.java:82)
@@ -5382,7 +5382,7 @@ org.springframework.beans.NotReadablePropertyException: Invalid property 'passwo
 org.springframework.beans.NotReadablePropertyException: Invalid property 'password' of bean class [java.lang.String]: Bean property 'password' is not readable or has an invalid getter method: Does the return type of the getter match the parameter type of the setter?
 	at org.springframework.beans.AbstractNestablePropertyAccessor.getPropertyValue(AbstractNestablePropertyAccessor.java:622)
 	at org.springframework.beans.AbstractNestablePropertyAccessor.getPropertyValue(AbstractNestablePropertyAccessor.java:612)
-	at org.vironit.timoshuk.computershop.validator.annotations.FieldsValueMatchValidator.isValid(FieldsValueMatchValidator.java:20)
+	at org.vironit.timoshuk.computershop.validator.FieldsValueMatchValidator.isValid(FieldsValueMatchValidator.java:20)
 	at org.hibernate.validator.internal.engine.constraintvalidation.ConstraintTree.validateSingleConstraint(ConstraintTree.java:318)
 	at org.hibernate.validator.internal.engine.constraintvalidation.ConstraintTree.validateConstraints(ConstraintTree.java:122)
 	at org.hibernate.validator.internal.engine.constraintvalidation.ConstraintTree.validateConstraints(ConstraintTree.java:82)

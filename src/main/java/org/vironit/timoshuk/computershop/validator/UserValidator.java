@@ -6,7 +6,7 @@ import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Service;
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
-import org.vironit.timoshuk.computershop.dto.UserDTO;
+import org.vironit.timoshuk.computershop.DTO.UserDTO;
 import org.vironit.timoshuk.computershop.entity.users.User;
 import org.vironit.timoshuk.computershop.service.UserService;
 

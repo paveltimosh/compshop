@@ -18,7 +18,7 @@
 2018-11-28 15:49:12,133 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
 2018-11-28 15:49:12,143 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 10 ms
 2018-11-28 15:49:19,808 INFO org.vironit.timoshuk.computershop.controller.UserController [http-nio-8080-exec-4] The user with login pafanya22 is logged in
-2018-11-28 15:49:55,353 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8080-exec-3] Resolved [org.springframework.web.method.annotation.MethodArgumentConversionNotSupportedException: Failed to convert value of type 'org.vironit.timoshuk.computershop.entity.users.User' to required type 'org.vironit.timoshuk.computershop.dto.UserDTO'; nested exception is java.lang.IllegalStateException: Cannot convert value of type 'org.vironit.timoshuk.computershop.entity.users.User' to required type 'org.vironit.timoshuk.computershop.dto.UserDTO': no matching editors or conversion strategy found]
+2018-11-28 15:49:55,353 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8080-exec-3] Resolved [org.springframework.web.method.annotation.MethodArgumentConversionNotSupportedException: Failed to convert value of type 'org.vironit.timoshuk.computershop.entity.users.User' to required type 'org.vironit.timoshuk.computershop.DTO.UserDTO'; nested exception is java.lang.IllegalStateException: Cannot convert value of type 'org.vironit.timoshuk.computershop.entity.users.User' to required type 'org.vironit.timoshuk.computershop.DTO.UserDTO': no matching editors or conversion strategy found]
 2018-11-28 15:57:29,410 INFO org.springframework.boot.StartupInfoLogger [main] Starting Application on WIN-C3L8TOODV5O with PID 13400 (C:\Users\User\IdeaProjects\computershop\target\classes started by User in C:\Users\User\IdeaProjects\computershop)
 2018-11-28 15:57:29,415 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
 2018-11-28 15:57:31,847 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
@@ -4008,18 +4008,18 @@ java.lang.IllegalArgumentException: Invalid character found in method name. HTTP
 2018-11-30 12:39:21,885 INFO org.springframework.boot.web.servlet.ServletRegistrationBean [localhost-startStop-1] Servlet dispatcherServlet mapped to [/]
 2018-11-30 12:39:21,889 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'characterEncodingFilter' to: [/*]
 2018-11-30 12:39:23,519 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/vironit/timoshuk/computershop/config/CustomWebMvcConfigurationSupport.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userController' method 
-public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.registerNewUser(org.vironit.timoshuk.computershop.dto.UserDTO,org.springframework.validation.BindingResult)
+public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.registerNewUser(org.vironit.timoshuk.computershop.DTO.UserDTO,org.springframework.validation.BindingResult)
 to {[],methods=[POST]}: There is already 'userController' bean method
-public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.changeProfile(org.vironit.timoshuk.computershop.dto.UserDTO,org.vironit.timoshuk.computershop.dto.UserDTO,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession) mapped.
+public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.changeProfile(org.vironit.timoshuk.computershop.DTO.UserDTO,org.vironit.timoshuk.computershop.DTO.UserDTO,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession) mapped.
 2018-11-30 12:39:23,523 INFO org.apache.juli.logging.DirectJDKLog [main] Stopping service [Tomcat]
 2018-11-30 12:39:23,536 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [main] 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
 2018-11-30 12:39:23,546 ERROR org.springframework.boot.SpringApplication [main] Application run failed
 org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/vironit/timoshuk/computershop/config/CustomWebMvcConfigurationSupport.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userController' method 
-public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.registerNewUser(org.vironit.timoshuk.computershop.dto.UserDTO,org.springframework.validation.BindingResult)
+public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.registerNewUser(org.vironit.timoshuk.computershop.DTO.UserDTO,org.springframework.validation.BindingResult)
 to {[],methods=[POST]}: There is already 'userController' bean method
-public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.changeProfile(org.vironit.timoshuk.computershop.dto.UserDTO,org.vironit.timoshuk.computershop.dto.UserDTO,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession) mapped.
+public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.changeProfile(org.vironit.timoshuk.computershop.DTO.UserDTO,org.vironit.timoshuk.computershop.DTO.UserDTO,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession) mapped.
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1745)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:576)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498)
@@ -4038,9 +4038,9 @@ public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.compute
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
 	at org.vironit.timoshuk.computershop.Application.main(Application.java:11)
 Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userController' method 
-public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.registerNewUser(org.vironit.timoshuk.computershop.dto.UserDTO,org.springframework.validation.BindingResult)
+public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.registerNewUser(org.vironit.timoshuk.computershop.DTO.UserDTO,org.springframework.validation.BindingResult)
 to {[],methods=[POST]}: There is already 'userController' bean method
-public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.changeProfile(org.vironit.timoshuk.computershop.dto.UserDTO,org.vironit.timoshuk.computershop.dto.UserDTO,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession) mapped.
+public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.changeProfile(org.vironit.timoshuk.computershop.DTO.UserDTO,org.vironit.timoshuk.computershop.DTO.UserDTO,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession) mapped.
 	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.assertUniqueMethodMapping(AbstractHandlerMethodMapping.java:599)
 	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:567)
 	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:294)
@@ -4067,18 +4067,18 @@ public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.compute
 2018-11-30 12:39:51,640 INFO org.springframework.boot.web.servlet.ServletRegistrationBean [localhost-startStop-1] Servlet dispatcherServlet mapped to [/]
 2018-11-30 12:39:51,645 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'characterEncodingFilter' to: [/*]
 2018-11-30 12:39:53,017 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/vironit/timoshuk/computershop/config/CustomWebMvcConfigurationSupport.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userController' method 
-public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.changeProfile(org.vironit.timoshuk.computershop.dto.UserDTO,org.vironit.timoshuk.computershop.dto.UserDTO,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession)
+public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.changeProfile(org.vironit.timoshuk.computershop.DTO.UserDTO,org.vironit.timoshuk.computershop.DTO.UserDTO,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession)
 to {[],methods=[POST]}: There is already 'userController' bean method
-public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.registerNewUser(org.vironit.timoshuk.computershop.dto.UserDTO,org.springframework.validation.BindingResult) mapped.
+public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.registerNewUser(org.vironit.timoshuk.computershop.DTO.UserDTO,org.springframework.validation.BindingResult) mapped.
 2018-11-30 12:39:53,022 INFO org.apache.juli.logging.DirectJDKLog [main] Stopping service [Tomcat]
 2018-11-30 12:39:53,037 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [main] 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
 2018-11-30 12:39:53,047 ERROR org.springframework.boot.SpringApplication [main] Application run failed
 org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/vironit/timoshuk/computershop/config/CustomWebMvcConfigurationSupport.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userController' method 
-public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.changeProfile(org.vironit.timoshuk.computershop.dto.UserDTO,org.vironit.timoshuk.computershop.dto.UserDTO,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession)
+public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.changeProfile(org.vironit.timoshuk.computershop.DTO.UserDTO,org.vironit.timoshuk.computershop.DTO.UserDTO,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession)
 to {[],methods=[POST]}: There is already 'userController' bean method
-public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.registerNewUser(org.vironit.timoshuk.computershop.dto.UserDTO,org.springframework.validation.BindingResult) mapped.
+public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.registerNewUser(org.vironit.timoshuk.computershop.DTO.UserDTO,org.springframework.validation.BindingResult) mapped.
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1745)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:576)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498)
@@ -4097,9 +4097,9 @@ public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.compute
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
 	at org.vironit.timoshuk.computershop.Application.main(Application.java:11)
 Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userController' method 
-public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.changeProfile(org.vironit.timoshuk.computershop.dto.UserDTO,org.vironit.timoshuk.computershop.dto.UserDTO,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession)
+public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.changeProfile(org.vironit.timoshuk.computershop.DTO.UserDTO,org.vironit.timoshuk.computershop.DTO.UserDTO,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession)
 to {[],methods=[POST]}: There is already 'userController' bean method
-public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.registerNewUser(org.vironit.timoshuk.computershop.dto.UserDTO,org.springframework.validation.BindingResult) mapped.
+public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.registerNewUser(org.vironit.timoshuk.computershop.DTO.UserDTO,org.springframework.validation.BindingResult) mapped.
 	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.assertUniqueMethodMapping(AbstractHandlerMethodMapping.java:599)
 	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:567)
 	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:294)
@@ -4126,18 +4126,18 @@ public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.compute
 2018-11-30 12:40:29,850 INFO org.springframework.boot.web.servlet.ServletRegistrationBean [localhost-startStop-1] Servlet dispatcherServlet mapped to [/]
 2018-11-30 12:40:29,853 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'characterEncodingFilter' to: [/*]
 2018-11-30 12:40:31,204 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/vironit/timoshuk/computershop/config/CustomWebMvcConfigurationSupport.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userController' method 
-public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.registerNewUser(org.vironit.timoshuk.computershop.dto.UserDTO,org.springframework.validation.BindingResult)
+public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.registerNewUser(org.vironit.timoshuk.computershop.DTO.UserDTO,org.springframework.validation.BindingResult)
 to {[],methods=[POST]}: There is already 'userController' bean method
-public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.changeProfile(org.vironit.timoshuk.computershop.dto.UserDTO,org.vironit.timoshuk.computershop.dto.UserDTO,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession) mapped.
+public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.changeProfile(org.vironit.timoshuk.computershop.DTO.UserDTO,org.vironit.timoshuk.computershop.DTO.UserDTO,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession) mapped.
 2018-11-30 12:40:31,208 INFO org.apache.juli.logging.DirectJDKLog [main] Stopping service [Tomcat]
 2018-11-30 12:40:31,222 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [main] 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
 2018-11-30 12:40:31,230 ERROR org.springframework.boot.SpringApplication [main] Application run failed
 org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/vironit/timoshuk/computershop/config/CustomWebMvcConfigurationSupport.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userController' method 
-public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.registerNewUser(org.vironit.timoshuk.computershop.dto.UserDTO,org.springframework.validation.BindingResult)
+public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.registerNewUser(org.vironit.timoshuk.computershop.DTO.UserDTO,org.springframework.validation.BindingResult)
 to {[],methods=[POST]}: There is already 'userController' bean method
-public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.changeProfile(org.vironit.timoshuk.computershop.dto.UserDTO,org.vironit.timoshuk.computershop.dto.UserDTO,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession) mapped.
+public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.changeProfile(org.vironit.timoshuk.computershop.DTO.UserDTO,org.vironit.timoshuk.computershop.DTO.UserDTO,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession) mapped.
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1745)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:576)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498)
@@ -4156,9 +4156,9 @@ public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.compute
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
 	at org.vironit.timoshuk.computershop.Application.main(Application.java:11)
 Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userController' method 
-public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.registerNewUser(org.vironit.timoshuk.computershop.dto.UserDTO,org.springframework.validation.BindingResult)
+public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.registerNewUser(org.vironit.timoshuk.computershop.DTO.UserDTO,org.springframework.validation.BindingResult)
 to {[],methods=[POST]}: There is already 'userController' bean method
-public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.changeProfile(org.vironit.timoshuk.computershop.dto.UserDTO,org.vironit.timoshuk.computershop.dto.UserDTO,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession) mapped.
+public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.changeProfile(org.vironit.timoshuk.computershop.DTO.UserDTO,org.vironit.timoshuk.computershop.DTO.UserDTO,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession) mapped.
 	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.assertUniqueMethodMapping(AbstractHandlerMethodMapping.java:599)
 	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:567)
 	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:294)
@@ -4185,18 +4185,18 @@ public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.compute
 2018-11-30 12:42:17,165 INFO org.springframework.boot.web.servlet.ServletRegistrationBean [localhost-startStop-1] Servlet dispatcherServlet mapped to [/]
 2018-11-30 12:42:17,182 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'characterEncodingFilter' to: [/*]
 2018-11-30 12:42:18,650 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/vironit/timoshuk/computershop/config/CustomWebMvcConfigurationSupport.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userController' method 
-public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.registerNewUser(org.vironit.timoshuk.computershop.dto.UserDTO,org.springframework.validation.BindingResult)
+public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.registerNewUser(org.vironit.timoshuk.computershop.DTO.UserDTO,org.springframework.validation.BindingResult)
 to {[],methods=[POST]}: There is already 'userController' bean method
-public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.changeProfile(org.vironit.timoshuk.computershop.dto.UserDTO,org.vironit.timoshuk.computershop.dto.UserDTO,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession) mapped.
+public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.changeProfile(org.vironit.timoshuk.computershop.DTO.UserDTO,org.vironit.timoshuk.computershop.DTO.UserDTO,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession) mapped.
 2018-11-30 12:42:18,654 INFO org.apache.juli.logging.DirectJDKLog [main] Stopping service [Tomcat]
 2018-11-30 12:42:18,666 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [main] 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
 2018-11-30 12:42:18,675 ERROR org.springframework.boot.SpringApplication [main] Application run failed
 org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/vironit/timoshuk/computershop/config/CustomWebMvcConfigurationSupport.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userController' method 
-public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.registerNewUser(org.vironit.timoshuk.computershop.dto.UserDTO,org.springframework.validation.BindingResult)
+public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.registerNewUser(org.vironit.timoshuk.computershop.DTO.UserDTO,org.springframework.validation.BindingResult)
 to {[],methods=[POST]}: There is already 'userController' bean method
-public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.changeProfile(org.vironit.timoshuk.computershop.dto.UserDTO,org.vironit.timoshuk.computershop.dto.UserDTO,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession) mapped.
+public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.changeProfile(org.vironit.timoshuk.computershop.DTO.UserDTO,org.vironit.timoshuk.computershop.DTO.UserDTO,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession) mapped.
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1745)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:576)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498)
@@ -4215,9 +4215,9 @@ public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.compute
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
 	at org.vironit.timoshuk.computershop.Application.main(Application.java:11)
 Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userController' method 
-public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.registerNewUser(org.vironit.timoshuk.computershop.dto.UserDTO,org.springframework.validation.BindingResult)
+public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.registerNewUser(org.vironit.timoshuk.computershop.DTO.UserDTO,org.springframework.validation.BindingResult)
 to {[],methods=[POST]}: There is already 'userController' bean method
-public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.changeProfile(org.vironit.timoshuk.computershop.dto.UserDTO,org.vironit.timoshuk.computershop.dto.UserDTO,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession) mapped.
+public org.springframework.web.servlet.ModelAndView org.vironit.timoshuk.computershop.controller.UserController.changeProfile(org.vironit.timoshuk.computershop.DTO.UserDTO,org.vironit.timoshuk.computershop.DTO.UserDTO,org.springframework.validation.BindingResult,javax.servlet.http.HttpSession) mapped.
 	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.assertUniqueMethodMapping(AbstractHandlerMethodMapping.java:599)
 	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:567)
 	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:294)

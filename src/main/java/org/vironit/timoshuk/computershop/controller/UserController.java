@@ -4,19 +4,19 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.Validator;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
-import org.vironit.timoshuk.computershop.dto.UserDTO;
-import org.vironit.timoshuk.computershop.dto.parser.UserDtoParser;
-import org.vironit.timoshuk.computershop.dto.transfer.CreateNewUser;
-import org.vironit.timoshuk.computershop.dto.transfer.EditUserData;
+import org.vironit.timoshuk.computershop.DTO.UserDTO;
+import org.vironit.timoshuk.computershop.DTO.transfer.CreateNewUser;
+import org.vironit.timoshuk.computershop.DTO.transfer.EditUserData;
 import org.vironit.timoshuk.computershop.entity.products.Item;
 import org.vironit.timoshuk.computershop.entity.users.UserType;
-import org.vironit.timoshuk.computershop.resource.MessageManager;
+import org.vironit.timoshuk.computershop.util.MessageManager;
 import org.vironit.timoshuk.computershop.service.UserService;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -31,6 +31,9 @@ public class UserController {
     private UserService userService;
 
     @Autowired
+    private PasswordEncoder passwordEncoder;
+
+    @Autowired
     @Qualifier("userValidator")
     private Validator userValidator;
 
@@ -41,17 +44,14 @@ public class UserController {
         return new UserDTO();
     }
 
-    @ModelAttribute("newUser")
-    public UserDTO createModelUser() {
-        return new UserDTO();
-    }
 
-
+/*
     @PostMapping(value = "/login")
     public ModelAndView login (@RequestParam String login,
                                @RequestParam String password,
                                HttpSession session){
         ModelAndView model = new ModelAndView("login");
+        System.out.println("user controller");
         try {
             UserDTO user = userService.findByLogin(login);
             if (user.getPassword().equals(password)) {
@@ -60,7 +60,7 @@ public class UserController {
                 session.setAttribute("role", user.getUserType().toString());
                 session.setAttribute("cart", cart);
                 LOG.info("The user with login " + user.getLogin() + " is logged in");
-                model.setViewName("main");
+                model.setViewName("redirect:register");
             }else {
                 model.addObject("wrongPassword", MessageManager.getProperty("message.passwordError"));
             }
@@ -68,7 +68,7 @@ public class UserController {
             model.addObject("userNotFound", MessageManager.getProperty("message.loginError"));
         }
         return model;
-    }
+    }*/
 
     @PostMapping(value = "/changeProfile")
     public ModelAndView changeProfile(@SessionAttribute("user") UserDTO userDTO,
@@ -88,33 +88,21 @@ public class UserController {
         userDTO.setPhoneNumber(userDtoEdit.getPhoneNumber());
         userDTO.setIdCard(userDtoEdit.getIdCard());
         userService.update(userDTO);
-        model.setViewName("user/profile");
+        model.setViewName("redirect:user/profile");
         session.setAttribute("user", userDTO);
         return model;
     }
 
-    @PostMapping(value = "/register")
-    public ModelAndView registerNewUser(@Validated(CreateNewUser.class) @ModelAttribute("newUser") UserDTO newUser,
-                                        BindingResult bindingResult){
-        ModelAndView model = new ModelAndView("main");
-        userValidator.validate(newUser,bindingResult);
-        if(bindingResult.hasErrors()){
-            model.setViewName("register");
-            return model;
-        }
-        newUser.setUserType(UserType.USER);
-        userService.createUserThenAuthenticate(newUser);
-        return model;
-    }
 
-    @GetMapping("/logout")
+
+    /*@GetMapping("/logout")
     public String getLogoutPage (@RequestParam String login,
                                  HttpServletRequest request, HttpSession session){
         session.invalidate();
         request.getSession(true);
         LOG.info("The user with login " + login + " is logged out");
         return "main";
-    }
+    }*/
 
     @GetMapping({"/profile",""})
     public String getShowProfilePage (){
@@ -126,15 +114,9 @@ public class UserController {
         return "user/changeUserData";
     }
 
-    @GetMapping("/login")
-    public String loginPage(){
-        return "login";
-    }
 
-    @GetMapping({"/register"})
-    public String getRegisterPage(){
-        return "register";
-    }
+
+
 
     @GetMapping({"/"})
     public String mainPage(){

@@ -6,6 +6,7 @@ import org.springframework.web.context.support.AnnotationConfigWebApplicationCon
 import org.springframework.web.context.support.GenericWebApplicationContext;
 import org.springframework.web.filter.CharacterEncodingFilter;
 import org.springframework.web.servlet.DispatcherServlet;
+import org.vironit.timoshuk.computershop.secure.WebSecurityConfig;
 
 import javax.servlet.FilterRegistration;
 import javax.servlet.ServletContext;
@@ -21,8 +22,8 @@ public class AppInitializer implements WebApplicationInitializer {
                 new AnnotationConfigWebApplicationContext();
 
         root.scan("org.vironit.timoshuk.computershop");
+        //root.register(WebSecurityConfig.class);
         sc.addListener(new ContextLoaderListener(root));
-
 
         ServletRegistration.Dynamic appServlet =
                 sc.addServlet("mvc", new DispatcherServlet(new GenericWebApplicationContext()));

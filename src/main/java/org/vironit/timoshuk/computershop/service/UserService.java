@@ -1,6 +1,6 @@
 package org.vironit.timoshuk.computershop.service;
 
-import org.vironit.timoshuk.computershop.dto.UserDTO;
+import org.vironit.timoshuk.computershop.DTO.UserDTO;
 import org.vironit.timoshuk.computershop.entity.users.User;
 import java.util.List;
 

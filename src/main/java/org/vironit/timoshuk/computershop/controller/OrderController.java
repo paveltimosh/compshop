@@ -4,12 +4,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
-import org.vironit.timoshuk.computershop.dto.UserDTO;
+import org.vironit.timoshuk.computershop.DTO.UserDTO;
 import org.vironit.timoshuk.computershop.entity.order.Order;
 import org.vironit.timoshuk.computershop.entity.order.OrderStatus;
 import org.vironit.timoshuk.computershop.entity.order.TypePayment;
 import org.vironit.timoshuk.computershop.entity.products.Item;
-import org.vironit.timoshuk.computershop.resource.MessageManager;
+import org.vironit.timoshuk.computershop.util.MessageManager;
 import org.vironit.timoshuk.computershop.service.OrderService;
 import org.vironit.timoshuk.computershop.service.UserService;
 import javax.servlet.http.HttpSession;
@@ -74,8 +74,11 @@ public class OrderController {
                                      @RequestParam String paymentType,
                                      @SessionAttribute UserDTO user,
                                      HttpSession session){
-        ModelAndView modelAndView = new ModelAndView("user/orders");
-        int ownMoney = user.getOwnMoney();
+        ModelAndView modelAndView = new ModelAndView("redirect:/user/orders");
+        int ownMoney = 0;
+        if(user.getOwnMoney()!= null) {
+            ownMoney = user.getOwnMoney();
+        }
         Order order = orderService.findById(orderId);
         if(order.getOrderStatus().equals(OrderStatus.IS_PAYED)){
             modelAndView.addObject("orderAlsoConfirmed", MessageManager.getProperty("message.orderAlsoConfirm"));
