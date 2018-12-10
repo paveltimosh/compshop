@@ -20,7 +20,7 @@
 2018-11-23 13:52:41,894 WARN org.springframework.web.servlet.DispatcherServlet [http-nio-8080-exec-1] No mapping for GET /
 2018-11-23 13:52:54,467 INFO com.zaxxer.hikari.HikariDataSource [http-nio-8080-exec-3] HikariPool-1 - Starting...
 2018-11-23 13:52:54,601 INFO com.zaxxer.hikari.HikariDataSource [http-nio-8080-exec-3] HikariPool-1 - Start completed.
-2018-11-23 13:53:19,288 INFO org.vironit.timoshuk.computershop.controller.UserController [http-nio-8080-exec-7] The  user with loginpafanya22 is logged in
+2018-11-23 13:53:19,288 INFO UserController [http-nio-8080-exec-7] The  user with loginpafanya22 is logged in
 2018-11-23 22:16:57,322 INFO org.springframework.boot.StartupInfoLogger [main] Starting Application on WIN-C3L8TOODV5O with PID 4000 (C:\Users\User\IdeaProjects\computershop\target\classes started by User in C:\Users\User\IdeaProjects\computershop)
 2018-11-23 22:16:57,327 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
 2018-11-23 22:16:59,276 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
@@ -33,7 +33,7 @@
 2018-11-23 22:16:59,571 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [localhost-startStop-1] Root WebApplicationContext: initialization completed in 2107 ms
 2018-11-23 22:16:59,586 INFO org.springframework.boot.web.servlet.ServletRegistrationBean [localhost-startStop-1] Servlet dispatcherServlet mapped to [/]
 2018-11-23 22:16:59,589 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'characterEncodingFilter' to: [/*]
-2018-11-23 22:17:01,501 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userController' defined in file [C:\Users\User\IdeaProjects\computershop\target\classes\org\vironit\timoshuk\computershop\controller\UserController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanNotOfRequiredTypeException: Bean named 'userServiceImpl' is expected to be of type 'org.vironit.timoshuk.computershop.service.impl.UserServiceImpl' but was actually of type 'com.sun.proxy.$Proxy75'
+2018-11-23 22:17:01,501 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userController' defined in file [C:\Users\User\IdeaProjects\computershop\target\classes\org\vironit\timoshuk\computershop\controller\UserController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanNotOfRequiredTypeException: Bean named 'userServiceImpl' is expected to be of type 'UserServiceImpl' but was actually of type 'com.sun.proxy.$Proxy75'
 2018-11-23 22:17:01,542 INFO org.apache.juli.logging.DirectJDKLog [main] Stopping service [Tomcat]
 2018-11-23 22:17:01,558 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [main] 
 
@@ -46,8 +46,8 @@ APPLICATION FAILED TO START
 
 Description:
 
-The bean 'userServiceImpl' could not be injected as a 'org.vironit.timoshuk.computershop.service.impl.UserServiceImpl' because it is a JDK dynamic proxy that implements:
-	org.vironit.timoshuk.computershop.service.UserService
+The bean 'userServiceImpl' could not be injected as a 'UserServiceImpl' because it is a JDK dynamic proxy that implements:
+	UserService
 
 
 Action:
@@ -67,7 +67,7 @@ Consider injecting the bean as one of its interfaces or forcing the use of CGLib
 2018-11-23 22:18:45,736 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [localhost-startStop-1] Root WebApplicationContext: initialization completed in 2143 ms
 2018-11-23 22:18:45,757 INFO org.springframework.boot.web.servlet.ServletRegistrationBean [localhost-startStop-1] Servlet dispatcherServlet mapped to [/]
 2018-11-23 22:18:45,760 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'characterEncodingFilter' to: [/*]
-2018-11-23 22:18:47,529 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userController' defined in file [C:\Users\User\IdeaProjects\computershop\target\classes\org\vironit\timoshuk\computershop\controller\UserController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanNotOfRequiredTypeException: Bean named 'userServiceImpl' is expected to be of type 'org.vironit.timoshuk.computershop.service.impl.UserServiceImpl' but was actually of type 'com.sun.proxy.$Proxy75'
+2018-11-23 22:18:47,529 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userController' defined in file [C:\Users\User\IdeaProjects\computershop\target\classes\org\vironit\timoshuk\computershop\controller\UserController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanNotOfRequiredTypeException: Bean named 'userServiceImpl' is expected to be of type 'UserServiceImpl' but was actually of type 'com.sun.proxy.$Proxy75'
 2018-11-23 22:18:47,572 INFO org.apache.juli.logging.DirectJDKLog [main] Stopping service [Tomcat]
 2018-11-23 22:18:47,590 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [main] 
 
@@ -80,8 +80,8 @@ APPLICATION FAILED TO START
 
 Description:
 
-The bean 'userServiceImpl' could not be injected as a 'org.vironit.timoshuk.computershop.service.impl.UserServiceImpl' because it is a JDK dynamic proxy that implements:
-	org.vironit.timoshuk.computershop.service.UserService
+The bean 'userServiceImpl' could not be injected as a 'UserServiceImpl' because it is a JDK dynamic proxy that implements:
+	UserService
 
 
 Action:
@@ -111,7 +111,7 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
-	at org.vironit.timoshuk.computershop.Application.main(Application.java:11)
+	at Application.main(Application.java:11)
 Caused by: java.lang.NoClassDefFoundError: org/aspectj/lang/annotation/Pointcut
 	at org.springframework.aop.aspectj.annotation.AbstractAspectJAdvisorFactory.<clinit>(AbstractAspectJAdvisorFactory.java:62)
 	at org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator.initBeanFactory(AnnotationAwareAspectJAutoProxyCreator.java:82)
@@ -138,7 +138,7 @@ Caused by: java.lang.ClassNotFoundException: org.aspectj.lang.annotation.Pointcu
 2018-11-23 22:26:59,999 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [localhost-startStop-1] Root WebApplicationContext: initialization completed in 2247 ms
 2018-11-23 22:27:00,020 INFO org.springframework.boot.web.servlet.ServletRegistrationBean [localhost-startStop-1] Servlet dispatcherServlet mapped to [/]
 2018-11-23 22:27:00,023 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'characterEncodingFilter' to: [/*]
-2018-11-23 22:27:02,243 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userController' defined in file [C:\Users\User\IdeaProjects\computershop\target\classes\org\vironit\timoshuk\computershop\controller\UserController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanNotOfRequiredTypeException: Bean named 'userServiceImpl' is expected to be of type 'org.vironit.timoshuk.computershop.service.impl.UserServiceImpl' but was actually of type 'com.sun.proxy.$Proxy75'
+2018-11-23 22:27:02,243 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userController' defined in file [C:\Users\User\IdeaProjects\computershop\target\classes\org\vironit\timoshuk\computershop\controller\UserController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanNotOfRequiredTypeException: Bean named 'userServiceImpl' is expected to be of type 'UserServiceImpl' but was actually of type 'com.sun.proxy.$Proxy75'
 2018-11-23 22:27:02,286 INFO org.apache.juli.logging.DirectJDKLog [main] Stopping service [Tomcat]
 2018-11-23 22:27:02,301 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [main] 
 
@@ -151,8 +151,8 @@ APPLICATION FAILED TO START
 
 Description:
 
-The bean 'userServiceImpl' could not be injected as a 'org.vironit.timoshuk.computershop.service.impl.UserServiceImpl' because it is a JDK dynamic proxy that implements:
-	org.vironit.timoshuk.computershop.service.UserService
+The bean 'userServiceImpl' could not be injected as a 'UserServiceImpl' because it is a JDK dynamic proxy that implements:
+	UserService
 
 
 Action:
@@ -171,7 +171,7 @@ Consider injecting the bean as one of its interfaces or forcing the use of CGLib
 2018-11-23 22:27:47,487 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [localhost-startStop-1] Root WebApplicationContext: initialization completed in 2156 ms
 2018-11-23 22:27:47,505 INFO org.springframework.boot.web.servlet.ServletRegistrationBean [localhost-startStop-1] Servlet dispatcherServlet mapped to [/]
 2018-11-23 22:27:47,508 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'characterEncodingFilter' to: [/*]
-2018-11-23 22:27:49,343 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userController': Unsatisfied dependency expressed through field 'userService'; nested exception is org.springframework.beans.factory.BeanNotOfRequiredTypeException: Bean named 'userServiceImpl' is expected to be of type 'org.vironit.timoshuk.computershop.service.impl.UserServiceImpl' but was actually of type 'com.sun.proxy.$Proxy75'
+2018-11-23 22:27:49,343 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userController': Unsatisfied dependency expressed through field 'userService'; nested exception is org.springframework.beans.factory.BeanNotOfRequiredTypeException: Bean named 'userServiceImpl' is expected to be of type 'UserServiceImpl' but was actually of type 'com.sun.proxy.$Proxy75'
 2018-11-23 22:27:49,391 INFO org.apache.juli.logging.DirectJDKLog [main] Stopping service [Tomcat]
 2018-11-23 22:27:49,410 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [main] 
 
@@ -184,8 +184,8 @@ APPLICATION FAILED TO START
 
 Description:
 
-The bean 'userServiceImpl' could not be injected as a 'org.vironit.timoshuk.computershop.service.impl.UserServiceImpl' because it is a JDK dynamic proxy that implements:
-	org.vironit.timoshuk.computershop.service.UserService
+The bean 'userServiceImpl' could not be injected as a 'UserServiceImpl' because it is a JDK dynamic proxy that implements:
+	UserService
 
 
 Action:
@@ -204,7 +204,7 @@ Consider injecting the bean as one of its interfaces or forcing the use of CGLib
 2018-11-23 22:41:22,692 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [localhost-startStop-1] Root WebApplicationContext: initialization completed in 2475 ms
 2018-11-23 22:41:22,711 INFO org.springframework.boot.web.servlet.ServletRegistrationBean [localhost-startStop-1] Servlet dispatcherServlet mapped to [/]
 2018-11-23 22:41:22,715 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'characterEncodingFilter' to: [/*]
-2018-11-23 22:41:24,975 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userController': Unsatisfied dependency expressed through field 'userService'; nested exception is org.springframework.beans.factory.BeanNotOfRequiredTypeException: Bean named 'userServiceImpl' is expected to be of type 'org.vironit.timoshuk.computershop.service.impl.UserServiceImpl' but was actually of type 'com.sun.proxy.$Proxy75'
+2018-11-23 22:41:24,975 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userController': Unsatisfied dependency expressed through field 'userService'; nested exception is org.springframework.beans.factory.BeanNotOfRequiredTypeException: Bean named 'userServiceImpl' is expected to be of type 'UserServiceImpl' but was actually of type 'com.sun.proxy.$Proxy75'
 2018-11-23 22:41:25,096 INFO org.apache.juli.logging.DirectJDKLog [main] Stopping service [Tomcat]
 2018-11-23 22:41:25,147 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [main] 
 
@@ -217,8 +217,8 @@ APPLICATION FAILED TO START
 
 Description:
 
-The bean 'userServiceImpl' could not be injected as a 'org.vironit.timoshuk.computershop.service.impl.UserServiceImpl' because it is a JDK dynamic proxy that implements:
-	org.vironit.timoshuk.computershop.service.UserService
+The bean 'userServiceImpl' could not be injected as a 'UserServiceImpl' because it is a JDK dynamic proxy that implements:
+	UserService
 
 
 Action:

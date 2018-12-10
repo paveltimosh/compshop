@@ -21,7 +21,7 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
-	at org.vironit.timoshuk.computershop.Application.main(Application.java:11)
+	at Application.main(Application.java:11)
 Caused by: java.lang.NoClassDefFoundError: org/aspectj/lang/annotation/Pointcut
 	at org.springframework.aop.aspectj.annotation.AbstractAspectJAdvisorFactory.<clinit>(AbstractAspectJAdvisorFactory.java:62)
 	at org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator.initBeanFactory(AnnotationAwareAspectJAutoProxyCreator.java:82)
@@ -59,7 +59,7 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
-	at org.vironit.timoshuk.computershop.Application.main(Application.java:11)
+	at Application.main(Application.java:11)
 Caused by: java.lang.NoClassDefFoundError: org/aspectj/lang/annotation/Pointcut
 	at org.springframework.aop.aspectj.annotation.AbstractAspectJAdvisorFactory.<clinit>(AbstractAspectJAdvisorFactory.java:62)
 	at org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator.initBeanFactory(AnnotationAwareAspectJAutoProxyCreator.java:82)
@@ -131,9 +131,9 @@ Caused by: java.lang.ClassNotFoundException: org.aspectj.lang.annotation.Pointcu
 2018-11-26 11:23:59,584 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
 2018-11-26 11:23:59,585 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
 2018-11-26 11:23:59,599 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 12 ms
-2018-11-26 11:23:59,947 INFO org.vironit.timoshuk.computershop.controller.UserController [http-nio-8080-exec-1] The  user with login pafanya22 is logged in
+2018-11-26 11:23:59,947 INFO UserController [http-nio-8080-exec-1] The  user with login pafanya22 is logged in
 2018-11-26 11:24:14,175 WARN org.springframework.web.servlet.DispatcherServlet [http-nio-8080-exec-5] No mapping for GET /profile
-2018-11-26 11:24:34,307 INFO org.vironit.timoshuk.computershop.controller.UserController [http-nio-8080-exec-9] The  user with login pafanya22 is logged in
+2018-11-26 11:24:34,307 INFO UserController [http-nio-8080-exec-9] The  user with login pafanya22 is logged in
 2018-11-26 11:32:39,895 INFO org.springframework.boot.StartupInfoLogger [main] Starting Application on WIN-C3L8TOODV5O with PID 18732 (C:\Users\User\IdeaProjects\computershop\target\classes started by User in C:\Users\User\IdeaProjects\computershop)
 2018-11-26 11:32:39,902 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
 2018-11-26 11:32:43,251 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
@@ -156,7 +156,7 @@ Caused by: java.lang.ClassNotFoundException: org.aspectj.lang.annotation.Pointcu
 2018-11-26 11:33:09,797 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 9 ms
 2018-11-26 11:33:09,815 WARN org.springframework.web.servlet.DispatcherServlet [http-nio-8080-exec-1] No mapping for GET /
 2018-11-26 11:33:14,537 WARN org.springframework.web.servlet.DispatcherServlet [http-nio-8080-exec-2] No mapping for GET /
-2018-11-26 11:33:30,786 INFO org.vironit.timoshuk.computershop.controller.UserController [http-nio-8080-exec-7] The  user with login pafanya22 is logged in
+2018-11-26 11:33:30,786 INFO UserController [http-nio-8080-exec-7] The  user with login pafanya22 is logged in
 2018-11-26 12:11:21,494 INFO org.springframework.boot.StartupInfoLogger [main] Starting Application on WIN-C3L8TOODV5O with PID 19352 (C:\Users\User\IdeaProjects\computershop\target\classes started by User in C:\Users\User\IdeaProjects\computershop)
 2018-11-26 12:11:21,502 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
 2018-11-26 12:11:24,705 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
@@ -177,7 +177,7 @@ Caused by: java.lang.ClassNotFoundException: org.aspectj.lang.annotation.Pointcu
 2018-11-26 12:11:38,950 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
 2018-11-26 12:11:38,951 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
 2018-11-26 12:11:38,960 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 8 ms
-2018-11-26 12:11:39,334 INFO org.vironit.timoshuk.computershop.controller.UserController [http-nio-8080-exec-1] The user with login pafanya22 is logged in
+2018-11-26 12:11:39,334 INFO UserController [http-nio-8080-exec-1] The user with login pafanya22 is logged in
 2018-11-26 12:12:59,614 INFO org.springframework.boot.StartupInfoLogger [main] Starting Application on WIN-C3L8TOODV5O with PID 1916 (C:\Users\User\IdeaProjects\computershop\target\classes started by User in C:\Users\User\IdeaProjects\computershop)
 2018-11-26 12:12:59,621 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
 2018-11-26 12:13:02,221 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
@@ -198,7 +198,7 @@ Caused by: java.lang.ClassNotFoundException: org.aspectj.lang.annotation.Pointcu
 2018-11-26 12:13:25,077 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
 2018-11-26 12:13:25,078 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
 2018-11-26 12:13:25,088 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 9 ms
-2018-11-26 12:13:46,890 INFO org.vironit.timoshuk.computershop.controller.UserController [http-nio-8080-exec-3] The user with login pafanya22 is logged in
+2018-11-26 12:13:46,890 INFO UserController [http-nio-8080-exec-3] The user with login pafanya22 is logged in
 2018-11-26 12:19:19,003 INFO org.springframework.boot.StartupInfoLogger [main] Starting Application on WIN-C3L8TOODV5O with PID 20764 (C:\Users\User\IdeaProjects\computershop\target\classes started by User in C:\Users\User\IdeaProjects\computershop)
 2018-11-26 12:19:19,008 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
 2018-11-26 12:19:21,185 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
@@ -284,7 +284,7 @@ Caused by: java.lang.ClassNotFoundException: org.aspectj.lang.annotation.Pointcu
 2018-11-26 12:28:21,392 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
 2018-11-26 12:28:21,393 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
 2018-11-26 12:28:21,401 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 6 ms
-2018-11-26 12:28:26,998 INFO org.vironit.timoshuk.computershop.controller.UserController [http-nio-8080-exec-2] The user with login pafanya22 is logged in
+2018-11-26 12:28:26,998 INFO UserController [http-nio-8080-exec-2] The user with login pafanya22 is logged in
 2018-11-26 12:29:43,999 INFO org.springframework.boot.StartupInfoLogger [main] Starting Application on WIN-C3L8TOODV5O with PID 2628 (C:\Users\User\IdeaProjects\computershop\target\classes started by User in C:\Users\User\IdeaProjects\computershop)
 2018-11-26 12:29:44,031 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
 2018-11-26 12:29:46,370 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
@@ -305,7 +305,7 @@ Caused by: java.lang.ClassNotFoundException: org.aspectj.lang.annotation.Pointcu
 2018-11-26 12:30:04,752 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
 2018-11-26 12:30:04,753 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
 2018-11-26 12:30:04,763 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 9 ms
-2018-11-26 12:30:11,489 INFO org.vironit.timoshuk.computershop.controller.UserController [http-nio-8080-exec-2] The user with login pafanya22 is logged in
+2018-11-26 12:30:11,489 INFO UserController [http-nio-8080-exec-2] The user with login pafanya22 is logged in
 2018-11-26 12:30:58,437 INFO org.springframework.boot.StartupInfoLogger [main] Starting Application on WIN-C3L8TOODV5O with PID 10216 (C:\Users\User\IdeaProjects\computershop\target\classes started by User in C:\Users\User\IdeaProjects\computershop)
 2018-11-26 12:30:58,451 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
 2018-11-26 12:31:00,925 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
@@ -326,7 +326,7 @@ Caused by: java.lang.ClassNotFoundException: org.aspectj.lang.annotation.Pointcu
 2018-11-26 12:31:10,625 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-8] Initializing Spring DispatcherServlet 'dispatcherServlet'
 2018-11-26 12:31:10,627 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-8] Initializing Servlet 'dispatcherServlet'
 2018-11-26 12:31:10,641 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-8] Completed initialization in 12 ms
-2018-11-26 12:31:19,986 INFO org.vironit.timoshuk.computershop.controller.UserController [http-nio-8080-exec-6] The user with login pafanya22 is logged in
+2018-11-26 12:31:19,986 INFO UserController [http-nio-8080-exec-6] The user with login pafanya22 is logged in
 2018-11-26 12:34:04,948 INFO org.springframework.boot.StartupInfoLogger [main] Starting Application on WIN-C3L8TOODV5O with PID 1552 (C:\Users\User\IdeaProjects\computershop\target\classes started by User in C:\Users\User\IdeaProjects\computershop)
 2018-11-26 12:34:04,954 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
 2018-11-26 12:34:06,979 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
@@ -347,7 +347,7 @@ Caused by: java.lang.ClassNotFoundException: org.aspectj.lang.annotation.Pointcu
 2018-11-26 12:34:27,572 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
 2018-11-26 12:34:27,573 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
 2018-11-26 12:34:27,582 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 7 ms
-2018-11-26 12:34:33,258 INFO org.vironit.timoshuk.computershop.controller.UserController [http-nio-8080-exec-2] The user with login pafanya22 is logged in
+2018-11-26 12:34:33,258 INFO UserController [http-nio-8080-exec-2] The user with login pafanya22 is logged in
 2018-11-26 12:41:45,231 INFO org.springframework.boot.StartupInfoLogger [main] Starting Application on WIN-C3L8TOODV5O with PID 23140 (C:\Users\User\IdeaProjects\computershop\target\classes started by User in C:\Users\User\IdeaProjects\computershop)
 2018-11-26 12:41:45,238 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
 2018-11-26 12:41:47,818 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
@@ -368,7 +368,7 @@ Caused by: java.lang.ClassNotFoundException: org.aspectj.lang.annotation.Pointcu
 2018-11-26 12:42:16,154 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-3] Initializing Spring DispatcherServlet 'dispatcherServlet'
 2018-11-26 12:42:16,155 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-3] Initializing Servlet 'dispatcherServlet'
 2018-11-26 12:42:16,166 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-3] Completed initialization in 10 ms
-2018-11-26 12:42:22,256 INFO org.vironit.timoshuk.computershop.controller.UserController [http-nio-8080-exec-4] The user with login pafanya22 is logged in
+2018-11-26 12:42:22,256 INFO UserController [http-nio-8080-exec-4] The user with login pafanya22 is logged in
 2018-11-26 12:43:21,506 INFO org.springframework.boot.StartupInfoLogger [main] Starting Application on WIN-C3L8TOODV5O with PID 14072 (C:\Users\User\IdeaProjects\computershop\target\classes started by User in C:\Users\User\IdeaProjects\computershop)
 2018-11-26 12:43:21,521 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
 2018-11-26 12:43:23,672 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
@@ -389,8 +389,8 @@ Caused by: java.lang.ClassNotFoundException: org.aspectj.lang.annotation.Pointcu
 2018-11-26 12:43:30,576 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
 2018-11-26 12:43:30,577 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
 2018-11-26 12:43:30,587 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 9 ms
-2018-11-26 12:43:36,006 INFO org.vironit.timoshuk.computershop.controller.UserController [http-nio-8080-exec-2] The user with login pafanya22 is logged in
-2018-11-26 12:43:49,241 INFO org.vironit.timoshuk.computershop.controller.UserController [http-nio-8080-exec-8] The user with login pafanya22 is logged in
+2018-11-26 12:43:36,006 INFO UserController [http-nio-8080-exec-2] The user with login pafanya22 is logged in
+2018-11-26 12:43:49,241 INFO UserController [http-nio-8080-exec-8] The user with login pafanya22 is logged in
 2018-11-26 12:43:52,225 WARN org.springframework.web.servlet.DispatcherServlet [http-nio-8080-exec-10] No mapping for GET /profile
 2018-11-26 12:48:51,681 INFO org.springframework.boot.StartupInfoLogger [main] Starting Application on WIN-C3L8TOODV5O with PID 23416 (C:\Users\User\IdeaProjects\computershop\target\classes started by User in C:\Users\User\IdeaProjects\computershop)
 2018-11-26 12:48:51,688 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
@@ -412,7 +412,7 @@ Caused by: java.lang.ClassNotFoundException: org.aspectj.lang.annotation.Pointcu
 2018-11-26 12:49:19,407 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
 2018-11-26 12:49:19,408 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
 2018-11-26 12:49:19,416 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 7 ms
-2018-11-26 12:49:40,490 INFO org.vironit.timoshuk.computershop.controller.UserController [http-nio-8080-exec-5] The user with login pafanya22 is logged in
+2018-11-26 12:49:40,490 INFO UserController [http-nio-8080-exec-5] The user with login pafanya22 is logged in
 2018-11-26 12:50:06,231 WARN org.springframework.web.servlet.DispatcherServlet [http-nio-8080-exec-1] No mapping for POST /editinfo
 2018-11-26 13:07:50,915 INFO org.springframework.boot.StartupInfoLogger [main] Starting Application on WIN-C3L8TOODV5O with PID 22448 (C:\Users\User\IdeaProjects\computershop\target\classes started by User in C:\Users\User\IdeaProjects\computershop)
 2018-11-26 13:07:50,921 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
@@ -435,8 +435,8 @@ Caused by: java.lang.ClassNotFoundException: org.aspectj.lang.annotation.Pointcu
 2018-11-26 13:08:53,784 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Initializing Servlet 'dispatcherServlet'
 2018-11-26 13:08:53,796 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Completed initialization in 10 ms
 2018-11-26 13:08:53,835 WARN org.springframework.web.servlet.DispatcherServlet [http-nio-8080-exec-2] No mapping for GET /
-2018-11-26 13:09:12,390 INFO org.vironit.timoshuk.computershop.controller.UserController [http-nio-8080-exec-5] The user with login pafanya22 is logged in
-2018-11-26 13:09:42,736 INFO org.vironit.timoshuk.computershop.controller.UserController [http-nio-8080-exec-2] The user with login pafanya22 is logged in
+2018-11-26 13:09:12,390 INFO UserController [http-nio-8080-exec-5] The user with login pafanya22 is logged in
+2018-11-26 13:09:42,736 INFO UserController [http-nio-8080-exec-2] The user with login pafanya22 is logged in
 2018-11-26 13:13:34,587 INFO org.springframework.boot.StartupInfoLogger [main] Starting Application on WIN-C3L8TOODV5O with PID 5832 (C:\Users\User\IdeaProjects\computershop\target\classes started by User in C:\Users\User\IdeaProjects\computershop)
 2018-11-26 13:13:34,595 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
 2018-11-26 13:13:38,135 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
@@ -477,8 +477,8 @@ Caused by: java.lang.ClassNotFoundException: org.aspectj.lang.annotation.Pointcu
 2018-11-26 13:22:29,777 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
 2018-11-26 13:22:29,778 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
 2018-11-26 13:22:29,790 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 11 ms
-2018-11-26 13:22:36,844 INFO org.vironit.timoshuk.computershop.controller.UserController [http-nio-8080-exec-3] The user with login pafanya22 is logged in
-2018-11-26 13:26:03,036 INFO org.vironit.timoshuk.computershop.controller.UserController [http-nio-8080-exec-8] The user with login pafanya22 is logged in
+2018-11-26 13:22:36,844 INFO UserController [http-nio-8080-exec-3] The user with login pafanya22 is logged in
+2018-11-26 13:26:03,036 INFO UserController [http-nio-8080-exec-8] The user with login pafanya22 is logged in
 2018-11-26 14:04:33,785 INFO org.springframework.boot.StartupInfoLogger [main] Starting Application on WIN-C3L8TOODV5O with PID 23140 (C:\Users\User\IdeaProjects\computershop\target\classes started by User in C:\Users\User\IdeaProjects\computershop)
 2018-11-26 14:04:33,794 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
 2018-11-26 14:04:36,877 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
@@ -499,7 +499,7 @@ Caused by: java.lang.ClassNotFoundException: org.aspectj.lang.annotation.Pointcu
 2018-11-26 14:04:48,151 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
 2018-11-26 14:04:48,152 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
 2018-11-26 14:04:48,165 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 11 ms
-2018-11-26 14:04:56,532 INFO org.vironit.timoshuk.computershop.controller.UserController [http-nio-8080-exec-3] The user with login pafanya22 is logged in
+2018-11-26 14:04:56,532 INFO UserController [http-nio-8080-exec-3] The user with login pafanya22 is logged in
 2018-11-26 14:05:13,321 WARN org.springframework.web.servlet.DispatcherServlet [http-nio-8080-exec-9] No mapping for POST /editinfo
 2018-11-26 14:06:11,160 INFO org.springframework.boot.StartupInfoLogger [main] Starting Application on WIN-C3L8TOODV5O with PID 7104 (C:\Users\User\IdeaProjects\computershop\target\classes started by User in C:\Users\User\IdeaProjects\computershop)
 2018-11-26 14:06:11,178 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
@@ -533,7 +533,7 @@ Caused by: java.lang.ClassNotFoundException: org.aspectj.lang.annotation.Pointcu
 2018-11-26 14:11:53,612 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
 2018-11-26 14:11:53,614 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Initializing Servlet 'dispatcherServlet'
 2018-11-26 14:11:53,626 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Completed initialization in 10 ms
-2018-11-26 14:12:27,737 INFO org.vironit.timoshuk.computershop.controller.UserController [http-nio-8080-exec-10] The user with login pafanya22 is logged in
+2018-11-26 14:12:27,737 INFO UserController [http-nio-8080-exec-10] The user with login pafanya22 is logged in
 2018-11-26 14:18:58,481 INFO org.springframework.boot.StartupInfoLogger [main] Starting Application on WIN-C3L8TOODV5O with PID 1436 (C:\Users\User\IdeaProjects\computershop\target\classes started by User in C:\Users\User\IdeaProjects\computershop)
 2018-11-26 14:18:58,490 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
 2018-11-26 14:19:01,906 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
@@ -555,21 +555,21 @@ Caused by: java.lang.ClassNotFoundException: org.aspectj.lang.annotation.Pointcu
 2018-11-26 14:19:30,111 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
 2018-11-26 14:19:30,125 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 12 ms
 2018-11-26 14:19:30,149 WARN org.springframework.web.servlet.DispatcherServlet [http-nio-8080-exec-1] No mapping for GET /%D0%B4%D1%89
-2018-11-26 14:19:38,680 INFO org.vironit.timoshuk.computershop.controller.UserController [http-nio-8080-exec-6] The user with login pafanya22 is logged in
+2018-11-26 14:19:38,680 INFO UserController [http-nio-8080-exec-6] The user with login pafanya22 is logged in
 2018-11-26 14:19:53,187 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-4] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IllegalStateException: Transaction already active] with root cause
 java.lang.IllegalStateException: Transaction already active
 	at org.hibernate.engine.transaction.internal.TransactionImpl.begin(TransactionImpl.java:52)
 	at org.hibernate.internal.AbstractSharedSessionContract.beginTransaction(AbstractSharedSessionContract.java:409)
-	at org.vironit.timoshuk.computershop.DAO.EntityDAOImpl.update(EntityDAOImpl.java:39)
-	at org.vironit.timoshuk.computershop.DAO.EntityDAOImpl$$FastClassBySpringCGLIB$$9402df81.invoke(<generated>)
+	at EntityDAOImpl.update(EntityDAOImpl.java:39)
+	at EntityDAOImpl$$FastClassBySpringCGLIB$$9402df81.invoke(<generated>)
 	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:746)
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
 	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
-	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl$$EnhancerBySpringCGLIB$$4b43bada.update(<generated>)
-	at org.vironit.timoshuk.computershop.service.impl.UserServiceImpl.update(UserServiceImpl.java:40)
+	at UserDAOImpl$$EnhancerBySpringCGLIB$$4b43bada.update(<generated>)
+	at UserServiceImpl.update(UserServiceImpl.java:40)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -582,7 +582,7 @@ java.lang.IllegalStateException: Transaction already active
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
 	at com.sun.proxy.$Proxy75.update(Unknown Source)
-	at org.vironit.timoshuk.computershop.controller.UserController.changeProfile(UserController.java:74)
+	at UserController.changeProfile(UserController.java:74)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -645,7 +645,7 @@ java.lang.IllegalStateException: Transaction already active
 2018-11-26 14:21:36,367 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
 2018-11-26 14:21:36,368 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
 2018-11-26 14:21:36,380 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 10 ms
-2018-11-26 14:21:41,541 INFO org.vironit.timoshuk.computershop.controller.UserController [http-nio-8080-exec-3] The user with login pafanya22 is logged in
+2018-11-26 14:21:41,541 INFO UserController [http-nio-8080-exec-3] The user with login pafanya22 is logged in
 2018-11-26 14:22:29,881 INFO org.springframework.boot.StartupInfoLogger [main] Starting Application on WIN-C3L8TOODV5O with PID 1996 (C:\Users\User\IdeaProjects\computershop\target\classes started by User in C:\Users\User\IdeaProjects\computershop)
 2018-11-26 14:22:29,888 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
 2018-11-26 14:22:32,294 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
@@ -666,7 +666,7 @@ java.lang.IllegalStateException: Transaction already active
 2018-11-26 14:22:41,531 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
 2018-11-26 14:22:41,532 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
 2018-11-26 14:22:41,542 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 9 ms
-2018-11-26 14:22:48,385 INFO org.vironit.timoshuk.computershop.controller.UserController [http-nio-8080-exec-5] The user with login pafanya22 is logged in
+2018-11-26 14:22:48,385 INFO UserController [http-nio-8080-exec-5] The user with login pafanya22 is logged in
 2018-11-26 14:27:42,069 INFO org.springframework.boot.StartupInfoLogger [main] Starting Application on WIN-C3L8TOODV5O with PID 5080 (C:\Users\User\IdeaProjects\computershop\target\classes started by User in C:\Users\User\IdeaProjects\computershop)
 2018-11-26 14:27:42,075 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
 2018-11-26 14:27:44,358 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
@@ -725,7 +725,7 @@ org.springframework.web.HttpSessionRequiredException: Expected session attribute
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
-2018-11-26 14:28:49,338 INFO org.vironit.timoshuk.computershop.controller.UserController [http-nio-8080-exec-4] The user with login pafanya22 is logged in
+2018-11-26 14:28:49,338 INFO UserController [http-nio-8080-exec-4] The user with login pafanya22 is logged in
 2018-11-26 14:33:18,588 INFO org.springframework.boot.StartupInfoLogger [main] Starting Application on WIN-C3L8TOODV5O with PID 18064 (C:\Users\User\IdeaProjects\computershop\target\classes started by User in C:\Users\User\IdeaProjects\computershop)
 2018-11-26 14:33:18,599 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
 2018-11-26 14:33:21,081 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
@@ -763,8 +763,8 @@ org.springframework.web.HttpSessionRequiredException: Expected session attribute
 2018-11-26 14:36:18,633 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
 2018-11-26 14:36:18,635 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
 2018-11-26 14:36:18,652 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 13 ms
-2018-11-26 14:36:24,040 INFO org.vironit.timoshuk.computershop.controller.UserController [http-nio-8080-exec-5] The user with login pafanya22 is logged in
-2018-11-26 14:36:28,819 INFO org.vironit.timoshuk.computershop.controller.UserController [http-nio-8080-exec-7] The user with login pafanya22 is logged in
+2018-11-26 14:36:24,040 INFO UserController [http-nio-8080-exec-5] The user with login pafanya22 is logged in
+2018-11-26 14:36:28,819 INFO UserController [http-nio-8080-exec-7] The user with login pafanya22 is logged in
 2018-11-26 14:40:49,846 INFO org.springframework.boot.StartupInfoLogger [main] Starting Application on WIN-C3L8TOODV5O with PID 17236 (C:\Users\User\IdeaProjects\computershop\target\classes started by User in C:\Users\User\IdeaProjects\computershop)
 2018-11-26 14:40:49,851 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
 2018-11-26 14:40:52,195 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
@@ -785,7 +785,7 @@ org.springframework.web.HttpSessionRequiredException: Expected session attribute
 2018-11-26 14:41:12,344 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
 2018-11-26 14:41:12,345 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
 2018-11-26 14:41:12,370 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 23 ms
-2018-11-26 14:41:18,142 INFO org.vironit.timoshuk.computershop.controller.UserController [http-nio-8080-exec-2] The user with login pafanya22 is logged in
+2018-11-26 14:41:18,142 INFO UserController [http-nio-8080-exec-2] The user with login pafanya22 is logged in
 2018-11-26 14:43:07,276 INFO org.springframework.boot.StartupInfoLogger [main] Starting Application on WIN-C3L8TOODV5O with PID 7328 (C:\Users\User\IdeaProjects\computershop\target\classes started by User in C:\Users\User\IdeaProjects\computershop)
 2018-11-26 14:43:07,283 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
 2018-11-26 14:43:09,337 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
@@ -806,8 +806,8 @@ org.springframework.web.HttpSessionRequiredException: Expected session attribute
 2018-11-26 14:43:15,600 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
 2018-11-26 14:43:15,601 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
 2018-11-26 14:43:15,612 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 10 ms
-2018-11-26 14:43:21,813 INFO org.vironit.timoshuk.computershop.controller.UserController [http-nio-8080-exec-3] The user with login pafanya22 is logged in
-2018-11-26 14:47:34,383 INFO org.vironit.timoshuk.computershop.controller.UserController [http-nio-8080-exec-1] The user with login pafanya22 is logged out
+2018-11-26 14:43:21,813 INFO UserController [http-nio-8080-exec-3] The user with login pafanya22 is logged in
+2018-11-26 14:47:34,383 INFO UserController [http-nio-8080-exec-1] The user with login pafanya22 is logged out
 2018-11-26 14:52:07,003 INFO org.springframework.boot.StartupInfoLogger [main] Starting Application on WIN-C3L8TOODV5O with PID 24148 (C:\Users\User\IdeaProjects\computershop\target\classes started by User in C:\Users\User\IdeaProjects\computershop)
 2018-11-26 14:52:07,013 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
 2018-11-26 14:52:11,103 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
@@ -827,9 +827,9 @@ org.springframework.web.HttpSessionRequiredException: Expected session attribute
 2018-11-26 14:52:25,470 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
 2018-11-26 14:52:25,471 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
 2018-11-26 14:52:25,481 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 9 ms
-2018-11-26 14:52:31,526 INFO org.vironit.timoshuk.computershop.controller.UserController [http-nio-8080-exec-4] The user with login pafanya22 is logged in
-2018-11-26 14:52:42,677 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-2] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.InvalidDataAccessApiUsageException: The given object has a null identifier: org.vironit.timoshuk.computershop.entity.users.User; nested exception is org.hibernate.TransientObjectException: The given object has a null identifier: org.vironit.timoshuk.computershop.entity.users.User] with root cause
-org.hibernate.TransientObjectException: The given object has a null identifier: org.vironit.timoshuk.computershop.entity.users.User
+2018-11-26 14:52:31,526 INFO UserController [http-nio-8080-exec-4] The user with login pafanya22 is logged in
+2018-11-26 14:52:42,677 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-2] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.InvalidDataAccessApiUsageException: The given object has a null identifier: User; nested exception is org.hibernate.TransientObjectException: The given object has a null identifier: User] with root cause
+org.hibernate.TransientObjectException: The given object has a null identifier: User
 	at org.hibernate.event.internal.DefaultSaveOrUpdateEventListener.getUpdateId(DefaultSaveOrUpdateEventListener.java:255)
 	at org.hibernate.event.internal.DefaultUpdateEventListener.getUpdateId(DefaultUpdateEventListener.java:53)
 	at org.hibernate.event.internal.DefaultSaveOrUpdateEventListener.entityIsDetached(DefaultSaveOrUpdateEventListener.java:222)
@@ -838,16 +838,16 @@ org.hibernate.TransientObjectException: The given object has a null identifier: 
 	at org.hibernate.internal.SessionImpl.fireUpdate(SessionImpl.java:715)
 	at org.hibernate.internal.SessionImpl.update(SessionImpl.java:707)
 	at org.hibernate.internal.SessionImpl.update(SessionImpl.java:702)
-	at org.vironit.timoshuk.computershop.DAO.EntityDAOImpl.update(EntityDAOImpl.java:39)
-	at org.vironit.timoshuk.computershop.DAO.EntityDAOImpl$$FastClassBySpringCGLIB$$9402df81.invoke(<generated>)
+	at EntityDAOImpl.update(EntityDAOImpl.java:39)
+	at EntityDAOImpl$$FastClassBySpringCGLIB$$9402df81.invoke(<generated>)
 	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:746)
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
 	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
-	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl$$EnhancerBySpringCGLIB$$b62dcff7.update(<generated>)
-	at org.vironit.timoshuk.computershop.service.impl.UserServiceImpl.update(UserServiceImpl.java:40)
+	at UserDAOImpl$$EnhancerBySpringCGLIB$$b62dcff7.update(<generated>)
+	at UserServiceImpl.update(UserServiceImpl.java:40)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -860,7 +860,7 @@ org.hibernate.TransientObjectException: The given object has a null identifier: 
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
 	at com.sun.proxy.$Proxy75.update(Unknown Source)
-	at org.vironit.timoshuk.computershop.controller.UserController.changeProfile(UserController.java:72)
+	at UserController.changeProfile(UserController.java:72)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -922,15 +922,15 @@ org.hibernate.TransientObjectException: The given object has a null identifier: 
 2018-11-26 15:02:22,272 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
 2018-11-26 15:02:22,273 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
 2018-11-26 15:02:22,284 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 10 ms
-2018-11-26 15:02:29,087 INFO org.vironit.timoshuk.computershop.controller.UserController [http-nio-8080-exec-3] The user with login pafanya22 is logged in
+2018-11-26 15:02:29,087 INFO UserController [http-nio-8080-exec-3] The user with login pafanya22 is logged in
 2018-11-26 15:02:34,835 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-9] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
 java.lang.NullPointerException: null
-	at org.vironit.timoshuk.computershop.DAO.EntityDAOImpl.getCurrentSession(EntityDAOImpl.java:54)
-	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl.findByParameter(UserDAOImpl.java:20)
-	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl.checkBankCard(UserDAOImpl.java:55)
+	at EntityDAOImpl.getCurrentSession(EntityDAOImpl.java:54)
+	at UserDAOImpl.findByParameter(UserDAOImpl.java:20)
+	at UserDAOImpl.checkBankCard(UserDAOImpl.java:55)
 	at org.vironit.timoshuk.computershop.validators.UserValidator.checkIdCardFromDB(UserValidator.java:58)
 	at org.vironit.timoshuk.computershop.validators.UserValidator.checkUserDataWithoutLoginPassword(UserValidator.java:133)
-	at org.vironit.timoshuk.computershop.controller.UserController.changeProfile(UserController.java:77)
+	at UserController.changeProfile(UserController.java:77)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1008,15 +1008,15 @@ java.lang.NullPointerException: null
 2018-11-26 15:04:40,907 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
 2018-11-26 15:04:40,908 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
 2018-11-26 15:04:40,919 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 10 ms
-2018-11-26 15:04:51,779 INFO org.vironit.timoshuk.computershop.controller.UserController [http-nio-8080-exec-6] The user with login pafanya22 is logged in
+2018-11-26 15:04:51,779 INFO UserController [http-nio-8080-exec-6] The user with login pafanya22 is logged in
 2018-11-26 15:05:20,150 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-9] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
 java.lang.NullPointerException: null
-	at org.vironit.timoshuk.computershop.DAO.EntityDAOImpl.getCurrentSession(EntityDAOImpl.java:54)
-	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl.findByParameter(UserDAOImpl.java:20)
-	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl.checkBankCard(UserDAOImpl.java:55)
+	at EntityDAOImpl.getCurrentSession(EntityDAOImpl.java:54)
+	at UserDAOImpl.findByParameter(UserDAOImpl.java:20)
+	at UserDAOImpl.checkBankCard(UserDAOImpl.java:55)
 	at org.vironit.timoshuk.computershop.validators.UserValidator.checkIdCardFromDB(UserValidator.java:58)
 	at org.vironit.timoshuk.computershop.validators.UserValidator.checkUserDataWithoutLoginPassword(UserValidator.java:133)
-	at org.vironit.timoshuk.computershop.controller.UserController.changeProfile(UserController.java:78)
+	at UserController.changeProfile(UserController.java:78)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1061,12 +1061,12 @@ java.lang.NullPointerException: null
 	at java.lang.Thread.run(Thread.java:748)
 2018-11-26 15:05:59,602 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-5] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
 java.lang.NullPointerException: null
-	at org.vironit.timoshuk.computershop.DAO.EntityDAOImpl.getCurrentSession(EntityDAOImpl.java:54)
-	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl.findByParameter(UserDAOImpl.java:20)
-	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl.checkBankCard(UserDAOImpl.java:55)
+	at EntityDAOImpl.getCurrentSession(EntityDAOImpl.java:54)
+	at UserDAOImpl.findByParameter(UserDAOImpl.java:20)
+	at UserDAOImpl.checkBankCard(UserDAOImpl.java:55)
 	at org.vironit.timoshuk.computershop.validators.UserValidator.checkIdCardFromDB(UserValidator.java:58)
 	at org.vironit.timoshuk.computershop.validators.UserValidator.checkUserDataWithoutLoginPassword(UserValidator.java:133)
-	at org.vironit.timoshuk.computershop.controller.UserController.changeProfile(UserController.java:78)
+	at UserController.changeProfile(UserController.java:78)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1128,15 +1128,15 @@ java.lang.NullPointerException: null
 2018-11-26 15:10:53,288 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
 2018-11-26 15:10:53,289 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
 2018-11-26 15:10:53,298 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 7 ms
-2018-11-26 15:10:59,353 INFO org.vironit.timoshuk.computershop.controller.UserController [http-nio-8080-exec-5] The user with login pafanya22 is logged in
+2018-11-26 15:10:59,353 INFO UserController [http-nio-8080-exec-5] The user with login pafanya22 is logged in
 2018-11-26 15:11:05,395 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
 java.lang.NullPointerException: null
-	at org.vironit.timoshuk.computershop.DAO.EntityDAOImpl.getCurrentSession(EntityDAOImpl.java:54)
-	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl.findByParameter(UserDAOImpl.java:20)
-	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl.checkBankCard(UserDAOImpl.java:55)
+	at EntityDAOImpl.getCurrentSession(EntityDAOImpl.java:54)
+	at UserDAOImpl.findByParameter(UserDAOImpl.java:20)
+	at UserDAOImpl.checkBankCard(UserDAOImpl.java:55)
 	at org.vironit.timoshuk.computershop.validators.UserValidator.checkIdCardFromDB(UserValidator.java:58)
 	at org.vironit.timoshuk.computershop.validators.UserValidator.checkUserDataWithoutLoginPassword(UserValidator.java:133)
-	at org.vironit.timoshuk.computershop.controller.UserController.changeProfile(UserController.java:79)
+	at UserController.changeProfile(UserController.java:79)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1198,15 +1198,15 @@ java.lang.NullPointerException: null
 2018-11-26 15:13:15,324 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
 2018-11-26 15:13:15,326 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
 2018-11-26 15:13:15,339 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 11 ms
-2018-11-26 15:13:20,300 INFO org.vironit.timoshuk.computershop.controller.UserController [http-nio-8080-exec-5] The user with login pafanya22 is logged in
+2018-11-26 15:13:20,300 INFO UserController [http-nio-8080-exec-5] The user with login pafanya22 is logged in
 2018-11-26 15:13:27,375 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
 java.lang.NullPointerException: null
-	at org.vironit.timoshuk.computershop.DAO.EntityDAOImpl.getCurrentSession(EntityDAOImpl.java:54)
-	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl.findByParameter(UserDAOImpl.java:20)
-	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl.checkBankCard(UserDAOImpl.java:55)
+	at EntityDAOImpl.getCurrentSession(EntityDAOImpl.java:54)
+	at UserDAOImpl.findByParameter(UserDAOImpl.java:20)
+	at UserDAOImpl.checkBankCard(UserDAOImpl.java:55)
 	at org.vironit.timoshuk.computershop.validators.UserValidator.checkIdCardFromDB(UserValidator.java:58)
 	at org.vironit.timoshuk.computershop.validators.UserValidator.checkUserDataWithoutLoginPassword(UserValidator.java:133)
-	at org.vironit.timoshuk.computershop.controller.UserController.changeProfile(UserController.java:79)
+	at UserController.changeProfile(UserController.java:79)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1268,15 +1268,15 @@ java.lang.NullPointerException: null
 2018-11-26 15:14:55,506 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
 2018-11-26 15:14:55,508 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
 2018-11-26 15:14:55,518 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 9 ms
-2018-11-26 15:15:00,997 INFO org.vironit.timoshuk.computershop.controller.UserController [http-nio-8080-exec-2] The user with login pafanya22 is logged in
+2018-11-26 15:15:00,997 INFO UserController [http-nio-8080-exec-2] The user with login pafanya22 is logged in
 2018-11-26 15:15:14,354 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-3] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
 java.lang.NullPointerException: null
-	at org.vironit.timoshuk.computershop.DAO.EntityDAOImpl.getCurrentSession(EntityDAOImpl.java:54)
-	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl.findByParameter(UserDAOImpl.java:20)
-	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl.checkBankCard(UserDAOImpl.java:55)
+	at EntityDAOImpl.getCurrentSession(EntityDAOImpl.java:54)
+	at UserDAOImpl.findByParameter(UserDAOImpl.java:20)
+	at UserDAOImpl.checkBankCard(UserDAOImpl.java:55)
 	at org.vironit.timoshuk.computershop.validators.UserValidator.checkIdCardFromDB(UserValidator.java:58)
 	at org.vironit.timoshuk.computershop.validators.UserValidator.checkUserDataWithoutLoginPassword(UserValidator.java:133)
-	at org.vironit.timoshuk.computershop.controller.UserController.changeProfile(UserController.java:79)
+	at UserController.changeProfile(UserController.java:79)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1338,15 +1338,15 @@ java.lang.NullPointerException: null
 2018-11-26 15:21:39,700 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
 2018-11-26 15:21:39,701 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
 2018-11-26 15:21:39,713 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 11 ms
-2018-11-26 15:21:46,551 INFO org.vironit.timoshuk.computershop.controller.UserController [http-nio-8080-exec-3] The user with login pafanya22 is logged in
+2018-11-26 15:21:46,551 INFO UserController [http-nio-8080-exec-3] The user with login pafanya22 is logged in
 2018-11-26 15:22:00,304 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
 java.lang.NullPointerException: null
-	at org.vironit.timoshuk.computershop.DAO.EntityDAOImpl.getCurrentSession(EntityDAOImpl.java:54)
-	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl.findByParameter(UserDAOImpl.java:20)
-	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl.checkBankCard(UserDAOImpl.java:56)
+	at EntityDAOImpl.getCurrentSession(EntityDAOImpl.java:54)
+	at UserDAOImpl.findByParameter(UserDAOImpl.java:20)
+	at UserDAOImpl.checkBankCard(UserDAOImpl.java:56)
 	at org.vironit.timoshuk.computershop.validators.UserValidator.checkIdCardFromDB(UserValidator.java:58)
 	at org.vironit.timoshuk.computershop.validators.UserValidator.checkUserDataWithoutLoginPassword(UserValidator.java:133)
-	at org.vironit.timoshuk.computershop.controller.UserController.changeProfile(UserController.java:78)
+	at UserController.changeProfile(UserController.java:78)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1408,15 +1408,15 @@ java.lang.NullPointerException: null
 2018-11-26 15:23:11,803 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
 2018-11-26 15:23:11,804 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
 2018-11-26 15:23:11,816 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 11 ms
-2018-11-26 15:23:24,678 INFO org.vironit.timoshuk.computershop.controller.UserController [http-nio-8080-exec-4] The user with login pafanya22 is logged in
+2018-11-26 15:23:24,678 INFO UserController [http-nio-8080-exec-4] The user with login pafanya22 is logged in
 2018-11-26 15:23:35,248 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-10] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
 java.lang.NullPointerException: null
-	at org.vironit.timoshuk.computershop.DAO.EntityDAOImpl.getCurrentSession(EntityDAOImpl.java:54)
-	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl.findByParameter(UserDAOImpl.java:20)
-	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl.checkBankCard(UserDAOImpl.java:56)
+	at EntityDAOImpl.getCurrentSession(EntityDAOImpl.java:54)
+	at UserDAOImpl.findByParameter(UserDAOImpl.java:20)
+	at UserDAOImpl.checkBankCard(UserDAOImpl.java:56)
 	at org.vironit.timoshuk.computershop.validators.UserValidator.checkIdCardFromDB(UserValidator.java:58)
 	at org.vironit.timoshuk.computershop.validators.UserValidator.checkUserDataWithoutLoginPassword(UserValidator.java:133)
-	at org.vironit.timoshuk.computershop.controller.UserController.changeProfile(UserController.java:78)
+	at UserController.changeProfile(UserController.java:78)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1478,15 +1478,15 @@ java.lang.NullPointerException: null
 2018-11-26 15:24:43,171 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
 2018-11-26 15:24:43,172 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
 2018-11-26 15:24:43,183 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 9 ms
-2018-11-26 15:24:50,208 INFO org.vironit.timoshuk.computershop.controller.UserController [http-nio-8080-exec-2] The user with login pafanya22 is logged in
+2018-11-26 15:24:50,208 INFO UserController [http-nio-8080-exec-2] The user with login pafanya22 is logged in
 2018-11-26 15:25:06,447 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-4] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
 java.lang.NullPointerException: null
-	at org.vironit.timoshuk.computershop.DAO.EntityDAOImpl.getCurrentSession(EntityDAOImpl.java:54)
-	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl.findByParameter(UserDAOImpl.java:20)
-	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl.checkBankCard(UserDAOImpl.java:56)
+	at EntityDAOImpl.getCurrentSession(EntityDAOImpl.java:54)
+	at UserDAOImpl.findByParameter(UserDAOImpl.java:20)
+	at UserDAOImpl.checkBankCard(UserDAOImpl.java:56)
 	at org.vironit.timoshuk.computershop.validators.UserValidator.checkIdCardFromDB(UserValidator.java:58)
 	at org.vironit.timoshuk.computershop.validators.UserValidator.checkUserDataWithoutLoginPassword(UserValidator.java:133)
-	at org.vironit.timoshuk.computershop.controller.UserController.changeProfile(UserController.java:78)
+	at UserController.changeProfile(UserController.java:78)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1529,9 +1529,9 @@ java.lang.NullPointerException: null
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
-2018-11-26 15:27:14,886 INFO org.vironit.timoshuk.computershop.controller.UserController [http-nio-8080-exec-10] The user with login pafanya22 is logged in
-2018-11-26 15:27:20,578 INFO org.vironit.timoshuk.computershop.controller.UserController [http-nio-8080-exec-2] The user with login pafanya22 is logged out
-2018-11-26 15:27:32,284 INFO org.vironit.timoshuk.computershop.controller.UserController [http-nio-8080-exec-6] The user with login pafanya22 is logged in
+2018-11-26 15:27:14,886 INFO UserController [http-nio-8080-exec-10] The user with login pafanya22 is logged in
+2018-11-26 15:27:20,578 INFO UserController [http-nio-8080-exec-2] The user with login pafanya22 is logged out
+2018-11-26 15:27:32,284 INFO UserController [http-nio-8080-exec-6] The user with login pafanya22 is logged in
 2018-11-26 15:28:45,716 INFO org.springframework.boot.StartupInfoLogger [main] Starting Application on WIN-C3L8TOODV5O with PID 5412 (C:\Users\User\IdeaProjects\computershop\target\classes started by User in C:\Users\User\IdeaProjects\computershop)
 2018-11-26 15:28:45,723 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
 2018-11-26 15:28:48,324 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
@@ -1638,15 +1638,15 @@ java.lang.NullPointerException: null
 2018-11-26 22:20:28,755 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
 2018-11-26 22:20:28,756 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
 2018-11-26 22:20:28,765 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 8 ms
-2018-11-26 22:20:36,524 INFO org.vironit.timoshuk.computershop.controller.UserController [http-nio-8080-exec-4] The user with login pafanya22 is logged in
+2018-11-26 22:20:36,524 INFO UserController [http-nio-8080-exec-4] The user with login pafanya22 is logged in
 2018-11-26 22:20:47,205 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
 java.lang.NullPointerException: null
-	at org.vironit.timoshuk.computershop.DAO.EntityDAOImpl.getCurrentSession(EntityDAOImpl.java:54)
-	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl.findByParameter(UserDAOImpl.java:20)
-	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl.checkBankCard(UserDAOImpl.java:56)
+	at EntityDAOImpl.getCurrentSession(EntityDAOImpl.java:54)
+	at UserDAOImpl.findByParameter(UserDAOImpl.java:20)
+	at UserDAOImpl.checkBankCard(UserDAOImpl.java:56)
 	at org.vironit.timoshuk.computershop.validators.UserValidator.checkIdCardFromDB(UserValidator.java:58)
 	at org.vironit.timoshuk.computershop.validators.UserValidator.checkUserDataWithoutLoginPassword(UserValidator.java:133)
-	at org.vironit.timoshuk.computershop.controller.UserController.changeProfile(UserController.java:76)
+	at UserController.changeProfile(UserController.java:76)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1691,12 +1691,12 @@ java.lang.NullPointerException: null
 	at java.lang.Thread.run(Thread.java:748)
 2018-11-26 22:20:57,856 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-5] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
 java.lang.NullPointerException: null
-	at org.vironit.timoshuk.computershop.DAO.EntityDAOImpl.getCurrentSession(EntityDAOImpl.java:54)
-	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl.findByParameter(UserDAOImpl.java:20)
-	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl.checkBankCard(UserDAOImpl.java:56)
+	at EntityDAOImpl.getCurrentSession(EntityDAOImpl.java:54)
+	at UserDAOImpl.findByParameter(UserDAOImpl.java:20)
+	at UserDAOImpl.checkBankCard(UserDAOImpl.java:56)
 	at org.vironit.timoshuk.computershop.validators.UserValidator.checkIdCardFromDB(UserValidator.java:58)
 	at org.vironit.timoshuk.computershop.validators.UserValidator.checkUserDataWithoutLoginPassword(UserValidator.java:133)
-	at org.vironit.timoshuk.computershop.controller.UserController.changeProfile(UserController.java:76)
+	at UserController.changeProfile(UserController.java:76)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1758,15 +1758,15 @@ java.lang.NullPointerException: null
 2018-11-26 22:23:48,164 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
 2018-11-26 22:23:48,165 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
 2018-11-26 22:23:48,178 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 11 ms
-2018-11-26 22:23:55,297 INFO org.vironit.timoshuk.computershop.controller.UserController [http-nio-8080-exec-4] The user with login pafanya22 is logged in
+2018-11-26 22:23:55,297 INFO UserController [http-nio-8080-exec-4] The user with login pafanya22 is logged in
 2018-11-26 22:24:46,546 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-6] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
 java.lang.NullPointerException: null
-	at org.vironit.timoshuk.computershop.DAO.EntityDAOImpl.getCurrentSession(EntityDAOImpl.java:54)
-	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl.findByParameter(UserDAOImpl.java:20)
-	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl.checkBankCard(UserDAOImpl.java:56)
+	at EntityDAOImpl.getCurrentSession(EntityDAOImpl.java:54)
+	at UserDAOImpl.findByParameter(UserDAOImpl.java:20)
+	at UserDAOImpl.checkBankCard(UserDAOImpl.java:56)
 	at org.vironit.timoshuk.computershop.validators.UserValidator.checkIdCardFromDB(UserValidator.java:58)
 	at org.vironit.timoshuk.computershop.validators.UserValidator.checkUserDataWithoutLoginPassword(UserValidator.java:133)
-	at org.vironit.timoshuk.computershop.controller.UserController.changeProfile(UserController.java:75)
+	at UserController.changeProfile(UserController.java:75)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1828,15 +1828,15 @@ java.lang.NullPointerException: null
 2018-11-26 22:26:29,842 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
 2018-11-26 22:26:29,843 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
 2018-11-26 22:26:29,853 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 9 ms
-2018-11-26 22:26:36,808 INFO org.vironit.timoshuk.computershop.controller.UserController [http-nio-8080-exec-4] The user with login pafanya22 is logged in
+2018-11-26 22:26:36,808 INFO UserController [http-nio-8080-exec-4] The user with login pafanya22 is logged in
 2018-11-26 22:26:47,118 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
 java.lang.NullPointerException: null
-	at org.vironit.timoshuk.computershop.DAO.EntityDAOImpl.getCurrentSession(EntityDAOImpl.java:54)
-	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl.findByParameter(UserDAOImpl.java:20)
-	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl.checkEmail(UserDAOImpl.java:46)
+	at EntityDAOImpl.getCurrentSession(EntityDAOImpl.java:54)
+	at UserDAOImpl.findByParameter(UserDAOImpl.java:20)
+	at UserDAOImpl.checkEmail(UserDAOImpl.java:46)
 	at org.vironit.timoshuk.computershop.validators.UserValidator.checkEmailFromDB(UserValidator.java:35)
 	at org.vironit.timoshuk.computershop.validators.UserValidator.checkUserDataWithoutLoginPassword(UserValidator.java:115)
-	at org.vironit.timoshuk.computershop.controller.UserController.changeProfile(UserController.java:75)
+	at UserController.changeProfile(UserController.java:75)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1898,7 +1898,7 @@ java.lang.NullPointerException: null
 2018-11-26 22:28:39,085 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
 2018-11-26 22:28:39,086 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Initializing Servlet 'dispatcherServlet'
 2018-11-26 22:28:39,095 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Completed initialization in 8 ms
-2018-11-26 22:28:46,270 INFO org.vironit.timoshuk.computershop.controller.UserController [http-nio-8080-exec-4] The user with login pafanya22 is logged in
+2018-11-26 22:28:46,270 INFO UserController [http-nio-8080-exec-4] The user with login pafanya22 is logged in
 2018-11-26 22:29:54,369 INFO org.springframework.boot.StartupInfoLogger [main] Starting Application on WIN-C3L8TOODV5O with PID 10040 (C:\Users\User\IdeaProjects\computershop\target\classes started by User in C:\Users\User\IdeaProjects\computershop)
 2018-11-26 22:29:54,376 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
 2018-11-26 22:29:56,557 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
@@ -1918,15 +1918,15 @@ java.lang.NullPointerException: null
 2018-11-26 22:30:05,235 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
 2018-11-26 22:30:05,236 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
 2018-11-26 22:30:05,246 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 8 ms
-2018-11-26 22:30:12,854 INFO org.vironit.timoshuk.computershop.controller.UserController [http-nio-8080-exec-4] The user with login pafanya22 is logged in
+2018-11-26 22:30:12,854 INFO UserController [http-nio-8080-exec-4] The user with login pafanya22 is logged in
 2018-11-26 22:30:19,994 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
 java.lang.NullPointerException: null
-	at org.vironit.timoshuk.computershop.DAO.EntityDAOImpl.getCurrentSession(EntityDAOImpl.java:54)
-	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl.findByParameter(UserDAOImpl.java:20)
-	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl.checkBankCard(UserDAOImpl.java:58)
+	at EntityDAOImpl.getCurrentSession(EntityDAOImpl.java:54)
+	at UserDAOImpl.findByParameter(UserDAOImpl.java:20)
+	at UserDAOImpl.checkBankCard(UserDAOImpl.java:58)
 	at org.vironit.timoshuk.computershop.validators.UserValidator.checkIdCardFromDB(UserValidator.java:59)
 	at org.vironit.timoshuk.computershop.validators.UserValidator.checkUserDataWithoutLoginPassword(UserValidator.java:136)
-	at org.vironit.timoshuk.computershop.controller.UserController.changeProfile(UserController.java:75)
+	at UserController.changeProfile(UserController.java:75)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1981,7 +1981,7 @@ java.lang.NullPointerException: null
 2018-11-26 22:31:37,279 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [localhost-startStop-1] Root WebApplicationContext: initialization completed in 2182 ms
 2018-11-26 22:31:37,302 INFO org.springframework.boot.web.servlet.ServletRegistrationBean [localhost-startStop-1] Servlet dispatcherServlet mapped to [/]
 2018-11-26 22:31:37,309 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'characterEncodingFilter' to: [/*]
-2018-11-26 22:31:38,775 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userController' defined in file [C:\Users\User\IdeaProjects\computershop\target\classes\org\vironit\timoshuk\computershop\controller\UserController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userServiceImpl' defined in file [C:\Users\User\IdeaProjects\computershop\target\classes\org\vironit\timoshuk\computershop\service\impl\UserServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanNotOfRequiredTypeException: Bean named 'userDAOImpl' is expected to be of type 'org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl' but was actually of type 'com.sun.proxy.$Proxy74'
+2018-11-26 22:31:38,775 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userController' defined in file [C:\Users\User\IdeaProjects\computershop\target\classes\org\vironit\timoshuk\computershop\controller\UserController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userServiceImpl' defined in file [C:\Users\User\IdeaProjects\computershop\target\classes\org\vironit\timoshuk\computershop\service\impl\UserServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanNotOfRequiredTypeException: Bean named 'userDAOImpl' is expected to be of type 'UserDAOImpl' but was actually of type 'com.sun.proxy.$Proxy74'
 2018-11-26 22:31:38,775 INFO org.apache.juli.logging.DirectJDKLog [main] Stopping service [Tomcat]
 2018-11-26 22:31:38,790 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [main] 
 
@@ -1994,7 +1994,7 @@ APPLICATION FAILED TO START
 
 Description:
 
-The bean 'userDAOImpl' could not be injected as a 'org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl' because it is a JDK dynamic proxy that implements:
+The bean 'userDAOImpl' could not be injected as a 'UserDAOImpl' because it is a JDK dynamic proxy that implements:
 
 
 Action:
@@ -2013,7 +2013,7 @@ Consider injecting the bean as one of its interfaces or forcing the use of CGLib
 2018-11-26 22:32:42,789 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [localhost-startStop-1] Root WebApplicationContext: initialization completed in 1738 ms
 2018-11-26 22:32:42,805 INFO org.springframework.boot.web.servlet.ServletRegistrationBean [localhost-startStop-1] Servlet dispatcherServlet mapped to [/]
 2018-11-26 22:32:42,805 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'characterEncodingFilter' to: [/*]
-2018-11-26 22:32:44,073 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userController' defined in file [C:\Users\User\IdeaProjects\computershop\target\classes\org\vironit\timoshuk\computershop\controller\UserController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userServiceImpl' defined in file [C:\Users\User\IdeaProjects\computershop\target\classes\org\vironit\timoshuk\computershop\service\impl\UserServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanNotOfRequiredTypeException: Bean named 'userDAOImpl' is expected to be of type 'org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl' but was actually of type 'com.sun.proxy.$Proxy74'
+2018-11-26 22:32:44,073 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userController' defined in file [C:\Users\User\IdeaProjects\computershop\target\classes\org\vironit\timoshuk\computershop\controller\UserController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userServiceImpl' defined in file [C:\Users\User\IdeaProjects\computershop\target\classes\org\vironit\timoshuk\computershop\service\impl\UserServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanNotOfRequiredTypeException: Bean named 'userDAOImpl' is expected to be of type 'UserDAOImpl' but was actually of type 'com.sun.proxy.$Proxy74'
 2018-11-26 22:32:44,077 INFO org.apache.juli.logging.DirectJDKLog [main] Stopping service [Tomcat]
 2018-11-26 22:32:44,090 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [main] 
 
@@ -2026,7 +2026,7 @@ APPLICATION FAILED TO START
 
 Description:
 
-The bean 'userDAOImpl' could not be injected as a 'org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl' because it is a JDK dynamic proxy that implements:
+The bean 'userDAOImpl' could not be injected as a 'UserDAOImpl' because it is a JDK dynamic proxy that implements:
 
 
 Action:
@@ -2052,14 +2052,14 @@ Consider injecting the bean as one of its interfaces or forcing the use of CGLib
 2018-11-26 22:35:25,995 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
 2018-11-26 22:35:25,996 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
 2018-11-26 22:35:26,007 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 10 ms
-2018-11-26 22:35:33,464 INFO org.vironit.timoshuk.computershop.controller.UserController [http-nio-8080-exec-5] The user with login pafanya22 is logged in
+2018-11-26 22:35:33,464 INFO UserController [http-nio-8080-exec-5] The user with login pafanya22 is logged in
 2018-11-26 22:35:46,298 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
 java.lang.NullPointerException: null
-	at org.vironit.timoshuk.computershop.DAO.EntityDAOImpl.getCurrentSession(EntityDAOImpl.java:54)
-	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl.checkEmail(UserDAOImpl.java:53)
+	at EntityDAOImpl.getCurrentSession(EntityDAOImpl.java:54)
+	at UserDAOImpl.checkEmail(UserDAOImpl.java:53)
 	at org.vironit.timoshuk.computershop.validators.UserValidator.checkEmailFromDB(UserValidator.java:36)
 	at org.vironit.timoshuk.computershop.validators.UserValidator.checkUserDataWithoutLoginPassword(UserValidator.java:117)
-	at org.vironit.timoshuk.computershop.controller.UserController.changeProfile(UserController.java:75)
+	at UserController.changeProfile(UserController.java:75)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -2121,12 +2121,12 @@ java.lang.NullPointerException: null
 2018-11-26 22:43:09,521 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
 2018-11-26 22:43:09,522 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
 2018-11-26 22:43:09,529 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 6 ms
-2018-11-26 22:43:16,338 INFO org.vironit.timoshuk.computershop.controller.UserController [http-nio-8080-exec-4] The user with login pafanya22 is logged in
+2018-11-26 22:43:16,338 INFO UserController [http-nio-8080-exec-4] The user with login pafanya22 is logged in
 2018-11-26 22:43:24,948 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
 java.lang.NullPointerException: null
 	at org.vironit.timoshuk.computershop.validators.UserValidator.checkEmailFromDB(UserValidator.java:40)
 	at org.vironit.timoshuk.computershop.validators.UserValidator.checkUserDataWithoutLoginPassword(UserValidator.java:121)
-	at org.vironit.timoshuk.computershop.controller.UserController.changeProfile(UserController.java:75)
+	at UserController.changeProfile(UserController.java:75)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -2188,15 +2188,15 @@ java.lang.NullPointerException: null
 2018-11-26 22:47:26,724 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
 2018-11-26 22:47:26,725 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
 2018-11-26 22:47:26,735 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 10 ms
-2018-11-26 22:47:34,022 INFO org.vironit.timoshuk.computershop.controller.UserController [http-nio-8080-exec-4] The user with login pafanya22 is logged in
+2018-11-26 22:47:34,022 INFO UserController [http-nio-8080-exec-4] The user with login pafanya22 is logged in
 2018-11-26 22:47:46,163 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
 java.lang.NullPointerException: null
-	at org.vironit.timoshuk.computershop.DAO.EntityDAOImpl.getCurrentSession(EntityDAOImpl.java:54)
-	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl.findByParameter(UserDAOImpl.java:19)
-	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl.checkBankCard(UserDAOImpl.java:63)
+	at EntityDAOImpl.getCurrentSession(EntityDAOImpl.java:54)
+	at UserDAOImpl.findByParameter(UserDAOImpl.java:19)
+	at UserDAOImpl.checkBankCard(UserDAOImpl.java:63)
 	at org.vironit.timoshuk.computershop.validators.UserValidator.checkIdCardFromDB(UserValidator.java:64)
 	at org.vironit.timoshuk.computershop.validators.UserValidator.checkUserDataWithoutLoginPassword(UserValidator.java:140)
-	at org.vironit.timoshuk.computershop.controller.UserController.changeProfile(UserController.java:75)
+	at UserController.changeProfile(UserController.java:75)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -2258,12 +2258,12 @@ java.lang.NullPointerException: null
 2018-11-26 22:52:04,688 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
 2018-11-26 22:52:04,689 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
 2018-11-26 22:52:04,698 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 9 ms
-2018-11-26 22:52:12,108 INFO org.vironit.timoshuk.computershop.controller.UserController [http-nio-8080-exec-4] The user with login pafanya22 is logged in
+2018-11-26 22:52:12,108 INFO UserController [http-nio-8080-exec-4] The user with login pafanya22 is logged in
 2018-11-26 22:52:23,216 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
 java.lang.NullPointerException: null
 	at org.vironit.timoshuk.computershop.validators.UserValidator.checkEmailFromDB(UserValidator.java:41)
 	at org.vironit.timoshuk.computershop.validators.UserValidator.checkUserDataWithoutLoginPassword(UserValidator.java:122)
-	at org.vironit.timoshuk.computershop.controller.UserController.changeProfile(UserController.java:75)
+	at UserController.changeProfile(UserController.java:75)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)

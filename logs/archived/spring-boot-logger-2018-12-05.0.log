@@ -17,7 +17,7 @@
 2018-12-05 00:00:18,526 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
 2018-12-05 00:00:18,527 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
 2018-12-05 00:00:18,533 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 6 ms
-2018-12-05 00:00:29,155 INFO org.vironit.timoshuk.computershop.controller.UserController [http-nio-8080-exec-5] The user with login pafanya22 is logged in
+2018-12-05 00:00:29,155 INFO UserController [http-nio-8080-exec-5] The user with login pafanya22 is logged in
 2018-12-05 00:05:36,733 INFO org.springframework.boot.StartupInfoLogger [main] Starting Application on WIN-C3L8TOODV5O with PID 12244 (C:\Users\User\IdeaProjects\computershop\target\classes started by User in C:\Users\User\IdeaProjects\computershop)
 2018-12-05 00:05:36,744 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
 2018-12-05 00:05:39,650 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
@@ -37,7 +37,7 @@
 2018-12-05 00:06:02,489 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
 2018-12-05 00:06:02,489 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Initializing Servlet 'dispatcherServlet'
 2018-12-05 00:06:02,508 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Completed initialization in 15 ms
-2018-12-05 00:06:10,623 INFO org.vironit.timoshuk.computershop.controller.UserController [http-nio-8080-exec-5] The user with login pafanya22 is logged in
+2018-12-05 00:06:10,623 INFO UserController [http-nio-8080-exec-5] The user with login pafanya22 is logged in
 2018-12-05 09:01:13,219 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-10] Error parsing HTTP request header
  Note: further occurrences of HTTP header parsing errors will be logged at DEBUG level.
 java.lang.IllegalArgumentException: Invalid character found in method name. HTTP method names must be tokens
@@ -70,7 +70,7 @@ java.lang.IllegalArgumentException: Invalid character found in method name. HTTP
 2018-12-05 10:30:32,083 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
 2018-12-05 10:30:32,084 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
 2018-12-05 10:30:32,095 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 9 ms
-2018-12-05 10:30:53,656 INFO org.vironit.timoshuk.computershop.controller.UserController [http-nio-8080-exec-5] The user with login pafanya22 is logged in
+2018-12-05 10:30:53,656 INFO UserController [http-nio-8080-exec-5] The user with login pafanya22 is logged in
 2018-12-05 10:38:04,080 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-10] Error parsing HTTP request header
  Note: further occurrences of HTTP header parsing errors will be logged at DEBUG level.
 java.lang.IllegalArgumentException: Invalid character found in method name. HTTP method names must be tokens
@@ -119,7 +119,7 @@ java.lang.IllegalArgumentException: Invalid character found in method name. HTTP
 2018-12-05 10:41:46,281 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
 2018-12-05 10:41:46,281 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
 2018-12-05 10:41:46,295 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 13 ms
-2018-12-05 10:41:53,684 INFO org.vironit.timoshuk.computershop.controller.UserController [http-nio-8080-exec-3] The user with login pafanya22 is logged in
+2018-12-05 10:41:53,684 INFO UserController [http-nio-8080-exec-3] The user with login pafanya22 is logged in
 2018-12-05 11:11:55,000 INFO org.springframework.boot.StartupInfoLogger [main] Starting Application on WIN-C3L8TOODV5O with PID 14660 (C:\Users\User\IdeaProjects\computershop\target\classes started by User in C:\Users\User\IdeaProjects\computershop)
 2018-12-05 11:11:55,000 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
 2018-12-05 11:11:57,522 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
@@ -783,17 +783,17 @@ org.springframework.context.NoSuchMessageException: No message found under code 
 org.hibernate.NonUniqueResultException: query did not return a unique result: 2
 	at org.hibernate.query.internal.AbstractProducedQuery.uniqueElement(AbstractProducedQuery.java:1487)
 	at org.hibernate.query.internal.AbstractProducedQuery.uniqueResult(AbstractProducedQuery.java:1457)
-	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl.findByParameter(UserDAOImpl.java:21)
-	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl.checkEmail(UserDAOImpl.java:46)
-	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl$$FastClassBySpringCGLIB$$63c59627.invoke(<generated>)
+	at UserDAOImpl.findByParameter(UserDAOImpl.java:21)
+	at UserDAOImpl.checkEmail(UserDAOImpl.java:46)
+	at UserDAOImpl$$FastClassBySpringCGLIB$$63c59627.invoke(<generated>)
 	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:746)
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
 	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
-	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl$$EnhancerBySpringCGLIB$$128d36d7.checkEmail(<generated>)
-	at org.vironit.timoshuk.computershop.service.impl.UserServiceImpl.checkEmail(UserServiceImpl.java:76)
+	at UserDAOImpl$$EnhancerBySpringCGLIB$$128d36d7.checkEmail(<generated>)
+	at UserServiceImpl.checkEmail(UserServiceImpl.java:76)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -806,8 +806,8 @@ org.hibernate.NonUniqueResultException: query did not return a unique result: 2
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
 	at com.sun.proxy.$Proxy86.checkEmail(Unknown Source)
-	at org.vironit.timoshuk.computershop.validator.UserValidator.validate(UserValidator.java:29)
-	at org.vironit.timoshuk.computershop.controller.UserController.registerNewUser(UserController.java:103)
+	at UserValidator.validate(UserValidator.java:29)
+	at UserController.registerNewUser(UserController.java:103)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -854,17 +854,17 @@ org.hibernate.NonUniqueResultException: query did not return a unique result: 2
 org.hibernate.NonUniqueResultException: query did not return a unique result: 2
 	at org.hibernate.query.internal.AbstractProducedQuery.uniqueElement(AbstractProducedQuery.java:1487)
 	at org.hibernate.query.internal.AbstractProducedQuery.uniqueResult(AbstractProducedQuery.java:1457)
-	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl.findByParameter(UserDAOImpl.java:21)
-	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl.checkEmail(UserDAOImpl.java:46)
-	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl$$FastClassBySpringCGLIB$$63c59627.invoke(<generated>)
+	at UserDAOImpl.findByParameter(UserDAOImpl.java:21)
+	at UserDAOImpl.checkEmail(UserDAOImpl.java:46)
+	at UserDAOImpl$$FastClassBySpringCGLIB$$63c59627.invoke(<generated>)
 	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:746)
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
 	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
-	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl$$EnhancerBySpringCGLIB$$128d36d7.checkEmail(<generated>)
-	at org.vironit.timoshuk.computershop.service.impl.UserServiceImpl.checkEmail(UserServiceImpl.java:76)
+	at UserDAOImpl$$EnhancerBySpringCGLIB$$128d36d7.checkEmail(<generated>)
+	at UserServiceImpl.checkEmail(UserServiceImpl.java:76)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -877,8 +877,8 @@ org.hibernate.NonUniqueResultException: query did not return a unique result: 2
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
 	at com.sun.proxy.$Proxy86.checkEmail(Unknown Source)
-	at org.vironit.timoshuk.computershop.validator.UserValidator.validate(UserValidator.java:29)
-	at org.vironit.timoshuk.computershop.controller.UserController.registerNewUser(UserController.java:103)
+	at UserValidator.validate(UserValidator.java:29)
+	at UserController.registerNewUser(UserController.java:103)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1600,17 +1600,17 @@ org.springframework.context.NoSuchMessageException: No message found under code 
 org.hibernate.NonUniqueResultException: query did not return a unique result: 2
 	at org.hibernate.query.internal.AbstractProducedQuery.uniqueElement(AbstractProducedQuery.java:1487)
 	at org.hibernate.query.internal.AbstractProducedQuery.uniqueResult(AbstractProducedQuery.java:1457)
-	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl.findByParameter(UserDAOImpl.java:21)
-	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl.checkEmail(UserDAOImpl.java:46)
-	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl$$FastClassBySpringCGLIB$$63c59627.invoke(<generated>)
+	at UserDAOImpl.findByParameter(UserDAOImpl.java:21)
+	at UserDAOImpl.checkEmail(UserDAOImpl.java:46)
+	at UserDAOImpl$$FastClassBySpringCGLIB$$63c59627.invoke(<generated>)
 	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:746)
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
 	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
-	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl$$EnhancerBySpringCGLIB$$8b123160.checkEmail(<generated>)
-	at org.vironit.timoshuk.computershop.service.impl.UserServiceImpl.checkEmail(UserServiceImpl.java:76)
+	at UserDAOImpl$$EnhancerBySpringCGLIB$$8b123160.checkEmail(<generated>)
+	at UserServiceImpl.checkEmail(UserServiceImpl.java:76)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1623,8 +1623,8 @@ org.hibernate.NonUniqueResultException: query did not return a unique result: 2
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
 	at com.sun.proxy.$Proxy86.checkEmail(Unknown Source)
-	at org.vironit.timoshuk.computershop.validator.UserValidator.validate(UserValidator.java:32)
-	at org.vironit.timoshuk.computershop.controller.UserController.registerNewUser(UserController.java:103)
+	at UserValidator.validate(UserValidator.java:32)
+	at UserController.registerNewUser(UserController.java:103)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1690,17 +1690,17 @@ org.hibernate.NonUniqueResultException: query did not return a unique result: 2
 org.hibernate.NonUniqueResultException: query did not return a unique result: 2
 	at org.hibernate.query.internal.AbstractProducedQuery.uniqueElement(AbstractProducedQuery.java:1487)
 	at org.hibernate.query.internal.AbstractProducedQuery.uniqueResult(AbstractProducedQuery.java:1457)
-	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl.findByParameter(UserDAOImpl.java:21)
-	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl.checkEmail(UserDAOImpl.java:46)
-	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl$$FastClassBySpringCGLIB$$63c59627.invoke(<generated>)
+	at UserDAOImpl.findByParameter(UserDAOImpl.java:21)
+	at UserDAOImpl.checkEmail(UserDAOImpl.java:46)
+	at UserDAOImpl$$FastClassBySpringCGLIB$$63c59627.invoke(<generated>)
 	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:746)
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
 	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
-	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl$$EnhancerBySpringCGLIB$$e235a113.checkEmail(<generated>)
-	at org.vironit.timoshuk.computershop.service.impl.UserServiceImpl.checkEmail(UserServiceImpl.java:76)
+	at UserDAOImpl$$EnhancerBySpringCGLIB$$e235a113.checkEmail(<generated>)
+	at UserServiceImpl.checkEmail(UserServiceImpl.java:76)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1713,8 +1713,8 @@ org.hibernate.NonUniqueResultException: query did not return a unique result: 2
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
 	at com.sun.proxy.$Proxy86.checkEmail(Unknown Source)
-	at org.vironit.timoshuk.computershop.validator.UserValidator.validate(UserValidator.java:35)
-	at org.vironit.timoshuk.computershop.controller.UserController.registerNewUser(UserController.java:103)
+	at UserValidator.validate(UserValidator.java:35)
+	at UserController.registerNewUser(UserController.java:103)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1780,18 +1780,18 @@ org.hibernate.NonUniqueResultException: query did not return a unique result: 2
 org.hibernate.HibernateException: Could not obtain transaction-synchronized Session for current thread
 	at org.springframework.orm.hibernate5.SpringSessionContext.currentSession(SpringSessionContext.java:143)
 	at org.hibernate.internal.SessionFactoryImpl.getCurrentSession(SessionFactoryImpl.java:465)
-	at org.vironit.timoshuk.computershop.DAO.EntityDAOImpl.getCurrentSession(EntityDAOImpl.java:54)
-	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl.findByParameter(UserDAOImpl.java:19)
-	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl.checkBankCard(UserDAOImpl.java:56)
-	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl$$FastClassBySpringCGLIB$$63c59627.invoke(<generated>)
+	at EntityDAOImpl.getCurrentSession(EntityDAOImpl.java:54)
+	at UserDAOImpl.findByParameter(UserDAOImpl.java:19)
+	at UserDAOImpl.checkBankCard(UserDAOImpl.java:56)
+	at UserDAOImpl$$FastClassBySpringCGLIB$$63c59627.invoke(<generated>)
 	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:746)
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
 	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
-	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl$$EnhancerBySpringCGLIB$$e4567604.checkBankCard(<generated>)
-	at org.vironit.timoshuk.computershop.service.impl.UserServiceImpl.checkBankCard(UserServiceImpl.java:87)
+	at UserDAOImpl$$EnhancerBySpringCGLIB$$e4567604.checkBankCard(<generated>)
+	at UserServiceImpl.checkBankCard(UserServiceImpl.java:87)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1799,8 +1799,8 @@ org.hibernate.HibernateException: Could not obtain transaction-synchronized Sess
 	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343)
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:206)
 	at com.sun.proxy.$Proxy86.checkBankCard(Unknown Source)
-	at org.vironit.timoshuk.computershop.validator.UserValidator.validate(UserValidator.java:40)
-	at org.vironit.timoshuk.computershop.controller.UserController.registerNewUser(UserController.java:103)
+	at UserValidator.validate(UserValidator.java:40)
+	at UserController.registerNewUser(UserController.java:103)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1866,17 +1866,17 @@ org.hibernate.HibernateException: Could not obtain transaction-synchronized Sess
 org.hibernate.NonUniqueResultException: query did not return a unique result: 2
 	at org.hibernate.query.internal.AbstractProducedQuery.uniqueElement(AbstractProducedQuery.java:1487)
 	at org.hibernate.query.internal.AbstractProducedQuery.uniqueResult(AbstractProducedQuery.java:1457)
-	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl.findByParameter(UserDAOImpl.java:21)
-	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl.checkEmail(UserDAOImpl.java:46)
-	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl$$FastClassBySpringCGLIB$$63c59627.invoke(<generated>)
+	at UserDAOImpl.findByParameter(UserDAOImpl.java:21)
+	at UserDAOImpl.checkEmail(UserDAOImpl.java:46)
+	at UserDAOImpl$$FastClassBySpringCGLIB$$63c59627.invoke(<generated>)
 	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:746)
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
 	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
-	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl$$EnhancerBySpringCGLIB$$cc098ada.checkEmail(<generated>)
-	at org.vironit.timoshuk.computershop.service.impl.UserServiceImpl.checkEmail(UserServiceImpl.java:76)
+	at UserDAOImpl$$EnhancerBySpringCGLIB$$cc098ada.checkEmail(<generated>)
+	at UserServiceImpl.checkEmail(UserServiceImpl.java:76)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1889,8 +1889,8 @@ org.hibernate.NonUniqueResultException: query did not return a unique result: 2
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
 	at com.sun.proxy.$Proxy86.checkEmail(Unknown Source)
-	at org.vironit.timoshuk.computershop.validator.UserValidator.validate(UserValidator.java:35)
-	at org.vironit.timoshuk.computershop.controller.UserController.registerNewUser(UserController.java:103)
+	at UserValidator.validate(UserValidator.java:35)
+	at UserController.registerNewUser(UserController.java:103)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1975,17 +1975,17 @@ org.hibernate.NonUniqueResultException: query did not return a unique result: 2
 org.hibernate.NonUniqueResultException: query did not return a unique result: 2
 	at org.hibernate.query.internal.AbstractProducedQuery.uniqueElement(AbstractProducedQuery.java:1487)
 	at org.hibernate.query.internal.AbstractProducedQuery.uniqueResult(AbstractProducedQuery.java:1457)
-	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl.findByParameter(UserDAOImpl.java:22)
-	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl.checkBankCard(UserDAOImpl.java:57)
-	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl$$FastClassBySpringCGLIB$$63c59627.invoke(<generated>)
+	at UserDAOImpl.findByParameter(UserDAOImpl.java:22)
+	at UserDAOImpl.checkBankCard(UserDAOImpl.java:57)
+	at UserDAOImpl$$FastClassBySpringCGLIB$$63c59627.invoke(<generated>)
 	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:746)
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
 	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
-	at org.vironit.timoshuk.computershop.DAO.impl.UserDAOImpl$$EnhancerBySpringCGLIB$$5a413aee.checkBankCard(<generated>)
-	at org.vironit.timoshuk.computershop.service.impl.UserServiceImpl.checkBankCard(UserServiceImpl.java:88)
+	at UserDAOImpl$$EnhancerBySpringCGLIB$$5a413aee.checkBankCard(<generated>)
+	at UserServiceImpl.checkBankCard(UserServiceImpl.java:88)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1998,8 +1998,8 @@ org.hibernate.NonUniqueResultException: query did not return a unique result: 2
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
 	at com.sun.proxy.$Proxy86.checkBankCard(Unknown Source)
-	at org.vironit.timoshuk.computershop.validator.UserValidator.validate(UserValidator.java:40)
-	at org.vironit.timoshuk.computershop.controller.UserController.registerNewUser(UserController.java:103)
+	at UserValidator.validate(UserValidator.java:40)
+	at UserController.registerNewUser(UserController.java:103)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -2093,7 +2093,7 @@ java.lang.IllegalArgumentException: Invalid character found in method name. HTTP
 2018-12-05 11:58:37,750 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
 2018-12-05 11:58:37,751 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
 2018-12-05 11:58:37,762 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 10 ms
-2018-12-05 11:58:46,361 INFO org.vironit.timoshuk.computershop.controller.UserController [http-nio-8080-exec-6] The user with login pafanya22 is logged in
+2018-12-05 11:58:46,361 INFO UserController [http-nio-8080-exec-6] The user with login pafanya22 is logged in
 2018-12-05 12:04:01,643 INFO org.springframework.boot.StartupInfoLogger [main] Starting Application on WIN-C3L8TOODV5O with PID 23140 (C:\Users\User\IdeaProjects\computershop\target\classes started by User in C:\Users\User\IdeaProjects\computershop)
 2018-12-05 12:04:01,649 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.1.0.RELEASE, Spring v5.1.1.RELEASE
 2018-12-05 12:04:01,652 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
@@ -2199,7 +2199,7 @@ java.lang.reflect.InvocationTargetException: null
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
-	at org.vironit.timoshuk.computershop.Application.main(Application.java:11)
+	at Application.main(Application.java:11)
 Caused by: java.sql.SQLFeatureNotSupportedException: Метод org.postgresql.jdbc.PgConnection.createClob() ещё не реализован
 	at org.postgresql.Driver.notImplemented(Driver.java:688)
 	at org.postgresql.jdbc.PgConnection.createClob(PgConnection.java:1269)
@@ -2328,7 +2328,7 @@ java.lang.reflect.InvocationTargetException: null
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
-	at org.vironit.timoshuk.computershop.Application.main(Application.java:11)
+	at Application.main(Application.java:11)
 Caused by: java.sql.SQLFeatureNotSupportedException: Метод org.postgresql.jdbc.PgConnection.createClob() ещё не реализован
 	at org.postgresql.Driver.notImplemented(Driver.java:688)
 	at org.postgresql.jdbc.PgConnection.createClob(PgConnection.java:1269)
