@@ -11,40 +11,38 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
+import org.springframework.security.web.authentication.SimpleUrlAuthenticationSuccessHandler;
+import org.springframework.security.web.savedrequest.HttpSessionRequestCache;
+import org.springframework.security.web.savedrequest.RequestCache;
+import org.springframework.security.web.savedrequest.SavedRequest;
 import org.springframework.stereotype.Component;
-import org.timoshuk.computershop.DTO.UserDTO;
-import org.timoshuk.computershop.entity.products.Item;
-import org.timoshuk.computershop.service.UserService;
+import org.springframework.util.StringUtils;
+
 
 @Component("customAuthenticationSuccessHandler")
-public class CustomAuthenticationSuccessHandler implements AuthenticationSuccessHandler {
+public class CustomAuthenticationSuccessHandler extends SimpleUrlAuthenticationSuccessHandler {
 
-    @Autowired
-    private ServletContext servletContext;
-
-    @Autowired
-    private UserService userService;
+    private RequestCache requestCache = new HttpSessionRequestCache();
 
     @Override
-    public void onAuthenticationSuccess(
-            HttpServletRequest request,
-            HttpServletResponse response,
-            Authentication a
-    ) throws IOException, ServletException {
-        System.out.println("обработчик аутентификатор");
-        Set<String> roles = AuthorityUtils.authorityListToSet(a.getAuthorities());
-        System.out.println(roles);
-            HashMap<Item, Integer> cart = new HashMap<>();
-            UserDTO userDTO = userService.findByLogin(a.getName());
-            request.getSession().setAttribute("user", userDTO);
-            request.getSession().setAttribute("role", userDTO.getUserType().toString());
-            request.getSession().setAttribute("cart", cart);
-            response.sendRedirect(servletContext.getContextPath()+ "/main");
+    public void onAuthenticationSuccess(final HttpServletRequest request, final HttpServletResponse response, final Authentication authentication) throws ServletException, IOException {
+        final SavedRequest savedRequest = requestCache.getRequest(request, response);
+        if (savedRequest == null) {
+            clearAuthenticationAttributes(request);
+            return;
+        }
+        final String targetUrlParameter = getTargetUrlParameter();
+        if (isAlwaysUseDefaultTargetUrl() || (targetUrlParameter != null && StringUtils.hasText(request.getParameter(targetUrlParameter)))) {
+            requestCache.removeRequest(request, response);
+            clearAuthenticationAttributes(request);
+            return;
+        }
 
-        /*if (roles.contains("ROLE_ADMIN") || roles.contains("ROLE_STAFF")) {
-            response.sendRedirect(servletContext.getContextPath() + "/admin/");
-        } else {
-            response.sendRedirect(servletContext.getContextPath() + "/");
-        }*/
+        clearAuthenticationAttributes(request);
     }
+
+    public void setRequestCache(final RequestCache requestCache) {
+        this.requestCache = requestCache;
+    }
+
 }

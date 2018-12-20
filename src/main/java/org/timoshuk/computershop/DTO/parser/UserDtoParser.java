@@ -23,4 +23,21 @@ public class UserDtoParser  {
                 .build();
         return userDTO;
     }
+
+    public User createEntityFromDTO(UserDTO userDTO){
+        User user = User.builder()
+                .id(userDTO.getId())
+                .idCard(userDTO.getIdCard())
+                .login(userDTO.getLogin())
+                .password(userDTO.getPassword())
+                .email(userDTO.getEmail())
+                .ownMoney(userDTO.getOwnMoney())
+                .address(userDTO.getAddress())
+                .firstName(userDTO.getFirstName())
+                .lastName(userDTO.getLastName())
+                .phoneNumber(userDTO.getPhoneNumber())
+                .userType(userDTO.getUserType())
+                .build();
+        return user;
+    }
 }

@@ -1,6 +1,7 @@
 package org.timoshuk.computershop.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
@@ -15,85 +16,82 @@ import javax.servlet.http.HttpSession;
 import java.util.HashMap;
 import java.util.List;
 
-@Controller
-@RequestMapping("catalog")
+@RestController
+@RequestMapping
 public class ItemCatalogController {
 
-    @Autowired
-    private RamService ramService;
+    private final RamService ramService;
+
+    private final VideocardService videocardService;
+
+    private final CpuService cpuService;
+
+    private final CaseService caseService;
+
+    private final MotherboardService motherboardService;
+
+    private final ComputerService computerService;
 
     @Autowired
-    private VideocardService videocardService;
+    public ItemCatalogController(RamService ramService, VideocardService videocardService, CpuService cpuService, CaseService caseService, MotherboardService motherboardService, ComputerService computerService) {
+        this.ramService = ramService;
+        this.videocardService = videocardService;
+        this.cpuService = cpuService;
+        this.caseService = caseService;
+        this.motherboardService = motherboardService;
+        this.computerService = computerService;
+    }
 
-    @Autowired
-    private CpuService cpuService;
-
-    @Autowired
-    private CaseService caseService;
-
-    @Autowired
-    private MotherboardService motherboardService;
-
-    @Autowired
-    private ComputerService computerService;
-
-    @GetMapping("/ram")
-    public ModelAndView showCatalogRam (){
-        ModelAndView modelAndView = new ModelAndView("catalog/ram");
+    @RequestMapping(value = "/rams", method = RequestMethod.GET)
+    @ResponseStatus(HttpStatus.OK)
+    public List<RAM> showCatalogRam (){
         List<RAM> ramList = ramService.findAll();
-        modelAndView.addObject("rams", ramList);
-        return modelAndView;
+        return ramList;
     }
 
-    @GetMapping("/videocard")
-    public ModelAndView showCatalogVideocard (){
-        ModelAndView modelAndView = new ModelAndView("catalog/videocards");
+    @RequestMapping(value = "/videocards", method = RequestMethod.GET)
+    @ResponseStatus(HttpStatus.OK)
+    public List<VideoCard> showCatalogVideocard (){
         List<VideoCard> videoCards = videocardService.findAll();
-        modelAndView.addObject("videoCards", videoCards);
-        return modelAndView;
+        return videoCards;
     }
 
-    @GetMapping("/cpu")
-    public ModelAndView showCatalogCPU (){
-        ModelAndView modelAndView = new ModelAndView("catalog/cpu");
+    @RequestMapping(value = "/cpus", method = RequestMethod.GET)
+    @ResponseStatus(HttpStatus.OK)
+    public List<CPU> showCatalogCPU (){
         List<CPU> cpuList = cpuService.findAll();
-        modelAndView.addObject("cpuList", cpuList);
-        return modelAndView;
+        return cpuList;
     }
 
-    @GetMapping("/case")
-    public ModelAndView showCatalogCase (){
-        ModelAndView modelAndView = new ModelAndView("catalog/cases");
+    @RequestMapping(value = "/cases", method = RequestMethod.GET)
+    @ResponseStatus(HttpStatus.OK)
+    public List<Case> showCatalogCase (){
         List<Case> caseList = caseService.findAll();
-        modelAndView.addObject("caseList", caseList);
-        return modelAndView;
+        return caseList;
     }
 
-    @GetMapping("/motherboard")
-    public ModelAndView showCatalogMotherboard (){
-        ModelAndView modelAndView = new ModelAndView("catalog/mother_boards");
+    @RequestMapping(value = "/motherboards", method = RequestMethod.GET)
+    @ResponseStatus(HttpStatus.OK)
+    public List<MotherBoard> showCatalogMotherboard (){
         List<MotherBoard> motherBoardList = motherboardService.findAll();
-        modelAndView.addObject("motherboardList", motherBoardList);
-        return modelAndView;
+        return motherBoardList;
     }
 
-    @GetMapping("/computer")
-    public ModelAndView showCatalogComputer(){
-        ModelAndView modelAndView = new ModelAndView("catalog/computers");
+    @RequestMapping(value = "/computers", method = RequestMethod.GET)
+    @ResponseStatus(HttpStatus.OK)
+    public List<Computer> showCatalogComputer(){
         List<Computer> computerList = computerService.findAll();
-        modelAndView.addObject("computerList", computerList);
-        return modelAndView;
+        return computerList;
     }
 
-    @GetMapping("/computer/info/{id}")
-    public ModelAndView showComputerInfo(@PathVariable Long id){
-        ModelAndView modelAndView = new ModelAndView("/catalog/view/computerInfo");
+    @RequestMapping(value = "/computers/{id}", method = RequestMethod.GET)
+    @ResponseStatus(HttpStatus.OK)
+    public Computer showComputerInfo(@PathVariable("id") Long id){
         Computer computer = computerService.findById(id);
-        modelAndView.addObject("computer",computer);
-        return modelAndView;
+        return computer;
     }
 
-    @PostMapping("/addToCart")
+    /*@PostMapping("/addToCart")
     public ModelAndView addToCart(@RequestParam String itemType,
                                   @RequestParam Long id,
                                   HttpSession session) {
@@ -109,61 +107,6 @@ public class ItemCatalogController {
         session.setAttribute("cart", cart);
         return modelAndView;
     }
+*/
 
-    @GetMapping("/")
-    public String showMain(){
-        return "main";
-    }
-
-    private Item defineAndGetItemFromDB(Long itemId, String itemType) {
-        Item item = null;
-        switch (itemType){
-            case "computers" :
-                item = computerService.findById(itemId);
-                break;
-            case "cases":
-                item = caseService.findById(itemId);
-                break;
-            case "cpu":
-                item = cpuService.findById(itemId);
-                break;
-            case "ram":
-                item = ramService.findById(itemId);
-                break;
-            case "videocards":
-                item = videocardService.findById(itemId);
-                break;
-            case "mother_boards":
-                item = motherboardService.findById(itemId);
-                break;
-            default:
-                item = null;
-        }
-        return item;
-    }
-
-    private ModelAndView getModelAndViewByType(String itemType) {
-        ModelAndView modelAndView = null;
-        switch (itemType){
-            case "computers" :
-                modelAndView = showCatalogComputer();
-                break;
-            case "cases":
-                modelAndView = showCatalogCase();
-                break;
-            case "cpu":
-                modelAndView = showCatalogCPU();
-                break;
-            case "ram":
-                modelAndView = showCatalogRam();
-                break;
-            case "videocards":
-                modelAndView = showCatalogVideocard();
-                break;
-            case "mother_boards":
-                modelAndView = showCatalogMotherboard();
-                break;
-        }
-        return modelAndView;
-    }
 }

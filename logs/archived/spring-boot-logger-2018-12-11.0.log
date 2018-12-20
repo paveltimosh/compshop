@@ -1,0 +1,89 @@
+2018-12-11 15:43:44,298 INFO org.springframework.boot.StartupInfoLogger [main] Starting Application on WIN-C3L8TOODV5O with PID 7864 (C:\Users\User\IdeaProjects\computershop\target\classes started by User in C:\Users\User\IdeaProjects\computershop)
+2018-12-11 15:43:44,326 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2018-12-11 15:43:47,892 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2018-12-11 15:43:47,908 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2018-12-11 15:43:47,923 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2018-12-11 15:43:47,923 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet Engine: Apache Tomcat/8.5.34
+2018-12-11 15:43:47,939 INFO org.apache.juli.logging.DirectJDKLog [localhost-startStop-1] The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_162\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;D:\ptc\proe4\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;C:\WINDOWS\System32\OpenSSH\;C:\soft\apache-maven-3.5.4-src\apache-maven-3.5.4\bin;;D:\ptc2\bin;C:\Users\User\AppData\Local\Microsoft\WindowsApps;C:\soft\apache-maven-3.5.4\bin;;.]
+2018-12-11 15:43:48,450 INFO org.apache.juli.logging.DirectJDKLog [localhost-startStop-1] At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2018-12-11 15:43:48,450 INFO org.apache.juli.logging.DirectJDKLog [localhost-startStop-1] Initializing Spring embedded WebApplicationContext
+2018-12-11 15:43:48,450 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [localhost-startStop-1] Root WebApplicationContext: initialization completed in 4029 ms
+2018-12-11 15:43:48,513 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-12-11 15:43:48,513 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'springSecurityFilterChain' to: [/*]
+2018-12-11 15:43:48,513 INFO org.springframework.boot.web.servlet.ServletRegistrationBean [localhost-startStop-1] Servlet dispatcherServlet mapped to [/]
+2018-12-11 15:43:52,063 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@423ed3b5, org.springframework.security.web.context.SecurityContextPersistenceFilter@76973a6, org.springframework.security.web.header.HeaderWriterFilter@67f9cb52, org.springframework.security.web.authentication.logout.LogoutFilter@5c48b72c, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@646427f7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@24876a7e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7fd4e815, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5d124d29, org.springframework.security.web.session.SessionManagementFilter@59018eed, org.springframework.security.web.access.ExceptionTranslationFilter@5eb0a686, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@e91af20]
+2018-12-11 15:43:52,541 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2018-12-11 15:43:52,557 INFO org.apache.juli.logging.DirectJDKLog [main] Using a shared selector for servlet write/read
+2018-12-11 15:43:52,604 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2018-12-11 15:43:52,604 INFO org.springframework.boot.StartupInfoLogger [main] Started Application in 9.459 seconds (JVM running for 10.723)
+2018-12-11 15:43:59,589 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2018-12-11 15:43:59,590 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2018-12-11 15:43:59,618 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 26 ms
+2018-12-11 17:42:45,238 INFO org.springframework.boot.StartupInfoLogger [main] Starting Application on WIN-C3L8TOODV5O with PID 1128 (C:\Users\User\IdeaProjects\computershop\target\classes started by User in C:\Users\User\IdeaProjects\computershop)
+2018-12-11 17:42:45,245 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2018-12-11 17:42:54,773 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2018-12-11 17:42:54,803 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2018-12-11 17:42:54,830 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2018-12-11 17:42:54,830 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet Engine: Apache Tomcat/8.5.34
+2018-12-11 17:42:54,859 INFO org.apache.juli.logging.DirectJDKLog [localhost-startStop-1] The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_162\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;D:\ptc\proe4\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;C:\WINDOWS\System32\OpenSSH\;C:\soft\apache-maven-3.5.4-src\apache-maven-3.5.4\bin;;D:\ptc2\bin;C:\Users\User\AppData\Local\Microsoft\WindowsApps;C:\soft\apache-maven-3.5.4\bin;;.]
+2018-12-11 17:42:55,555 INFO org.apache.juli.logging.DirectJDKLog [localhost-startStop-1] At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2018-12-11 17:42:55,572 INFO org.apache.juli.logging.DirectJDKLog [localhost-startStop-1] Initializing Spring embedded WebApplicationContext
+2018-12-11 17:42:55,573 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [localhost-startStop-1] Root WebApplicationContext: initialization completed in 10217 ms
+2018-12-11 17:42:55,642 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-12-11 17:42:55,644 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'springSecurityFilterChain' to: [/*]
+2018-12-11 17:42:55,644 INFO org.springframework.boot.web.servlet.ServletRegistrationBean [localhost-startStop-1] Servlet dispatcherServlet mapped to [/]
+2018-12-11 17:43:05,490 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3dbd7107, org.springframework.security.web.context.SecurityContextPersistenceFilter@6d293993, org.springframework.security.web.header.HeaderWriterFilter@31f77791, org.springframework.security.web.authentication.logout.LogoutFilter@3ebc955b, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@61b65d54, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@616a06e3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@57fdb8a4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4a6c0f38, org.springframework.security.web.session.SessionManagementFilter@548e43b1, org.springframework.security.web.access.ExceptionTranslationFilter@7f5fcfe9, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@13213f26]
+2018-12-11 17:43:08,685 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2018-12-11 17:43:08,716 ERROR org.apache.juli.logging.DirectJDKLog [main] Failed to start connector [Connector[HTTP/1.1-8080]]
+org.apache.catalina.LifecycleException: Failed to start component [Connector[HTTP/1.1-8080]]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.addPreviouslyRemovedConnectors(TomcatWebServer.java:259)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:197)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.startWebServer(ServletWebServerApplicationContext.java:300)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:162)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at org.timoshuk.computershop.Application.main(Application.java:10)
+Caused by: org.apache.catalina.LifecycleException: Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1020)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	... 13 common frames omitted
+Caused by: java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:433)
+	at sun.nio.ch.Net.bind(Net.java:425)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:219)
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:1151)
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:591)
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1018)
+	... 14 common frames omitted
+2018-12-11 17:43:08,755 INFO org.apache.juli.logging.DirectJDKLog [main] Pausing ProtocolHandler ["http-nio-8080"]
+2018-12-11 17:43:08,758 INFO org.apache.juli.logging.DirectJDKLog [main] Stopping service [Tomcat]
+2018-12-11 17:43:08,778 INFO org.apache.juli.logging.DirectJDKLog [main] The stop() method was called on component [StandardServer[-1]] after stop() had already been called. The second call will be ignored.
+2018-12-11 17:43:08,779 INFO org.apache.juli.logging.DirectJDKLog [main] Stopping ProtocolHandler ["http-nio-8080"]
+2018-12-11 17:43:08,780 INFO org.apache.juli.logging.DirectJDKLog [main] Destroying ProtocolHandler ["http-nio-8080"]
+2018-12-11 17:43:08,785 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [main] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2018-12-11 17:43:08,787 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 8080 failed to start. The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 8080, or configure this application to listen on another port.
+

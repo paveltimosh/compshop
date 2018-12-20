@@ -10,10 +10,12 @@ import org.springframework.security.config.annotation.authentication.builders.Au
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
+import org.springframework.security.web.authentication.SimpleUrlAuthenticationFailureHandler;
 
 @Configuration
 @EnableWebSecurity
@@ -30,11 +32,24 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     private UserDetailsService userDetailsService;
 
     @Autowired
+    private RestAuthenticationEntryPoint restAuthenticationEntryPoint;
+
+    @Autowired
+    private CustomAccessDeniedHandler accessDeniedHandler;
+
+    private SimpleUrlAuthenticationFailureHandler myFailureHandler = new SimpleUrlAuthenticationFailureHandler();
+
+
+    public WebSecurityConfig() {
+        super();
+        SecurityContextHolder.setStrategyName(SecurityContextHolder.MODE_INHERITABLETHREADLOCAL);
+    }
+
+    @Autowired
     public void registerGlobalAuthentication(AuthenticationManagerBuilder auth) throws Exception {
         auth
                 .authenticationProvider(authProvider())
-                .userDetailsService(userDetailsService)
-        ;
+                .userDetailsService(userDetailsService);
     }
 
     @Override
@@ -42,25 +57,25 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         http
                 .csrf().disable()
                 .authorizeRequests()
-                    .antMatchers("/user/**").hasAnyAuthority("USER")
-                    .antMatchers("/login", "/register", "/catalog/**", "/", "/main").permitAll()
-                    .anyRequest()
-                    .authenticated()
+                    .and()
+                    .exceptionHandling()
+                    .accessDeniedHandler(accessDeniedHandler)
+                    .authenticationEntryPoint(restAuthenticationEntryPoint)
+                    .and()
+                .authorizeRequests()
+                    //.antMatchers("/user/**").hasAnyAuthority("USER")
+                    //.antMatchers("/rest/users","/login", "/register", "/catalog/**", "/", "/main").permitAll()
+                    .antMatchers("/users/**").authenticated()
+                    .antMatchers("/users/**").hasAnyAuthority("USER")
+                    .antMatchers( "/registration").permitAll()
                     .and()
                 .formLogin()
-                    .loginPage("/login")
-                    .loginProcessingUrl("/perform_login")
-                    .usernameParameter("login")
-                    .passwordParameter("password")
                     .successHandler(customAuthenticationSuccessHandler)
-                    .failureUrl("/user/login")
-                    .permitAll()
+                    .failureHandler(myFailureHandler)
                     .and()
-                .logout()
-                    .logoutUrl("/perform_logout")
-                    .invalidateHttpSession(true)
-                    .logoutSuccessUrl("/main")
-                    .permitAll();
+                    .httpBasic()
+                    .and()
+                .logout();
     }
 
     @Bean

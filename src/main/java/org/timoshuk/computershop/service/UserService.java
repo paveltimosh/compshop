@@ -7,9 +7,9 @@ import java.util.List;
 
 public interface UserService {
 
-    User findById(Long id);
+    UserDTO findById(Long id);
     List<User> findAll();
-    void createUserThenAuthenticate(UserDTO entity);
+    void createUser(UserDTO entity);
     void update(UserDTO entity);
     void delete(User entity);
     void deleteById(Long id);

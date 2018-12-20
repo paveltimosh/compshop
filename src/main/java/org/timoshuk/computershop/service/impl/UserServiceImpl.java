@@ -1,11 +1,16 @@
 package org.timoshuk.computershop.service.impl;
 
+import org.hibernate.NonUniqueResultException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.timoshuk.computershop.DAO.impl.UserDAOImpl;
 import org.timoshuk.computershop.DTO.UserDTO;
 import org.timoshuk.computershop.DTO.parser.UserDtoParser;
 import org.timoshuk.computershop.entity.users.User;
+import org.timoshuk.computershop.entity.users.UserType;
+import org.timoshuk.computershop.exception.UserExistsException;
+import org.timoshuk.computershop.exception.UserNotFoundException;
 import org.timoshuk.computershop.service.UserService;
 
 import javax.transaction.Transactional;
@@ -21,14 +26,21 @@ public class UserServiceImpl implements UserService {
     private UserDtoParser userDtoParser;
 
     @Autowired
+    private PasswordEncoder passwordEncoder;
+
+    @Autowired
     public UserServiceImpl(UserDAOImpl userDAO) {
         this.userDAO = userDAO;
     }
 
     @Transactional
     @Override
-    public User findById(Long id) {
-         return userDAO.findById(id);
+    public UserDTO findById(Long id) {
+        User user = userDAO.findById(id);
+        if (user == null){
+            throw new UserNotFoundException("User not found!");
+        }
+        return userDtoParser.createDTOFromEntity(user);
     }
 
     @Transactional
@@ -39,9 +51,13 @@ public class UserServiceImpl implements UserService {
 
     @Transactional
     @Override
-    public void createUserThenAuthenticate(UserDTO userDTO) {
-        User user = createUserEntityFromDTO(userDTO);
-        userDAO.create(user);
+    public void createUser(UserDTO userDTO) {
+        userDTO.setPassword(passwordEncoder.encode(userDTO.getPassword()));
+        userDTO.setUserType(UserType.USER);
+        User user = userDtoParser.createEntityFromDTO(userDTO);
+        if(validateUser(user)) {
+            userDAO.create(user);
+        }
     }
 
     @Transactional
@@ -66,8 +82,7 @@ public class UserServiceImpl implements UserService {
     @Transactional
     @Override
     public UserDTO findByLogin (String login){
-
-        return new UserDtoParser().createDTOFromEntity(userDAO.findByLogin(login));
+        return userDtoParser.createDTOFromEntity(userDAO.findByLogin(login));
     }
 
     @Transactional
@@ -90,6 +105,7 @@ public class UserServiceImpl implements UserService {
 
 
     private User createUserEntityFromDTO(UserDTO userDTO){
+
         User user = User.builder().userType(userDTO.getUserType())
                 .id(userDTO.getId())
                 .login(userDTO.getLogin())
@@ -104,6 +120,25 @@ public class UserServiceImpl implements UserService {
                 .idCard(userDTO.getIdCard())
                 .build();
         return user;
+    }
+
+    private boolean validateUser(User user) {
+        boolean userValid = false;
+        try {
+            if (userDAO.checkLogin(user.getLogin())) {
+                throw new UserExistsException("User with this login already exists!");
+            }
+            if (userDAO.checkEmail(user.getEmail())) {
+                throw new UserExistsException("User with this email already exists!");
+            }
+            if (userDAO.checkBankCard(user.getIdCard())) {
+                throw new UserExistsException("User with this bankcard's already exists!");
+            }
+        }catch (NonUniqueResultException e){
+
+        }
+        userValid = true;
+        return userValid;
     }
 
 

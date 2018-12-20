@@ -7,7 +7,6 @@ public class SpringApplicationInitializer
         extends AbstractAnnotationConfigDispatcherServletInitializer {
 
     protected Class<?>[] getRootConfigClasses() {
-        System.out.println("какаято хрень");
         return new Class[] {WebSecurityConfig.class};
     }
 

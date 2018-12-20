@@ -13,6 +13,14 @@
       <change afterPath="$USER_HOME$/Downloads/WebShop-master/WEBShop-master/.idea/misc.xml" afterDir="false" />
       <change afterPath="$USER_HOME$/Downloads/WebShop-master/WEBShop-master/.idea/modules.xml" afterDir="false" />
       <change afterPath="$USER_HOME$/Downloads/WebShop-master/WEBShop-master/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/DTO/view/UserDTOview.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/exception/AccessDeniedException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/exception/UserExistsException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/exception/UserNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/exception/handling/ApiError.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/exception/handling/RestResponseEntityExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/secure/CustomAccessDeniedHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/secure/RestAuthenticationEntryPoint.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Program/src/com" beforeDir="false" afterPath="$PROJECT_DIR$/../Program/src/com" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../SurveyApp/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../SurveyApp/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../SurveyApp/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SurveyApp/.idea/vcs.xml" afterDir="false" />
@@ -24,153 +32,27 @@
       <change beforePath="$PROJECT_DIR$/../SurveyApp/src/main/java/org/timoshuk/model/Answer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SurveyApp/src/main/java/org/timoshuk/model/Answer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../SurveyApp/src/main/java/org/timoshuk/model/Survey.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SurveyApp/src/main/java/org/timoshuk/model/Survey.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../SurveyApp/src/main/java/org/timoshuk/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SurveyApp/src/main/java/org/timoshuk/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SurveyApp/src/main/webapp/WEB-INF/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../SurveyApp/src/main/webapp/WEB-INF/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../SurveyAppp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/computershop.iml" beforeDir="false" afterPath="$PROJECT_DIR$/computershop.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/archived/spring-boot-logger-2018-11-23.0.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/archived/spring-boot-logger-2018-11-23.0.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/archived/spring-boot-logger-2018-11-26.0.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/archived/spring-boot-logger-2018-11-26.0.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/archived/spring-boot-logger-2018-11-30.0.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/archived/spring-boot-logger-2018-11-30.0.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/archived/spring-boot-logger-2018-12-04.0.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/archived/spring-boot-logger-2018-12-04.0.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/archived/spring-boot-logger-2018-12-05.0.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/archived/spring-boot-logger-2018-12-05.0.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/archived/spring-boot-logger-2018-12-06.0.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/archived/spring-boot-logger-2018-12-06.0.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/spring-boot-logger.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/spring-boot-logger.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/DAO/DBException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/DAO/DBException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/DAO/EntityDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/DAO/EntityDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/DAO/EntityDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/DAO/EntityDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/DAO/impl/OrderDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/DAO/impl/OrderDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/DAO/impl/UserDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/DAO/impl/UserDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/DAO/impl/productDAO/CaseDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/DAO/impl/productDAO/CaseDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/DAO/impl/productDAO/ComputerDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/DAO/impl/productDAO/ComputerDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/DAO/impl/productDAO/CpuDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/DAO/impl/productDAO/CpuDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/DAO/impl/productDAO/MotherboardDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/DAO/impl/productDAO/MotherboardDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/DAO/impl/productDAO/RamDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/DAO/impl/productDAO/RamDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/DAO/impl/productDAO/VideocardDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/DAO/impl/productDAO/VideocardDAOImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/DTO/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/DTO/UserDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/DTO/parser/UserDtoParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/DTO/parser/UserDtoParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/DTO/transfer/CreateNewUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/DTO/transfer/CreateNewUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/DTO/transfer/EditUserData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/DTO/transfer/EditUserData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/config/AppInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/config/AppInitializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/config/CustomWebMvcConfigurationSupport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/config/CustomWebMvcConfigurationSupport.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/config/CustomWebMvcConfigurationSupport.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/config/SpringApplicationInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/config/SpringApplicationInitializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/config/WebConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/controller/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/controller/CartController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/controller/ItemCatalogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/controller/ItemCatalogController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/controller/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/controller/OrderController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/entity/order/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/entity/order/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/entity/order/OrderStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/entity/order/OrderStatus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/entity/order/PaymentDescription.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/entity/order/PaymentDescription.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/entity/order/TypePayment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/entity/order/TypePayment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/entity/products/Components/CPU.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/entity/products/Components/CPU.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/entity/products/Components/Case.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/entity/products/Components/Case.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/entity/products/Components/Component.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/entity/products/Components/Component.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/entity/products/Components/MotherBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/entity/products/Components/MotherBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/entity/products/Components/RAM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/entity/products/Components/RAM.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/entity/products/Components/VideoCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/entity/products/Components/VideoCard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/entity/products/Computer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/entity/products/Computer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/entity/products/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/entity/products/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/entity/users/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/entity/users/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/entity/users/UserType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/entity/users/UserType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/filter/EncodingFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/filter/EncodingFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/filter/NonregisteredUserRedirectFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/filter/NonregisteredUserRedirectFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/filter/EncodingFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/filter/NonregisteredUserRedirectFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/secure/CustomAuthenticationSuccessHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/secure/CustomAuthenticationSuccessHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/secure/UserDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/secure/UserDetailsServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/secure/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/secure/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/service/CaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/service/CaseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/service/ComputerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/service/ComputerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/service/CpuService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/service/CpuService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/service/MotherboardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/service/MotherboardService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/service/OrderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/service/RamService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/service/RamService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/service/VideocardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/service/VideocardService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/service/impl/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/service/impl/OrderServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/service/impl/products/CaseServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/service/impl/products/CaseServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/service/impl/products/ComputerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/service/impl/products/ComputerServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/service/impl/products/CpuServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/service/impl/products/CpuServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/service/impl/products/MotherboardServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/service/impl/products/MotherboardServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/service/impl/products/RamServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/service/impl/products/RamServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/service/impl/products/VideocardImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/service/impl/products/VideocardImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/util/LocalDateAttributeConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/util/LocalDateAttributeConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/util/LocalTimeAttributeConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/util/LocalTimeAttributeConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/util/MessageManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/util/MessageManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/validator/FieldsValueMatchValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/validator/FieldsValueMatchValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/validator/UserValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/validator/UserValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/validator/annotations/FieldsValueMatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/validator/annotations/FieldsValueMatch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/DAO/DBException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/DAO/DBException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/DAO/EntityDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/DAO/EntityDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/DAO/EntityDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/DAO/EntityDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/DAO/impl/OrderDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/DAO/impl/OrderDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/DAO/impl/UserDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/DAO/impl/UserDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/DAO/impl/productDAO/CaseDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/DAO/impl/productDAO/CaseDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/DAO/impl/productDAO/ComputerDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/DAO/impl/productDAO/ComputerDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/DAO/impl/productDAO/CpuDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/DAO/impl/productDAO/CpuDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/DAO/impl/productDAO/MotherboardDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/DAO/impl/productDAO/MotherboardDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/DAO/impl/productDAO/RamDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/DAO/impl/productDAO/RamDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/DAO/impl/productDAO/VideocardDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/DAO/impl/productDAO/VideocardDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/DTO/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/DTO/UserDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/DTO/parser/UserDtoParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/DTO/parser/UserDtoParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/DTO/transfer/CreateNewUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/DTO/transfer/CreateNewUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/DTO/transfer/EditUserData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/DTO/transfer/EditUserData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/config/AppInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/config/AppInitializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/config/CustomWebMvcConfigurationSupport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/config/CustomWebMvcConfigurationSupport.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/config/HibernateConf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/config/HibernateConf.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/config/SpringApplicationInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/config/SpringApplicationInitializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/config/WebConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/controller/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/controller/CartController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/controller/ItemCatalogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/controller/ItemCatalogController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/controller/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/controller/OrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/entity/order/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/entity/order/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/entity/order/OrderStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/entity/order/OrderStatus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/entity/order/PaymentDescription.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/entity/order/PaymentDescription.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/entity/order/TypePayment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/entity/order/TypePayment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/entity/products/Components/CPU.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/entity/products/Components/CPU.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/entity/products/Components/Case.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/entity/products/Components/Case.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/entity/products/Components/Component.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/entity/products/Components/Component.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/entity/products/Components/MotherBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/entity/products/Components/MotherBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/entity/products/Components/RAM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/entity/products/Components/RAM.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/entity/products/Components/VideoCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/entity/products/Components/VideoCard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/entity/products/Computer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/entity/products/Computer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/entity/products/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/entity/products/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/entity/users/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/entity/users/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/entity/users/UserType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/entity/users/UserType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/filter/EncodingFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/filter/EncodingFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/filter/NonregisteredUserRedirectFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/filter/NonregisteredUserRedirectFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/secure/CustomAuthenticationSuccessHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/secure/CustomAuthenticationSuccessHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/secure/UserDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/secure/UserDetailsServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/secure/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/secure/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/service/CaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/service/CaseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/service/ComputerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/service/ComputerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/service/CpuService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/service/CpuService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/service/MotherboardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/service/MotherboardService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/service/OrderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/service/RamService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/service/RamService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/service/VideocardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/service/VideocardService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/service/impl/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/service/impl/OrderServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/service/impl/products/CaseServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/service/impl/products/CaseServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/service/impl/products/ComputerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/service/impl/products/ComputerServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/service/impl/products/CpuServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/service/impl/products/CpuServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/service/impl/products/MotherboardServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/service/impl/products/MotherboardServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/service/impl/products/RamServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/service/impl/products/RamServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/service/impl/products/VideocardImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/service/impl/products/VideocardImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/util/LocalDateAttributeConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/util/LocalDateAttributeConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/util/LocalTimeAttributeConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/util/LocalTimeAttributeConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/util/MessageManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/util/MessageManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/validator/FieldsValueMatchValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/validator/FieldsValueMatchValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/validator/UserValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/validator/UserValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/validator/annotations/FieldsValueMatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/validator/annotations/FieldsValueMatch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/org/timoshuk/computershop/dao/impl/UserDAOImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/org/timoshuk/computershop/dao/impl/UserDAOImplTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/org/vironit/timoshuk/computershop/dao/impl/UserDAOImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/org/timoshuk/computershop/dao/impl/UserDAOImplTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../fx_project" beforeDir="false" afterPath="$PROJECT_DIR$/../fx_project" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../surveyapp/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../surveyapp/README.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -214,60 +96,63 @@
     <session id="1443471809">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="10" />
+          <entry key="project.closed" value="12" />
           <entry key="project.open.time.20" value="1" />
           <entry key="project.open.time.22" value="3" />
           <entry key="project.open.time.24" value="2" />
-          <entry key="project.open.time.25" value="2" />
+          <entry key="project.open.time.25" value="3" />
           <entry key="project.open.time.26" value="1" />
           <entry key="project.open.time.28" value="2" />
+          <entry key="project.open.time.33" value="1" />
           <entry key="project.open.time.36" value="1" />
           <entry key="project.open.time.38" value="1" />
           <entry key="project.open.time.41" value="1" />
+          <entry key="project.open.time.43" value="1" />
+          <entry key="project.open.time.48" value="2" />
           <entry key="project.open.time.5" value="1" />
-          <entry key="project.opened" value="16" />
+          <entry key="project.opened" value="21" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="WebConfig" value="1" />
           <entry key="cases" value="1" />
-          <entry key="class" value="48" />
+          <entry key="class" value="50" />
           <entry key="css" value="6" />
           <entry key="customers" value="2" />
           <entry key="gitignore" value="4" />
           <entry key="iml" value="2" />
-          <entry key="java" value="992" />
-          <entry key="jsp" value="228" />
+          <entry key="java" value="1082" />
+          <entry key="jsp" value="229" />
           <entry key="jspf" value="29" />
           <entry key="log" value="25" />
           <entry key="png" value="1" />
           <entry key="pom" value="1" />
-          <entry key="properties" value="95" />
+          <entry key="properties" value="97" />
           <entry key="public" value="4" />
           <entry key="rams" value="1" />
           <entry key="sql" value="2" />
           <entry key="tld" value="2" />
           <entry key="users" value="1" />
-          <entry key="xml" value="76" />
+          <entry key="xml" value="78" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="48" />
+          <entry key="CLASS" value="50" />
           <entry key="CSS" value="6" />
           <entry key="Database Element" value="4" />
           <entry key="Git file" value="4" />
           <entry key="IDEA_MODULE" value="2" />
           <entry key="Image" value="1" />
-          <entry key="JAVA" value="992" />
-          <entry key="JSP" value="257" />
+          <entry key="JAVA" value="1082" />
+          <entry key="JSP" value="258" />
           <entry key="Log" value="24" />
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Properties" value="95" />
+          <entry key="Properties" value="97" />
           <entry key="Scratch" value="2" />
           <entry key="UML" value="6" />
-          <entry key="XML" value="79" />
+          <entry key="XML" value="81" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -276,8 +161,8 @@
           <entry key="class" value="1" />
           <entry key="css" value="12" />
           <entry key="dummy" value="4" />
-          <entry key="java" value="43241" />
-          <entry key="jsp" value="6095" />
+          <entry key="java" value="45074" />
+          <entry key="jsp" value="6102" />
           <entry key="jspf" value="820" />
           <entry key="log" value="2" />
           <entry key="properties" value="1639" />
@@ -290,8 +175,8 @@
         <counts>
           <entry key="CLASS" value="1" />
           <entry key="CSS" value="12" />
-          <entry key="JAVA" value="43215" />
-          <entry key="JSP" value="6915" />
+          <entry key="JAVA" value="45048" />
+          <entry key="JSP" value="6922" />
           <entry key="Log" value="2" />
           <entry key="PLAIN_TEXT" value="20" />
           <entry key="Properties" value="1639" />
@@ -305,22 +190,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/controller/UserController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="85" column="36" selection-start-line="85" selection-start-column="36" selection-end-line="85" selection-end-column="36" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/controller/MainController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="47">
-              <caret line="35" column="4" selection-start-line="35" selection-start-column="4" selection-end-line="38" selection-end-column="5" />
+            <state relative-caret-position="204">
+              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -329,10 +202,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/service/UserService.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/exception/handling/RestResponseEntityExceptionHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+            <state relative-caret-position="232">
+              <caret line="45" column="75" selection-start-line="45" selection-start-column="75" selection-end-line="45" selection-end-column="75" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -341,52 +214,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/service/impl/UserServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="30" column="28" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/register.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" selection-start-line="4" selection-end-line="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/entity/users/User.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="26" selection-start-line="26" selection-end-line="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/DTO/UserDTO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="191">
-              <caret line="38" column="14" selection-start-line="38" selection-start-column="14" selection-end-line="38" selection-end-column="52" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/secure/WebSecurityConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="36" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
+            <state relative-caret-position="395">
+              <caret line="79" lean-forward="true" selection-start-line="79" selection-end-line="79" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -397,11 +228,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/secure/UserDetailsServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="35" column="27" selection-start-line="35" selection-start-column="27" selection-end-line="36" selection-end-column="5" />
+            <state relative-caret-position="153">
+              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/controller/UserController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/controller/ItemCatalogController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="242">
+              <caret line="86" selection-start-line="86" selection-end-line="86" />
             </state>
           </provider>
         </entry>
@@ -437,31 +286,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/service/impl/OrderService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/hibernateDAO/impl/OrderDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/catalog/videocards.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/command/user/MakeOrderCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/command/user/ShowOrderUserCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/command/user/ConfirmOrderCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/command/user/DeleteOrderByUserCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/controller/CartController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/service/impl/OrderServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/service/OrderService.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/user/cart.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/util/HibernateUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/user/orders.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/dto/UserDTO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/validator/FieldsValueMatchValidator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/resource/MessageManager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/service/UserService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/service/impl/UserServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/validator/UserValidator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/hibernateDAO/impl/UserDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/DAO/impl/OrderDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/util/DataBasePoolConnector.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/util/MessageManager.java" />
         <option value="$PROJECT_DIR$/src/main/resources/message_en_EN.properties" />
         <option value="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/config/SecurityConfig.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
@@ -471,7 +295,6 @@
         <option value="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/controller/ItemCatalogController.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/config/SpringApplicationInitializer.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/config/AppInitializer.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/secure/CustomAuthenticationSuccessHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/secure/UserDetailsServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/controller/UserController.java" />
@@ -483,11 +306,37 @@
         <option value="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/entity/users/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/DAO/EntityDAO.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/register.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/controller/MainController.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/config/AppInitializer.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/config/HibernateConf.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/entity/products/Computer.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/DTO/parser/UserDtoParser.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/rest/UserController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/exception/ApiError.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/exception/UserLoginExistsException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/DTO/transfer/TransferUserDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/exception/AccessDeniedException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/service/UserService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/exception/UserNotFoundException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/exception/RestResponseEntityExceptionHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/config/CustomWebMvcConfigurationSupport.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/secure/CustomAccessDeniedHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/secure/RestAuthenticationEntryPoint.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/secure/CustomAuthenticationSuccessHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/rest/UserRestController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/config/SpringApplicationInitializer.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/config/WebConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/secure/UserDetailsServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/service/impl/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/DTO/view/UserDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/DTO/view/UserDTOview.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/DTO/UserDTO.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/secure/WebSecurityConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/controller/MainController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/exception/handling/RestResponseEntityExceptionHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/controller/ItemCatalogController.java" />
       </list>
     </option>
   </component>
@@ -541,11 +390,11 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
-    <option name="width" value="1938" />
-    <option name="height" value="1048" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-18" />
+    <option name="y" value="7" />
+    <option name="width" value="1944" />
+    <option name="height" value="1005" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -718,7 +567,90 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="org" type="462c0819:PsiDirectoryNode" />
               <item name="computershop" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="computershop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="computershop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="org" type="462c0819:PsiDirectoryNode" />
+              <item name="computershop" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="computershop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="computershop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="org" type="462c0819:PsiDirectoryNode" />
+              <item name="computershop" type="462c0819:PsiDirectoryNode" />
+              <item name="DTO" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="computershop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="computershop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="org" type="462c0819:PsiDirectoryNode" />
+              <item name="computershop" type="462c0819:PsiDirectoryNode" />
+              <item name="DTO" type="462c0819:PsiDirectoryNode" />
+              <item name="parser" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="computershop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="computershop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="org" type="462c0819:PsiDirectoryNode" />
+              <item name="computershop" type="462c0819:PsiDirectoryNode" />
+              <item name="DTO" type="462c0819:PsiDirectoryNode" />
+              <item name="transfer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="computershop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="computershop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="org" type="462c0819:PsiDirectoryNode" />
+              <item name="computershop" type="462c0819:PsiDirectoryNode" />
+              <item name="exception" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="computershop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="computershop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="org" type="462c0819:PsiDirectoryNode" />
+              <item name="computershop" type="462c0819:PsiDirectoryNode" />
+              <item name="exception" type="462c0819:PsiDirectoryNode" />
+              <item name="handling" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="computershop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="computershop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="org" type="462c0819:PsiDirectoryNode" />
+              <item name="computershop" type="462c0819:PsiDirectoryNode" />
               <item name="secure" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="computershop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="computershop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="org" type="462c0819:PsiDirectoryNode" />
+              <item name="computershop" type="462c0819:PsiDirectoryNode" />
+              <item name="validator" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="computershop" type="b2602c69:ProjectViewProjectNode" />
@@ -759,6 +691,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -819,9 +752,22 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.Application">
+  <component name="RunManager" selected="Application.Application">
+    <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.timoshuk.computershop.Application" />
+      <module name="computershop" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.timoshuk.computershop.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.vironit.timoshuk.computershop.Main" />
+      <option name="MAIN_CLASS_NAME" value="org.timoshuk.computershop.Main" />
       <module name="computershop" />
       <extension name="coverage">
         <pattern>
@@ -831,92 +777,6 @@
       </extension>
       <method v="2">
         <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="computershop" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.vironit.timoshuk.computershop.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="org.timoshuk.computershop.Application" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TomCat" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.34" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
-      <option name="UPDATING_POLICY" value="restart-server" />
-      <deployment>
-        <artifact name="computershop:war exploded">
-          <settings>
-            <option name="CONTEXT_PATH" value="/" />
-          </settings>
-        </artifact>
-      </deployment>
-      <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="Unnamed_computershop" />
-      </server-settings>
-      <predefined_log_file id="Tomcat" enabled="true" />
-      <predefined_log_file id="Tomcat Catalina" enabled="true" />
-      <predefined_log_file id="Tomcat Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="56691" />
-      </RunnerSettings>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <method v="2">
-        <option name="BuildArtifacts" enabled="true">
-          <artifact name="computershop:war exploded" />
-        </option>
       </method>
     </configuration>
     <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.34" ALTERNATIVE_JRE_ENABLED="false">
@@ -985,12 +845,11 @@
     </configuration>
     <list>
       <item itemvalue="Application.Main" />
-      <item itemvalue="Tomcat Server.TomCat" />
-      <item itemvalue="Spring Boot.Application" />
+      <item itemvalue="Application.Application" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.Application" />
+        <item itemvalue="Application.Application" />
       </list>
     </recent_temporary>
   </component>
@@ -1022,7 +881,12 @@
       <workItem from="1542276478725" duration="5125000" />
       <workItem from="1542563882170" duration="70813000" />
       <workItem from="1543253435466" duration="105255000" />
-      <workItem from="1544091198718" duration="47662000" />
+      <workItem from="1544091198718" duration="57020000" />
+      <workItem from="1544539066955" duration="227000" />
+      <workItem from="1544539737027" duration="5605000" />
+      <workItem from="1544611706017" duration="802000" />
+      <workItem from="1544614327231" duration="18864000" />
+      <workItem from="1545210901848" duration="11707000" />
     </task>
     <servers />
   </component>
@@ -1059,7 +923,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="697460000" />
+    <option name="totallyTimeSpent" value="744023000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1071,78 +935,74 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-13" y="7" width="1554" height="803" extended-state="0" />
     <layout>
-      <window_info id="Structure" order="0" sideWeight="0.5022625" side_tool="true" weight="0.16359773" />
-      <window_info id="Web" order="1" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23895583" />
+      <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="7" sideWeight="0.4988662" visible="true" weight="0.19530201" />
-      <window_info anchor="bottom" id="Application Servers" order="0" weight="0.32664755" />
-      <window_info anchor="bottom" id="Database Console" order="1" weight="0.2975078" />
-      <window_info anchor="bottom" id="Message" order="2" />
-      <window_info anchor="bottom" id="Find" order="3" weight="0.33531156" />
-      <window_info anchor="bottom" id="Run" order="4" sideWeight="0.83910537" visible="true" weight="0.17588653" />
-      <window_info anchor="bottom" id="Debug" order="5" weight="0.30712166" />
-      <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="8" weight="0.32924962" />
-      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32850942" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.16089466" side_tool="true" weight="0.34562212" />
-      <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.32872504" />
-      <window_info anchor="bottom" id="Database Changes" order="13" weight="0.32850942" />
-      <window_info anchor="bottom" id="Messages" order="14" sideWeight="0.6919192" weight="0.33481482" />
-      <window_info anchor="bottom" id="Spring" order="15" weight="0.3295129" />
-      <window_info anchor="right" id="Bean Validation" order="0" weight="0.3295535" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="2" weight="0.21443442" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="4" />
-      <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="6" visible="true" weight="0.087248325" />
-      <window_info anchor="right" id="Theme Preview" order="7" />
-      <window_info anchor="right" id="Palette&#9;" order="8" />
-      <window_info anchor="right" id="Maven Projects" order="9" weight="0.32861954" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32935917" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.51946306" visible="true" weight="0.3164179" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.4805369" side_tool="true" weight="0.32907802" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.49785176" weight="0.32686567" />
+      <window_info anchor="bottom" id="Spring" order="11" />
+      <window_info anchor="bottom" id="Java Enterprise" order="12" />
+      <window_info anchor="bottom" id="Database Changes" order="13" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Maven Projects" order="7" />
+      <window_info anchor="right" id="Database" order="8" />
+      <window_info anchor="right" id="Bean Validation" order="9" weight="0.3295302" />
     </layout>
     <layout-to-restore>
-      <window_info id="Structure" order="0" sideWeight="0.5022625" side_tool="true" weight="0.16359773" />
-      <window_info id="Web" order="1" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22824632" />
+      <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="7" sideWeight="0.4988662" weight="0.2539903" />
-      <window_info anchor="bottom" id="Application Servers" order="0" weight="0.32664755" />
-      <window_info anchor="bottom" id="Database Console" order="1" weight="0.2975078" />
-      <window_info anchor="bottom" id="Message" order="2" />
-      <window_info anchor="bottom" id="Find" order="3" weight="0.3432624" />
-      <window_info anchor="bottom" id="Run" order="4" sideWeight="0.83910537" visible="true" weight="0.44592592" />
-      <window_info anchor="bottom" id="Debug" order="5" weight="0.14623338" />
-      <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="8" weight="0.32924962" />
-      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32850942" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.16089466" side_tool="true" weight="0.34562212" />
-      <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.32872504" />
-      <window_info anchor="bottom" id="Database Changes" order="13" weight="0.32850942" />
-      <window_info anchor="bottom" id="Messages" order="14" sideWeight="0.6919192" weight="0.34268832" />
-      <window_info anchor="bottom" id="Spring" order="15" weight="0.3295129" />
-      <window_info anchor="right" id="Bean Validation" order="0" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="2" weight="0.21443442" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="4" />
-      <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="6" weight="0.21677852" />
-      <window_info anchor="right" id="Theme Preview" order="7" />
-      <window_info anchor="right" id="Palette&#9;" order="8" />
-      <window_info anchor="right" id="Maven Projects" order="9" weight="0.32861954" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.51946306" visible="true" weight="0.4396423" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.4805369" side_tool="true" weight="0.32907802" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.49785176" weight="0.32907802" />
+      <window_info anchor="bottom" id="Spring" order="11" />
+      <window_info anchor="bottom" id="Java Enterprise" order="12" />
+      <window_info anchor="bottom" id="Database Changes" order="13" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Maven Projects" order="7" />
+      <window_info anchor="right" id="Database" order="8" />
+      <window_info anchor="right" id="Bean Validation" order="9" weight="0.3295302" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1156,202 +1016,12 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/filter/NonregisteredUserRedirectFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/validators/UserValidator.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/validator/annotations/FieldsValueMatch.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/controller/CartController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.1.1.RELEASE/spring-context-5.1.1.RELEASE.jar!/org/springframework/context/MessageSource.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/validator/UserValidator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="31" column="8" selection-start-line="31" selection-start-column="8" selection-end-line="32" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#259#260#0" expanded="true" />
-            <element signature="e#287#288#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logs/spring-boot-logger.log">
-      <provider selected="true" editor-type-id="LogFileEditorProvider">
-        <state relative-caret-position="-38557" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/DAO/impl/OrderDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/util/DataBasePoolConnector.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/regex.properties" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/message_en_EN.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="8" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/validator/FieldsValueMatchValidator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/DAO/impl/productDAO/CaseDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="16" column="58" selection-start-line="16" selection-start-column="58" selection-end-line="16" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-security/2.1.1.RELEASE/spring-boot-starter-security-2.1.1.RELEASE.pom">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-910" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/config/CustomAuthenticationProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="28" column="16" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/util/MessageManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="7" column="90" selection-start-line="7" selection-start-column="90" selection-end-line="7" selection-end-column="90" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.1.0.RELEASE/spring-security-core-5.1.0.RELEASE.jar!/org/springframework/security/core/userdetails/User.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="59" column="47" selection-start-line="59" selection-start-column="47" selection-end-line="59" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-jdbc/5.1.1.RELEASE/spring-jdbc-5.1.1.RELEASE.jar!/org/springframework/jdbc/support/SQLStateSQLExceptionTranslator.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="10" column="87" selection-start-line="10" selection-start-column="87" selection-end-line="10" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/controller/ItemCatalogController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-54">
-          <caret line="67" column="53" selection-start-line="67" selection-start-column="53" selection-end-line="67" selection-end-column="53" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/controller/OrderController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8">
-          <caret line="76" column="64" selection-start-line="76" selection-start-column="64" selection-end-line="76" selection-end-column="64" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/user/orders.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="10" selection-start-line="10" selection-end-line="10" selection-end-column="27" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/common/header.jspf">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="14" column="43" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/logback-spring.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="46" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="193" selection-end-line="193" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="3" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
@@ -1378,70 +1048,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="40" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/entity/order/Order.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-286">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/DAO/impl/UserDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="27" column="52" selection-start-line="27" selection-start-column="52" selection-end-line="27" selection-end-column="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/DAO/EntityDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-95">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/entity/users/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/DTO/UserDTO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="38" column="14" selection-start-line="38" selection-start-column="14" selection-end-line="38" selection-end-column="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1452,14 +1058,205 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/config/AppInitializer.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/util/MessageManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="22" column="23" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
+        <state relative-caret-position="255">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/config/CustomWebMvcConfigurationSupport.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/validator/FieldsValueMatchValidator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="8" column="6" lean-forward="true" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/controller/CartController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/controller/OrderController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1281">
+          <caret line="76" column="58" selection-start-line="76" selection-start-column="58" selection-end-line="76" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/entity/order/Order.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1768">
+          <caret line="104" column="17" selection-start-line="88" selection-start-column="4" selection-end-line="104" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/entity/products/Computer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/DTO/parser/UserDtoParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/service/impl/OrderServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-496">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/validator/UserValidator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="31" column="22" lean-forward="true" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/entity/users/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-180">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/DAO/EntityDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-102">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/DTO/transfer/TransferUserDTO.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/exception/AccessDeniedException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="16" />
+          <folding>
+            <element signature="e#143#144#0" expanded="true" />
+            <element signature="e#166#167#0" expanded="true" />
+            <element signature="e#218#219#0" expanded="true" />
+            <element signature="e#248#249#0" expanded="true" />
+            <element signature="e#317#318#0" expanded="true" />
+            <element signature="e#354#355#0" expanded="true" />
+            <element signature="e#407#408#0" expanded="true" />
+            <element signature="e#435#436#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/exception/UserExistsException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+          <folding>
+            <element signature="e#210#211#0" expanded="true" />
+            <element signature="e#240#241#0" expanded="true" />
+            <element signature="e#312#313#0" expanded="true" />
+            <element signature="e#349#350#0" expanded="true" />
+            <element signature="e#405#406#0" expanded="true" />
+            <element signature="e#433#434#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/exception/UserNotFoundException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="36" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
+          <folding>
+            <element signature="e#201#202#0" expanded="true" />
+            <element signature="e#231#232#0" expanded="true" />
+            <element signature="e#300#301#0" expanded="true" />
+            <element signature="e#337#338#0" expanded="true" />
+            <element signature="e#390#391#0" expanded="true" />
+            <element signature="e#418#419#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/config/CustomWebMvcConfigurationSupport.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_162/src.zip!/java/util/ArrayList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="870" column="21" lean-forward="true" selection-start-line="870" selection-start-column="21" selection-end-line="870" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/5.1.2.RELEASE/spring-security-web-5.1.2.RELEASE.jar!/org/springframework/security/web/authentication/AuthenticationSuccessHandler.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="549">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/DAO/impl/UserDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/rest/UserRestController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="50" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/logback-spring.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="50" selection-start-line="7" selection-start-column="50" selection-end-line="7" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/exception/handling/ApiError.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
@@ -1469,60 +1266,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/controller/MainController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/service/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="47">
-          <caret line="35" column="4" selection-start-line="35" selection-start-column="4" selection-end-line="38" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="102">
+          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/config/HibernateConf.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-22">
-          <caret line="21" column="46" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="3" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/config/AppInitializer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="22" column="23" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/config/SpringApplicationInitializer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+        <state relative-caret-position="153">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/service/impl/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="30" column="28" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#426#427#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/config/WebConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-368">
-          <caret line="15" column="13" lean-forward="true" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="677">
+          <caret line="62" lean-forward="true" selection-start-line="62" selection-end-line="62" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/controller/UserController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/secure/RestAuthenticationEntryPoint.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="85" column="36" selection-start-line="85" selection-start-column="36" selection-end-line="85" selection-end-column="36" />
+        <state relative-caret-position="335">
+          <caret line="22" column="90" selection-start-line="22" selection-start-column="90" selection-end-line="22" selection-end-column="90" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1531,18 +1317,87 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/secure/CustomAuthenticationSuccessHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="91">
-          <caret line="29" column="37" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="37" />
+        <state relative-caret-position="96">
+          <caret line="22" column="55" selection-start-line="22" selection-start-column="55" selection-end-line="22" selection-end-column="55" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/secure/CustomAccessDeniedHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.1.2.RELEASE/spring-security-core-5.1.2.RELEASE.jar!/org/springframework/security/crypto/password/PasswordEncoder.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+          <folding>
+            <element signature="e#349#350#0" expanded="true" />
+            <element signature="e#377#378#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/config/HibernateConf.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-64">
+          <caret line="21" column="46" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/service/impl/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="41" column="9" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/DTO/view/UserDTOview.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="26" lean-forward="true" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/secure/UserDetailsServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="35" column="27" selection-start-line="35" selection-start-column="27" selection-end-line="36" selection-end-column="5" />
+        <state relative-caret-position="153">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/DTO/UserDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="70" column="41" selection-start-line="70" selection-start-column="41" selection-end-line="70" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/exception/handling/RestResponseEntityExceptionHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="45" column="75" selection-start-line="45" selection-start-column="75" selection-end-line="45" selection-end-column="75" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/controller/MainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1551,11 +1406,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/secure/WebSecurityConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="36" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
+        <state relative-caret-position="395">
+          <caret line="79" lean-forward="true" selection-start-line="79" selection-end-line="79" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/controller/ItemCatalogController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="86" selection-start-line="86" selection-end-line="86" />
         </state>
       </provider>
     </entry>

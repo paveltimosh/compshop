@@ -5,6 +5,9 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 import java.util.UUID;
 
 public class Main  {
@@ -13,8 +16,23 @@ public class Main  {
 
     public static void main(String[] args) {
 
-        System.out.println(Long.toHexString(Double.doubleToLongBits(Math.random())));
-        System.out.println( UUID.randomUUID().toString());
+        List<String> list = new ArrayList<>();
+        list.add("Вася");
+        list.add("Петя");
+        list.add("Шура");
+        list.add("Коля");
+
+        Iterator iterator = list.iterator();
+        int counter = 1;
+        while (iterator.hasNext()){
+            if (counter%2 == 0) {
+                iterator.remove();
+            }
+            System.out.println(iterator.next());
+            counter++;
+        }
+
+        System.out.println(list);
     }
 
 }
