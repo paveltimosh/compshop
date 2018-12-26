@@ -154,7 +154,7 @@ java.lang.IllegalArgumentException: Invalid character found in method name. HTTP
 2018-12-25 22:31:57,685 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
 2018-12-25 22:31:57,686 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Initializing Servlet 'dispatcherServlet'
 2018-12-25 22:31:57,700 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Completed initialization in 13 ms
-2018-12-25 22:32:11,868 INFO org.timoshuk.computershop.controller.OrderController [http-nio-8080-exec-3] Method showOrdersOfUser began work
+2018-12-25 22:32:11,868 INFO org.timoshuk.computershop.controller.customer.OrderController [http-nio-8080-exec-3] Method showOrdersOfUser began work
 2018-12-25 22:32:59,815 INFO org.springframework.boot.StartupInfoLogger [main] Starting Application on WIN-C3L8TOODV5O with PID 2272 (C:\Users\User\IdeaProjects\computershop\target\classes started by User in C:\Users\User\IdeaProjects\computershop)
 2018-12-25 22:32:59,822 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
 2018-12-25 22:33:03,988 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
@@ -176,7 +176,7 @@ java.lang.IllegalArgumentException: Invalid character found in method name. HTTP
 2018-12-25 22:33:11,489 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
 2018-12-25 22:33:11,490 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
 2018-12-25 22:33:11,506 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 13 ms
-2018-12-25 22:33:12,191 INFO org.timoshuk.computershop.controller.OrderController [http-nio-8080-exec-1] Method showOrdersOfUser began work
+2018-12-25 22:33:12,191 INFO org.timoshuk.computershop.controller.customer.OrderController [http-nio-8080-exec-1] Method showOrdersOfUser began work
 2018-12-25 22:33:28,131 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-3] Error parsing HTTP request header
  Note: further occurrences of HTTP header parsing errors will be logged at DEBUG level.
 java.lang.IllegalArgumentException: Invalid character found in method name. HTTP method names must be tokens
@@ -211,8 +211,8 @@ java.lang.IllegalArgumentException: Invalid character found in method name. HTTP
 2018-12-25 22:34:28,552 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
 2018-12-25 22:34:28,553 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
 2018-12-25 22:34:28,566 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 11 ms
-2018-12-25 22:34:29,248 INFO org.timoshuk.computershop.controller.OrderController [http-nio-8080-exec-1] Method showOrderById began work
-2018-12-25 22:34:37,254 INFO org.timoshuk.computershop.controller.OrderController [http-nio-8080-exec-3] Method showOrderById began work
+2018-12-25 22:34:29,248 INFO org.timoshuk.computershop.controller.customer.OrderController [http-nio-8080-exec-1] Method showOrderById began work
+2018-12-25 22:34:37,254 INFO org.timoshuk.computershop.controller.customer.OrderController [http-nio-8080-exec-3] Method showOrderById began work
 2018-12-25 22:36:40,051 INFO org.springframework.boot.StartupInfoLogger [main] Starting Application on WIN-C3L8TOODV5O with PID 7688 (C:\Users\User\IdeaProjects\computershop\target\classes started by User in C:\Users\User\IdeaProjects\computershop)
 2018-12-25 22:36:40,059 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
 2018-12-25 22:36:44,687 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
@@ -234,10 +234,10 @@ java.lang.IllegalArgumentException: Invalid character found in method name. HTTP
 2018-12-25 22:36:57,020 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
 2018-12-25 22:36:57,022 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
 2018-12-25 22:36:57,039 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 15 ms
-2018-12-25 22:36:57,711 INFO org.timoshuk.computershop.controller.OrderController [http-nio-8080-exec-1] Method showOrderById began work
+2018-12-25 22:36:57,711 INFO org.timoshuk.computershop.controller.customer.OrderController [http-nio-8080-exec-1] Method showOrderById began work
 2018-12-25 22:36:57,749 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
 java.lang.NullPointerException: null
-	at org.timoshuk.computershop.controller.OrderController.showOrderById(OrderController.java:58)
+	at org.timoshuk.computershop.controller.customer.OrderController.showOrderById(OrderController.java:58)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -315,7 +315,7 @@ java.lang.NullPointerException: null
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
-2018-12-25 22:37:26,218 INFO org.timoshuk.computershop.controller.OrderController [http-nio-8080-exec-4] Method showOrderById began work
+2018-12-25 22:37:26,218 INFO org.timoshuk.computershop.controller.customer.OrderController [http-nio-8080-exec-4] Method showOrderById began work
 2018-12-25 22:42:12,313 INFO org.springframework.boot.StartupInfoLogger [main] Starting Application on WIN-C3L8TOODV5O with PID 15616 (C:\Users\User\IdeaProjects\computershop\target\classes started by User in C:\Users\User\IdeaProjects\computershop)
 2018-12-25 22:42:12,320 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
 2018-12-25 22:42:18,491 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
@@ -337,9 +337,9 @@ java.lang.NullPointerException: null
 2018-12-25 22:42:36,199 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
 2018-12-25 22:42:36,200 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Initializing Servlet 'dispatcherServlet'
 2018-12-25 22:42:36,217 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Completed initialization in 15 ms
-2018-12-25 22:42:36,960 INFO org.timoshuk.computershop.controller.OrderController [http-nio-8080-exec-2] Method showOrderById began work
+2018-12-25 22:42:36,960 INFO org.timoshuk.computershop.controller.customer.OrderController [http-nio-8080-exec-2] Method showOrderById began work
 2018-12-25 22:42:37,030 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8080-exec-2] Resolved [org.timoshuk.computershop.exception.AccessDeniedException: You can't to see this order, because you are not the owner!]
-2018-12-25 22:42:48,046 INFO org.timoshuk.computershop.controller.OrderController [http-nio-8080-exec-3] Method showOrderById began work
+2018-12-25 22:42:48,046 INFO org.timoshuk.computershop.controller.customer.OrderController [http-nio-8080-exec-3] Method showOrderById began work
 2018-12-25 22:42:48,065 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8080-exec-3] Resolved [org.timoshuk.computershop.exception.NotFoundException: Order not found]
 2018-12-25 22:43:28,131 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-4] Error parsing HTTP request header
  Note: further occurrences of HTTP header parsing errors will be logged at DEBUG level.
@@ -402,7 +402,7 @@ java.lang.IllegalArgumentException: Invalid character found in method name. HTTP
 2018-12-25 22:51:16,027 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-9] Completed initialization in 16 ms
 2018-12-25 22:51:16,815 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-9] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
 java.lang.NullPointerException: null
-	at org.timoshuk.computershop.controller.OrderController.confirmOrder(OrderController.java:90)
+	at org.timoshuk.computershop.controller.customer.OrderController.confirmOrder(OrderController.java:90)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -482,7 +482,7 @@ java.lang.NullPointerException: null
 	at java.lang.Thread.run(Thread.java:748)
 2018-12-25 22:52:07,708 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-7] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
 java.lang.NullPointerException: null
-	at org.timoshuk.computershop.controller.OrderController.confirmOrder(OrderController.java:90)
+	at org.timoshuk.computershop.controller.customer.OrderController.confirmOrder(OrderController.java:90)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -664,7 +664,7 @@ Verify the connector's configuration, identify and stop any process that's liste
 2018-12-25 22:55:15,362 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Completed initialization in 13 ms
 2018-12-25 22:55:16,118 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-2] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
 java.lang.NullPointerException: null
-	at org.timoshuk.computershop.controller.OrderController.confirmOrder(OrderController.java:89)
+	at org.timoshuk.computershop.controller.customer.OrderController.confirmOrder(OrderController.java:89)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -758,7 +758,7 @@ java.lang.IllegalArgumentException: No enum constant org.timoshuk.computershop.e
 	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343)
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:206)
 	at com.sun.proxy.$Proxy95.changePaymentDescrOfOrder(Unknown Source)
-	at org.timoshuk.computershop.controller.OrderController.confirmOrder(OrderController.java:105)
+	at org.timoshuk.computershop.controller.customer.OrderController.confirmOrder(OrderController.java:105)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -873,7 +873,7 @@ java.lang.IllegalArgumentException: No enum constant org.timoshuk.computershop.e
 	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343)
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:206)
 	at com.sun.proxy.$Proxy95.changePaymentDescrOfOrder(Unknown Source)
-	at org.timoshuk.computershop.controller.OrderController.confirmOrder(OrderController.java:105)
+	at org.timoshuk.computershop.controller.customer.OrderController.confirmOrder(OrderController.java:105)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)

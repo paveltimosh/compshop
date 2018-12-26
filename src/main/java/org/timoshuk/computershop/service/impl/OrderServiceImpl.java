@@ -1,15 +1,18 @@
 package org.timoshuk.computershop.service.impl;
 
+import com.sun.org.apache.xpath.internal.operations.Or;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.timoshuk.computershop.DAO.impl.OrderDAOImpl;
+import org.timoshuk.computershop.DAO.impl.UserDAOImpl;
 import org.timoshuk.computershop.DTO.CartPositionDTO;
 import org.timoshuk.computershop.entity.order.Order;
 import org.timoshuk.computershop.entity.order.OrderStatus;
 import org.timoshuk.computershop.entity.order.PaymentDescription;
 import org.timoshuk.computershop.entity.order.TypePayment;
 import org.timoshuk.computershop.entity.products.Item;
+import org.timoshuk.computershop.exception.EntityNotFoundException;
 import org.timoshuk.computershop.service.OrderService;
 
 import java.time.LocalDate;
@@ -24,10 +27,17 @@ public class OrderServiceImpl implements OrderService {
     @Autowired
     private OrderDAOImpl orderDAO;
 
+    @Autowired
+    private UserDAOImpl userDAO;
+
     @Transactional
     @Override
     public Order findById(Long id) {
-        return orderDAO.findById(id);
+        Order order = orderDAO.findById(id);
+        if (order == null){
+            throw new EntityNotFoundException("Order not found");
+        }
+        return order;
     }
 
     @Transactional
@@ -57,13 +67,38 @@ public class OrderServiceImpl implements OrderService {
     @Transactional
     @Override
     public void deleteById(Long id) {
+        Order order = orderDAO.findById(id);
+        if (order == null){
+            throw new EntityNotFoundException("Order not found");
+        }
         orderDAO.deleteById(id);
+    }
+
+    @Override
+    public void changeOrder(Order order, String orderStatus) {
+        if (checkAcceptableOfOrderStatus(orderStatus)){
+            order.setOrderStatus(OrderStatus.valueOf(orderStatus));
+        }else {
+            throw new IllegalArgumentException("As order status you can use only: IS_PAYED, IS_CONFIRMED, IS_CANCELLED, IS_COMPLETED, IS_READY_FOR_DELIVERY");
+        }
     }
 
     @Transactional
     @Override
     public List<Order> findAllByUserId(Long userId) {
+        if (userDAO.findById(userId) == null){
+            throw new EntityNotFoundException("User not found");
+        }
         return orderDAO.findAllByUserId(userId);
+    }
+
+    @Transactional
+    @Override
+    public List<Order> findAllByOrderStatus(String orderStatus) {
+        if(!checkAcceptableOfOrderStatus(orderStatus)) {
+            throw new IllegalArgumentException("As order status you can use only: IS_PAYED, IS_CONFIRMED, IS_CANCELLED, IS_COMPLETED, IS_READY_FOR_DELIVERY");
+        }
+        return orderDAO.findAllByOrderStatus(orderStatus);
     }
 
     @Override
@@ -107,6 +142,18 @@ public class OrderServiceImpl implements OrderService {
         }else {
             throw new IllegalArgumentException("As payment type you can use only: BANK_CARD, CASH, CREDIT");
         }
+    }
+
+    private boolean checkAcceptableOfOrderStatus(String orderStatus){
+        boolean acceptable = false;
+        if(orderStatus.equals(OrderStatus.IS_PAYED.toString())
+                || orderStatus.equals(OrderStatus.IS_CONFIRMED.toString())
+                || orderStatus.equals(OrderStatus.IS_CANCELLED.toString())
+                || orderStatus.equals(OrderStatus.IS_COMPLETED.toString())
+                || orderStatus.equals(OrderStatus.IS_READY_FOR_DELIVERY.toString())) {
+            acceptable = true;
+        }
+        return acceptable;
     }
 
     public void chekAvailabilityOfItems(){

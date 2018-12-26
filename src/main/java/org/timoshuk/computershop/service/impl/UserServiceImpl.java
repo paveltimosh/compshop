@@ -10,10 +10,11 @@ import org.timoshuk.computershop.DTO.parser.UserDtoParser;
 import org.timoshuk.computershop.entity.users.User;
 import org.timoshuk.computershop.entity.users.UserType;
 import org.timoshuk.computershop.exception.UserExistsException;
-import org.timoshuk.computershop.exception.UserNotFoundException;
+import org.timoshuk.computershop.exception.EntityNotFoundException;
 import org.timoshuk.computershop.service.UserService;
 
 import javax.transaction.Transactional;
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -38,15 +39,20 @@ public class UserServiceImpl implements UserService {
     public UserDTO findById(Long id) {
         User user = userDAO.findById(id);
         if (user == null){
-            throw new UserNotFoundException("User not found!");
+            throw new EntityNotFoundException("User not found!");
         }
         return userDtoParser.createDTOFromEntity(user);
     }
 
     @Transactional
     @Override
-    public List<User> findAll() {
-        return userDAO.findAll();
+    public List<UserDTO> findAll() {
+        List<User> users = userDAO.findAll();
+        List<UserDTO> userDTOList = new ArrayList<>();
+        for (User user : users) {
+            userDTOList.add(userDtoParser.createDTOFromEntity(user));
+        }
+        return userDTOList;
     }
 
     @Transactional

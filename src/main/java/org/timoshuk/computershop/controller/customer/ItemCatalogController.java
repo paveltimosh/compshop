@@ -1,4 +1,4 @@
-package org.timoshuk.computershop.controller;
+package org.timoshuk.computershop.controller.customer;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

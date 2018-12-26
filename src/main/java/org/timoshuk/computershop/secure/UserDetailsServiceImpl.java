@@ -8,7 +8,6 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.timoshuk.computershop.DTO.UserDTO;
-import org.timoshuk.computershop.entity.users.UserType;
 import org.timoshuk.computershop.service.UserService;
 
 import java.util.HashSet;
@@ -24,7 +23,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     public UserDetails loadUserByUsername(String login) throws UsernameNotFoundException {
         UserDTO user = userService.findByLogin(login);
         Set<GrantedAuthority> roles = new HashSet();
-        roles.add(new SimpleGrantedAuthority(UserType.USER.name()));
+        roles.add(new SimpleGrantedAuthority(user.getUserType().name()));
         UserDetails userDetails =
                 new org.springframework.security.core.userdetails.User(user.getLogin(),
                         user.getPassword(),

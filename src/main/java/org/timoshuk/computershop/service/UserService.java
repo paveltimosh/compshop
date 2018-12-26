@@ -8,7 +8,7 @@ import java.util.List;
 public interface UserService {
 
     UserDTO findById(Long id);
-    List<User> findAll();
+    List<UserDTO> findAll();
     void createUser(UserDTO entity);
     void update(UserDTO entity);
     void delete(User entity);
@@ -17,5 +17,6 @@ public interface UserService {
     boolean checkEmail (String email);
     boolean checkLogin(String login);
     boolean checkBankCard (String bankCard);
+
 
 }

@@ -23,4 +23,12 @@ public class OrderDAOImpl extends EntityDAOImpl<Order, Long> {
         return orderList;
     }
 
+    public List<Order> findAllByOrderStatus(String orderStatus) {
+        List<Order> orderList = new ArrayList<>();
+        Query query = getCurrentSession().createQuery("FROM Order WHERE order_status =:param");
+        query.setParameter("param", orderStatus);
+        orderList = query.list();
+        return orderList;
+    }
+
 }

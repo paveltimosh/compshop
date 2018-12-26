@@ -1,8 +1,8 @@
 2018-12-13 14:36:21,936 INFO org.springframework.boot.StartupInfoLogger [main] Starting Application on WIN-C3L8TOODV5O with PID 8928 (C:\Users\User\IdeaProjects\computershop\target\classes started by User in C:\Users\User\IdeaProjects\computershop)
 2018-12-13 14:36:21,945 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
-2018-12-13 14:36:22,945 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [org.timoshuk.computershop.Application]; nested exception is org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'userController' for bean class [org.timoshuk.computershop.rest.UserController] conflicts with existing, non-compatible bean definition of same name and class [org.timoshuk.computershop.controller.UserController]
+2018-12-13 14:36:22,945 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [org.timoshuk.computershop.Application]; nested exception is org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'userController' for bean class [org.timoshuk.computershop.rest.UserController] conflicts with existing, non-compatible bean definition of same name and class [org.timoshuk.computershop.controller.customer.UserController]
 2018-12-13 14:36:22,960 ERROR org.springframework.boot.SpringApplication [main] Application run failed
-org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [org.timoshuk.computershop.Application]; nested exception is org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'userController' for bean class [org.timoshuk.computershop.rest.UserController] conflicts with existing, non-compatible bean definition of same name and class [org.timoshuk.computershop.controller.UserController]
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [org.timoshuk.computershop.Application]; nested exception is org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'userController' for bean class [org.timoshuk.computershop.rest.UserController] conflicts with existing, non-compatible bean definition of same name and class [org.timoshuk.computershop.controller.customer.UserController]
 	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:181)
 	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:315)
 	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:232)
@@ -17,7 +17,7 @@ org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse 
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
 	at org.timoshuk.computershop.Application.main(Application.java:10)
-Caused by: org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'userController' for bean class [org.timoshuk.computershop.rest.UserController] conflicts with existing, non-compatible bean definition of same name and class [org.timoshuk.computershop.controller.UserController]
+Caused by: org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'userController' for bean class [org.timoshuk.computershop.rest.UserController] conflicts with existing, non-compatible bean definition of same name and class [org.timoshuk.computershop.controller.customer.UserController]
 	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.checkCandidate(ClassPathBeanDefinitionScanner.java:348)
 	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.doScan(ClassPathBeanDefinitionScanner.java:286)
 	at org.springframework.context.annotation.ComponentScanAnnotationParser.parse(ComponentScanAnnotationParser.java:132)
@@ -847,8 +847,8 @@ java.lang.IllegalArgumentException: Invalid character found in method name. HTTP
 2018-12-13 16:27:53,373 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-10] Initializing Spring DispatcherServlet 'dispatcherServlet'
 2018-12-13 16:27:53,374 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-10] Initializing Servlet 'dispatcherServlet'
 2018-12-13 16:27:53,392 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-10] Completed initialization in 17 ms
-2018-12-13 16:28:23,033 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-5] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.timoshuk.computershop.exception.UserNotFoundException: User not found] with root cause
-org.timoshuk.computershop.exception.UserNotFoundException: User not found
+2018-12-13 16:28:23,033 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-5] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.timoshuk.computershop.exception.EntityNotFoundException: User not found] with root cause
+org.timoshuk.computershop.exception.EntityNotFoundException: User not found
 	at org.timoshuk.computershop.service.impl.UserServiceImpl.findById(UserServiceImpl.java:41)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -976,7 +976,7 @@ java.lang.IllegalArgumentException: Invalid character found in method name. HTTP
 2018-12-13 16:30:25,398 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-10] Initializing Spring DispatcherServlet 'dispatcherServlet'
 2018-12-13 16:30:25,399 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-10] Initializing Servlet 'dispatcherServlet'
 2018-12-13 16:30:25,414 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-10] Completed initialization in 14 ms
-2018-12-13 16:30:25,721 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8080-exec-10] Resolved [org.timoshuk.computershop.exception.UserNotFoundException: User not found]
+2018-12-13 16:30:25,721 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8080-exec-10] Resolved [org.timoshuk.computershop.exception.EntityNotFoundException: User not found]
 2018-12-13 16:30:53,711 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-8] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
 java.lang.NullPointerException: null
 	at org.timoshuk.computershop.rest.UserRestController.getUser(UserRestController.java:35)

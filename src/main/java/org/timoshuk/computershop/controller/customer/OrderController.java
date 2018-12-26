@@ -1,4 +1,4 @@
-package org.timoshuk.computershop.controller;
+package org.timoshuk.computershop.controller.customer;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -11,7 +11,6 @@ import org.timoshuk.computershop.entity.order.OrderStatus;
 import org.timoshuk.computershop.entity.order.TypePayment;
 import org.timoshuk.computershop.exception.AccessDeniedException;
 import org.timoshuk.computershop.exception.NotEnoughMoneyException;
-import org.timoshuk.computershop.exception.NotFoundException;
 import org.timoshuk.computershop.exception.OrderIsPayedException;
 import org.timoshuk.computershop.service.OrderService;
 import org.timoshuk.computershop.service.UserService;
@@ -56,9 +55,6 @@ public class OrderController {
         String userLogin = principal.getName();
         UserDTO user = userService.findByLogin(userLogin);
         Order order = orderService.findById(id);
-        if (order == null){
-            throw new NotFoundException("Order not found");
-        }
         if(!order.getIdOfCustomer().equals(user.getId())){
             throw new AccessDeniedException("You can't to see this order, because you are not the owner!");
         }
@@ -70,9 +66,6 @@ public class OrderController {
                                   @PathVariable("id") Long orderId){
         Order order = orderService.findById(orderId);
         UserDTO userDTO = userService.findById(order.getIdOfCustomer());
-        if (order == null){
-            throw new NotFoundException("Order not found");
-        }
         if (userDTO.getLogin().equals(principal.getName())) {
             orderService.delete(order);
         }else {

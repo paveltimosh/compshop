@@ -1,5 +1,6 @@
 package org.timoshuk.computershop.DTO;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonView;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

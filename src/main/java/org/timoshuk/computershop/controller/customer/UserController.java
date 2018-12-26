@@ -1,4 +1,4 @@
-package org.timoshuk.computershop.controller;
+package org.timoshuk.computershop.controller.customer;
 
 import com.fasterxml.jackson.annotation.JsonView;
 import org.springframework.beans.BeanUtils;

@@ -19,4 +19,4 @@
 2018-12-20 15:07:31,075 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-10] Initializing Spring DispatcherServlet 'dispatcherServlet'
 2018-12-20 15:07:31,076 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-10] Initializing Servlet 'dispatcherServlet'
 2018-12-20 15:07:31,096 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-10] Completed initialization in 18 ms
-2018-12-20 15:07:32,072 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8080-exec-10] Resolved [org.timoshuk.computershop.exception.UserNotFoundException: User not found!]
+2018-12-20 15:07:32,072 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8080-exec-10] Resolved [org.timoshuk.computershop.exception.EntityNotFoundException: User not found!]

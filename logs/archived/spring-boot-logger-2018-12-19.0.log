@@ -1021,7 +1021,7 @@ java.lang.IllegalArgumentException: Invalid character found in method name. HTTP
 2018-12-19 15:31:54,585 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-9] Initializing Spring DispatcherServlet 'dispatcherServlet'
 2018-12-19 15:31:54,586 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-9] Initializing Servlet 'dispatcherServlet'
 2018-12-19 15:31:54,603 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-9] Completed initialization in 15 ms
-2018-12-19 15:33:34,005 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8080-exec-6] Resolved [org.timoshuk.computershop.exception.UserNotFoundException: User not found!]
+2018-12-19 15:33:34,005 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8080-exec-6] Resolved [org.timoshuk.computershop.exception.EntityNotFoundException: User not found!]
 2018-12-19 15:34:44,397 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-4] Error parsing HTTP request header
  Note: further occurrences of HTTP header parsing errors will be logged at DEBUG level.
 java.lang.IllegalArgumentException: Invalid character found in method name. HTTP method names must be tokens
@@ -1124,7 +1124,7 @@ java.lang.IllegalArgumentException: Invalid character found in method name. HTTP
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
-2018-12-19 16:07:51,993 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8080-exec-9] Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [1] in public org.timoshuk.computershop.DTO.UserDTO org.timoshuk.computershop.controller.UserController.changeUser(java.lang.Long,org.timoshuk.computershop.DTO.UserDTO,java.security.Principal): [Field error in object 'userDTO' on field 'login': rejected value [pafafa]; codes [Null.userDTO.login,Null.login,Null.java.lang.String,Null]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userDTO.login,login]; arguments []; default message [login]]; default message [должно быть незадано]] ]
+2018-12-19 16:07:51,993 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8080-exec-9] Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [1] in public org.timoshuk.computershop.DTO.UserDTO org.timoshuk.computershop.controller.customer.UserController.changeUser(java.lang.Long,org.timoshuk.computershop.DTO.UserDTO,java.security.Principal): [Field error in object 'userDTO' on field 'login': rejected value [pafafa]; codes [Null.userDTO.login,Null.login,Null.java.lang.String,Null]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userDTO.login,login]; arguments []; default message [login]]; default message [должно быть незадано]] ]
 2018-12-19 16:08:11,666 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8080-exec-10] Resolved [org.timoshuk.computershop.exception.AccessDeniedException: You can not change this account, because you are not its owner!]
 2018-12-19 16:09:48,740 INFO org.springframework.boot.StartupInfoLogger [main] Starting Application on WIN-C3L8TOODV5O with PID 8372 (C:\Users\User\IdeaProjects\computershop\target\classes started by User in C:\Users\User\IdeaProjects\computershop)
 2018-12-19 16:09:48,748 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
@@ -1179,7 +1179,7 @@ org.hibernate.TransientObjectException: The given object has a null identifier: 
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
 	at com.sun.proxy.$Proxy92.update(Unknown Source)
-	at org.timoshuk.computershop.controller.UserController.changeUser(UserController.java:44)
+	at org.timoshuk.computershop.controller.customer.UserController.changeUser(UserController.java:44)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1320,7 +1320,7 @@ org.hibernate.TransientObjectException: The given object has a null identifier: 
 2018-12-19 16:18:03,642 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
 2018-12-19 16:18:03,643 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
 2018-12-19 16:18:03,659 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 14 ms
-2018-12-19 16:18:05,186 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8080-exec-1] Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [1] in public org.timoshuk.computershop.DTO.UserDTO org.timoshuk.computershop.controller.UserController.changeUser(java.lang.Long,org.timoshuk.computershop.DTO.UserDTO,java.security.Principal): [Field error in object 'userDTO' on field 'email': rejected value [paf]; codes [Email.userDTO.email,Email.email,Email.java.lang.String,Email]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userDTO.email,email]; arguments []; default message [email],[Ljavax.validation.constraints.Pattern$Flag;@799968bb,org.springframework.validation.beanvalidation.SpringValidatorAdapter$ResolvableAttribute@73c02a2]; default message [Email incorrect! It must be like: email@email.com!]] ]
+2018-12-19 16:18:05,186 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8080-exec-1] Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [1] in public org.timoshuk.computershop.DTO.UserDTO org.timoshuk.computershop.controller.customer.UserController.changeUser(java.lang.Long,org.timoshuk.computershop.DTO.UserDTO,java.security.Principal): [Field error in object 'userDTO' on field 'email': rejected value [paf]; codes [Email.userDTO.email,Email.email,Email.java.lang.String,Email]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userDTO.email,email]; arguments []; default message [email],[Ljavax.validation.constraints.Pattern$Flag;@799968bb,org.springframework.validation.beanvalidation.SpringValidatorAdapter$ResolvableAttribute@73c02a2]; default message [Email incorrect! It must be like: email@email.com!]] ]
 2018-12-19 16:18:46,552 INFO org.springframework.boot.StartupInfoLogger [main] Starting Application on WIN-C3L8TOODV5O with PID 16380 (C:\Users\User\IdeaProjects\computershop\target\classes started by User in C:\Users\User\IdeaProjects\computershop)
 2018-12-19 16:18:46,558 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
 2018-12-19 16:18:50,185 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
@@ -1377,18 +1377,18 @@ org.hibernate.TransientObjectException: The given object has a null identifier: 
 2018-12-19 16:35:53,854 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'springSecurityFilterChain' to: [/*]
 2018-12-19 16:35:53,855 INFO org.springframework.boot.web.servlet.ServletRegistrationBean [localhost-startStop-1] Servlet dispatcherServlet mapped to [/]
 2018-12-19 16:35:57,792 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/web/servlet/config/annotation/DelegatingWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'itemCatalogController' method 
-public java.util.List<org.timoshuk.computershop.entity.products.Components.Case> org.timoshuk.computershop.controller.ItemCatalogController.showCatalogCase()
+public java.util.List<org.timoshuk.computershop.entity.products.Components.Case> org.timoshuk.computershop.controller.customer.ItemCatalogController.showCatalogCase()
 to {[/cpus],methods=[GET]}: There is already 'itemCatalogController' bean method
-public java.util.List<org.timoshuk.computershop.entity.products.Components.CPU> org.timoshuk.computershop.controller.ItemCatalogController.showCatalogCPU() mapped.
+public java.util.List<org.timoshuk.computershop.entity.products.Components.CPU> org.timoshuk.computershop.controller.customer.ItemCatalogController.showCatalogCPU() mapped.
 2018-12-19 16:35:57,803 INFO org.apache.juli.logging.DirectJDKLog [main] Stopping service [Tomcat]
 2018-12-19 16:35:57,839 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [main] 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
 2018-12-19 16:35:57,891 ERROR org.springframework.boot.SpringApplication [main] Application run failed
 org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/web/servlet/config/annotation/DelegatingWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'itemCatalogController' method 
-public java.util.List<org.timoshuk.computershop.entity.products.Components.Case> org.timoshuk.computershop.controller.ItemCatalogController.showCatalogCase()
+public java.util.List<org.timoshuk.computershop.entity.products.Components.Case> org.timoshuk.computershop.controller.customer.ItemCatalogController.showCatalogCase()
 to {[/cpus],methods=[GET]}: There is already 'itemCatalogController' bean method
-public java.util.List<org.timoshuk.computershop.entity.products.Components.CPU> org.timoshuk.computershop.controller.ItemCatalogController.showCatalogCPU() mapped.
+public java.util.List<org.timoshuk.computershop.entity.products.Components.CPU> org.timoshuk.computershop.controller.customer.ItemCatalogController.showCatalogCPU() mapped.
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1745)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:576)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498)
@@ -1407,9 +1407,9 @@ public java.util.List<org.timoshuk.computershop.entity.products.Components.CPU> 
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
 	at org.timoshuk.computershop.Application.main(Application.java:10)
 Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'itemCatalogController' method 
-public java.util.List<org.timoshuk.computershop.entity.products.Components.Case> org.timoshuk.computershop.controller.ItemCatalogController.showCatalogCase()
+public java.util.List<org.timoshuk.computershop.entity.products.Components.Case> org.timoshuk.computershop.controller.customer.ItemCatalogController.showCatalogCase()
 to {[/cpus],methods=[GET]}: There is already 'itemCatalogController' bean method
-public java.util.List<org.timoshuk.computershop.entity.products.Components.CPU> org.timoshuk.computershop.controller.ItemCatalogController.showCatalogCPU() mapped.
+public java.util.List<org.timoshuk.computershop.entity.products.Components.CPU> org.timoshuk.computershop.controller.customer.ItemCatalogController.showCatalogCPU() mapped.
 	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.assertUniqueMethodMapping(AbstractHandlerMethodMapping.java:599)
 	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:567)
 	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:294)
@@ -1437,18 +1437,18 @@ public java.util.List<org.timoshuk.computershop.entity.products.Components.CPU> 
 2018-12-19 16:37:04,374 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'springSecurityFilterChain' to: [/*]
 2018-12-19 16:37:04,374 INFO org.springframework.boot.web.servlet.ServletRegistrationBean [localhost-startStop-1] Servlet dispatcherServlet mapped to [/]
 2018-12-19 16:37:06,769 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/web/servlet/config/annotation/DelegatingWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'itemCatalogController' method 
-public java.util.List<org.timoshuk.computershop.entity.products.Components.CPU> org.timoshuk.computershop.controller.ItemCatalogController.showCatalogCPU()
+public java.util.List<org.timoshuk.computershop.entity.products.Components.CPU> org.timoshuk.computershop.controller.customer.ItemCatalogController.showCatalogCPU()
 to {[/cpus],methods=[GET]}: There is already 'itemCatalogController' bean method
-public java.util.List<org.timoshuk.computershop.entity.products.Components.Case> org.timoshuk.computershop.controller.ItemCatalogController.showCatalogCase() mapped.
+public java.util.List<org.timoshuk.computershop.entity.products.Components.Case> org.timoshuk.computershop.controller.customer.ItemCatalogController.showCatalogCase() mapped.
 2018-12-19 16:37:06,775 INFO org.apache.juli.logging.DirectJDKLog [main] Stopping service [Tomcat]
 2018-12-19 16:37:06,799 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [main] 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
 2018-12-19 16:37:06,805 ERROR org.springframework.boot.SpringApplication [main] Application run failed
 org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/web/servlet/config/annotation/DelegatingWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'itemCatalogController' method 
-public java.util.List<org.timoshuk.computershop.entity.products.Components.CPU> org.timoshuk.computershop.controller.ItemCatalogController.showCatalogCPU()
+public java.util.List<org.timoshuk.computershop.entity.products.Components.CPU> org.timoshuk.computershop.controller.customer.ItemCatalogController.showCatalogCPU()
 to {[/cpus],methods=[GET]}: There is already 'itemCatalogController' bean method
-public java.util.List<org.timoshuk.computershop.entity.products.Components.Case> org.timoshuk.computershop.controller.ItemCatalogController.showCatalogCase() mapped.
+public java.util.List<org.timoshuk.computershop.entity.products.Components.Case> org.timoshuk.computershop.controller.customer.ItemCatalogController.showCatalogCase() mapped.
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1745)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:576)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498)
@@ -1467,9 +1467,9 @@ public java.util.List<org.timoshuk.computershop.entity.products.Components.Case>
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
 	at org.timoshuk.computershop.Application.main(Application.java:10)
 Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'itemCatalogController' method 
-public java.util.List<org.timoshuk.computershop.entity.products.Components.CPU> org.timoshuk.computershop.controller.ItemCatalogController.showCatalogCPU()
+public java.util.List<org.timoshuk.computershop.entity.products.Components.CPU> org.timoshuk.computershop.controller.customer.ItemCatalogController.showCatalogCPU()
 to {[/cpus],methods=[GET]}: There is already 'itemCatalogController' bean method
-public java.util.List<org.timoshuk.computershop.entity.products.Components.Case> org.timoshuk.computershop.controller.ItemCatalogController.showCatalogCase() mapped.
+public java.util.List<org.timoshuk.computershop.entity.products.Components.Case> org.timoshuk.computershop.controller.customer.ItemCatalogController.showCatalogCase() mapped.
 	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.assertUniqueMethodMapping(AbstractHandlerMethodMapping.java:599)
 	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:567)
 	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:294)

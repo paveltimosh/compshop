@@ -53,7 +53,7 @@ public class RestResponseEntityExceptionHandler extends ResponseEntityExceptionH
                 new HttpHeaders(), HttpStatus.FORBIDDEN, request);
     }
 
-    @ExceptionHandler(value = { UserNotFoundException.class })
+    @ExceptionHandler(value = { EntityNotFoundException.class })
     protected ResponseEntity<Object> handleUserNotFound(
             RuntimeException ex, WebRequest request) {
         String bodyOfResponse = ex.getMessage();
