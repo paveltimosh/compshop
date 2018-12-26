@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.timoshuk.computershop.DAO.impl.OrderDAOImpl;
+import org.timoshuk.computershop.DTO.CartPositionDTO;
 import org.timoshuk.computershop.entity.order.Order;
 import org.timoshuk.computershop.entity.order.OrderStatus;
 import org.timoshuk.computershop.entity.order.PaymentDescription;
@@ -66,12 +67,16 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-    public Order createOrderEntity( Long userId, int totalAmountOfOrder, String descr){
+    public Order createOrderEntity( Long userId, List<CartPositionDTO> cartList, String descr){
         Order order = null;
         LocalDate dateNow = LocalDate.now();
         LocalTime timeNow = LocalTime.now();
+        Integer totalAmount = 0;
+        for (CartPositionDTO cartPositionDTO : cartList) {
+            totalAmount = totalAmount + cartPositionDTO.getPrice()*cartPositionDTO.getCount();
+        }
         order = Order.builder().idOfCustomer(userId).dateOfOrder(dateNow).timeOfOrder(timeNow)
-                .totalAmountOrder(totalAmountOfOrder).orderStatus(OrderStatus.IS_CONFIRMED).orderDescription(descr).paymentDescription(
+                .totalAmountOrder(totalAmount).orderStatus(OrderStatus.IS_CONFIRMED).orderDescription(descr).paymentDescription(
                         PaymentDescription.builder()
                                 .build()
                 ).build();
@@ -79,23 +84,33 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-    public String createDescriptionOfOrder( HashMap<Item, Integer> cart ){
+    public String createDescriptionOfOrder( List<CartPositionDTO> cartList ){
         String orderDescription = "";
-        for (Map.Entry <Item, Integer> entry : cart.entrySet()){
-            orderDescription = orderDescription.concat(entry.getKey().getModel()).concat(" ");
+        for (CartPositionDTO cart : cartList){
+            orderDescription = orderDescription.concat(cart.getModelOfItem()).concat(" ");
         }
         return orderDescription;
     }
 
     @Override
     public void changePaymentDescrOfOrder(Order order, String paymentType){
-        LocalDate dateNow = LocalDate.now();
-        LocalTime timeNow = LocalTime.now();
-        order.setOrderStatus(OrderStatus.IS_PAYED);
-        order.setPaymentDescription(PaymentDescription.builder()
-                .typePayment(TypePayment.valueOf(paymentType))
-                .dateOfPayment(dateNow)
-                .timeOfPayment(timeNow)
-                .build());
+        if(paymentType.equals(TypePayment.BANK_CARD.toString()) || paymentType.equals(TypePayment.CASH.toString())
+                || paymentType.equals(TypePayment.CREDIT.toString()) ) {
+            LocalDate dateNow = LocalDate.now();
+            LocalTime timeNow = LocalTime.now();
+            order.setOrderStatus(OrderStatus.IS_PAYED);
+            order.setPaymentDescription(PaymentDescription.builder()
+                    .typePayment(TypePayment.valueOf(paymentType))
+                    .dateOfPayment(dateNow)
+                    .timeOfPayment(timeNow)
+                    .build());
+        }else {
+            throw new IllegalArgumentException("As payment type you can use only: BANK_CARD, CASH, CREDIT");
+        }
+    }
+
+    public void chekAvailabilityOfItems(){
+
+
     }
 }

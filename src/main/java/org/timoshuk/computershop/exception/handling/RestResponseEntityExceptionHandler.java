@@ -10,9 +10,7 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
-import org.timoshuk.computershop.exception.AccessDeniedException;
-import org.timoshuk.computershop.exception.UserExistsException;
-import org.timoshuk.computershop.exception.UserNotFoundException;
+import org.timoshuk.computershop.exception.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -47,7 +45,7 @@ public class RestResponseEntityExceptionHandler extends ResponseEntityExceptionH
         return handleExceptionInternal(ex, apiError, headers, apiError.getStatus(), request);
     }
 
-    @ExceptionHandler(value = { AccessDeniedException.class })
+    @ExceptionHandler(value = { AccessDeniedException.class, OrderIsPayedException.class})
     protected ResponseEntity<Object> handleAccessDenied(
             RuntimeException ex, WebRequest request) {
         String bodyOfResponse = ex.getMessage();
@@ -63,6 +61,21 @@ public class RestResponseEntityExceptionHandler extends ResponseEntityExceptionH
                 new HttpHeaders(), HttpStatus.NOT_FOUND, request);
     }
 
+    @ExceptionHandler(value = {NotEnoughMoneyException.class, IllegalArgumentException.class})
+    protected ResponseEntity<Object> handleNotAcceptable(
+            RuntimeException ex, WebRequest request) {
+        String bodyOfResponse = ex.getMessage();
+        return handleExceptionInternal(ex, bodyOfResponse,
+                new HttpHeaders(), HttpStatus.NOT_ACCEPTABLE, request);
+    }
+
+    @ExceptionHandler(value = {NotFoundException.class})
+    protected ResponseEntity<Object> handleNotFound(
+            RuntimeException ex, WebRequest request) {
+        String bodyOfResponse = ex.getMessage();
+        return handleExceptionInternal(ex, bodyOfResponse,
+                new HttpHeaders(), HttpStatus.NOT_FOUND, request);
+    }
 
 }
 

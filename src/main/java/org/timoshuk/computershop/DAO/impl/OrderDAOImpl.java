@@ -22,4 +22,5 @@ public class OrderDAOImpl extends EntityDAOImpl<Order, Long> {
         orderList = query.list();
         return orderList;
     }
+
 }

@@ -1,24 +1,28 @@
 package org.timoshuk.computershop.controller;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.ModelAndView;
+import org.timoshuk.computershop.DTO.CartPositionDTO;
 import org.timoshuk.computershop.DTO.UserDTO;
 import org.timoshuk.computershop.entity.order.Order;
 import org.timoshuk.computershop.entity.order.OrderStatus;
 import org.timoshuk.computershop.entity.order.TypePayment;
-import org.timoshuk.computershop.entity.products.Item;
-import org.timoshuk.computershop.service.UserService;
-import org.timoshuk.computershop.util.MessageManager;
+import org.timoshuk.computershop.exception.AccessDeniedException;
+import org.timoshuk.computershop.exception.NotEnoughMoneyException;
+import org.timoshuk.computershop.exception.NotFoundException;
+import org.timoshuk.computershop.exception.OrderIsPayedException;
 import org.timoshuk.computershop.service.OrderService;
-
-import javax.servlet.http.HttpSession;
-import java.util.HashMap;
+import org.timoshuk.computershop.service.UserService;
+import java.security.Principal;
 import java.util.List;
 
-@Controller
+@RestController
+@RequestMapping("users/orders")
 public class OrderController {
+
+    private static final Logger LOG = LoggerFactory.getLogger(OrderController.class);
 
     @Autowired
     private OrderService orderService;
@@ -26,82 +30,79 @@ public class OrderController {
     @Autowired
     private UserService userService;
 
-    @RequestMapping(value = "/make_order", method = RequestMethod.POST)
-    public ModelAndView makeOrder(@RequestParam String summa,
-                                  @SessionAttribute UserDTO user,
-                                  HttpSession session) {
-        ModelAndView modelAndView = new ModelAndView("user/cart");
-        HashMap<Item, Integer> cart = (HashMap<Item, Integer>) session.getAttribute("cart");
-        if(!cart.isEmpty()){
-            int totalAmountOfOrder = Integer.valueOf(summa.trim());
-            String orderDescription = orderService.createDescriptionOfOrder( cart);
-            Order order = orderService.createOrderEntity(user.getId(), totalAmountOfOrder, orderDescription.trim());
-            orderService.create(order);
-            cart = new HashMap<>();
-            modelAndView.addObject("orderSuccessful", MessageManager.getProperty("message.orderSuccessful"));
-            session.setAttribute("cart", cart);
-        }else {
-            modelAndView.addObject("orderError", MessageManager.getProperty("message.orderError"));
-        }
-        return modelAndView;
+    @RequestMapping(method = RequestMethod.POST)
+    public Order makeOrder(@RequestBody List<CartPositionDTO> cart,
+                           Principal principal) {
+        UserDTO user = userService.findByLogin(principal.getName());
+        String descrOfOrder = orderService.createDescriptionOfOrder(cart);
+        Order order = orderService.createOrderEntity(user.getId(), cart,descrOfOrder);
+        orderService.create(order);
+        return order;
     }
 
-    @GetMapping("user/orders")
-    public ModelAndView showOrdersOfUser(@SessionAttribute UserDTO user){
-        ModelAndView modelAndView = new ModelAndView("user/orders");
+    @RequestMapping(method = RequestMethod.GET)
+    public List<Order> showOrdersOfUser(Principal principal){
+        LOG.debug("Method showOrdersOfUser began work");
+        String userLogin = principal.getName();
+        UserDTO user = userService.findByLogin(userLogin);
         List<Order> orderList = orderService.findAllByUserId(user.getId());
-        modelAndView.addObject("orders", orderList );
-        return modelAndView;
+        return orderList;
     }
 
-    @PostMapping("user/orders/delete")
-    public ModelAndView deleteOrderByUser(@RequestParam Long orderId,
-                                          @SessionAttribute UserDTO user){
-        ModelAndView modelAndView = new ModelAndView("user/orders");
+    @RequestMapping(value = "/{id}", method = RequestMethod.GET)
+    public Order showOrderById(@PathVariable("id") Long id,
+                                     Principal principal){
+        LOG.debug("Method showOrderById began work");
+        String userLogin = principal.getName();
+        UserDTO user = userService.findByLogin(userLogin);
+        Order order = orderService.findById(id);
+        if (order == null){
+            throw new NotFoundException("Order not found");
+        }
+        if(!order.getIdOfCustomer().equals(user.getId())){
+            throw new AccessDeniedException("You can't to see this order, because you are not the owner!");
+        }
+        return order;
+    }
+
+    @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
+    public void deleteOrderByUser(Principal principal,
+                                  @PathVariable("id") Long orderId){
         Order order = orderService.findById(orderId);
-        if (order != null && order.getOrderStatus().equals(OrderStatus.IS_CONFIRMED)){
+        UserDTO userDTO = userService.findById(order.getIdOfCustomer());
+        if (order == null){
+            throw new NotFoundException("Order not found");
+        }
+        if (userDTO.getLogin().equals(principal.getName())) {
             orderService.delete(order);
-            modelAndView.addObject("deleteOrderSuccess", MessageManager.getProperty("message.order.deleteSuccess"));
         }else {
-            modelAndView.addObject("deletePayedOrderError", MessageManager.getProperty("message.orderPayed.deleteError"));
+            throw new AccessDeniedException("You are not the owner of this order, so you can't delete it!");
         }
-        List<Order> orderList = orderService.findAllByUserId(user.getId());
-        modelAndView.addObject("orders", orderList );
-        return modelAndView;
     }
 
-    @PostMapping("user/orders/confirm")
-    public ModelAndView confirmOrder(@RequestParam Long orderId,
-                                     @RequestParam String paymentType,
-                                     @SessionAttribute UserDTO user,
-                                     HttpSession session){
-        ModelAndView modelAndView = new ModelAndView("redirect:/user/orders");
-        int ownMoney = 0;
-        if(user.getOwnMoney()!= null) {
-            ownMoney = user.getOwnMoney();
-        }
-        Order order = orderService.findById(orderId);
+    @RequestMapping(value = "/{id}/confirmation/{paymentType}", method = RequestMethod.PUT)
+    public Order confirmOrder(@PathVariable("id") Long idOrder,
+                              @PathVariable String paymentType,
+                              Principal principal){
+        String userLogin = principal.getName();
+        UserDTO user = userService.findByLogin(userLogin);
+        int ownMoney = user.getOwnMoney();
+        Order order = orderService.findById(idOrder);
         if(order.getOrderStatus().equals(OrderStatus.IS_PAYED)){
-            modelAndView.addObject("orderAlsoConfirmed", MessageManager.getProperty("message.orderAlsoConfirm"));
-            return modelAndView;
+            throw new OrderIsPayedException("Order already paid");
         }
         if(paymentType.equals(TypePayment.BANK_CARD.toString())){
             if (ownMoney >= order.getTotalAmountOrder()){
                 orderService.changePaymentDescrOfOrder(order, paymentType);
                 user.setOwnMoney(ownMoney - order.getTotalAmountOrder());
                 userService.update(user);
-                session.setAttribute("user", user);
-                modelAndView.addObject("orderConfirmSuc", MessageManager.getProperty("message.orderConfirmSuccessful"));
             }else {
-                modelAndView.addObject("orderConfirmError", MessageManager.getProperty("message.orderConfirmError"));
+                throw new NotEnoughMoneyException("User don't have enough money!");
             }
         }else {
             orderService.changePaymentDescrOfOrder(order, paymentType);
-            modelAndView.addObject("orderConfirmSuc", MessageManager.getProperty("message.orderConfirmSuccessful"));
         }
         orderService.update(order);
-        List<Order> orderList = orderService.findAllByUserId(user.getId());
-        modelAndView.addObject("orders", orderList );
-        return modelAndView;
+        return order;
     }
 }

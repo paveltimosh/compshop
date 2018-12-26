@@ -1,5 +1,6 @@
 package org.timoshuk.computershop.entity.order;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.*;
 import org.timoshuk.computershop.util.LocalDateAttributeConverter;
 import org.timoshuk.computershop.util.LocalTimeAttributeConverter;
@@ -36,10 +37,12 @@ public class Order implements Serializable {
 
     @Column(name = "date_of_order")
     @Convert(converter = LocalDateAttributeConverter.class)
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     private LocalDate dateOfOrder;
 
     @Column(name = "time_of_order")
     @Convert(converter = LocalTimeAttributeConverter.class)
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "HH:mm:ss")
     private LocalTime timeOfOrder;
 
     @Column(name = "total_amount_of_order")

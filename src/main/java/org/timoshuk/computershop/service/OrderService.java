@@ -1,9 +1,8 @@
 package org.timoshuk.computershop.service;
 
+import org.timoshuk.computershop.DTO.CartPositionDTO;
 import org.timoshuk.computershop.entity.order.Order;
-import org.timoshuk.computershop.entity.products.Item;
 
-import java.util.HashMap;
 import java.util.List;
 
 public interface OrderService {
@@ -14,7 +13,7 @@ public interface OrderService {
     void delete(final Order order);
     void deleteById(Long id);
     List<Order> findAllByUserId(Long userId);
-    Order createOrderEntity( Long userId, int totalAmountOfOrder, String descr);
-    String createDescriptionOfOrder( HashMap<Item, Integer> cart );
+    Order createOrderEntity( Long userId, List<CartPositionDTO> cartList, String descr);
+    String createDescriptionOfOrder(List<CartPositionDTO> cartList );
     void changePaymentDescrOfOrder(Order order, String paymentType);
 }

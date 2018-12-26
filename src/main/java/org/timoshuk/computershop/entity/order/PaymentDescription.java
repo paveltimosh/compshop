@@ -1,5 +1,6 @@
 package org.timoshuk.computershop.entity.order;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.*;
 import org.timoshuk.computershop.util.LocalDateAttributeConverter;
 import org.timoshuk.computershop.util.LocalTimeAttributeConverter;
@@ -10,38 +11,31 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 
 @Builder
-@Getter
-@Setter
-@ToString()
-@EqualsAndHashCode()
+@Data
 @Embeddable
 @Table(name = "orders")
 public class PaymentDescription implements Serializable {
 
     private static final long serialVersionUID = 7977952600198651569L;
 
-    /*@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "id_of_payment")
-    @SequenceGenerator(name = "id_of_payment", sequenceName = "id_of_payment_seq", allocationSize = 1)
-    private Long id;*/
-
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @Convert(converter = LocalDateAttributeConverter.class)
     private LocalDate dateOfPayment;
 
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "HH:mm:ss")
     @Convert(converter = LocalTimeAttributeConverter.class)
     private LocalTime timeOfPayment;
 
     @Enumerated(EnumType.STRING)
     private TypePayment typePayment;
 
-    public PaymentDescription(){
-    }
-
-    public PaymentDescription( LocalDate dateOfPayment, LocalTime timeOfPayment, TypePayment typePayment) {
-
+    public PaymentDescription(LocalDate dateOfPayment, LocalTime timeOfPayment, TypePayment typePayment) {
         this.dateOfPayment = dateOfPayment;
         this.timeOfPayment = timeOfPayment;
         this.typePayment = typePayment;
     }
 
+    public PaymentDescription() {
 
+    }
 }

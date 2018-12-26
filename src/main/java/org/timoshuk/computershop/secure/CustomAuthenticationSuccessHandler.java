@@ -17,10 +17,16 @@ import org.springframework.security.web.savedrequest.RequestCache;
 import org.springframework.security.web.savedrequest.SavedRequest;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
+import org.timoshuk.computershop.DTO.UserDTO;
+import org.timoshuk.computershop.entity.products.Item;
+import org.timoshuk.computershop.service.UserService;
 
 
 @Component("customAuthenticationSuccessHandler")
 public class CustomAuthenticationSuccessHandler extends SimpleUrlAuthenticationSuccessHandler {
+
+    @Autowired
+    private UserService userService;
 
     private RequestCache requestCache = new HttpSessionRequestCache();
 
@@ -29,15 +35,23 @@ public class CustomAuthenticationSuccessHandler extends SimpleUrlAuthenticationS
         final SavedRequest savedRequest = requestCache.getRequest(request, response);
         if (savedRequest == null) {
             clearAuthenticationAttributes(request);
+            System.out.println("!!");
             return;
         }
         final String targetUrlParameter = getTargetUrlParameter();
         if (isAlwaysUseDefaultTargetUrl() || (targetUrlParameter != null && StringUtils.hasText(request.getParameter(targetUrlParameter)))) {
             requestCache.removeRequest(request, response);
             clearAuthenticationAttributes(request);
+            System.out.println("!!!");
             return;
         }
+        HashMap<Item, Integer> cart = new HashMap<>();
+        UserDTO userDTO = userService.findByLogin(authentication.getName());
 
+        request.getSession().setAttribute("user", userDTO);
+        request.getSession().setAttribute("role", userDTO.getUserType().toString());
+        request.getSession().setAttribute("cart", cart);
+        System.out.println("юзер из сессии" + request.getSession().getAttribute("user"));
         clearAuthenticationAttributes(request);
     }
 
