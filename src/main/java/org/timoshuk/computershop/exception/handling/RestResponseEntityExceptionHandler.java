@@ -69,13 +69,5 @@ public class RestResponseEntityExceptionHandler extends ResponseEntityExceptionH
                 new HttpHeaders(), HttpStatus.NOT_ACCEPTABLE, request);
     }
 
-    @ExceptionHandler(value = {NotFoundException.class})
-    protected ResponseEntity<Object> handleNotFound(
-            RuntimeException ex, WebRequest request) {
-        String bodyOfResponse = ex.getMessage();
-        return handleExceptionInternal(ex, bodyOfResponse,
-                new HttpHeaders(), HttpStatus.NOT_FOUND, request);
-    }
-
 }
 

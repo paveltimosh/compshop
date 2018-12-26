@@ -7,7 +7,7 @@ import java.io.Serializable;
 
 @Getter
 @Setter
-@EqualsAndHashCode(callSuper = true, of = {"id", "model"})
+@EqualsAndHashCode(callSuper = true, of = {"id"})
 @Entity
 @Table(name = "computers")
 @NoArgsConstructor
@@ -17,8 +17,8 @@ public class Computer extends Item implements Serializable {
     private static final long serialVersionUID = 2967751437487461522L;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    @Column(name = "id")
+    @GeneratedValue(strategy=GenerationType.SEQUENCE, generator = "comp_seq")
+    @SequenceGenerator(name = "comp_seq", sequenceName = "id_component_seq", allocationSize = 1)
     private Long id;
 
     @Column(name = "price")

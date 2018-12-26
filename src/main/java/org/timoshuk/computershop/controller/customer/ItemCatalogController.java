@@ -33,7 +33,8 @@ public class ItemCatalogController {
     private final ComputerService computerService;
 
     @Autowired
-    public ItemCatalogController(RamService ramService, VideocardService videocardService, CpuService cpuService, CaseService caseService, MotherboardService motherboardService, ComputerService computerService) {
+    public ItemCatalogController(RamService ramService, VideocardService videocardService, CpuService cpuService,
+                                 CaseService caseService, MotherboardService motherboardService, ComputerService computerService) {
         this.ramService = ramService;
         this.videocardService = videocardService;
         this.cpuService = cpuService;

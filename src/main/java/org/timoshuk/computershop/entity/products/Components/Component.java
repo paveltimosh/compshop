@@ -5,6 +5,7 @@ import lombok.*;
 import org.timoshuk.computershop.entity.products.Item;
 
 import javax.persistence.*;
+import javax.validation.constraints.Digits;
 
 @Getter
 @Setter
@@ -16,10 +17,12 @@ public abstract class Component extends Item {
 
     @Id
     @Setter(value = AccessLevel.PRIVATE)
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy=GenerationType.SEQUENCE, generator = "comp_seq")
+    @SequenceGenerator(name = "comp_seq", sequenceName = "id_component_seq", allocationSize = 1)
     @Column(name = "id")
     private Long id;
 
+    @Digits(integer = 6,fraction = 0, message = "It can be only 1-2 digits")
     @Column(name = "price")
     private Integer price;
 
