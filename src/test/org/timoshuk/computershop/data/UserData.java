@@ -13,7 +13,7 @@ public class UserData {
 
     public static final String USER_LOGIN = "petrov12";
     public static final String USER_PASSWORD = "petrov";
-    public static final String USER_FIRST_NAME = "Jean-Louis Brian";
+    public static final String USER_FIRST_NAME = "JeanLouis Brian";
     public static final String USER_EMAIL = "dasafsf@fsefsge";
     public static final String USER_LAST_NAME = "Dgigan";
     public static final String USER_PHONE = "298745652";

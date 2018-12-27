@@ -57,7 +57,7 @@ public class UserServiceImpl implements UserService {
 
     @Transactional
     @Override
-    public UserDTO createUser(UserDTO userDTO) {
+    public UserDTO createUser(UserDTO userDTO) throws UserExistsException{
         userDTO.setPassword(passwordEncoder.encode(userDTO.getPassword()));
         userDTO.setUserType(UserType.USER);
         User user = userDtoParser.createEntityFromDTO(userDTO);

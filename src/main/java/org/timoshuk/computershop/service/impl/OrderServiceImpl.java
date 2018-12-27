@@ -131,14 +131,18 @@ public class OrderServiceImpl implements OrderService {
     @Override
     public Order createOrderEntity( Long userId, List<CartPositionDTO> cartList, String descr){
         Order order = null;
-        LocalDate dateNow = LocalDate.now();
-        LocalTime timeNow = LocalTime.now();
         Integer totalAmount = 0;
         for (CartPositionDTO cartPositionDTO : cartList) {
             totalAmount = totalAmount + cartPositionDTO.getPrice()*cartPositionDTO.getCount();
         }
-        order = Order.builder().idOfCustomer(userId).dateOfOrder(dateNow).timeOfOrder(timeNow)
-                .totalAmountOrder(totalAmount).orderStatus(OrderStatus.IS_CONFIRMED).orderDescription(descr).paymentDescription(
+        order = Order.builder()
+                .idOfCustomer(userId)
+                .dateOfOrder(LocalDate.now())
+                .timeOfOrder(LocalTime.now())
+                .totalAmountOrder(totalAmount)
+                .orderStatus(OrderStatus.IS_CONFIRMED)
+                .orderDescription(descr)
+                .paymentDescription(
                         PaymentDescription.builder()
                                 .build()
                 ).build();
@@ -157,13 +161,11 @@ public class OrderServiceImpl implements OrderService {
     private void changePaymentDescrOfOrder(Order order, String paymentType){
         if(paymentType.equals(TypePayment.BANK_CARD.toString()) || paymentType.equals(TypePayment.CASH.toString())
                 || paymentType.equals(TypePayment.CREDIT.toString()) ) {
-            LocalDate dateNow = LocalDate.now();
-            LocalTime timeNow = LocalTime.now();
             order.setOrderStatus(OrderStatus.IS_PAYED);
             order.setPaymentDescription(PaymentDescription.builder()
                     .typePayment(TypePayment.valueOf(paymentType))
-                    .dateOfPayment(dateNow)
-                    .timeOfPayment(timeNow)
+                    .dateOfPayment(LocalDate.now())
+                    .timeOfPayment(LocalTime.now())
                     .build());
         }else {
             throw new IllegalArgumentException("As payment type you can use only: BANK_CARD, CASH, CREDIT");
