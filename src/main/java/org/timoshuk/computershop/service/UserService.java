@@ -9,7 +9,7 @@ public interface UserService {
 
     UserDTO findById(Long id);
     List<UserDTO> findAll();
-    void createUser(UserDTO entity);
+    UserDTO createUser(UserDTO entity);
     void update(UserDTO entity);
     void delete(User entity);
     void deleteById(Long id);

@@ -57,13 +57,14 @@ public class UserServiceImpl implements UserService {
 
     @Transactional
     @Override
-    public void createUser(UserDTO userDTO) {
+    public UserDTO createUser(UserDTO userDTO) {
         userDTO.setPassword(passwordEncoder.encode(userDTO.getPassword()));
         userDTO.setUserType(UserType.USER);
         User user = userDtoParser.createEntityFromDTO(userDTO);
         if(validateUser(user)) {
             userDAO.create(user);
         }
+        return userDTO;
     }
 
     @Transactional

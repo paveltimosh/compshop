@@ -18,7 +18,8 @@ public class MainController {
     private UserService userService;
 
     @JsonView(UserDTOview.ShowUser.class)
-    @RequestMapping(value = "/registration", method = RequestMethod.POST)
+    @RequestMapping(value = "/" +
+            "", method = RequestMethod.POST)
     @ResponseStatus(HttpStatus.CREATED)
     public UserDTO registerUser(@Validated(CreateNewUser.class) @RequestBody UserDTO userDTO){
         userService.createUser(userDTO);
