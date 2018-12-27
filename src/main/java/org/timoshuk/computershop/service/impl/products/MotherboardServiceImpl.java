@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.timoshuk.computershop.entity.products.Components.MotherBoard;
 import org.timoshuk.computershop.DAO.impl.productDAO.MotherboardDAOImpl;
+import org.timoshuk.computershop.exception.EntityNotFoundException;
 import org.timoshuk.computershop.service.MotherboardService;
 
 import java.util.List;
@@ -18,7 +19,11 @@ public class MotherboardServiceImpl implements MotherboardService {
     @Transactional
     @Override
     public MotherBoard findById(Long id) {
-        return motherboardDAO.findById(id);
+        MotherBoard motherBoard = motherboardDAO.findById(id);
+        if(motherBoard == null){
+            throw new EntityNotFoundException("Motherboard not found");
+        }
+        return motherBoard;
     }
 
     @Transactional
@@ -48,6 +53,7 @@ public class MotherboardServiceImpl implements MotherboardService {
     @Transactional
     @Override
     public void deleteById(Long id) {
+        findById(id);
         motherboardDAO.deleteById(id);
     }
 }

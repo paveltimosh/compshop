@@ -3,6 +3,7 @@ package org.timoshuk.computershop.service.impl.products;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.timoshuk.computershop.exception.EntityNotFoundException;
 import org.timoshuk.computershop.service.RamService;
 import org.timoshuk.computershop.entity.products.Components.RAM;
 import org.timoshuk.computershop.DAO.impl.productDAO.RamDAOImpl;
@@ -18,7 +19,11 @@ public class RamServiceImpl implements RamService {
     @Transactional
     @Override
     public RAM findById(Long id) {
-        return ramDAO.findById(id);
+        RAM ram = ramDAO.findById(id);
+        if (ram == null){
+            throw new EntityNotFoundException("RAM not found");
+        }
+        return ram;
     }
 
     @Transactional
@@ -48,6 +53,10 @@ public class RamServiceImpl implements RamService {
     @Transactional
     @Override
     public void deleteById(Long id) {
+        RAM ram = ramDAO.findById(id);
+        if (ram == null){
+            throw new EntityNotFoundException("RAM not found");
+        }
         ramDAO.deleteById(id);
     }
 }

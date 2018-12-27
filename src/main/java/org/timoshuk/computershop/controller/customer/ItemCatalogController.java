@@ -92,22 +92,4 @@ public class ItemCatalogController {
         return computer;
     }
 
-    /*@PostMapping("/addToCart")
-    public ModelAndView addToCart(@RequestParam String itemType,
-                                  @RequestParam Long id,
-                                  HttpSession session) {
-        ModelAndView modelAndView = getModelAndViewByType(itemType);
-        UserDTO user = (UserDTO) session.getAttribute("user");
-        HashMap<Item, Integer> cart = (HashMap<Item, Integer>) session.getAttribute("cart");
-        if(user == null){
-            modelAndView.addObject("addToCartError", MessageManager.getProperty("message.addToCartError"));
-            return modelAndView;
-        }
-        Item item = defineAndGetItemFromDB(id, itemType);
-        cart.put(item,1);
-        session.setAttribute("cart", cart);
-        return modelAndView;
-    }
-*/
-
 }

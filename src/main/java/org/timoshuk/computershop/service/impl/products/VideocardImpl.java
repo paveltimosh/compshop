@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.timoshuk.computershop.entity.products.Components.VideoCard;
 import org.timoshuk.computershop.DAO.impl.productDAO.VideocardDAOImpl;
+import org.timoshuk.computershop.exception.EntityNotFoundException;
 import org.timoshuk.computershop.service.VideocardService;
 
 import java.util.List;
@@ -18,7 +19,11 @@ public class VideocardImpl implements VideocardService {
     @Transactional
     @Override
     public VideoCard findById(Long id) {
-        return videocardDAO.findById(id);
+        VideoCard videoCard = videocardDAO.findById(id);
+        if(videoCard == null){
+            throw new EntityNotFoundException("Video card not found");
+        }
+        return videoCard;
     }
 
     @Transactional
@@ -48,6 +53,10 @@ public class VideocardImpl implements VideocardService {
     @Transactional
     @Override
     public void deleteById(Long id) {
+        VideoCard videoCard = videocardDAO.findById(id);
+        if(videoCard == null){
+            throw new EntityNotFoundException("Video card not found");
+        }
         videocardDAO.deleteById(id);
     }
 }

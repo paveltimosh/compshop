@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.timoshuk.computershop.entity.products.Components.Case;
 import org.timoshuk.computershop.DAO.impl.productDAO.CaseDAOImpl;
+import org.timoshuk.computershop.exception.EntityNotFoundException;
 import org.timoshuk.computershop.service.CaseService;
 
 import java.util.List;
@@ -18,7 +19,11 @@ public class CaseServiceImpl implements CaseService {
     @Transactional
     @Override
     public Case findById(Long id) {
-        return caseDAO.findById(id);
+        Case aCase = caseDAO.findById(id);
+        if (aCase == null){
+            throw new EntityNotFoundException("The case not found");
+        }
+        return aCase;
     }
 
     @Transactional
@@ -48,6 +53,10 @@ public class CaseServiceImpl implements CaseService {
     @Transactional
     @Override
     public void deleteById(Long id) {
+        Case aCase = caseDAO.findById(id);
+        if (aCase == null){
+            throw new EntityNotFoundException("The case not found");
+        }
         caseDAO.deleteById(id);
     }
 }

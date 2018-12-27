@@ -1,6 +1,7 @@
 package org.timoshuk.computershop.service;
 
 import org.timoshuk.computershop.DTO.CartPositionDTO;
+import org.timoshuk.computershop.DTO.UserDTO;
 import org.timoshuk.computershop.entity.order.Order;
 
 import java.util.List;
@@ -17,5 +18,5 @@ public interface OrderService {
     void changeOrder(Order order, String orderStatus);
     Order createOrderEntity( Long userId, List<CartPositionDTO> cartList, String descr);
     String createDescriptionOfOrder(List<CartPositionDTO> cartList );
-    void changePaymentDescrOfOrder(Order order, String paymentType);
+    void confirmOrder(UserDTO user, Order order, String paymentType);
 }

@@ -7,13 +7,17 @@ import org.springframework.transaction.annotation.Transactional;
 import org.timoshuk.computershop.DAO.impl.OrderDAOImpl;
 import org.timoshuk.computershop.DAO.impl.UserDAOImpl;
 import org.timoshuk.computershop.DTO.CartPositionDTO;
+import org.timoshuk.computershop.DTO.UserDTO;
 import org.timoshuk.computershop.entity.order.Order;
 import org.timoshuk.computershop.entity.order.OrderStatus;
 import org.timoshuk.computershop.entity.order.PaymentDescription;
 import org.timoshuk.computershop.entity.order.TypePayment;
 import org.timoshuk.computershop.entity.products.Item;
 import org.timoshuk.computershop.exception.EntityNotFoundException;
+import org.timoshuk.computershop.exception.NotEnoughMoneyException;
+import org.timoshuk.computershop.exception.OrderIsPayedException;
 import org.timoshuk.computershop.service.OrderService;
+import org.timoshuk.computershop.service.UserService;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
@@ -29,6 +33,9 @@ public class OrderServiceImpl implements OrderService {
 
     @Autowired
     private UserDAOImpl userDAO;
+
+    @Autowired
+    private UserService userService;
 
     @Transactional
     @Override
@@ -101,6 +108,26 @@ public class OrderServiceImpl implements OrderService {
         return orderDAO.findAllByOrderStatus(orderStatus);
     }
 
+    @Transactional
+    @Override
+    public void confirmOrder(UserDTO user, Order order, String paymentType){
+        int ownMoney = user.getOwnMoney();
+        if(order.getOrderStatus().equals(OrderStatus.IS_PAYED)){
+            throw new OrderIsPayedException("Order already paid");
+        }
+        if(paymentType.equals(TypePayment.BANK_CARD.toString())){
+            if (ownMoney >= order.getTotalAmountOrder()){
+                changePaymentDescrOfOrder(order, paymentType);
+                user.setOwnMoney(ownMoney - order.getTotalAmountOrder());
+                userService.update(user);
+            }else {
+                throw new NotEnoughMoneyException("User don't have enough money!");
+            }
+        }else {
+            changePaymentDescrOfOrder(order, paymentType);
+        }
+    }
+
     @Override
     public Order createOrderEntity( Long userId, List<CartPositionDTO> cartList, String descr){
         Order order = null;
@@ -127,8 +154,7 @@ public class OrderServiceImpl implements OrderService {
         return orderDescription;
     }
 
-    @Override
-    public void changePaymentDescrOfOrder(Order order, String paymentType){
+    private void changePaymentDescrOfOrder(Order order, String paymentType){
         if(paymentType.equals(TypePayment.BANK_CARD.toString()) || paymentType.equals(TypePayment.CASH.toString())
                 || paymentType.equals(TypePayment.CREDIT.toString()) ) {
             LocalDate dateNow = LocalDate.now();
@@ -156,8 +182,4 @@ public class OrderServiceImpl implements OrderService {
         return acceptable;
     }
 
-    public void chekAvailabilityOfItems(){
-
-
-    }
 }

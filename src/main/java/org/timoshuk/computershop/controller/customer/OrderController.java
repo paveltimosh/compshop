@@ -7,11 +7,7 @@ import org.springframework.web.bind.annotation.*;
 import org.timoshuk.computershop.DTO.CartPositionDTO;
 import org.timoshuk.computershop.DTO.UserDTO;
 import org.timoshuk.computershop.entity.order.Order;
-import org.timoshuk.computershop.entity.order.OrderStatus;
-import org.timoshuk.computershop.entity.order.TypePayment;
 import org.timoshuk.computershop.exception.AccessDeniedException;
-import org.timoshuk.computershop.exception.NotEnoughMoneyException;
-import org.timoshuk.computershop.exception.OrderIsPayedException;
 import org.timoshuk.computershop.service.OrderService;
 import org.timoshuk.computershop.service.UserService;
 import java.security.Principal;
@@ -79,22 +75,8 @@ public class OrderController {
                               Principal principal){
         String userLogin = principal.getName();
         UserDTO user = userService.findByLogin(userLogin);
-        int ownMoney = user.getOwnMoney();
         Order order = orderService.findById(idOrder);
-        if(order.getOrderStatus().equals(OrderStatus.IS_PAYED)){
-            throw new OrderIsPayedException("Order already paid");
-        }
-        if(paymentType.equals(TypePayment.BANK_CARD.toString())){
-            if (ownMoney >= order.getTotalAmountOrder()){
-                orderService.changePaymentDescrOfOrder(order, paymentType);
-                user.setOwnMoney(ownMoney - order.getTotalAmountOrder());
-                userService.update(user);
-            }else {
-                throw new NotEnoughMoneyException("User don't have enough money!");
-            }
-        }else {
-            orderService.changePaymentDescrOfOrder(order, paymentType);
-        }
+        orderService.confirmOrder(user, order, paymentType);
         orderService.update(order);
         return order;
     }

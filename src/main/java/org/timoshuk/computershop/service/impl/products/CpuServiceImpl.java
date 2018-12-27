@@ -3,6 +3,7 @@ package org.timoshuk.computershop.service.impl.products;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.timoshuk.computershop.exception.EntityNotFoundException;
 import org.timoshuk.computershop.service.CpuService;
 import org.timoshuk.computershop.entity.products.Components.CPU;
 import org.timoshuk.computershop.DAO.impl.productDAO.CpuDAOImpl;
@@ -18,7 +19,11 @@ public class CpuServiceImpl implements CpuService {
     @Transactional
     @Override
     public CPU findById(Long id) {
-        return cpuDAO.findById(id);
+        CPU cpu = cpuDAO.findById(id);
+        if (cpu == null){
+            throw new EntityNotFoundException("Cpu not found!");
+        }
+        return cpu;
     }
 
     @Transactional

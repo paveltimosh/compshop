@@ -69,5 +69,6 @@ public class RestResponseEntityExceptionHandler extends ResponseEntityExceptionH
                 new HttpHeaders(), HttpStatus.NOT_ACCEPTABLE, request);
     }
 
+
 }
 
