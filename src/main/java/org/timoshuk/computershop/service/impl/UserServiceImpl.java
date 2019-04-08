@@ -70,7 +70,7 @@ public class UserServiceImpl implements UserService {
     @Transactional
     @Override
     public void update(UserDTO userDTO) {
-        User user = createUserEntityFromDTO(userDTO);
+        User user = userDtoParser.createEntityFromDTO(userDTO);
         userDAO.update(user);
     }
 
@@ -108,25 +108,6 @@ public class UserServiceImpl implements UserService {
     @Override
     public boolean checkBankCard(String bankCard) {
         return userDAO.checkBankCard(bankCard);
-    }
-
-
-    private User createUserEntityFromDTO(UserDTO userDTO){
-
-        User user = User.builder().userType(userDTO.getUserType())
-                .id(userDTO.getId())
-                .login(userDTO.getLogin())
-                .password(userDTO.getPassword())
-                .email(userDTO.getEmail())
-                .ownMoney(userDTO.getOwnMoney())
-                .address(userDTO.getAddress())
-                .firstName(userDTO.getFirstName())
-                .lastName(userDTO.getLastName())
-                .phoneNumber(userDTO.getPhoneNumber())
-                .userType(userDTO.getUserType())
-                .idCard(userDTO.getIdCard())
-                .build();
-        return user;
     }
 
     private boolean validateUser(User user) {

@@ -18,6 +18,8 @@ import org.timoshuk.computershop.config.WebConfig;
 import org.timoshuk.computershop.controller.customer.ItemCatalogController;
 import org.timoshuk.computershop.secure.WebSecurityConfig;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest
 @ContextConfiguration(classes = {WebConfig.class, WebSecurityConfig.class})
@@ -31,6 +33,11 @@ public class ItemCatalogControllerTest {
     @Before
     public void setUp() {
         this.mockMvc = MockMvcBuilders.standaloneSetup(itemCatalogController).build();
+    }
+
+    @Test
+    public void contexLoads() throws Exception {
+        assertThat(itemCatalogController).isNotNull();
     }
 
     @Test

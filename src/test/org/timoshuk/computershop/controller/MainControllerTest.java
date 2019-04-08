@@ -2,9 +2,7 @@ package org.timoshuk.computershop.controller;
 
 import io.restassured.RestAssured;
 import io.restassured.parsing.Parser;
-import net.minidev.json.JSONObject;
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,30 +10,26 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.web.server.LocalServerPort;
 import org.springframework.http.HttpStatus;
 import org.springframework.mock.web.MockHttpServletResponse;
-import org.springframework.stereotype.Controller;
 import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
-import org.springframework.test.context.web.WebAppConfiguration;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.test.web.servlet.request.MockHttpServletRequestBuilder;
-import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
-import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.util.NestedServletException;
 import org.timoshuk.computershop.DTO.UserDTO;
 import org.timoshuk.computershop.config.WebConfig;
 import org.timoshuk.computershop.data.UserData;
-import org.timoshuk.computershop.exception.UserExistsException;
 import org.timoshuk.computershop.secure.WebSecurityConfig;
+import org.timoshuk.computershop.service.UserService;
 import org.timoshuk.computershop.util.TestUtil;
 
 import static io.restassured.RestAssured.given;
-import static io.restassured.RestAssured.with;
 import static junit.framework.TestCase.assertEquals;
-import static org.hamcrest.Matchers.*;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.hamcrest.Matchers.containsString;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 
 @RunWith(SpringRunner.class)
 @Transactional
@@ -51,7 +45,6 @@ public class MainControllerTest {
     @Autowired
     private MainController mainController;
 
-
     @Before
     public void setUp() {
         this.mockMvc = MockMvcBuilders.standaloneSetup(mainController).build();
@@ -59,12 +52,16 @@ public class MainControllerTest {
         RestAssured.registerParser("text/plain", Parser.JSON);
     }
 
+    @Test
+    public void contexLoads() throws Exception {
+        assertThat(mainController).isNotNull();
+    }
 
     @Test
     @Rollback
     public void createdUser_ok() throws Exception {
         UserDTO userDTO = UserData.getUserDTO();
-        MockHttpServletRequestBuilder request = MockMvcRequestBuilders.post("/registration")
+        MockHttpServletRequestBuilder request = post("/registration")
                 .accept(TestUtil.APPLICATION_JSON_UTF8)
                 .content(TestUtil.convertObjectToJsonBytes(userDTO))
                 .contentType(TestUtil.APPLICATION_JSON_UTF8);

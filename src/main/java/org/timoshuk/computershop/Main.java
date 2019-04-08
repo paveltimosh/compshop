@@ -32,8 +32,8 @@ public class Main  {
             counter++;
         }
 
+        List <Integer> list1;
         System.out.println(list);
     }
-
 }
 

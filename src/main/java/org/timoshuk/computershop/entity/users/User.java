@@ -26,6 +26,7 @@ public class User implements Serializable{
     private Long id;
 
     @Column(name = "user_type")
+
     @Enumerated(EnumType.STRING)
     private UserType userType;
 
