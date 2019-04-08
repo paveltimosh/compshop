@@ -11,16 +11,7 @@ pipelines:
         caches:
           - maven
         script: # Modify the commands below to build your repository.
-          - mvn -B verify # -B batch mode makes Maven less verbose
-    - step:
-            name: Deploy to production
-            deployment: production
-            caches:
-              - pip
-            script:
-            - pipe: atlassian/heroku-deploy:0.1.1
-              variables:
-                HEROKU_API_KEY: '5d1cb4e6-91d2-45be-ac6a-b51db765ecbb'
-                HEROKU_APP_NAME: 'computershoptimoshuk'
-                ZIP_FILE: '<string>'
-
+                   - mvn clean install     
+                   # IMPORTANT here you need to define all the sets for your code to be build            
+                   - git push https://heroku:5d1cb4e6-91d2-45be-ac6a-b51db765ecbb@git.heroku.com/computershoptimoshuk.git HEAD:master 
+          
