@@ -1,0 +1,142 @@
+2018-12-21 00:23:04,293 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-7] Error parsing HTTP request header
+ Note: further occurrences of HTTP header parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in method name. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:428)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:684)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2018-12-21 11:13:57,948 INFO org.springframework.boot.StartupInfoLogger [main] Starting Application on WIN-C3L8TOODV5O with PID 20196 (C:\Users\User\IdeaProjects\computershop\target\classes started by User in C:\Users\User\IdeaProjects\computershop)
+2018-12-21 11:13:57,955 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2018-12-21 11:14:04,098 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2018-12-21 11:14:04,128 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2018-12-21 11:14:04,148 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2018-12-21 11:14:04,148 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet Engine: Apache Tomcat/8.5.34
+2018-12-21 11:14:04,171 INFO org.apache.juli.logging.DirectJDKLog [localhost-startStop-1] The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_162\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;D:\ptc\proe4\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;C:\WINDOWS\System32\OpenSSH\;C:\soft\apache-maven-3.5.4-src\apache-maven-3.5.4\bin;;D:\ptc2\bin;C:\Users\User\AppData\Local\Microsoft\WindowsApps;C:\soft\apache-maven-3.5.4\bin;;.]
+2018-12-21 11:14:05,807 INFO org.apache.juli.logging.DirectJDKLog [localhost-startStop-1] At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2018-12-21 11:14:05,818 INFO org.apache.juli.logging.DirectJDKLog [localhost-startStop-1] Initializing Spring embedded WebApplicationContext
+2018-12-21 11:14:05,818 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [localhost-startStop-1] Root WebApplicationContext: initialization completed in 7742 ms
+2018-12-21 11:14:05,870 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-12-21 11:14:05,871 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'springSecurityFilterChain' to: [/*]
+2018-12-21 11:14:05,872 INFO org.springframework.boot.web.servlet.ServletRegistrationBean [localhost-startStop-1] Servlet dispatcherServlet mapped to [/]
+2018-12-21 11:14:09,121 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@19827608, org.springframework.security.web.context.SecurityContextPersistenceFilter@619c93ca, org.springframework.security.web.header.HeaderWriterFilter@7ed49a7f, org.springframework.security.web.authentication.logout.LogoutFilter@402f8592, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@474749b8, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@265c1a7c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6aa5974e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7a388990, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@cc9ef8d, org.springframework.security.web.session.SessionManagementFilter@443cdaa4, org.springframework.security.web.access.ExceptionTranslationFilter@7ca492d9, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@31a136a6]
+2018-12-21 11:14:09,487 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2018-12-21 11:14:09,503 INFO org.apache.juli.logging.DirectJDKLog [main] Using a shared selector for servlet write/read
+2018-12-21 11:14:09,540 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2018-12-21 11:14:09,545 INFO org.springframework.boot.StartupInfoLogger [main] Started Application in 12.876 seconds (JVM running for 16.323)
+2018-12-21 11:21:14,996 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-10] Error parsing HTTP request header
+ Note: further occurrences of HTTP header parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in method name. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:428)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:684)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2018-12-21 11:21:15,028 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-9] Error parsing HTTP request header
+ Note: further occurrences of HTTP header parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in method name. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:428)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:684)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2018-12-21 11:42:17,860 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2018-12-21 11:42:17,872 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2018-12-21 11:42:18,167 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 291 ms
+2018-12-21 11:43:09,270 INFO org.springframework.boot.StartupInfoLogger [main] Starting Application on WIN-C3L8TOODV5O with PID 12524 (C:\Users\User\IdeaProjects\computershop\target\classes started by User in C:\Users\User\IdeaProjects\computershop)
+2018-12-21 11:43:09,276 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2018-12-21 11:43:16,014 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2018-12-21 11:43:16,049 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2018-12-21 11:43:16,068 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2018-12-21 11:43:16,069 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet Engine: Apache Tomcat/8.5.34
+2018-12-21 11:43:16,091 INFO org.apache.juli.logging.DirectJDKLog [localhost-startStop-1] The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_162\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;D:\ptc\proe4\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;C:\WINDOWS\System32\OpenSSH\;C:\soft\apache-maven-3.5.4-src\apache-maven-3.5.4\bin;;D:\ptc2\bin;C:\Users\User\AppData\Local\Microsoft\WindowsApps;C:\soft\apache-maven-3.5.4\bin;;.]
+2018-12-21 11:43:17,214 INFO org.apache.juli.logging.DirectJDKLog [localhost-startStop-1] At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2018-12-21 11:43:17,225 INFO org.apache.juli.logging.DirectJDKLog [localhost-startStop-1] Initializing Spring embedded WebApplicationContext
+2018-12-21 11:43:17,225 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [localhost-startStop-1] Root WebApplicationContext: initialization completed in 7735 ms
+2018-12-21 11:43:17,287 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-12-21 11:43:17,288 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'springSecurityFilterChain' to: [/*]
+2018-12-21 11:43:17,289 INFO org.springframework.boot.web.servlet.ServletRegistrationBean [localhost-startStop-1] Servlet dispatcherServlet mapped to [/]
+2018-12-21 11:43:20,806 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5d71b500, org.springframework.security.web.context.SecurityContextPersistenceFilter@35bd8bc9, org.springframework.security.web.header.HeaderWriterFilter@30922f8d, org.springframework.security.web.authentication.logout.LogoutFilter@30a9e3db, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@280fafd, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@4ed18798, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@45d56062, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@57bd6a8f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@8840c98, org.springframework.security.web.session.SessionManagementFilter@51ff3c4b, org.springframework.security.web.access.ExceptionTranslationFilter@36f6e521, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@43a4a9e5]
+2018-12-21 11:43:21,141 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2018-12-21 11:43:21,157 INFO org.apache.juli.logging.DirectJDKLog [main] Using a shared selector for servlet write/read
+2018-12-21 11:43:21,189 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2018-12-21 11:43:21,189 INFO org.springframework.boot.StartupInfoLogger [main] Started Application in 13.454 seconds (JVM running for 15.281)
+2018-12-21 11:45:36,810 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2018-12-21 11:45:36,811 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Initializing Servlet 'dispatcherServlet'
+2018-12-21 11:45:36,826 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Completed initialization in 12 ms
+2018-12-21 11:51:11,939 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-4] Error parsing HTTP request header
+ Note: further occurrences of HTTP header parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in method name. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:428)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:684)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2018-12-21 12:07:12,077 INFO org.springframework.boot.StartupInfoLogger [main] Starting Application on WIN-C3L8TOODV5O with PID 12372 (C:\Users\User\IdeaProjects\computershop\target\classes started by User in C:\Users\User\IdeaProjects\computershop)
+2018-12-21 12:07:12,085 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2018-12-21 12:07:17,797 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2018-12-21 12:07:17,817 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2018-12-21 12:07:17,830 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2018-12-21 12:07:17,831 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet Engine: Apache Tomcat/8.5.34
+2018-12-21 12:07:17,848 INFO org.apache.juli.logging.DirectJDKLog [localhost-startStop-1] The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_162\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;D:\ptc\proe4\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;C:\WINDOWS\System32\OpenSSH\;C:\soft\apache-maven-3.5.4-src\apache-maven-3.5.4\bin;;D:\ptc2\bin;C:\Users\User\AppData\Local\Microsoft\WindowsApps;C:\soft\apache-maven-3.5.4\bin;;.]
+2018-12-21 12:07:18,518 INFO org.apache.juli.logging.DirectJDKLog [localhost-startStop-1] At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2018-12-21 12:07:18,537 INFO org.apache.juli.logging.DirectJDKLog [localhost-startStop-1] Initializing Spring embedded WebApplicationContext
+2018-12-21 12:07:18,537 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [localhost-startStop-1] Root WebApplicationContext: initialization completed in 6282 ms
+2018-12-21 12:07:18,622 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-12-21 12:07:18,623 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'springSecurityFilterChain' to: [/*]
+2018-12-21 12:07:18,623 INFO org.springframework.boot.web.servlet.ServletRegistrationBean [localhost-startStop-1] Servlet dispatcherServlet mapped to [/]
+2018-12-21 12:07:22,264 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@c412556, org.springframework.security.web.context.SecurityContextPersistenceFilter@6aa5974e, org.springframework.security.web.header.HeaderWriterFilter@443cdaa4, org.springframework.security.web.authentication.logout.LogoutFilter@b2c4a8b, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@265c1a7c, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@5f395ce1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5bda157e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4e4162bc, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6f930e0, org.springframework.security.web.session.SessionManagementFilter@619c93ca, org.springframework.security.web.access.ExceptionTranslationFilter@7ed49a7f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2e0fdbe9]
+2018-12-21 12:07:22,762 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2018-12-21 12:07:22,782 INFO org.apache.juli.logging.DirectJDKLog [main] Using a shared selector for servlet write/read
+2018-12-21 12:07:22,844 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2018-12-21 12:07:22,850 INFO org.springframework.boot.StartupInfoLogger [main] Started Application in 12.45 seconds (JVM running for 13.954)
+2018-12-21 12:07:35,235 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2018-12-21 12:07:35,236 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2018-12-21 12:07:35,252 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 14 ms
+2018-12-21 12:07:36,009 INFO org.timoshuk.computershop.secure.CustomAccessDeniedHandler [http-nio-8080-exec-1] User 'pafafa' attempted to access the protected URL: /admins/41
+2018-12-21 12:08:41,034 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-3] Error parsing HTTP request header
+ Note: further occurrences of HTTP header parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in method name. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:428)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:684)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2018-12-21 12:08:41,045 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-4] Error parsing HTTP request header
+ Note: further occurrences of HTTP header parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in method name. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:428)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:684)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)

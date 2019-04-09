@@ -1,0 +1,248 @@
+2018-11-23 13:52:33,600 INFO org.springframework.boot.StartupInfoLogger [main] Starting Application on WIN-C3L8TOODV5O with PID 8064 (C:\Users\User\IdeaProjects\computershop\target\classes started by User in C:\Users\User\IdeaProjects\computershop)
+2018-11-23 13:52:33,606 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2018-11-23 13:52:36,174 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2018-11-23 13:52:36,192 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2018-11-23 13:52:36,203 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2018-11-23 13:52:36,204 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet Engine: Apache Tomcat/8.5.34
+2018-11-23 13:52:36,213 INFO org.apache.juli.logging.DirectJDKLog [localhost-startStop-1] The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_162\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;D:\ptc\proe4\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;C:\WINDOWS\System32\OpenSSH\;C:\soft\apache-maven-3.5.4-src\apache-maven-3.5.4\bin;;D:\ptc2\bin;C:\Users\User\AppData\Local\Microsoft\WindowsApps;C:\soft\apache-maven-3.5.4\bin;;.]
+2018-11-23 13:52:36,639 INFO org.apache.juli.logging.DirectJDKLog [localhost-startStop-1] At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2018-11-23 13:52:36,648 INFO org.apache.juli.logging.DirectJDKLog [localhost-startStop-1] Initializing Spring embedded WebApplicationContext
+2018-11-23 13:52:36,649 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [localhost-startStop-1] Root WebApplicationContext: initialization completed in 2963 ms
+2018-11-23 13:52:36,673 INFO org.springframework.boot.web.servlet.ServletRegistrationBean [localhost-startStop-1] Servlet dispatcherServlet mapped to [/]
+2018-11-23 13:52:36,679 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-11-23 13:52:37,075 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2018-11-23 13:52:37,086 INFO org.apache.juli.logging.DirectJDKLog [main] Using a shared selector for servlet write/read
+2018-11-23 13:52:37,109 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2018-11-23 13:52:37,113 INFO org.springframework.boot.StartupInfoLogger [main] Started Application in 4.436 seconds (JVM running for 5.933)
+2018-11-23 13:52:41,861 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2018-11-23 13:52:41,862 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2018-11-23 13:52:41,872 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 8 ms
+2018-11-23 13:52:41,894 WARN org.springframework.web.servlet.DispatcherServlet [http-nio-8080-exec-1] No mapping for GET /
+2018-11-23 13:52:54,467 INFO com.zaxxer.hikari.HikariDataSource [http-nio-8080-exec-3] HikariPool-1 - Starting...
+2018-11-23 13:52:54,601 INFO com.zaxxer.hikari.HikariDataSource [http-nio-8080-exec-3] HikariPool-1 - Start completed.
+2018-11-23 13:53:19,288 INFO UserController [http-nio-8080-exec-7] The  user with loginpafanya22 is logged in
+2018-11-23 22:16:57,322 INFO org.springframework.boot.StartupInfoLogger [main] Starting Application on WIN-C3L8TOODV5O with PID 4000 (C:\Users\User\IdeaProjects\computershop\target\classes started by User in C:\Users\User\IdeaProjects\computershop)
+2018-11-23 22:16:57,327 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2018-11-23 22:16:59,276 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2018-11-23 22:16:59,288 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2018-11-23 22:16:59,297 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2018-11-23 22:16:59,298 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet Engine: Apache Tomcat/8.5.34
+2018-11-23 22:16:59,306 INFO org.apache.juli.logging.DirectJDKLog [localhost-startStop-1] The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_162\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;D:\ptc\proe4\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;C:\WINDOWS\System32\OpenSSH\;C:\soft\apache-maven-3.5.4-src\apache-maven-3.5.4\bin;;D:\ptc2\bin;C:\Users\User\AppData\Local\Microsoft\WindowsApps;C:\soft\apache-maven-3.5.4\bin;;.]
+2018-11-23 22:16:59,563 INFO org.apache.juli.logging.DirectJDKLog [localhost-startStop-1] At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2018-11-23 22:16:59,570 INFO org.apache.juli.logging.DirectJDKLog [localhost-startStop-1] Initializing Spring embedded WebApplicationContext
+2018-11-23 22:16:59,571 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [localhost-startStop-1] Root WebApplicationContext: initialization completed in 2107 ms
+2018-11-23 22:16:59,586 INFO org.springframework.boot.web.servlet.ServletRegistrationBean [localhost-startStop-1] Servlet dispatcherServlet mapped to [/]
+2018-11-23 22:16:59,589 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-11-23 22:17:01,501 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userController' defined in file [C:\Users\User\IdeaProjects\computershop\target\classes\org\vironit\timoshuk\computershop\controller\UserController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanNotOfRequiredTypeException: Bean named 'userServiceImpl' is expected to be of type 'UserServiceImpl' but was actually of type 'com.sun.proxy.$Proxy75'
+2018-11-23 22:17:01,542 INFO org.apache.juli.logging.DirectJDKLog [main] Stopping service [Tomcat]
+2018-11-23 22:17:01,558 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [main] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2018-11-23 22:17:01,562 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The bean 'userServiceImpl' could not be injected as a 'UserServiceImpl' because it is a JDK dynamic proxy that implements:
+	UserService
+
+
+Action:
+
+Consider injecting the bean as one of its interfaces or forcing the use of CGLib-based proxies by setting proxyTargetClass=true on @EnableAsync and/or @EnableCaching.
+
+2018-11-23 22:18:43,311 DEBUG org.hibernate.validator.messageinterpolation.ResourceBundleMessageInterpolator [background-preinit] Loaded expression factory via original TCCL
+2018-11-23 22:18:43,475 INFO org.springframework.boot.StartupInfoLogger [main] Starting Application on WIN-C3L8TOODV5O with PID 21444 (C:\Users\User\IdeaProjects\computershop\target\classes started by User in C:\Users\User\IdeaProjects\computershop)
+2018-11-23 22:18:43,479 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2018-11-23 22:18:45,344 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2018-11-23 22:18:45,356 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2018-11-23 22:18:45,365 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2018-11-23 22:18:45,365 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet Engine: Apache Tomcat/8.5.34
+2018-11-23 22:18:45,372 INFO org.apache.juli.logging.DirectJDKLog [localhost-startStop-1] The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_162\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;D:\ptc\proe4\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;C:\WINDOWS\System32\OpenSSH\;C:\soft\apache-maven-3.5.4-src\apache-maven-3.5.4\bin;;D:\ptc2\bin;C:\Users\User\AppData\Local\Microsoft\WindowsApps;C:\soft\apache-maven-3.5.4\bin;;.]
+2018-11-23 22:18:45,725 INFO org.apache.juli.logging.DirectJDKLog [localhost-startStop-1] At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2018-11-23 22:18:45,735 INFO org.apache.juli.logging.DirectJDKLog [localhost-startStop-1] Initializing Spring embedded WebApplicationContext
+2018-11-23 22:18:45,736 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [localhost-startStop-1] Root WebApplicationContext: initialization completed in 2143 ms
+2018-11-23 22:18:45,757 INFO org.springframework.boot.web.servlet.ServletRegistrationBean [localhost-startStop-1] Servlet dispatcherServlet mapped to [/]
+2018-11-23 22:18:45,760 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-11-23 22:18:47,529 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userController' defined in file [C:\Users\User\IdeaProjects\computershop\target\classes\org\vironit\timoshuk\computershop\controller\UserController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanNotOfRequiredTypeException: Bean named 'userServiceImpl' is expected to be of type 'UserServiceImpl' but was actually of type 'com.sun.proxy.$Proxy75'
+2018-11-23 22:18:47,572 INFO org.apache.juli.logging.DirectJDKLog [main] Stopping service [Tomcat]
+2018-11-23 22:18:47,590 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [main] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2018-11-23 22:18:47,596 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The bean 'userServiceImpl' could not be injected as a 'UserServiceImpl' because it is a JDK dynamic proxy that implements:
+	UserService
+
+
+Action:
+
+Consider injecting the bean as one of its interfaces or forcing the use of CGLib-based proxies by setting proxyTargetClass=true on @EnableAsync and/or @EnableCaching.
+
+2018-11-23 22:21:45,558 INFO org.springframework.boot.StartupInfoLogger [main] Starting Application on WIN-C3L8TOODV5O with PID 17604 (C:\Users\User\IdeaProjects\computershop\target\classes started by User in C:\Users\User\IdeaProjects\computershop)
+2018-11-23 22:21:45,568 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2018-11-23 22:21:47,818 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.aop.config.internalAutoProxyCreator': Initialization of bean failed; nested exception is java.lang.NoClassDefFoundError: org/aspectj/lang/annotation/Pointcut
+2018-11-23 22:21:47,832 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [main] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2018-11-23 22:21:47,846 ERROR org.springframework.boot.SpringApplication [main] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.aop.config.internalAutoProxyCreator': Initialization of bean failed; nested exception is java.lang.NoClassDefFoundError: org/aspectj/lang/annotation/Pointcut
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:584)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.registerBeanPostProcessors(PostProcessorRegistrationDelegate.java:228)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:707)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:531)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at Application.main(Application.java:11)
+Caused by: java.lang.NoClassDefFoundError: org/aspectj/lang/annotation/Pointcut
+	at org.springframework.aop.aspectj.annotation.AbstractAspectJAdvisorFactory.<clinit>(AbstractAspectJAdvisorFactory.java:62)
+	at org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator.initBeanFactory(AnnotationAwareAspectJAutoProxyCreator.java:82)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.setBeanFactory(AbstractAdvisorAutoProxyCreator.java:63)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeAwareMethods(AbstractAutowireCapableBeanFactory.java:1767)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1732)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:576)
+	... 15 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.aspectj.lang.annotation.Pointcut
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:338)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 21 common frames omitted
+2018-11-23 22:26:57,620 INFO org.springframework.boot.StartupInfoLogger [main] Starting Application on WIN-C3L8TOODV5O with PID 1996 (C:\Users\User\IdeaProjects\computershop\target\classes started by User in C:\Users\User\IdeaProjects\computershop)
+2018-11-23 22:26:57,625 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2018-11-23 22:26:59,617 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2018-11-23 22:26:59,636 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2018-11-23 22:26:59,649 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2018-11-23 22:26:59,649 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet Engine: Apache Tomcat/8.5.34
+2018-11-23 22:26:59,658 INFO org.apache.juli.logging.DirectJDKLog [localhost-startStop-1] The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_162\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;D:\ptc\proe4\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;C:\WINDOWS\System32\OpenSSH\;C:\soft\apache-maven-3.5.4-src\apache-maven-3.5.4\bin;;D:\ptc2\bin;C:\Users\User\AppData\Local\Microsoft\WindowsApps;C:\soft\apache-maven-3.5.4\bin;;.]
+2018-11-23 22:26:59,991 INFO org.apache.juli.logging.DirectJDKLog [localhost-startStop-1] At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2018-11-23 22:26:59,999 INFO org.apache.juli.logging.DirectJDKLog [localhost-startStop-1] Initializing Spring embedded WebApplicationContext
+2018-11-23 22:26:59,999 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [localhost-startStop-1] Root WebApplicationContext: initialization completed in 2247 ms
+2018-11-23 22:27:00,020 INFO org.springframework.boot.web.servlet.ServletRegistrationBean [localhost-startStop-1] Servlet dispatcherServlet mapped to [/]
+2018-11-23 22:27:00,023 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-11-23 22:27:02,243 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userController' defined in file [C:\Users\User\IdeaProjects\computershop\target\classes\org\vironit\timoshuk\computershop\controller\UserController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanNotOfRequiredTypeException: Bean named 'userServiceImpl' is expected to be of type 'UserServiceImpl' but was actually of type 'com.sun.proxy.$Proxy75'
+2018-11-23 22:27:02,286 INFO org.apache.juli.logging.DirectJDKLog [main] Stopping service [Tomcat]
+2018-11-23 22:27:02,301 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [main] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2018-11-23 22:27:02,305 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The bean 'userServiceImpl' could not be injected as a 'UserServiceImpl' because it is a JDK dynamic proxy that implements:
+	UserService
+
+
+Action:
+
+Consider injecting the bean as one of its interfaces or forcing the use of CGLib-based proxies by setting proxyTargetClass=true on @EnableAsync and/or @EnableCaching.
+
+2018-11-23 22:27:45,210 INFO org.springframework.boot.StartupInfoLogger [main] Starting Application on WIN-C3L8TOODV5O with PID 20440 (C:\Users\User\IdeaProjects\computershop\target\classes started by User in C:\Users\User\IdeaProjects\computershop)
+2018-11-23 22:27:45,219 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2018-11-23 22:27:47,158 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2018-11-23 22:27:47,169 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2018-11-23 22:27:47,179 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2018-11-23 22:27:47,179 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet Engine: Apache Tomcat/8.5.34
+2018-11-23 22:27:47,185 INFO org.apache.juli.logging.DirectJDKLog [localhost-startStop-1] The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_162\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;D:\ptc\proe4\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;C:\WINDOWS\System32\OpenSSH\;C:\soft\apache-maven-3.5.4-src\apache-maven-3.5.4\bin;;D:\ptc2\bin;C:\Users\User\AppData\Local\Microsoft\WindowsApps;C:\soft\apache-maven-3.5.4\bin;;.]
+2018-11-23 22:27:47,480 INFO org.apache.juli.logging.DirectJDKLog [localhost-startStop-1] At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2018-11-23 22:27:47,487 INFO org.apache.juli.logging.DirectJDKLog [localhost-startStop-1] Initializing Spring embedded WebApplicationContext
+2018-11-23 22:27:47,487 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [localhost-startStop-1] Root WebApplicationContext: initialization completed in 2156 ms
+2018-11-23 22:27:47,505 INFO org.springframework.boot.web.servlet.ServletRegistrationBean [localhost-startStop-1] Servlet dispatcherServlet mapped to [/]
+2018-11-23 22:27:47,508 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-11-23 22:27:49,343 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userController': Unsatisfied dependency expressed through field 'userService'; nested exception is org.springframework.beans.factory.BeanNotOfRequiredTypeException: Bean named 'userServiceImpl' is expected to be of type 'UserServiceImpl' but was actually of type 'com.sun.proxy.$Proxy75'
+2018-11-23 22:27:49,391 INFO org.apache.juli.logging.DirectJDKLog [main] Stopping service [Tomcat]
+2018-11-23 22:27:49,410 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [main] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2018-11-23 22:27:49,416 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The bean 'userServiceImpl' could not be injected as a 'UserServiceImpl' because it is a JDK dynamic proxy that implements:
+	UserService
+
+
+Action:
+
+Consider injecting the bean as one of its interfaces or forcing the use of CGLib-based proxies by setting proxyTargetClass=true on @EnableAsync and/or @EnableCaching.
+
+2018-11-23 22:41:20,091 INFO org.springframework.boot.StartupInfoLogger [main] Starting Application on WIN-C3L8TOODV5O with PID 3628 (C:\Users\User\IdeaProjects\computershop\target\classes started by User in C:\Users\User\IdeaProjects\computershop)
+2018-11-23 22:41:20,100 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2018-11-23 22:41:22,385 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2018-11-23 22:41:22,401 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2018-11-23 22:41:22,411 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2018-11-23 22:41:22,411 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet Engine: Apache Tomcat/8.5.34
+2018-11-23 22:41:22,418 INFO org.apache.juli.logging.DirectJDKLog [localhost-startStop-1] The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_162\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;D:\ptc\proe4\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;C:\WINDOWS\System32\OpenSSH\;C:\soft\apache-maven-3.5.4-src\apache-maven-3.5.4\bin;;D:\ptc2\bin;C:\Users\User\AppData\Local\Microsoft\WindowsApps;C:\soft\apache-maven-3.5.4\bin;;.]
+2018-11-23 22:41:22,684 INFO org.apache.juli.logging.DirectJDKLog [localhost-startStop-1] At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2018-11-23 22:41:22,691 INFO org.apache.juli.logging.DirectJDKLog [localhost-startStop-1] Initializing Spring embedded WebApplicationContext
+2018-11-23 22:41:22,692 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [localhost-startStop-1] Root WebApplicationContext: initialization completed in 2475 ms
+2018-11-23 22:41:22,711 INFO org.springframework.boot.web.servlet.ServletRegistrationBean [localhost-startStop-1] Servlet dispatcherServlet mapped to [/]
+2018-11-23 22:41:22,715 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-11-23 22:41:24,975 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userController': Unsatisfied dependency expressed through field 'userService'; nested exception is org.springframework.beans.factory.BeanNotOfRequiredTypeException: Bean named 'userServiceImpl' is expected to be of type 'UserServiceImpl' but was actually of type 'com.sun.proxy.$Proxy75'
+2018-11-23 22:41:25,096 INFO org.apache.juli.logging.DirectJDKLog [main] Stopping service [Tomcat]
+2018-11-23 22:41:25,147 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [main] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2018-11-23 22:41:25,154 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The bean 'userServiceImpl' could not be injected as a 'UserServiceImpl' because it is a JDK dynamic proxy that implements:
+	UserService
+
+
+Action:
+
+Consider injecting the bean as one of its interfaces or forcing the use of CGLib-based proxies by setting proxyTargetClass=true on @EnableAsync and/or @EnableCaching.
+
+2018-11-23 22:45:15,359 INFO org.springframework.boot.StartupInfoLogger [main] Starting Application on WIN-C3L8TOODV5O with PID 24292 (C:\Users\User\IdeaProjects\computershop\target\classes started by User in C:\Users\User\IdeaProjects\computershop)
+2018-11-23 22:45:15,364 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2018-11-23 22:45:17,387 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2018-11-23 22:45:17,403 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2018-11-23 22:45:17,415 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2018-11-23 22:45:17,416 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet Engine: Apache Tomcat/8.5.34
+2018-11-23 22:45:17,428 INFO org.apache.juli.logging.DirectJDKLog [localhost-startStop-1] The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_162\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;D:\ptc\proe4\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;C:\WINDOWS\System32\OpenSSH\;C:\soft\apache-maven-3.5.4-src\apache-maven-3.5.4\bin;;D:\ptc2\bin;C:\Users\User\AppData\Local\Microsoft\WindowsApps;C:\soft\apache-maven-3.5.4\bin;;.]
+2018-11-23 22:45:17,749 INFO org.apache.juli.logging.DirectJDKLog [localhost-startStop-1] At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2018-11-23 22:45:17,757 INFO org.apache.juli.logging.DirectJDKLog [localhost-startStop-1] Initializing Spring embedded WebApplicationContext
+2018-11-23 22:45:17,757 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [localhost-startStop-1] Root WebApplicationContext: initialization completed in 2307 ms
+2018-11-23 22:45:17,772 INFO org.springframework.boot.web.servlet.ServletRegistrationBean [localhost-startStop-1] Servlet dispatcherServlet mapped to [/]
+2018-11-23 22:45:17,776 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-11-23 22:45:19,610 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2018-11-23 22:45:19,829 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2018-11-23 22:45:19,837 INFO org.apache.juli.logging.DirectJDKLog [main] Using a shared selector for servlet write/read
+2018-11-23 22:45:19,860 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2018-11-23 22:45:19,864 INFO org.springframework.boot.StartupInfoLogger [main] Started Application in 5.325 seconds (JVM running for 6.469)
+2018-11-23 22:45:38,687 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2018-11-23 22:45:38,688 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2018-11-23 22:45:38,700 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 10 ms
+2018-11-23 22:45:38,721 WARN org.springframework.web.servlet.DispatcherServlet [http-nio-8080-exec-1] No mapping for GET /

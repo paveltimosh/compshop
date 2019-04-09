@@ -7,37 +7,87 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e6acd940-c530-41ba-9507-8e88af58759b" name="Default Changelist" comment="add test package">
+      <change afterPath="$APPLICATION_CONFIG_DIR$/consoles/db/9c2ca683-5456-46d5-88fd-ffe32e49fc7f/console.sql" afterDir="false" />
       <change afterPath="$APPLICATION_CONFIG_DIR$/consoles/db/e5eac0bd-a665-49d7-a55b-642c53ec8eaf/console_1.sql" afterDir="false" />
+      <change afterPath="$APPLICATION_CONFIG_DIR$/consoles/db/ecd7f931-6236-43df-a58d-389eb139ae84/console.sql" afterDir="false" />
       <change afterPath="$USER_HOME$/Downloads/WebShop-master/WEBShop-master/.idea/WEBShop-master.iml" afterDir="false" />
       <change afterPath="$USER_HOME$/Downloads/WebShop-master/WEBShop-master/.idea/misc.xml" afterDir="false" />
       <change afterPath="$USER_HOME$/Downloads/WebShop-master/WEBShop-master/.idea/modules.xml" afterDir="false" />
       <change afterPath="$USER_HOME$/Downloads/WebShop-master/WEBShop-master/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Shop/untitled/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Shop/untitled/src/com/company/SimpleFuncInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Shop/untitled/untitled.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_3_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__dom4j_dom4j_1_6_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_javax_activation_api_1_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_persistence_javax_persistence_api_2_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_8_17.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_0_4_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_core_5_3_6_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_entitymanager_5_3_6_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_23_1_GA.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_jandex_2_0_5_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_2_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_spec_javax_transaction_jboss_transaction_api_1_2_spec_1_1_1_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled4/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled4/src/com/company/C.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled4/src/com/company/DeclareStuff.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled4/src/com/company/TestDeclare.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/computershop_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/computershop_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CountEmployees/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CountEmployees/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CountEmployees/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CountEmployees/CountEmployees.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CountEmployees/input.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CountEmployees/out/production/CountEmployees/Application.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CountEmployees/src/Application.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Program/src/com" beforeDir="false" afterPath="$PROJECT_DIR$/../Program/src/com" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAppp/.idea/artifacts/SpringAppp_war_exploded.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAppp/.idea/libraries/Spring_4_3_18_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAppp/.idea/libraries/Spring_Data_JPA_1_3_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAppp/.idea/libraries/Spring_MVC_4_3_18_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAppp/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAppp/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAppp/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAppp/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAppp/SpringAppp.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAppp/lib/aopalliance-1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAppp/lib/commons-logging-1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAppp/lib/spring-aop-4.3.18.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAppp/lib/spring-aspects-4.3.18.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAppp/lib/spring-beans-4.3.18.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAppp/lib/spring-context-4.3.18.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAppp/lib/spring-context-support-4.3.18.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAppp/lib/spring-core-4.3.18.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAppp/lib/spring-data-jpa-1.3.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAppp/lib/spring-expression-4.3.18.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAppp/lib/spring-instrument-4.3.18.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAppp/lib/spring-instrument-tomcat-4.3.18.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAppp/lib/spring-jdbc-4.3.18.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAppp/lib/spring-jms-4.3.18.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAppp/lib/spring-messaging-4.3.18.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAppp/lib/spring-orm-4.3.18.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAppp/lib/spring-oxm-4.3.18.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAppp/lib/spring-test-4.3.18.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAppp/lib/spring-tx-4.3.18.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAppp/lib/spring-web-4.3.18.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAppp/lib/spring-webmvc-4.3.18.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAppp/lib/spring-webmvc-portlet-4.3.18.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAppp/lib/spring-websocket-4.3.18.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAppp/web/WEB-INF/applicationContext.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAppp/web/WEB-INF/dispatcher-servlet.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAppp/web/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAppp/web/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SurveyApp/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../SurveyApp/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SurveyApp/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SurveyApp/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SurveyApp/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SurveyApp/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SurveyApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SurveyApp/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SurveyApp/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SurveyApp/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SurveyApp/src/main/java/org/timoshuk/config/HibernateConf.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SurveyApp/src/main/java/org/timoshuk/config/HibernateConf.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SurveyApp/src/main/java/org/timoshuk/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SurveyApp/src/main/java/org/timoshuk/config/WebConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SurveyApp/src/main/java/org/timoshuk/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SurveyApp/src/main/java/org/timoshuk/controller/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SurveyApp/src/main/java/org/timoshuk/model/Answer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SurveyApp/src/main/java/org/timoshuk/model/Answer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SurveyApp/src/main/java/org/timoshuk/model/Survey.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SurveyApp/src/main/java/org/timoshuk/model/Survey.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SurveyApp/src/main/java/org/timoshuk/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SurveyApp/src/main/java/org/timoshuk/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SurveyApp/src/main/webapp/WEB-INF/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../SurveyApp/src/main/webapp/WEB-INF/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SurveyAppp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/computershop.iml" beforeDir="false" afterPath="$PROJECT_DIR$/computershop.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/command/common/ShowCatalogComputerCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/command/common/ShowCatalogComputerCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/entity/users/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/entity/users/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fx_project" beforeDir="false" afterPath="$PROJECT_DIR$/../fx_project" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../surveyapp/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../surveyapp/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled4/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled4/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled4/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled4/.idea/project-template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled4/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled4/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled4/out/production/untitled4/com/company/DeclareStuff.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled4/out/production/untitled4/com/company/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled4/out/production/untitled4/com/company/TestDeclare.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled4/src/com/company/C.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled4/src/com/company/DeclareStuff.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled4/src/com/company/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled4/src/com/company/TestDeclare.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled4/untitled4.iml" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -45,6 +95,9 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/computershop$TomCat.ic" NAME="TomCat Coverage Results" MODIFIED="1542102704994" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -62,66 +115,6 @@
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="computershoptest@localhost" type="feb32156:DbDataSourceImpl" />
       </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="computershoptest@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="computershoptest@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="computershoptest: database" type="6d9b600a:PostgresImplModel$Database" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="computershoptest@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="computershoptest: database" type="6d9b600a:PostgresImplModel$Database" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="computershoptest@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="computershoptest: database" type="6d9b600a:PostgresImplModel$Database" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="public: schema" type="a16502c0:PostgresImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="computershoptest@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="computershoptest: database" type="6d9b600a:PostgresImplModel$Database" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="public: schema" type="a16502c0:PostgresImplModel$Schema" />
-        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="computershoptest@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="computershoptest: database" type="6d9b600a:PostgresImplModel$Database" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="public: schema" type="a16502c0:PostgresImplModel$Schema" />
-        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="computers: table" type="a93d6ac6:PostgresImplModel$LocalTable" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="computershoptest@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="computershoptest: database" type="6d9b600a:PostgresImplModel$Database" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="public: schema" type="a16502c0:PostgresImplModel$Schema" />
-        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="users: table" type="a93d6ac6:PostgresImplModel$LocalTable" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="computershoptest@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="roles" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
     </expand>
     <select />
   </component>
@@ -138,82 +131,103 @@
     <session id="1443471809">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="8" />
+          <entry key="project.closed" value="15" />
+          <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.20" value="1" />
           <entry key="project.open.time.22" value="3" />
-          <entry key="project.open.time.25" value="1" />
-          <entry key="project.open.time.26" value="1" />
-          <entry key="project.open.time.28" value="1" />
+          <entry key="project.open.time.24" value="2" />
+          <entry key="project.open.time.25" value="3" />
+          <entry key="project.open.time.26" value="2" />
+          <entry key="project.open.time.28" value="3" />
+          <entry key="project.open.time.30" value="1" />
+          <entry key="project.open.time.31" value="1" />
+          <entry key="project.open.time.32" value="2" />
+          <entry key="project.open.time.33" value="2" />
+          <entry key="project.open.time.34" value="1" />
+          <entry key="project.open.time.36" value="1" />
           <entry key="project.open.time.38" value="1" />
+          <entry key="project.open.time.41" value="1" />
+          <entry key="project.open.time.43" value="2" />
+          <entry key="project.open.time.45" value="1" />
+          <entry key="project.open.time.48" value="2" />
           <entry key="project.open.time.5" value="1" />
-          <entry key="project.opened" value="10" />
+          <entry key="project.open.time.55" value="1" />
+          <entry key="project.opened" value="33" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="WebConfig" value="1" />
+          <entry key="backup" value="2" />
           <entry key="cases" value="1" />
-          <entry key="class" value="13" />
-          <entry key="css" value="4" />
+          <entry key="class" value="65" />
+          <entry key="css" value="6" />
           <entry key="customers" value="2" />
-          <entry key="gitignore" value="2" />
-          <entry key="iml" value="1" />
-          <entry key="java" value="329" />
-          <entry key="jsp" value="111" />
-          <entry key="jspf" value="12" />
-          <entry key="log" value="11" />
+          <entry key="gitignore" value="4" />
+          <entry key="iml" value="2" />
+          <entry key="java" value="1277" />
+          <entry key="jsp" value="234" />
+          <entry key="jspf" value="29" />
+          <entry key="log" value="27" />
           <entry key="png" value="1" />
-          <entry key="properties" value="36" />
+          <entry key="pom" value="1" />
+          <entry key="properties" value="98" />
           <entry key="public" value="4" />
-          <entry key="sql" value="2" />
+          <entry key="rams" value="1" />
+          <entry key="sql" value="3" />
           <entry key="tld" value="2" />
           <entry key="users" value="1" />
-          <entry key="xml" value="42" />
+          <entry key="xml" value="83" />
+          <entry key="yml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="13" />
-          <entry key="CSS" value="4" />
-          <entry key="Database Element" value="3" />
-          <entry key="Git file" value="2" />
-          <entry key="IDEA_MODULE" value="1" />
+          <entry key="CLASS" value="65" />
+          <entry key="CSS" value="6" />
+          <entry key="Database Element" value="4" />
+          <entry key="Git file" value="4" />
+          <entry key="IDEA_MODULE" value="2" />
           <entry key="Image" value="1" />
-          <entry key="JAVA" value="329" />
-          <entry key="JSP" value="123" />
-          <entry key="Log" value="10" />
-          <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Properties" value="36" />
-          <entry key="Scratch" value="2" />
-          <entry key="UML" value="5" />
-          <entry key="XML" value="44" />
+          <entry key="JAVA" value="1277" />
+          <entry key="JSP" value="263" />
+          <entry key="Log" value="26" />
+          <entry key="PLAIN_TEXT" value="3" />
+          <entry key="Properties" value="98" />
+          <entry key="Scratch" value="3" />
+          <entry key="UML" value="6" />
+          <entry key="XML" value="86" />
+          <entry key="YAML" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="cell" value="3" />
           <entry key="class" value="1" />
-          <entry key="css" value="11" />
-          <entry key="dummy" value="4" />
-          <entry key="java" value="22863" />
-          <entry key="jsp" value="3911" />
-          <entry key="jspf" value="648" />
-          <entry key="properties" value="807" />
+          <entry key="css" value="12" />
+          <entry key="dummy" value="10" />
+          <entry key="java" value="51872" />
+          <entry key="jsp" value="6103" />
+          <entry key="jspf" value="820" />
+          <entry key="log" value="2" />
+          <entry key="properties" value="1639" />
           <entry key="tld" value="1" />
           <entry key="txt" value="16" />
-          <entry key="xml" value="734" />
+          <entry key="xml" value="1085" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CLASS" value="1" />
-          <entry key="CSS" value="11" />
-          <entry key="JAVA" value="22837" />
-          <entry key="JSP" value="4559" />
-          <entry key="PLAIN_TEXT" value="20" />
-          <entry key="Properties" value="807" />
+          <entry key="CSS" value="12" />
+          <entry key="JAVA" value="51846" />
+          <entry key="JSP" value="6923" />
+          <entry key="Log" value="2" />
+          <entry key="PLAIN_TEXT" value="26" />
+          <entry key="Properties" value="1639" />
           <entry key="SQL" value="26" />
           <entry key="Scratch" value="3" />
-          <entry key="XML" value="735" />
+          <entry key="XML" value="1086" />
         </counts>
       </usages-collector>
     </session>
@@ -221,78 +235,94 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="402">
-              <caret line="108" selection-start-line="108" selection-end-line="108" />
+            <state relative-caret-position="443">
+              <caret line="252" column="17" selection-start-line="252" selection-start-column="17" selection-end-line="252" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/filter/NonregisteredUserRedirectFilter.java">
+        <entry file="file://$PROJECT_DIR$/bitbucket-pipelines.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="27" column="25" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/command/common/ShowCatalogComputerCommand.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="249">
-              <caret line="16" selection-start-line="16" selection-end-line="16" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="255">
+              <caret line="15" column="97" lean-forward="true" selection-start-line="15" selection-start-column="97" selection-end-line="15" selection-end-column="117" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate.properties">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/Application.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1292">
-              <caret line="76" selection-start-line="76" selection-end-line="76" />
+            <state relative-caret-position="153">
+              <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/entity/users/User.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/DTO/ComputerDTO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="283">
-              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+            <state relative-caret-position="85">
+              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/DTO/parser/UserDtoParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
+            <state relative-caret-position="51">
               <caret line="8" selection-start-line="8" selection-end-line="8" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/filter/EncodingFilter.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/DTO/CartPositionDTO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="103">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="85">
+              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/config/HibernateConf.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="291">
+              <caret line="32" column="96" selection-start-line="32" selection-start-column="96" selection-end-line="32" selection-end-column="96" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/config/AppInitializer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="40">
+              <caret line="20" column="51" selection-start-line="20" selection-start-column="51" selection-end-line="20" selection-end-column="51" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/config/WebConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-34">
+              <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/entity/products/Computer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="112">
+              <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -304,73 +334,81 @@
       <list>
         <option value="FxmlFile" />
         <option value="Tag Library Descriptor" />
-        <option value="XML Properties File" />
         <option value="JUnit4 Test Class" />
         <option value="Enum" />
-        <option value="Interface" />
         <option value="Jsp File" />
         <option value="CSS File" />
+        <option value="XML Properties File" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <dirStrings>
+      <dir>C:\Users\User\IdeaProjects\computershop\src\main\java\org\vironit\timoshuk\computershop\entity</dir>
+    </dirStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/common/footer.jspf" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/dao/impl/UserDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/common/header.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/validators/UserValidator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/command/common/RegisterCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/servlet/Controller.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/dao/impl/OrderDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/entity/users/UserType.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/user/changeUserData.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/catalog/videocards.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/catalog/ram.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/catalog/mother_boards.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/catalog/cpu.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/entity/products/Components/Case.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/catalog/computerInfo.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/command/item/ShowComputerInfo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/command/item/ShowComputerInfoCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/entity/order/Order.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/common/header.jspf" />
-        <option value="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/dao/impl/ComputerDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/urlConfig.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/command/CommandEnum.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/entity/products/Item.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/entity/products/Components/Component.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/entity/products/Computer.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/user/cart.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/command/common/EmptyCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/command/user/DeleteFromCartCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/foundation.css" />
-        <option value="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/command/user/UpdateUserDataCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/command/common/ShowCatalogCaseCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/footer_style.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/common/footer.jspf" />
-        <option value="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/command/common/LoginCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/message.properties" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/common/menu.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/command/user/AddToCartCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/catalog/view/computerInfo.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/catalog/cases.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/DTO/CartPositionDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/exception/NotEnoughMoneyException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/entity/order/Order.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/exception/NotFoundException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/controller/OrderController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/entity/order/PaymentDescription.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/secure/UserDetailsServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/secure/WebSecurityConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/DAO/impl/OrderDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/entity/products/Components/Component.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/DTO/ComputerDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/service/ComputerService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/DAO/impl/productDAO/ComputerDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/service/impl/products/ComputerServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/entity/products/Computer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/controller/admin/AdminItemCatalogController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/service/OrderService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/controller/admin/AdminOrderController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/service/impl/products/CpuServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/service/impl/products/MotherboardServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/service/impl/products/CaseServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/service/impl/products/RamServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/service/impl/products/VideocardImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/exception/handling/RestResponseEntityExceptionHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/controller/customer/ItemCatalogController.java" />
+        <option value="$PROJECT_DIR$/src/test/org/timoshuk/computershop/util/TestUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/service/UserService.java" />
+        <option value="$PROJECT_DIR$/src/test/org/timoshuk/computershop/controller/ItemCatalogControllerClass.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/service/impl/OrderServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/test/org/timoshuk/computershop/data/UserData.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/controller/MainController.java" />
+        <option value="$PROJECT_DIR$/src/test/org/timoshuk/computershop/controller/ItemCatalogControllerTest.java" />
+        <option value="$PROJECT_DIR$/src/test/org/timoshuk/computershop/controller/MainControllerTest.java" />
+        <option value="$PROJECT_DIR$/src/test/org/timoshuk/computershop/controller/UserControllerTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/DTO/parser/UserDtoParser.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/controller/customer/OrderController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/DTO/UserDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/config/WebConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/controller/admin/AdminController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/exception/OrderIsPayedException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/config/AppInitializer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/DAO/impl/UserDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/service/impl/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/Fibonachi.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/entity/users/User.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/catalog/computers.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/user/profile.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/main.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/register.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/filter/EncodingFilter.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/filter/NonregisteredUserRedirectFilter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/command/common/ShowCatalogComputerCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/config/HibernateConf.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/entity/users/User.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/Application.java" />
       </list>
     </option>
   </component>
@@ -385,6 +423,9 @@
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="JspContextManager">
+    <jsp-to-context jsp-file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/common/footer.jspf" context-file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/user/profile.jsp" />
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -422,10 +463,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="121" />
-    <option name="y" value="43" />
-    <option name="width" value="1794" />
-    <option name="height" value="980" />
+    <option name="x" value="1848" />
+    <option name="y" value="35" />
+    <option name="width" value="1750" />
+    <option name="height" value="970" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -461,6 +502,12 @@
           </State>
           <State>
             <id>ECMAScript 6 migration aidsJavaScript</id>
+          </State>
+          <State>
+            <id>EncapsulationJava</id>
+          </State>
+          <State>
+            <id>Hibernate</id>
           </State>
           <State>
             <id>Inheritance issuesJava</id>
@@ -517,6 +564,9 @@
             <id>Probable bugsJava</id>
           </State>
           <State>
+            <id>Resource managementJava</id>
+          </State>
+          <State>
             <id>SecurityLintAndroid</id>
           </State>
           <State>
@@ -537,7 +587,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -548,11 +597,6 @@
             <path>
               <item name="computershop" type="b2602c69:ProjectViewProjectNode" />
               <item name="computershop" type="462c0819:PsiDirectoryNode" />
-              <item name="logs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="computershop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="computershop" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -579,101 +623,43 @@
             <path>
               <item name="computershop" type="b2602c69:ProjectViewProjectNode" />
               <item name="computershop" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="computershop" type="462c0819:PsiDirectoryNode" />
-              <item name="command" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="computershop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="computershop" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="computershop" type="462c0819:PsiDirectoryNode" />
-              <item name="command" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="computershop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="computershop" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="computershop" type="462c0819:PsiDirectoryNode" />
-              <item name="servlet" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="computershop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="computershop" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="computershop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="computershop" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="computershop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="computershop" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="computershop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="computershop" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="jsp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="computershop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="computershop" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="jsp" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="computershop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="postgresql" />
+    <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="SearchEverywhereHistoryKey" value="SessionFactoryUt&#9;PSI&#9;JAVA://org.springframework.orm.hibernate5.SessionFactoryUtils" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="add_unversioned_files" value="$PROJECT_DIR$/target/classes/org/vironit/timoshuk/computershop/entity/users/User.class" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541064030130" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543237466731" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="database.console.LAST_STATE" value="true" />
     <property name="extract.method.default.visibility" value="private" />
+    <property name="last.edited.regexp" value="254789654" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/model/dao" />
-    <property name="last_opened_file_path" value="C:/Program Files/TomCat/apache-tomcat-8.5.34/lib/servlet-api.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../surveyapp" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.33983928" />
-    <property name="settings.editor.selected.configurable" value="Lombok plugin" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="sql.rename.search.for.storage.occurrences" value="true" />
   </component>
   <component name="RecentsManager">
@@ -688,6 +674,7 @@
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\User\IdeaProjects\computershop\src\main\java\org\vironit\timoshuk\computershop\hibernateDAO\impl" />
       <recent name="C:\Users\User\IdeaProjects\computershop\src\main\webapp\WEB-INF\jsp\catalog\view" />
       <recent name="C:\Users\User\IdeaProjects\computershop\src\main\webapp\WEB-INF" />
       <recent name="C:\Users\User\IdeaProjects\computershop\src\main\webapp\img" />
@@ -706,9 +693,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Tomcat Server.TomCat">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.vironit.timoshuk.computershop.Main" />
+  <component name="RunManager" selected="Spring Boot.Application">
+    <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.timoshuk.computershop.Main" />
       <module name="computershop" />
       <extension name="coverage">
         <pattern>
@@ -720,108 +707,79 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserDAOImplTest.createUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ItemCatalogControllerTest.contexLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="computershop" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.vironit.timoshuk.computershop.dao.*" />
+          <option name="PATTERN" value="org.timoshuk.computershop.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.vironit.timoshuk.computershop.model.dao.impl" />
-      <option name="MAIN_CLASS_NAME" value="org.vironit.timoshuk.computershop.model.dao.impl.UserDAOImplTest" />
-      <option name="METHOD_NAME" value="createUser" />
+      <option name="PACKAGE_NAME" value="org.timoshuk.computershop.controller" />
+      <option name="MAIN_CLASS_NAME" value="org.timoshuk.computershop.controller.ItemCatalogControllerTest" />
+      <option name="METHOD_NAME" value="contexLoads" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserDAOImplTest" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="MainControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="computershop" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.vironit.timoshuk.computershop.dao.*" />
+          <option name="PATTERN" value="org.timoshuk.computershop.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.vironit.timoshuk.computershop.model.dao.impl" />
-      <option name="MAIN_CLASS_NAME" value="org.vironit.timoshuk.computershop.model.dao.impl.UserDAOImplTest" />
-      <properties />
-      <listeners />
+      <option name="PACKAGE_NAME" value="org.timoshuk.computershop.controller" />
+      <option name="MAIN_CLASS_NAME" value="org.timoshuk.computershop.controller.MainControllerTest" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TomCat" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.34" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
-      <option name="UPDATING_POLICY" value="restart-server" />
-      <deployment>
-        <artifact name="computershop:war exploded">
-          <settings>
-            <option name="CONTEXT_PATH" value="/" />
-          </settings>
-        </artifact>
-      </deployment>
-      <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="Unnamed_computershop" />
-      </server-settings>
-      <predefined_log_file id="Tomcat" enabled="true" />
-      <predefined_log_file id="Tomcat Catalina" enabled="true" />
-      <predefined_log_file id="Tomcat Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="56691" />
-      </RunnerSettings>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
+    <configuration name="MainControllerTest.createdUser_ok" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="computershop" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.timoshuk.computershop.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.timoshuk.computershop.controller" />
+      <option name="MAIN_CLASS_NAME" value="org.timoshuk.computershop.controller.MainControllerTest" />
+      <option name="METHOD_NAME" value="createdUser_ok" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
-        <option name="BuildArtifacts" enabled="true">
-          <artifact name="computershop:war exploded" />
-        </option>
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserControllerTest.contexLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="computershop" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.timoshuk.computershop.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.timoshuk.computershop.controller" />
+      <option name="MAIN_CLASS_NAME" value="org.timoshuk.computershop.controller.UserControllerTest" />
+      <option name="METHOD_NAME" value="contexLoads" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="computershop" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.timoshuk.computershop.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.timoshuk.computershop.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.34" ALTERNATIVE_JRE_ENABLED="false">
@@ -889,18 +847,25 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Tomcat Server.TomCat" />
       <item itemvalue="Application.Main" />
-      <item itemvalue="JUnit.UserDAOImplTest.createUser" />
-      <item itemvalue="TestNG.UserDAOImplTest" />
+      <item itemvalue="JUnit.ItemCatalogControllerTest.contexLoads" />
+      <item itemvalue="JUnit.UserControllerTest.contexLoads" />
+      <item itemvalue="JUnit.MainControllerTest.createdUser_ok" />
+      <item itemvalue="JUnit.MainControllerTest" />
+      <item itemvalue="Spring Boot.Application" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
-        <item itemvalue="TestNG.UserDAOImplTest" />
-        <item itemvalue="JUnit.UserDAOImplTest.createUser" />
+        <item itemvalue="Spring Boot.Application" />
+        <item itemvalue="JUnit.MainControllerTest" />
+        <item itemvalue="JUnit.MainControllerTest.createdUser_ok" />
+        <item itemvalue="JUnit.UserControllerTest.contexLoads" />
+        <item itemvalue="JUnit.ItemCatalogControllerTest.contexLoads" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SpringBeansView">
+    <option name="beanDetailsProportion" value="0.3" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -921,44 +886,67 @@
       <workItem from="1538897188523" duration="32829000" />
       <workItem from="1539158529414" duration="68616000" />
       <workItem from="1539895439067" duration="136685000" />
-      <workItem from="1540880604488" duration="19383000" />
+      <workItem from="1540880604488" duration="35412000" />
+      <workItem from="1541174414018" duration="2316000" />
+      <workItem from="1541178045833" duration="136075000" />
+      <workItem from="1542276478725" duration="5125000" />
+      <workItem from="1542563882170" duration="70813000" />
+      <workItem from="1543253435466" duration="105255000" />
+      <workItem from="1544091198718" duration="57020000" />
+      <workItem from="1544539066955" duration="227000" />
+      <workItem from="1544539737027" duration="5605000" />
+      <workItem from="1544611706017" duration="802000" />
+      <workItem from="1544614327231" duration="18864000" />
+      <workItem from="1545210901848" duration="11707000" />
+      <workItem from="1545306643331" duration="22693000" />
+      <workItem from="1545809620961" duration="60011000" />
+      <workItem from="1546968848000" duration="1582000" />
+      <workItem from="1547197998569" duration="535000" />
+      <workItem from="1548155199966" duration="917000" />
+      <workItem from="1549551184630" duration="133000" />
+      <workItem from="1550761417549" duration="141000" />
+      <workItem from="1550818894031" duration="1737000" />
+      <workItem from="1551791158022" duration="6285000" />
+      <workItem from="1552380486242" duration="223000" />
+      <workItem from="1554441505772" duration="1220000" />
+      <workItem from="1554756361061" duration="4707000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="UserDAOImplTest_createUser - 2018.10.10 at 16h 09m 48s.xml">
-      <configuration name="UserDAOImplTest.createUser" configurationId="JUnit" />
+    <history-entry file="UserControllerTest_createUser_duplicateLogin - 2018.12.28 at 00h 53m 00s.xml">
+      <configuration name="UserControllerTest.createUser_duplicateLogin" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserDAOImplTest - 2018.10.10 at 16h 10m 36s.xml">
-      <configuration name="UserDAOImplTest" configurationId="TestNG" />
+    <history-entry file="UserControllerTest_createUser_duplicateLogin - 2018.12.28 at 00h 53m 45s.xml">
+      <configuration name="UserControllerTest.createUser_duplicateLogin" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserDAOImplTest - 2018.10.10 at 16h 12m 07s.xml">
-      <configuration name="UserDAOImplTest" configurationId="TestNG" />
+    <history-entry file="UserControllerTest - 2018.12.28 at 00h 57m 00s.xml">
+      <configuration name="UserControllerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserDAOImplTest - 2018.10.10 at 16h 12m 32s.xml">
-      <configuration name="UserDAOImplTest" configurationId="TestNG" />
+    <history-entry file="UserControllerTest - 2018.12.28 at 00h 58m 21s.xml">
+      <configuration name="UserControllerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserDAOImplTest_createUser - 2018.10.10 at 16h 12m 38s.xml">
-      <configuration name="UserDAOImplTest.createUser" configurationId="JUnit" />
+    <history-entry file="UserControllerTest - 2018.12.28 at 00h 59m 35s.xml">
+      <configuration name="UserControllerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserDAOImplTest - 2018.10.10 at 16h 13m 42s.xml">
-      <configuration name="UserDAOImplTest" configurationId="TestNG" />
+    <history-entry file="UserControllerTest - 2018.12.28 at 01h 00m 30s.xml">
+      <configuration name="UserControllerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserDAOImplTest_createUser - 2018.10.10 at 16h 13m 46s.xml">
-      <configuration name="UserDAOImplTest.createUser" configurationId="JUnit" />
+    <history-entry file="ItemCatalogControllerTest_contexLoads - 2018.12.28 at 10h 14m 11s.xml">
+      <configuration name="ItemCatalogControllerTest.contexLoads" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserDAOImplTest_createUser - 2018.10.10 at 16h 14m 14s.xml">
-      <configuration name="UserDAOImplTest.createUser" configurationId="JUnit" />
+    <history-entry file="UserControllerTest_contexLoads - 2018.12.28 at 10h 16m 45s.xml">
+      <configuration name="UserControllerTest.contexLoads" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserDAOImplTest_createUser - 2018.10.10 at 16h 14m 43s.xml">
-      <configuration name="UserDAOImplTest.createUser" configurationId="JUnit" />
+    <history-entry file="MainControllerTest_createdUser_ok - 2018.12.28 at 10h 24m 18s.xml">
+      <configuration name="MainControllerTest.createdUser_ok" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserDAOImplTest_createUser - 2018.10.10 at 16h 15m 13s.xml">
-      <configuration name="UserDAOImplTest.createUser" configurationId="JUnit" />
+    <history-entry file="MainControllerTest - 2018.12.28 at 10h 25m 45s.xml">
+      <configuration name="MainControllerTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="314185000" />
+    <option name="totallyTimeSpent" value="844207000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -970,41 +958,41 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="1912" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Structure" order="0" sideWeight="0.5022625" side_tool="true" weight="0.16359773" />
-      <window_info id="Web" order="1" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16717096" />
+      <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="7" sideWeight="0.4988662" visible="true" weight="0.23959732" />
-      <window_info anchor="bottom" id="Application Servers" order="0" weight="0.32840237" />
-      <window_info anchor="bottom" id="Database Console" order="1" weight="0.29787233" />
-      <window_info anchor="bottom" id="Message" order="2" />
-      <window_info anchor="bottom" id="Find" order="3" weight="0.49112427" />
-      <window_info anchor="bottom" id="Run" order="4" sideWeight="0.49963635" weight="0.35886526" />
-      <window_info anchor="bottom" id="Debug" order="5" weight="0.4051205" />
-      <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="8" weight="0.32935917" />
-      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="10" />
-      <window_info anchor="bottom" id="Terminal" order="11" />
-      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.50036365" side_tool="true" weight="0.43010753" />
-      <window_info anchor="bottom" id="Java Enterprise" order="13" />
-      <window_info anchor="bottom" id="Messages" order="14" weight="0.34923077" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32935917" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.5184936" visible="true" weight="0.09508197" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.5424739" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32985073" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32935917" />
+      <window_info anchor="bottom" id="Spring" order="8" weight="0.32935917" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49932885" weight="0.32786885" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.48150638" side_tool="true" weight="0.52309984" />
+      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.5080537" weight="0.38413686" />
+      <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.32985073" />
+      <window_info anchor="bottom" id="Database Changes" order="13" weight="0.32985073" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Database" order="5" weight="0.29731545" />
-      <window_info anchor="right" id="Theme Preview" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Maven Projects" order="8" weight="0.32861954" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Maven Projects" order="7" />
+      <window_info anchor="right" id="Database" order="8" visible="true" weight="0.2193646" />
+      <window_info anchor="right" id="Bean Validation" order="9" weight="0.3293011" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1013,404 +1001,356 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/src/test/org/timoshuk/computershop/controller/MainControllerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        <state relative-caret-position="-23">
+          <caret line="39" column="21" selection-start-line="39" selection-start-column="21" selection-end-line="39" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/command/common/LogoutCommand.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/controller/customer/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="42" lean-forward="true" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
+        <state relative-caret-position="246">
+          <caret line="27" column="55" selection-start-line="27" selection-start-column="55" selection-end-line="27" selection-end-column="55" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/catalog/mother_boards.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/controller/MainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="23" column="36" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.1.1.RELEASE/spring-context-5.1.1.RELEASE.jar!/org/springframework/context/annotation/Bean.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/controller/admin/AdminController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="38" column="14" lean-forward="true" selection-start-line="38" selection-start-column="14" selection-end-line="38" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/exception/handling/RestResponseEntityExceptionHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/DAO/EntityDAOImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/DAO/impl/OrderDAOImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="32" column="40" selection-start-line="32" selection-start-column="40" selection-end-line="32" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/command/ActionCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/servlet/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="30" column="36" lean-forward="true" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/dao/impl/ComputerDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2108">
-          <caret line="151" column="26" selection-start-line="151" selection-start-column="26" selection-end-line="151" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/urlConfig.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" selection-start-line="8" selection-end-line="8" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/command/CommandEnum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="47" column="6" selection-start-line="47" selection-start-column="6" selection-end-line="47" selection-end-column="6" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/entity/products/Components/VideoCard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
+        <state relative-caret-position="85">
           <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/entity/products/Item.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/DAO/impl/productDAO/CaseDAOImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="85">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/entity/products/Computer.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/DAO/EntityDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="9" column="58" selection-start-line="9" selection-start-column="58" selection-end-line="9" selection-end-column="58" />
+        <state relative-caret-position="68">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/entity/products/Components/Component.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/validator/annotations/FieldsValueMatch.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
+          <caret line="32" column="1" lean-forward="true" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.1.RELEASE/spring-web-5.1.1.RELEASE.jar!/org/springframework/web/context/support/AnnotationConfigWebApplicationContext.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1003">
+          <caret line="29" column="11" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-core/5.2.12.Final/hibernate-core-5.2.12.Final.jar!/org/hibernate/query/Query.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="99" column="6" selection-start-line="99" selection-start-column="6" selection-end-line="99" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/DAO/impl/UserDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-orm/5.1.1.RELEASE/spring-orm-5.1.1.RELEASE.jar!/org/springframework/orm/hibernate5/SessionFactoryUtils.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1428">
+          <caret line="133" column="30" selection-start-line="133" selection-start-column="30" selection-end-line="133" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/validator/FieldsValueMatchValidator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/config/SpringApplicationInitializer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/controller/customer/OrderController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="42" column="77" selection-start-line="42" selection-start-column="77" selection-end-line="42" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/entity/users/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
           <caret line="28" selection-start-line="28" selection-end-line="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/entity/products/Components/CPU.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/entity/order/Order.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        <state relative-caret-position="612">
+          <caret line="43" column="45" selection-start-line="43" selection-start-column="45" selection-end-line="44" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/entity/products/Components/Case.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/DTO/CartDTO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+        <state relative-caret-position="85">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/css/foundation.css">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/service/impl/UserServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="6371" selection-start-line="6371" selection-end-line="6371" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/command/user/DeleteFromCartCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        <state relative-caret-position="1462">
+          <caret line="115" column="51" selection-start-line="115" selection-start-column="51" selection-end-line="115" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/css/footer_style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="1" selection-start-column="1" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/common/footer.jspf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/command/common/ShowCatalogCaseCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="21" column="58" selection-start-line="21" selection-start-column="58" selection-end-line="21" selection-end-column="58" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/command/user/UpdateUserDataCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="59" column="75" selection-start-line="59" selection-start-column="75" selection-end-line="59" selection-end-column="75" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/message.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/command/user/AddToCartCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="42" column="9" lean-forward="true" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/common/menu.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="33" column="52" lean-forward="true" selection-start-line="33" selection-start-column="52" selection-end-line="33" selection-end-column="52" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#td#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/common/header.jspf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="27" column="23" lean-forward="true" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/catalog/videocards.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/command/common/EmptyCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/command/common/LoginCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="470">
-          <caret line="37" column="86" selection-start-line="37" selection-start-column="86" selection-end-line="37" selection-end-column="107" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/dao/DAOException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/dao/EntityDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/dao/EntityDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/dao/impl/CaseDAOIml.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1099">
-          <caret line="77" column="36" selection-start-line="77" selection-start-column="36" selection-end-line="77" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/catalog/view/computerInfo.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" selection-start-line="10" selection-end-line="10" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/catalog/cases.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="45" selection-start-line="45" selection-end-line="45" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/user/profile.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="25" column="51" selection-start-line="25" selection-start-column="51" selection-end-line="25" selection-end-column="51" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" selection-start-line="20" selection-end-line="20" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/catalog/computers.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="65" column="51" selection-start-line="65" selection-start-column="51" selection-end-line="65" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/register.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="597">
-          <caret line="39" column="51" selection-start-line="39" selection-start-column="51" selection-end-line="39" selection-end-column="51" />
+        <state relative-caret-position="255">
+          <caret line="15" column="64" selection-start-line="15" selection-start-column="64" selection-end-line="15" selection-end-column="64" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/main.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/register.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/catalog/computers.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="51" selection-start-line="10" selection-start-column="51" selection-end-line="10" selection-end-column="51" />
+        <state relative-caret-position="493">
+          <caret line="29" column="52" selection-start-line="29" selection-start-column="52" selection-end-line="29" selection-end-column="52" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/filter/EncodingFilter.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/DTO/UserDTO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="103">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        <state relative-caret-position="306">
+          <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/util/LocalDateAttributeConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/service/impl/OrderServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1428">
+          <caret line="115" column="26" selection-start-line="115" selection-start-column="26" selection-end-line="115" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/exception/OrderIsPayedException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_162/src.zip!/java/lang/Iterable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="44" column="17" selection-start-line="44" selection-start-column="17" selection-end-line="44" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_162/src.zip!/java/util/Collection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="143" column="43" selection-start-line="143" selection-start-column="43" selection-end-line="143" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_162/src.zip!/java/util/List.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="110" column="40" selection-start-line="110" selection-start-column="40" selection-end-line="110" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/Fibonachi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="36" column="5" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/org/timoshuk/computershop/data/UserData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-38">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/org/timoshuk/computershop/util/TestUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/message_en_EN.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/service/impl/products/ComputerServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="37" selection-start-line="37" selection-end-line="37" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#1363#1364#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/DTO/CartPositionDTO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
+        <state relative-caret-position="85">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/DTO/ComputerDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/DTO/parser/UserDtoParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
           <caret line="8" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
-    <entry file="das://e5eac0bd-a665-49d7-a55b-642c53ec8eaf/database/computershoptest/schema/public/table/users">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/config/AppInitializer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="20" column="51" selection-start-line="20" selection-start-column="51" selection-end-line="20" selection-end-column="51" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/filter/NonregisteredUserRedirectFilter.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/config/WebConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="25" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="-34">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/command/common/RegisterCommand.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/sql/comp.backup">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/entity/products/Computer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="48" column="29" lean-forward="true" selection-start-line="48" selection-start-column="29" selection-end-line="48" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="112">
+          <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/user/changeUserData.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
-        </state>
-      </provider>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/9c2ca683-5456-46d5-88fd-ffe32e49fc7f/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/user/cart.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/config/HibernateConf.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="108" selection-start-line="108" selection-end-line="108" />
+        <state relative-caret-position="291">
+          <caret line="32" column="96" selection-start-line="32" selection-start-column="96" selection-end-line="32" selection-end-column="96" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1292">
-          <caret line="76" selection-start-line="76" selection-end-line="76" />
+        <state relative-caret-position="443">
+          <caret line="252" column="17" selection-start-line="252" selection-start-column="17" selection-end-line="252" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/entity/users/User.java">
+    <entry file="file://$PROJECT_DIR$/bitbucket-pipelines.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        <state relative-caret-position="255">
+          <caret line="15" column="97" lean-forward="true" selection-start-line="15" selection-start-column="97" selection-end-line="15" selection-end-column="117" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/vironit/timoshuk/computershop/command/common/ShowCatalogComputerCommand.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/timoshuk/computershop/Application.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        <state relative-caret-position="153">
+          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate.properties">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
   <component name="masterDetails">
@@ -1443,6 +1383,7 @@
       </state>
       <state key="GlobalLibrariesConfigurable.UI">
         <settings>
+          <last-edited>vue</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1458,7 +1399,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.33983928" />
               </list>
             </option>
           </splitter-proportions>
@@ -1470,7 +1411,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.33983928" />
+                <option value="0.17336395" />
               </list>
             </option>
           </splitter-proportions>
