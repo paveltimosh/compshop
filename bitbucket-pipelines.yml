@@ -14,4 +14,4 @@ pipelines:
                    - mvn clean install     
                    # IMPORTANT here you need to define all the sets for your code to be build            
                    - git push https://heroku:5d1cb4e6-91d2-45be-ac6a-b51db765ecbb@git.heroku.com/computershoptimoshuk.git HEAD:master 
-          
+                   - mvn spring-boot:run
